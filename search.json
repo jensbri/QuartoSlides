@@ -217,6 +217,13 @@
     "text": "Lesson Overview\n\n\n\n\nLesson Title\nStatus\nRun #1\nRun #2\n\n\n\n\n\nProgramming with Python\nReleased\nMon, Tue\n-\n\n\n\nIntroduction to Machine Learning with Scikit Learn\nAlpha\nWed, Thu\nMon, Tue\n\n\n\nIntroduction to Deep Learning\nBeta\nFri\nWed, Thu\n\n\n\n\n\n\n\nFour hour sessions over four consecutive afternoon\n\n\n\n\nDepending on Maturity, sessions were run with a small changes or substantially (re)developed.\n\n\n\n\nOne major change was Goolge Colab  being used instead of local Python installs."
   },
   {
+    "objectID": "LightningTalk.html#lesson-details",
+    "href": "LightningTalk.html#lesson-details",
+    "title": "Developing a Carpentries-style Machine Learning workshop",
+    "section": "Lesson Details",
+    "text": "Lesson Details\n\n\n\nProgramming with Python\nIntroduction to Machine Learning with Scikit Learn and Python\nIntroduction to deep learning\n\n\n\n\nPython Fundamentals\nIntroduction\nIntroduction\n\n\nAnalyzing Patient Data\nSupervised methods - Regression\nClassification by a neural network using Keras\n\n\nVisualizing Tabular Data\nSupervised methods - Classification\nMonitor the training process\n\n\nStoring Multiple Values in Lists\nEnsemble methods\nAdvanced layer types\n\n\nRepeating Actions with Loops\nUnsupervised methods - Clustering\nOutlook\n\n\nAnalyzing Data from Multiple Files\nUnsupervised methods - Dimensionality reduction\n\n\n\nMaking Choices\nNeural Networks\n\n\n\nCreating Functions\nEthics and the Implications of Machine Learning\n\n\n\nErrors and Exceptions\nFind out more\n\n\n\nDefensive Programming\n\n\n\n\nDebugging\n\n\n\n\nCommand-Line Programs"
+  },
+  {
     "objectID": "LightningTalk.html#participants-background",
     "href": "LightningTalk.html#participants-background",
     "title": "Developing a Carpentries-style Machine Learning workshop",
