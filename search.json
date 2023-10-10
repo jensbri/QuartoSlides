@@ -151,7 +151,7 @@
     "href": "UpskillingResearchersInML.html#this-talks-focus",
     "title": "Upskilling researchers in Machine Learning",
     "section": "This talk’s focus",
-    "text": "This talk’s focus\n\nLightning Talk earlier today was mainly about answering ‘what’ we did and metrics\nThis talk is focused on the delivery\n\ntwo perspectives: CeR and NeSI\n\nBoF (right after this talk) will be a broader discussion of a similar topic"
+    "text": "This talk’s focus\n\nThe Lightning Talk earlier today was mainly about answering ‘what’ we1 did and metrics\nThis talk is focused on the delivery\n\ntwo perspectives: CeR and NeSI\n\nBoF (right after this talk) will be a broader discussion of a similar topic\n\nwe is CeR (Centre for eResearch) and NeSI (National eScience Infrastructure)"
   },
   {
     "objectID": "UpskillingResearchersInML.html#this-talks-goal",
@@ -165,21 +165,63 @@
     "href": "UpskillingResearchersInML.html#this-talks-structure",
     "title": "Upskilling researchers in Machine Learning",
     "section": "This talk’s Structure",
-    "text": "This talk’s Structure\n\nwe (CeR and NeSI) won’t talk about these topics one after the other\nwe picked some perspectives and will share them in parallel"
+    "text": "This talk’s Structure\n\nwe won’t talk about the previously mentioned topics one after the other\nwe picked some perspectives and will share them in parallel"
   },
   {
     "objectID": "UpskillingResearchersInML.html#how-the-ml-sessions-were-executed",
     "href": "UpskillingResearchersInML.html#how-the-ml-sessions-were-executed",
     "title": "Upskilling researchers in Machine Learning",
     "section": "How the ML sessions were executed",
-    "text": "How the ML sessions were executed\n\nCeR and NeSI independently made the decision to base the workshops on existing material (The Carpentries) and (Scikit-learn Tutorial(https://github.com/jakevdp/sklearn_tutorial) by [Jake Vanderplas])\nThe underlying idea was to start with foundational ML aspects and to build up\ndifferent session times\n\nColumn left: show details of ML101 and ML201\nColumn right: show details of Carp Sessions\n\nMaybe a comparison of content covered"
+    "text": "How the ML sessions were executed\n\nCeR and NeSI independently made the decision to base the workshops on existing material (The Carpentries) and (Scikit-learn Tutorial(https://github.com/jakevdp/sklearn_tutorial) by [Jake Vanderplas])\nReasoning about what topics to cover and in what depth: Decision to started with foundational ML aspects and to build up\ndifferent session times\n\nColumn left: show details of ML101 and ML201\nColumn right: show details of Carp Sessions\n\nMaybe a comparison of content covered"
   },
   {
     "objectID": "UpskillingResearchersInML.html#resoures-used",
     "href": "UpskillingResearchersInML.html#resoures-used",
     "title": "Upskilling researchers in Machine Learning",
     "section": "Resoures used",
-    "text": "Resoures used\n\nColab\nJupyterHub?"
+    "text": "Resoures used\n\n\nNeSI  - (several iterations of the workshops) in-person with own challenges then online only event: Zoom.us - byod - Jupyter Hub\n\nCeR\n\nonline only event: Zoom.us\nbyod\ndeviation from ‘The Carpentries’: No local Python installs\nGoogle Colab"
+  },
+  {
+    "objectID": "UpskillingResearchersInML.html#audience-and-runs",
+    "href": "UpskillingResearchersInML.html#audience-and-runs",
+    "title": "Upskilling researchers in Machine Learning",
+    "section": "Audience and Runs",
+    "text": "Audience and Runs\n\n\nUoA workshops\n\naudience: The University of Auckland (UoA) researchers\ntwo runs\n\nRun #1: March 2023\nRun #2: September 2023\n\nwell-received: filtering by mandatory Expression of Interest (EoI)\n\nabout 100 applications for 30 spots\n\nTODO add Zoom participants plot\n\n\nNeSI workshops\n\n\naudience: Aotearoa – NZ researchers\nML 101\n\nintro to Machine Learning\nstarted in 2021\n7 workshops (in person, online, hybrid)\nTODO attendees in total\n\nML 102\n\nintro to Deep Learning (CNNs)\nstarted in 2022\n2 workshops (online)\nTODO attendees in total"
+  },
+  {
+    "objectID": "UpskillingResearchersInML.html#schedule",
+    "href": "UpskillingResearchersInML.html#schedule",
+    "title": "Upskilling researchers in Machine Learning",
+    "section": "Schedule",
+    "text": "Schedule\n\n\nUoA workshops\n\nRun #1:\n\n4h Python\n4h Intro ML\n… PUT CORRECT NUMBERS HERE\n\nRun #2:\n\n–4h Python–\n8h Intro ML\n… PUT CORRECT NUMBERS HERE\n\n\n\nNeSI workshops\n\nML 101: 6 hours\n\nat first in one day\nnow split over 2 mornings\n\nML 102: 3 hours\nindependent workshops\nalmost always online\n\n1 in person (wifi issues)\n1 hybrid (require more organisation)\n\n\n\n\nTODO here some recommendations:\n\nmake it online\nsplit/shorter sessions (bearing in mind the scheduling-challenges for researchers)"
+  },
+  {
+    "objectID": "UpskillingResearchersInML.html#material",
+    "href": "UpskillingResearchersInML.html#material",
+    "title": "Upskilling researchers in Machine Learning",
+    "section": "Material",
+    "text": "Material\n\n\nUoA workshops\n\nTODO WHAT copy-paste of the table of Lightning talk?\n\n\nNeSI workshops\n\nML 101\n\nScikit-Learn workshop from Jake Vanderplas\nonline recordings (very good to rehearse)\nJupyter notebook based\nvery few changes (updated package version)\n\nML 102\n\nTensorFlow tutorials\nJupyter notebook based\nadded an introduction\nadded section to submit a Slurm job\n\n\n\n\nTODO here some recommendations: reuse/adapt content, don’t start from scratch"
+  },
+  {
+    "objectID": "UpskillingResearchersInML.html#content",
+    "href": "UpskillingResearchersInML.html#content",
+    "title": "Upskilling researchers in Machine Learning",
+    "section": "Content",
+    "text": "Content\n\n\n\nMachine Learning\n\nsupervised vs. unsupervised\n\nregression, classification\ncluster, dimensionality reduction\n\nensemble models (random forests)\nvalidation (train/test, cross-validation)\n\n\nTODO add a nice image"
+  },
+  {
+    "objectID": "UpskillingResearchersInML.html#audience",
+    "href": "UpskillingResearchersInML.html#audience",
+    "title": "Upskilling researchers in Machine Learning",
+    "section": "Audience",
+    "text": "Audience\nTODO some more generic recommendations around EOIs, selection process, pre-workshop communication, teaching crew (get helpers)"
+  },
+  {
+    "objectID": "UpskillingResearchersInML.html#platform",
+    "href": "UpskillingResearchersInML.html#platform",
+    "title": "Upskilling researchers in Machine Learning",
+    "section": "Platform",
+    "text": "Platform\nTODO Google Colab, Jupyter-on-NeSI, no need of GPU to start (or small ones on Colab available)"
   },
   {
     "objectID": "Plots.html",
