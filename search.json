@@ -179,7 +179,7 @@
     "href": "UpskillingResearchersInML.html#nesi-workshops-1",
     "title": "Upskilling researchers in Machine Learning",
     "section": "NeSI workshops",
-    "text": "NeSI workshops\n\n\n\n\n\nAlmost always online\n\n1 in person (had wifi issues)\n1 hybrid (require more organisation)\n\nUse Jupyter-on-NeSI\n\nJupyterHub platform\nRequire a NeSI account\nML101: 2 cores & 4 GB of RAM\nML102: 4 cores & 8 GB of RAM\n\nUse Slurm based job for GPU training (a little bit)\nTip: make sure the Platform team does not schedule upgrades that day…"
+    "text": "NeSI workshops\n\n\n\n JupyterLab session running on Jupyter-on-NeSI\n\n\nOnline and in person\n\n2 delivered in person (1 had wifi issues 😓)\n5 delivered online\n\nUse Jupyter-on-NeSI\n\nJupyterHub platform\nRequire a NeSI account\nML101: 2 cores & 4 GB of RAM\nML102: 4 cores & 8 GB of RAM\n\nUse Slurm based job for GPU training (a little bit)\nTip: make sure the Platform team does not schedule upgrades that day…"
   },
   {
     "objectID": "UpskillingResearchersInML.html#recommendations-1",
@@ -200,7 +200,7 @@
     "href": "UpskillingResearchersInML.html#nesi-workshops-2",
     "title": "Upskilling researchers in Machine Learning",
     "section": "NeSI workshops",
-    "text": "NeSI workshops\n\n\n\nML 101\n\n6 hours with TODO breaks\nat first in one day\nnow split over 2 mornings\n\nML 102\n\n3 hours with TODO breaks\n\nIndependent workshops\nBut organised “close” to each other\n\n\nTODO illustration or runsheet capture"
+    "text": "NeSI workshops\n\n\n\nML 101\n\n6 hours with 3 breaks ☕\nat first in one day\nnow split over 2 mornings\n\nML 102\n\n3 hours with 2 breaks 🍵\n\nIndependent workshops\nBut organised “close” to each other\n\n\n ML101 runsheet, used to keep track of time"
   },
   {
     "objectID": "UpskillingResearchersInML.html#recommendations-2",
