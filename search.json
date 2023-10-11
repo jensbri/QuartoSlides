@@ -179,7 +179,7 @@
     "href": "UpskillingResearchersInML.html#nesi-workshops-1",
     "title": "Upskilling researchers in Machine Learning",
     "section": "NeSI workshops",
-    "text": "NeSI workshops\n\n\n\n JupyterLab session running on Jupyter-on-NeSI\n\n\nOnline and in person\n\n2 delivered in person (1 had wifi issues 😓)\n5 delivered online\n\nUse Jupyter-on-NeSI\n\nJupyterHub platform\nRequire a NeSI account\nML101: 2 cores & 4 GB of RAM\nML102: 4 cores & 8 GB of RAM\n\nUse Slurm based job for GPU training (a little bit)\nTip: make sure the Platform team does not schedule upgrades that day…"
+    "text": "NeSI workshops\n\n\n\n JupyterLab session running on Jupyter-on-NeSI\n\n\nOnline and in person\n\n2 delivered in person (1 had wifi issues 😓)\n5 delivered online\n\nUse Jupyter-on-NeSI\n\nJupyterHub platform\nRequire a NeSI account\nML101: 2 cores & 4 GB of RAM\nML102: 4 cores & 8 GB of RAM\n\nUse Slurm based job for GPU training (a little bit)\nTip: make sure the Platform team does not schedule upgrades that day 😬…"
   },
   {
     "objectID": "UpskillingResearchersInML.html#recommendations-1",
