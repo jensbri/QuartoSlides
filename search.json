@@ -164,22 +164,29 @@
     "objectID": "UpskillingResearchersInML.html#audience-and-runs",
     "href": "UpskillingResearchersInML.html#audience-and-runs",
     "title": "Upskilling researchers in Machine Learning",
-    "section": "Audience and Runs",
-    "text": "Audience and Runs\n\n\nUoA workshops\n\naudience: The University of Auckland (UoA) researchers\ntwo runs\n\nRun #1: March 2023\nRun #2: September 2023\n\nwell-received: filtering by mandatory Expression of Interest (EoI)\n\nabout 100 applications for 30 spots\n\nTODO add Zoom participants plot\n\n\nNeSI workshops\n\n\naudience: Aotearoa – NZ researchers\nML 101\n\nintro to Machine Learning\nstarted in 2021\n7 workshops (in person, online, hybrid)\nTODO attendees in total\n\nML 102\n\nintro to Deep Learning (CNNs)\nstarted in 2022\n2 workshops (online)\nTODO attendees in total"
+    "section": "Audience and Runs –",
+    "text": "Audience and Runs –\n\n\nUoA workshops\n\naudience: The University of Auckland (UoA) researchers\ntwo runs\n\nRun #1: March 2023\nRun #2: September 2023\n\nwell-received: filtering by mandatory Expression of Interest (EoI)\n\nabout 100 applications for 30 spots\n\nTODO add Zoom participants plot\n\n\nNeSI workshops\n\n\naudience: Aotearoa – NZ researchers\nML 101\n\nintro to Machine Learning\nstarted in 2021\n7 workshops (in person, online, hybrid)\nTODO attendees in total\n\nML 102\n\nintro to Deep Learning (CNNs)\nstarted in 2022\n2 workshops (online)\nTODO attendees in total"
   },
   {
-    "objectID": "UpskillingResearchersInML.html#schedule",
-    "href": "UpskillingResearchersInML.html#schedule",
+    "objectID": "UpskillingResearchersInML.html#uoa-wokshops",
+    "href": "UpskillingResearchersInML.html#uoa-wokshops",
     "title": "Upskilling researchers in Machine Learning",
-    "section": "Schedule",
-    "text": "Schedule\n\n\n\nUoA workshops\n\nRun #1:\n\n4h Python\n4h Intro ML\n… PUT CORRECT NUMBERS HERE\n\nRun #2:\n\n–4h Python–\n8h Intro ML\n… PUT CORRECT NUMBERS HERE\n\n\n\nNeSI workshops\n\nML 101: 6 hours\n\nat first in one day\nnow split over 2 mornings\n\nML 102: 3 hours\nindependent workshops\nalmost always online\n\n1 in person (wifi issues)\n1 hybrid (require more organisation)\n\n\n\n\n\nmake it online\nsplit/shorter sessions (bearing in mind the scheduling-challenges for researchers)\nsticking to break-schedule\nfollowing best practices for online audience\n\nWebinar: Tips & tricks for hosting a successful online event"
+    "section": "UoA wokshops",
+    "text": "UoA wokshops\n\n\n\nRun #1:\n\n4h Python\n4h Intro ML\n… PUT CORRECT NUMBERS HERE\n\nRun #2:\n\n–4h Python–\n8h Intro ML\n… PUT CORRECT NUMBERS HERE\n\n\n\nTODO illustration"
   },
   {
-    "objectID": "UpskillingResearchersInML.html#material",
-    "href": "UpskillingResearchersInML.html#material",
+    "objectID": "UpskillingResearchersInML.html#nesi-workshops",
+    "href": "UpskillingResearchersInML.html#nesi-workshops",
     "title": "Upskilling researchers in Machine Learning",
-    "section": "Material",
-    "text": "Material\n\nAn overview of the lessons that were used, adapted, enhanced: \n\n\n\nUoA workshops\n\nTODO paste the table with the linked Slides from Lightning talk\n\n\nNeSI workshops\n\nML 101\n\nScikit-Learn workshop from Jake Vanderplas\nonline recordings (very good to rehearse)\nJupyter notebook based\nvery few changes (updated package version)\n\nML 102\n\nTensorFlow tutorials\nJupyter notebook based\nadded an introduction\nadded section to submit a Slurm job\n\n\n\n\nOverall recommendations: - don’t reinvent the wheel - reuse/adapt content"
+    "section": "NeSI workshops",
+    "text": "NeSI workshops\n\n\n\nML 101: 6 hours\n\nat first in one day\nnow split over 2 mornings\n\nML 102: 3 hours\nindependent workshops\nalmost always online\n\n1 in person (wifi issues)\n1 hybrid (require more organisation)\n\n\n\nTODO illustration"
+  },
+  {
+    "objectID": "UpskillingResearchersInML.html#recommendations",
+    "href": "UpskillingResearchersInML.html#recommendations",
+    "title": "Upskilling researchers in Machine Learning",
+    "section": "Recommendations",
+    "text": "Recommendations\n\nmake it online\nsplit/shorter sessions (bearing in mind the scheduling-challenges for researchers)\nsticking to break-schedule\nfollowing best practices for online audience\n\nWebinar: Tips & tricks for hosting a successful online event"
   },
   {
     "objectID": "UpskillingResearchersInML.html#content",
