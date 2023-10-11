@@ -343,26 +343,16 @@ Maxime Rio, Jens Brinkmann
 
   <p class="date">Tuesday, October 17, 2023</p>
 </section>
-<section id="recommendation-by-organisers" class="title-slide slide level1 center">
-<h1>recommendation by organisers</h1>
-<p>based on <a href="https://conference.eresearch.edu.au/guidelines-presenter/?utm_source=sendgrid.com&amp;utm_medium=email&amp;utm_campaign=website">this</a>: <em>Oral Presentations (15 minutes plus 5 minutes for questions and changeover): Short conversation starters which provide enough information to encourage the audience to engage and seek further information.</em></p>
-</section>
+<section class="slide level2">
 
-<section id="todo" class="title-slide slide level1 center">
-<h1>todo</h1>
-<ul>
-<li>put links for lightning talk and BoF</li>
-<li>put links to NeSI and CeR</li>
-<li>what tables and stats from the Lightning talk to include?</li>
-</ul>
+<!-- based on [this](https://conference.eresearch.edu.au/guidelines-presenter/?utm_source=sendgrid.com&utm_medium=email&utm_campaign=website): *Oral Presentations (15 minutes plus 5 minutes for questions and changeover): Short conversation starters which provide enough information to encourage the audience to engage and seek further information.* -->
 </section>
-
 <section id="about-this-talk" class="title-slide slide level1 center">
 <h1>About this talk</h1>
 <div>
 <ul>
-<li class="fragment">some intro</li>
-<li class="fragment">maybe a ToC?</li>
+<li class="fragment">We want to inform about our experience with Machine Learning (ML) workshops</li>
+<li class="fragment">We want to share some recommendations</li>
 </ul>
 </div>
 </section>
@@ -401,20 +391,20 @@ Maxime Rio, Jens Brinkmann
 <h2>This talk’s focus</h2>
 <ul>
 <li>The <a href="https://conference.eresearch.edu.au/developing-a-carpentries-style-machine-learning-workshop/">Lightning Talk earlier today</a> was mainly about answering ‘<em>what</em>’ we<sup>1</sup> did and metrics</li>
-<li><a href="https://conference.eresearch.edu.au/upskilling-researchers-in-machine-learning/">This talk</a> is focused on the <strong>delivery</strong>
+<li><a href="https://conference.eresearch.edu.au/upskilling-researchers-in-machine-learning/">This current talk</a> is focused on the <strong>delivery</strong>
 <ul>
 <li>two perspectives: CeR and NeSI</li>
 </ul></li>
 <li><a href="https://conference.eresearch.edu.au/ai-skill-training-pathway-bridging-gaps-and-fostering-inclusivity/">BoF</a> (right after this talk) will be a <em>broader discussion</em> of a similar topic</li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p><em>we</em> is CeR (Centre for eResearch) and NeSI (National eScience Infrastructure)</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>by “<em>we</em>” is (<a href="https://eresearch.auckland.ac.nz/">CeR - Centre for eResearch</a>) and <a href="https://www.nesi.org.nz/">NeSI (National eScience Infrastructure)</a></p></li></ol></aside></section>
 <section id="this-talks-goal" class="slide level2">
 <h2>This talk’s Goal</h2>
 <ul>
 <li>share our experience
 <ul>
 <li>lessons learned</li>
-<li>what went well, what didn’t, how we would do it differently</li>
+<li>along the lines of: What went well, what didn’t, how we would do it differently</li>
 </ul></li>
 <li>emphasising on some best-practices</li>
 <li>encourage others to do similar things
@@ -427,28 +417,45 @@ Maxime Rio, Jens Brinkmann
 <section id="this-talks-structure" class="slide level2">
 <h2>This talk’s Structure</h2>
 <ul>
-<li>we won’t talk about the previously mentioned topics <em>one after the other</em></li>
-<li>we picked some perspectives and will share them in parallel</li>
+<li>we won’t talk about this from a NeSI vs.&nbsp;CeR perspective sequentially</li>
+<li>we rather picked some perspectives and will share them in parallel</li>
 </ul>
 </section></section>
 <section>
 <section id="execution-phase-of-the-ml-workshops" class="title-slide slide level1 center">
 <h1>Execution-phase of the ML workshops</h1>
+
+</section>
+<section id="one-goal-2-approaches" class="slide level2">
+<h2>One goal – 2 approaches</h2>
+<div class="columns">
+<div class="column">
 <ul>
-<li>(maybe another sub toc?)</li>
+<li>Introduce researchers to Machine Learning <br> and Deep Learning</li>
+<li>Teaching by doing, i.e.&nbsp;hands-on interactive workshops</li>
+<li>Unrealistic to cover topic exhaustively, more of an <em>ice-breaker</em></li>
+<li>Yet provide practical knowledge to get started
+<ul>
+<li>but not a show and tell of existing commercial solutions</li>
+</ul></li>
 </ul>
+</div><div class="column">
+<p><img data-src="./UpskillingResearchersInML_Assets/BingAIDalle3.jpeg" alt="AI Image"> <em>Figure 1: <a href="https://www.bing.com/images/create/a-cool-photo-showing-machine-learning/6525c46fdd2b4dabb631b07a2a527ba6?id=BeZ%2bVfneQKjueVSP0cGXoQ%3d%3d&amp;view=detailv2&amp;idpp=genimg&amp;idpclose=1&amp;FORM=SYDBIC&amp;ssp=1&amp;setlang=en-NZ&amp;safesearch=moderate">AI Created Photo (DallE3, Bing)</a>.</em> <!-- had to be an AI generated image, we can adjust --></p>
+</div>
+</div>
 </section>
 <section id="how-the-ml-sessions-were-executed" class="slide level2">
 <h2>How the ML sessions were executed</h2>
 <ul>
-<li>CeR and NeSI independently made the decision to base the workshops on existing material (<a href="https://carpentries.org/index.html">The Carpentries</a>) and (<a href="https://github.com/jakevdp">Scikit-learn Tutorial(https://github.com/jakevdp/sklearn_tutorial) by [Jake Vanderplas]</a>)</li>
-<li>Reasoning about what topics to cover and in what depth: Decision to started with foundational ML aspects and to build up</li>
-<li>different session times
+<li>CeR and NeSI independently made the decision to base the workshops on <strong>existing material</strong> (<a href="https://carpentries.org/index.html">The Carpentries</a>) and (<a href="https://github.com/jakevdp">Scikit-learn Tutorial(https://github.com/jakevdp/sklearn_tutorial) by [Jake Vanderplas]</a>)</li>
+<li>Scope: Decision to started with <strong>foundational</strong> ML aspects and to build up from there</li>
+<li>Research field agnostic</li>
+<li><strong>Hands-on</strong> approach
 <ul>
-<li>Column left: show details of ML101 and ML201</li>
-<li>Column right: show details of Carp Sessions</li>
+<li><strong>no</strong> show and tell of existing commercial solutions</li>
+<li><strong>no</strong> theoretical lectures</li>
+<li><strong>no</strong> deep dive into the maths behind ML</li>
 </ul></li>
-<li>Maybe a comparison of content covered</li>
 </ul>
 </section>
 <section id="resoures-used" class="slide level2">
@@ -466,27 +473,8 @@ Maxime Rio, Jens Brinkmann
 </ul>
 </div>
 </div>
-</section></section>
-<section id="one-goal-2-approaches" class="title-slide slide level1 center">
-<h1>One goal – 2 approaches</h1>
-<div class="columns">
-<div class="column">
-<ul>
-<li>Introduce researchers to Machine Learning <br> and Deep Learning</li>
-<li>Teaching by doing, i.e.&nbsp;hands-on interactive workshops</li>
-<li>Unrealistic to cover topic exhaustively, more of an <em>ice-breaker</em></li>
-<li>Yet provide practical knowledge to get started
-<ul>
-<li>but not a show and tell of existing commercial solutions</li>
-</ul></li>
-</ul>
-</div><div class="column">
-<p><img data-src="./UpskillingResearchersInML_Assets/BingAIDalle3.jpeg" alt="AI Image"> <em>Figure 1: <a href="https://www.bing.com/images/create/a-cool-photo-showing-machine-learning/6525c46fdd2b4dabb631b07a2a527ba6?id=BeZ%2bVfneQKjueVSP0cGXoQ%3d%3d&amp;view=detailv2&amp;idpp=genimg&amp;idpclose=1&amp;FORM=SYDBIC&amp;ssp=1&amp;setlang=en-NZ&amp;safesearch=moderate">AI Created Photo (DallE3, Bing)</a>.</em> <!-- had to be an AI generated image, we can adjust --></p>
-</div>
-</div>
 <p>Let’s dissect some key aspects of the 2 approaches!</p>
-</section>
-
+</section></section>
 <section>
 <section id="some-numbers" class="title-slide slide level1 center">
 <h1>Some numbers</h1>
@@ -535,6 +523,7 @@ Maxime Rio, Jens Brinkmann
 </section>
 <section id="schedule" class="slide level2">
 <h2>Schedule</h2>
+<!-- so this is purely about the hours and the split of content over these hours -->
 <div class="columns">
 <div class="column">
 <p><strong>UoA workshops</strong></p>
@@ -570,19 +559,26 @@ Maxime Rio, Jens Brinkmann
 </ul>
 </div>
 </div>
-<p>TODO here some recommendations:</p>
 <ul>
 <li>make it online</li>
 <li>split/shorter sessions (bearing in mind the scheduling-challenges for researchers)</li>
+<li>sticking to break-schedule</li>
+<li>following best practices for online audience
+<ul>
+<li><a href="https://youtu.be/XTeCHUZ2H_w?si=OD4GDRNSV460zK7O">Webinar: Tips &amp; tricks for hosting a successful online event</a></li>
+</ul></li>
 </ul>
 </section>
 <section id="material" class="slide level2">
 <h2>Material</h2>
+<ul>
+<li>An overview of the lessons that were used, adapted, enhanced: <!-- IS THIS PREVIOUS STATEMENT WHAT YOU HAD IN MIND? --></li>
+</ul>
 <div class="columns">
 <div class="column">
 <p><strong>UoA workshops</strong></p>
 <ul>
-<li>TODO WHAT copy-paste of the table of Lightning talk?</li>
+<li>TODO paste the table with the linked Slides from Lightning talk</li>
 </ul>
 </div><div class="column">
 <p><strong>NeSI workshops</strong></p>
@@ -604,11 +600,13 @@ Maxime Rio, Jens Brinkmann
 </ul>
 </div>
 </div>
-<p>TODO here some recommendations: reuse/adapt content, don’t start from scratch</p>
+<p>Overall recommendations: - don’t reinvent the wheel - reuse/adapt content</p>
 </section>
 <section id="content" class="slide level2">
 <h2>Content</h2>
-<!-- I AM NOT SURE HOW CONTENT DIFFERS FROM MATERIAL? -->
+<ul>
+<li>this differs from the previous perspective as it is more about the abstract topics covered <!-- IS THIS PREVIOUS STATEMENT WHAT YOU HAD IN MIND? --></li>
+</ul>
 <div class="columns">
 <div class="column" style="width:60%;">
 <p><strong>Machine Learning</strong></p>
@@ -621,6 +619,7 @@ Maxime Rio, Jens Brinkmann
 <li>ensemble models (random forests)</li>
 <li>validation (train/test, cross-validation)</li>
 </ul>
+<!-- we should include the DeepLearning topic here, too? Or was the point for you to show: This was covered by both of us? -->
 </div><div class="column" style="width:40%;">
 <p>TODO add a nice image <!-- WHAT KIND OF IMAGE DID YOU HAVE IN MIND?? --></p>
 </div>
@@ -656,6 +655,8 @@ Maxime Rio, Jens Brinkmann
 <h1>How to get in touch</h1>
 <ul>
 <li>email abc</li>
+<li>maybe a QR code or two</li>
+<li></li>
 </ul>
 <!-- snippet to create a slide ;-)
 
