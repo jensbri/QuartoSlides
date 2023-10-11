@@ -179,7 +179,7 @@
     "href": "UpskillingResearchersInML.html#nesi-workshops-1",
     "title": "Upskilling researchers in Machine Learning",
     "section": "NeSI workshops",
-    "text": "NeSI workshops\n\n\n\n\n\nAlmost always online\n\n1 in person (had wifi issues)\n1 hybrid (require more organisation)\n\nUse Jupyter-on-NeSI\n\nJupyterHub platform\nML101: 2 cores & 4 GB of RAM\nML102: 4 cores & 8 GB of RAM\n\nUse Slurm based job for GPU training (a little bit)\nTip: make sure the Platform team does not schedule upgrades that day…"
+    "text": "NeSI workshops\n\n\n\n\n\nAlmost always online\n\n1 in person (had wifi issues)\n1 hybrid (require more organisation)\n\nUse Jupyter-on-NeSI\n\nJupyterHub platform\nRequire a NeSI account\nML101: 2 cores & 4 GB of RAM\nML102: 4 cores & 8 GB of RAM\n\nUse Slurm based job for GPU training (a little bit)\nTip: make sure the Platform team does not schedule upgrades that day…"
   },
   {
     "objectID": "UpskillingResearchersInML.html#recommendations-1",
@@ -235,7 +235,7 @@
     "href": "UpskillingResearchersInML.html#section",
     "title": "Upskilling researchers in Machine Learning",
     "section": "",
-    "text": "Machine Learning\n\nData preparation\nSupervised vs. unsupervised learning\n\nregression, classification\ncluster, dimensionality reduction\n\nEnsemble models (random forests)\nValidation (train/test, cross-validation)\n\n\nDeep Learning"
+    "text": "Machine Learning\n\nData preparation\nSupervised vs. unsupervised learning\n\nregression, classification\ncluster, dimensionality reduction\n\nEnsemble models (random forests)\nValidation (train/test, cross-validation)\n\n\nDeep Learning\nTODO add contents from workshops"
   },
   {
     "objectID": "UpskillingResearchersInML.html#recommendations-4",
