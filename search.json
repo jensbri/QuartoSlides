@@ -147,13 +147,6 @@
     "text": "Tables\n\n\n\nA simple table in \\(\\LaTeX\\) syntax:\n\n\\begin{table}[]\n\\caption{My Example Table}\n\\label{tab:my-table}\n\\begin{tabular}{|l|l|l|l|l|}\n\\hline\ncountry     & 1999   & 2000   &  &  \\\\ \\hline\nAfghanistan & 745    & 2666   &  &  \\\\ \\hline\nBrazil      & 37737  & 80488  &  &  \\\\ \\hline\nChina       & 212258 & 213766 &  &  \\\\ \\hline\n\\end{tabular}\n\\end{table}\n\n\nAlternatively using markdown syntax:\n\n| country     | 1999   | 2000   |   |   |\n|-------------|--------|--------|---|---|\n| Afghanistan | 745    | 2666   |   |   |\n| Brazil      | 37737  | 80488  |   |   |\n| China       | 212258 | 213766 |   |   |\n\n\n\nTo be honest:\n\nBoth are a pain to format by hand\nYou shouldn’t work with your data in these. These are for publishing only.\nSome see spreadsheet software (MSExcel, Google Sheets, etc.) just suited for data entry, Python, R, OpenRefine, etc. are better alternatives whose learning curve isn’t as steep as you might expect and relevant sessions are also provided at this year’s ResBaz (see pointers)"
   },
   {
-    "objectID": "UpskillingResearchersInML.html#how-the-ml-sessions-were-executed",
-    "href": "UpskillingResearchersInML.html#how-the-ml-sessions-were-executed",
-    "title": "Upskilling researchers in Machine Learning",
-    "section": "How the ML sessions were executed",
-    "text": "How the ML sessions were executed\n\nCeR and NeSI independently made the decision to base the workshops on existing material (The Carpentries) and (Scikit-learn Tutorial by Jake Vanderplas)"
-  },
-  {
     "objectID": "UpskillingResearchersInML.html#resoures-used",
     "href": "UpskillingResearchersInML.html#resoures-used",
     "title": "Upskilling researchers in Machine Learning",
@@ -168,11 +161,11 @@
     "text": "Audience and Runs –\n\n\nUoA workshops\n\naudience: The University of Auckland (UoA) researchers\ntwo runs\n\nRun #1: March 2023\nRun #2: September 2023\n\nwell-received: filtering by mandatory Expression of Interest (EoI)\n\nabout 100 applications for 30 spots\n\nTODO add Zoom participants plot\n\n\nNeSI workshops\n\n\naudience: Aotearoa – NZ researchers\nML 101\n\nintro to Machine Learning\nstarted in 2021\n7 workshops (in person, online, hybrid)\nTODO attendees in total\n\nML 102\n\nintro to Deep Learning (CNNs)\nstarted in 2022\n2 workshops (online)\nTODO attendees in total"
   },
   {
-    "objectID": "UpskillingResearchersInML.html#uoa-wokshops",
-    "href": "UpskillingResearchersInML.html#uoa-wokshops",
+    "objectID": "UpskillingResearchersInML.html#uoa-workshops",
+    "href": "UpskillingResearchersInML.html#uoa-workshops",
     "title": "Upskilling researchers in Machine Learning",
-    "section": "UoA wokshops",
-    "text": "UoA wokshops\n\n\n\nRun #1:\n\n4h Python\n4h Intro ML\n… PUT CORRECT NUMBERS HERE\n\nRun #2:\n\n–4h Python–\n8h Intro ML\n… PUT CORRECT NUMBERS HERE\n\n\n\nTODO illustration"
+    "section": "UoA workshops",
+    "text": "UoA workshops\n\n\n\nRun #1:\n\n4h Python\n4h Intro ML\n… PUT CORRECT NUMBERS HERE\n\nRun #2:\n\n–4h Python–\n8h Intro ML\n… PUT CORRECT NUMBERS HERE\n\n\n\nTODO illustration"
   },
   {
     "objectID": "UpskillingResearchersInML.html#nesi-workshops",
@@ -189,18 +182,39 @@
     "text": "Recommendations\n\nmake it online\nsplit/shorter sessions (bearing in mind the scheduling-challenges for researchers)\nsticking to break-schedule\nfollowing best practices for online audience\n\nWebinar: Tips & tricks for hosting a successful online event"
   },
   {
-    "objectID": "UpskillingResearchersInML.html#content",
-    "href": "UpskillingResearchersInML.html#content",
+    "objectID": "UpskillingResearchersInML.html#uoa-workshops-1",
+    "href": "UpskillingResearchersInML.html#uoa-workshops-1",
     "title": "Upskilling researchers in Machine Learning",
-    "section": "Content",
-    "text": "Content\n\nthis differs from the previous perspective as it is more about the abstract topics covered \n\n\n\nMachine Learning\n\nsupervised vs. unsupervised\n\nregression, classification\ncluster, dimensionality reduction\n\nensemble models (random forests)\nvalidation (train/test, cross-validation)\n\n\n\nTODO add a nice image"
+    "section": "UoA workshops",
+    "text": "UoA workshops\n\nThe Carpentries\nTODO paste the table with the linked Slides from Lightning talk"
   },
   {
-    "objectID": "UpskillingResearchersInML.html#audience",
-    "href": "UpskillingResearchersInML.html#audience",
+    "objectID": "UpskillingResearchersInML.html#nesi-workshops-1",
+    "href": "UpskillingResearchersInML.html#nesi-workshops-1",
     "title": "Upskilling researchers in Machine Learning",
-    "section": "Audience",
-    "text": "Audience\nTODO some more generic recommendations around EOIs, selection process, pre-workshop communication, teaching crew (get helpers)"
+    "section": "NeSI workshops",
+    "text": "NeSI workshops\n\n\nTODO add image\n\nNeSI workshops\n\nML 101\n\nScikit-learn Tutorial by Jake Vanderplas\nonline recordings (very good to rehearse)\nJupyter notebook based\nvery few changes (updated package version)\n\nML 102\n\nTensorFlow tutorials\nJupyter notebook based\nadded an introduction\nadded section to submit a Slurm job"
+  },
+  {
+    "objectID": "UpskillingResearchersInML.html#recommendations-1",
+    "href": "UpskillingResearchersInML.html#recommendations-1",
+    "title": "Upskilling researchers in Machine Learning",
+    "section": "Recommendations",
+    "text": "Recommendations\nCeR and NeSI independently made the decision to base the workshops on existing material\n\ndon’t reinvent the wheel\nreuse/adapt content"
+  },
+  {
+    "objectID": "UpskillingResearchersInML.html#section",
+    "href": "UpskillingResearchersInML.html#section",
+    "title": "Upskilling researchers in Machine Learning",
+    "section": "",
+    "text": "Machine Learning\n\nsupervised vs. unsupervised\n\nregression, classification\ncluster, dimensionality reduction\n\nensemble models (random forests)\nvalidation (train/test, cross-validation)\n\n\nDeep Learning"
+  },
+  {
+    "objectID": "UpskillingResearchersInML.html#recommendations-2",
+    "href": "UpskillingResearchersInML.html#recommendations-2",
+    "title": "Upskilling researchers in Machine Learning",
+    "section": "Recommendations",
+    "text": "Recommendations\n\nrandom forest are a good first non-linear model to learn\n\nintuitive to understand how it works\ngood performances on tabular data\ndoesn’t require too much care in terms of data preparation\n\nresist the temptation of MLP (multi-layer perceptron) for an ML intro\n\nrequire more notions (architecture, training, data preprocessing, …)\nkeep it for Deep Learning introduction"
   },
   {
     "objectID": "UpskillingResearchersInML.html#platform",
