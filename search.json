@@ -147,46 +147,18 @@
     "text": "Tables\n\n\n\nA simple table in \\(\\LaTeX\\) syntax:\n\n\\begin{table}[]\n\\caption{My Example Table}\n\\label{tab:my-table}\n\\begin{tabular}{|l|l|l|l|l|}\n\\hline\ncountry     & 1999   & 2000   &  &  \\\\ \\hline\nAfghanistan & 745    & 2666   &  &  \\\\ \\hline\nBrazil      & 37737  & 80488  &  &  \\\\ \\hline\nChina       & 212258 & 213766 &  &  \\\\ \\hline\n\\end{tabular}\n\\end{table}\n\n\nAlternatively using markdown syntax:\n\n| country     | 1999   | 2000   |   |   |\n|-------------|--------|--------|---|---|\n| Afghanistan | 745    | 2666   |   |   |\n| Brazil      | 37737  | 80488  |   |   |\n| China       | 212258 | 213766 |   |   |\n\n\n\nTo be honest:\n\nBoth are a pain to format by hand\nYou shouldn’t work with your data in these. These are for publishing only.\nSome see spreadsheet software (MSExcel, Google Sheets, etc.) just suited for data entry, Python, R, OpenRefine, etc. are better alternatives whose learning curve isn’t as steep as you might expect and relevant sessions are also provided at this year’s ResBaz (see pointers)"
   },
   {
-    "objectID": "UpskillingResearchersInML.html#this-talks-focus",
-    "href": "UpskillingResearchersInML.html#this-talks-focus",
-    "title": "Upskilling researchers in Machine Learning",
-    "section": "This talk’s focus",
-    "text": "This talk’s focus\n\nThe Lightning Talk earlier today was mainly about answering ‘what’ we1 did and metrics\nThis current talk is focused on the delivery\n\ntwo perspectives: CeR and NeSI\n\nBoF (right after this talk) will be a broader discussion of a similar topic\n\nby “we” is (CeR - Centre for eResearch) and NeSI (National eScience Infrastructure)"
-  },
-  {
-    "objectID": "UpskillingResearchersInML.html#this-talks-goal",
-    "href": "UpskillingResearchersInML.html#this-talks-goal",
-    "title": "Upskilling researchers in Machine Learning",
-    "section": "This talk’s Goal",
-    "text": "This talk’s Goal\n\nshare our experience\n\nlessons learned\nalong the lines of: What went well, what didn’t, how we would do it differently\n\nemphasising on some best-practices\nencourage others to do similar things\n\nbecause the time is now\nyou need less resources than you might expect"
-  },
-  {
-    "objectID": "UpskillingResearchersInML.html#this-talks-structure",
-    "href": "UpskillingResearchersInML.html#this-talks-structure",
-    "title": "Upskilling researchers in Machine Learning",
-    "section": "This talk’s Structure",
-    "text": "This talk’s Structure\n\nwe won’t talk about this from a NeSI vs. CeR perspective sequentially\nwe rather picked some perspectives and will share them in parallel"
-  },
-  {
-    "objectID": "UpskillingResearchersInML.html#one-goal-2-approaches",
-    "href": "UpskillingResearchersInML.html#one-goal-2-approaches",
-    "title": "Upskilling researchers in Machine Learning",
-    "section": "One goal – 2 approaches",
-    "text": "One goal – 2 approaches\n\n\n\nIntroduce researchers to Machine Learning  and Deep Learning\nTeaching by doing, i.e. hands-on interactive workshops\nUnrealistic to cover topic exhaustively, more of an ice-breaker\nYet provide practical knowledge to get started\n\nbut not a show and tell of existing commercial solutions\n\n\n\n Figure 1: AI Created Photo (DallE3, Bing)."
-  },
-  {
     "objectID": "UpskillingResearchersInML.html#how-the-ml-sessions-were-executed",
     "href": "UpskillingResearchersInML.html#how-the-ml-sessions-were-executed",
     "title": "Upskilling researchers in Machine Learning",
     "section": "How the ML sessions were executed",
-    "text": "How the ML sessions were executed\n\nCeR and NeSI independently made the decision to base the workshops on existing material (The Carpentries) and (Scikit-learn Tutorial(https://github.com/jakevdp/sklearn_tutorial) by [Jake Vanderplas])\nScope: Decision to started with foundational ML aspects and to build up from there\nResearch field agnostic\nHands-on approach\n\nno show and tell of existing commercial solutions\nno theoretical lectures\nno deep dive into the maths behind ML"
+    "text": "How the ML sessions were executed\n\nCeR and NeSI independently made the decision to base the workshops on existing material (The Carpentries) and (Scikit-learn Tutorial(https://github.com/jakevdp/sklearn_tutorial) by [Jake Vanderplas])"
   },
   {
     "objectID": "UpskillingResearchersInML.html#resoures-used",
     "href": "UpskillingResearchersInML.html#resoures-used",
     "title": "Upskilling researchers in Machine Learning",
     "section": "Resoures used",
-    "text": "Resoures used\n\n\nNeSI  - (several iterations of the workshops) in-person with own challenges then online only event: Zoom.us - byod - Jupyter Hub\n\nCeR\n\nonline only event: Zoom.us\nbyod\ndeviation from ‘The Carpentries’: No local Python installs\nGoogle Colab\n\n\n\nLet’s dissect some key aspects of the 2 approaches!"
+    "text": "Resoures used\n\n\nNeSI\n\n\n(several iterations of the workshops) in-person with own challenges then online only event: Zoom.us\nbyod\nJupyter Hub\n\n\nCeR\n\nonline only event: Zoom.us\nbyod\ndeviation from ‘The Carpentries’: No local Python installs\nGoogle Colab"
   },
   {
     "objectID": "UpskillingResearchersInML.html#audience-and-runs",
