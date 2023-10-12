@@ -172,7 +172,7 @@
     "href": "UpskillingResearchersInML.html#uoa-workshops-1",
     "title": "Upskilling Researchers in Machine Learning",
     "section": "UoA workshops",
-    "text": "UoA workshops\n\n\n\nonline only event: Zoom.us\nBYOD (bring your own device)\nmajor deviation from The Carpentries: No local Python installs\nGoogle Colab (a browser-based Jupyter Notebook using Google infrastructure (a virtual machine, GPU can be added))\n\n\n\n\n\nGoogle Colab in a Browser"
+    "text": "UoA workshops\n\n\n\nonline only event: Zoom.us\nBYOD (bring your own device)\nmajor deviation from The Carpentries: No local Python installs\nGoolge Colab  (a browser-based Jupyter Notebook using Google infrastructure (a virtual machine, GPU can be added))\n\n\n\n\n\nGoogle Colab in a Browser"
   },
   {
     "objectID": "UpskillingResearchersInML.html#nesi-workshops-1",
@@ -186,7 +186,7 @@
     "href": "UpskillingResearchersInML.html#recommendations-1",
     "title": "Upskilling Researchers in Machine Learning",
     "section": "Recommendations",
-    "text": "Recommendations\n\nMake it online\nLeverage online computational platforms (Google Colab, JupyterHub, Open OnDemand…)\nNo need for GPU to start (or small ones on Colab available)"
+    "text": "Recommendations\n\nMake it online\nLeverage online computational platforms (Google Colab, JupyterHub, Open OnDemand…)\nNo need for GPU to start (or small ones on Google Colab available)"
   },
   {
     "objectID": "UpskillingResearchersInML.html#uoa-workshops-2",
@@ -238,11 +238,11 @@
     "text": "Machine Learning\n\nData preparation\nSupervised vs. unsupervised learning\n\nregression\nclassification\nclustering\ndimensionality reduction\n\nEnsemble models (random forests)\nValidation\n\ntrain/test/validation split\ncross-validation\nvalidation and learning curves\n\n\n\nDeep Learning\n\nModel architectures\n\nMulti-layer perceptron\nConvolutional neural network  (CNN | computer vision)\n\nModel training\n\noptimisers and mini-batch\noverfitting and early stopping\ndata augmentation\ndropout, batch normalisation, …\n\nTransfer learning"
   },
   {
-    "objectID": "UpskillingResearchersInML.html#ml-recommendations",
-    "href": "UpskillingResearchersInML.html#ml-recommendations",
+    "objectID": "UpskillingResearchersInML.html#recommendations-4",
+    "href": "UpskillingResearchersInML.html#recommendations-4",
     "title": "Upskilling Researchers in Machine Learning",
-    "section": "ML-Recommendations",
-    "text": "ML-Recommendations\n\nRandom forest is a good first non-linear model to learn\n\nintuitive to understand how it works\ngood performances on tabular data\ndoesn’t require too much care in terms of data preparation\n\nResist the temptation of MLP (multi-layer perceptron) for an ML intro\n\nrequire more notions (architecture, training, data preprocessing, …)\nkeep it for Deep Learning introduction"
+    "section": "Recommendations",
+    "text": "Recommendations\n\nRandom forest is a good first non-linear model to learn\n\nintuitive to understand how it works\ngood performances on tabular data\ndoesn’t require too much care in terms of data preparation\n\nResist the temptation of MLP (multi-layer perceptron) for an ML intro\n\nrequire more notions (architecture, training, data preprocessing, …)\nkeep it for Deep Learning introduction"
   },
   {
     "objectID": "Plots.html",
@@ -305,14 +305,14 @@
     "href": "LightningTalk.html#background",
     "title": "Developing a Carpentries-style Machine Learning workshop",
     "section": "Background",
-    "text": "Background\n\n\nMachine Learning (ML) or Artificial Intelligence (AI) are without a doubt a hot topics\nEmpowering reserachers to understand and use ML seems rewarding, but also challenging\nThe Carpentries  offer a proven teaching-style accounting for participants with limited IT experience\n\nCore aspects\n\nlive-coding\npositive attitude towards mistakes\nminimal prereuisites\nmaximising participant invovlement\n\n\nThe CeR (Centre for eResearch) at the University of Auckland acquired funding to further develop and run a series of workshops (also referred to as ML-Carp)\nTwo iterations (referred to as Run #1 and Run#2) took place so far. In March and September 2023."
+    "text": "Background\n\nMachine Learning (ML) or Artificial Intelligence (AI) are without a doubt a hot topics\nEmpowering reserachers to understand and use ML seems rewarding, but also challenging\nThe Carpentries  offer a proven teaching-style accounting for participants with limited IT experience\n\nCore aspects\n\nlive-coding\npositive attitude towards mistakes\nminimal prereuisites\nmaximising participant invovlement\n\n\nThe CeR (Centre for eResearch) at the University of Auckland acquired funding to further develop and run a series of workshops (also referred to as ML-Carp)\nTwo iterations (referred to as Run #1 and Run#2) took place so far. In March and September 2023."
   },
   {
     "objectID": "LightningTalk.html#lesson-overview",
     "href": "LightningTalk.html#lesson-overview",
     "title": "Developing a Carpentries-style Machine Learning workshop",
     "section": "Lesson Overview",
-    "text": "Lesson Overview\n\n\n\n\nLesson Title\nStatus\nRun #1\nRun #2\n\n\n\n\n\nProgramming with Python\nReleased\nMon, Tue\n-\n\n\n\nIntroduction to Machine Learning with Scikit Learn\nAlpha\nWed, Thu\nMon, Tue\n\n\n\nIntroduction to Deep Learning\nBeta\nFri\nWed, Thu\n\n\n\n\n\n\n\nFour hour sessions over four consecutive afternoon\n\n\n\n\nDepending on Maturity, sessions were run with a small changes or substantially (re)developed.\n\n\n\n\nOne major change was Goolge Colab  being used instead of local Python installs."
+    "text": "Lesson Overview\n\n\n\nLesson Title\nStatus\nRun #1\nRun #2\n\n\n\n\n\nProgramming with Python\nReleased\nMon, Tue\n-\n\n\n\nIntroduction to Machine Learning with Scikit Learn\nAlpha\nWed, Thu\nMon, Tue\n\n\n\nIntroduction to Deep Learning\nBeta\nFri\nWed, Thu\n\n\n\n\n\n\n\n \n\n\n\n\n\n4h sessions over 4 consecutive afternoons\n\n\n\n\n\nDepending on Maturity, sessions were run with a small changes or substantially (re)developed.\nOne major change was Goolge Colab  being used instead of local Python installs."
   },
   {
     "objectID": "LightningTalk.html#lesson-details",
@@ -361,6 +361,6 @@
     "href": "LightningTalk.html#participants-feelings---statements-and-adjustments",
     "title": "Developing a Carpentries-style Machine Learning workshop",
     "section": "Participants’ Feelings - Statements and Adjustments",
-    "text": "Participants’ Feelings - Statements and Adjustments\n\n\n\nobservation: Even at the very end of the sessions, questions, participantion and interest didn’t cease\n\n\n\n“Python lesson might be separated”\n\nRun #2: Python was removed from the curriculum\n\n“more breaks”\n\nRun #2: better adherence to schedule\n\n“stick to one coding interface”\n\nRun #2: only Colab, VSC etc. was linked to for post-workshop engagement\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nAll statements are positively phrased; overall the results confirm a poasitive appreciation."
+    "text": "Participants’ Feelings - Statements and Adjustments\n\n\n\nobservation: Even at the very end of the sessions, questions, participantion and interest didn’t cease\n“Python lesson might be separated”\n\nRun #2: Python was removed from the curriculum\n\n“more breaks”\n\nRun #2: better adherence to schedule\n\n“stick to one coding interface”\n\nRun #2: only Colab, VSC etc. was linked to for post-workshop engagement\n\n\n\n\n\n\n\n\nNote\n\n\nAll statements are positively phrased; overall the results confirm a poasitive appreciation."
   }
 ]
