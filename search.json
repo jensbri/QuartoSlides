@@ -193,7 +193,7 @@
     "href": "UpskillingResearchersInML.html#uoa-workshops-2",
     "title": "Upskilling researchers in Machine Learning",
     "section": "UoA workshops",
-    "text": "UoA workshops\n\n\n\nRun #1:\n\ntwo afternoons (8h) Python\none afternoon (4h) Intro to ML\ntwo afternoons (8h) DL\n\nRun #2:\n\ntwo afternoons (8h) ML\ntwo afternoons (8h) DL\n\n\n\nTODO illustration MAYBE TILES OF LIGHTNING TALK PLOTS?"
+    "text": "UoA workshops\n\n\nRun #1\n\n\n\nTime Budget\nActivity\n\n\n\n\ntwo afternoons (8h)\nPython\n\n\none afternoon (4h)\nML\n\n\ntwo afternoons (8h)\nDL\n\n\n\nRun #2 \n\n\n\nTime Budget\nActivity\n\n\n\n\ntwo afternoons (8h)\nML\n\n\ntwo afternoons (8h)\nDL\n\n\n\n\n\nall workshops took place in the same week\nno mixing and matching, signing up = coming to all sessions\nMajor adjustment for Run #2: Python as a prerequisite, not part of the series"
   },
   {
     "objectID": "UpskillingResearchersInML.html#nesi-workshops-2",
@@ -203,11 +203,11 @@
     "text": "NeSI workshops\n\n\n\nML 101\n\n6 hours with 3 breaks ☕\nat first in one day\nnow split over 2 mornings\n\nML 102\n\n3 hours with 2 breaks 🍵\n\nIndependent workshops\nBut organised “close” to each other\n\n\n ML101 runsheet, used to keep track of time"
   },
   {
-    "objectID": "UpskillingResearchersInML.html#workshop-recommendations",
-    "href": "UpskillingResearchersInML.html#workshop-recommendations",
+    "objectID": "UpskillingResearchersInML.html#recommendations-2",
+    "href": "UpskillingResearchersInML.html#recommendations-2",
     "title": "Upskilling researchers in Machine Learning",
-    "section": "Workshop Recommendations",
-    "text": "Workshop Recommendations\n\n\nSplit/shorter sessions (bearing in mind the scheduling-challenges for researchers)\nSticking to break-schedule\nFollowing best practices for online audience, among which\n\nget a Zoom DJ, some helpers, get multiple co-hosts\nkeep a QA document\nprepare your intro and outro\nmake attendees join from same computer running the code\nWebinar: Tips & tricks for hosting a successful online event"
+    "section": "Recommendations",
+    "text": "Recommendations\n\nSplit/shorter sessions (bearing in mind the scheduling-challenges for researchers)\nSticking to break-schedule\nFollowing best practices for online audience, among which\n\nget a Zoom DJ, some helpers, get multiple co-hosts\nkeep a QA document\nprepare your intro and outro\nmake attendees join from same computer running the code\nWebinar: Tips & tricks for hosting a successful online event"
   },
   {
     "objectID": "UpskillingResearchersInML.html#uoa-workshops-3",
@@ -224,8 +224,8 @@
     "text": "NeSI workshops\n\n\n My rehearsal and source of inspiration 💓\n\nNeSI workshops\n\nML 101 – github.com/nesi/sklearn_tutorial\n\nScikit-learn Tutorial by Jake Vanderplas\nexisted online recordings  (very good to rehearse!)\nJupyter notebook based\nvery few changes (updated package version)\n\nML 102 – github.com/nesi/ml102_workshop\n\nTensorFlow tutorials\nJupyter notebook based\nadded an introduction\nadded section to submit a Slurm job"
   },
   {
-    "objectID": "UpskillingResearchersInML.html#recommendations-2",
-    "href": "UpskillingResearchersInML.html#recommendations-2",
+    "objectID": "UpskillingResearchersInML.html#recommendations-3",
+    "href": "UpskillingResearchersInML.html#recommendations-3",
     "title": "Upskilling researchers in Machine Learning",
     "section": "Recommendations",
     "text": "Recommendations\nCeR and NeSI independently made the decision to base the workshops on existing material.\n\nDon’t reinvent the wheel\nReuse/adapt content"
@@ -235,7 +235,7 @@
     "href": "UpskillingResearchersInML.html#section",
     "title": "Upskilling researchers in Machine Learning",
     "section": "",
-    "text": "Machine Learning\n\nData preparation\nSupervised vs. unsupervised learning\n\nregression\nclassification\nclustering\ndimensionality reduction\n\nEnsemble models (random forests)\nValidation\n\ntrain/test/validation split\ncross-validation\nvalidation and learning curves\n\n\n\nDeep Learning\n\nModel architectures\n\nMulti-layer perceptron\nConvolutional neural network (computer vision)\nRecurrent neural network (sequences, times series)\n\nModel training\n\noptimisers and mini-batch\noverfitting and early stopping\ndata augmentation\ndropout, batch normalisation, …\n\nTransfer learning"
+    "text": "Machine Learning\n\nData preparation\nSupervised vs. unsupervised learning\n\nregression\nclassification\nclustering\ndimensionality reduction\n\nEnsemble models (random forests)\nValidation\n\ntrain/test/validation split\ncross-validation\nvalidation and learning curves\n\n\n\nDeep Learning\n\nModel architectures\n\nMulti-layer perceptron\nConvolutional neural network  (CNN | computer vision)\n\nModel training\n\noptimisers and mini-batch\noverfitting and early stopping\ndata augmentation\ndropout, batch normalisation, …\n\nTransfer learning"
   },
   {
     "objectID": "UpskillingResearchersInML.html#ml-recommendations",
