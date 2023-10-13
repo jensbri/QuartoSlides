@@ -172,14 +172,14 @@
     "href": "UpskillingResearchersInML.html#uoa-workshops-1",
     "title": "Upskilling Researchers in Machine Learning",
     "section": "UoA workshops",
-    "text": "UoA workshops\n\n\n\nonline only event: Zoom.us\nBYOD (bring your own device)\nmajor deviation from The Carpentries: No local Python installs\nGoolge Colab  (a browser-based Jupyter Notebook using Google infrastructure (a virtual machine, GPU can be added))\n\n\n\n\n\nGoogle Colab in a Browser"
+    "text": "UoA workshops\n\n\n\nonline only event: Zoom.us\nBYOD (bring your own device)\nmajor deviation from The Carpentries: No local Python installs\nGoolge Colab ,a browser-based Jupyter Notebook using Google infrastructure (a virtual machine; a GPU can be added)\n\n\n\n\n\nGoogle Colab in a Browser"
   },
   {
     "objectID": "UpskillingResearchersInML.html#nesi-workshops-1",
     "href": "UpskillingResearchersInML.html#nesi-workshops-1",
     "title": "Upskilling Researchers in Machine Learning",
     "section": "NeSI workshops",
-    "text": "NeSI workshops\n\n\n\n JupyterLab session running on Jupyter-on-NeSI\n\n\nOnline and in person\n\n2 delivered in person (1 had wifi issues 😓)\n5 delivered online\n\nUse Jupyter-on-NeSI\n\nJupyterHub platform\nRequire a NeSI account\nML101: 2 cores & 4 GB of RAM\nML102: 4 cores & 8 GB of RAM\n\nUse Slurm-based job for GPU training (a little bit)\nTip: make sure the Platform team does not schedule upgrades that day 😬…"
+    "text": "NeSI workshops\n\n\n\n JupyterLab session running on Jupyter-on-NeSI\n\n\nOnline and in person\n\n2 delivered in person (1 had wifi issues 😓)\n5 delivered online\n\nUse Jupyter-on-NeSI\n\nJupyterHub platform\nRequires a NeSI account\nML101: 2 cores & 4 GB of RAM\nML102: 4 cores & 8 GB of RAM\n\nUse Slurm-based job for GPU training (a little bit)\nTip: make sure the Platform team does not schedule upgrades that day 😬…"
   },
   {
     "objectID": "UpskillingResearchersInML.html#recommendations-1",
@@ -207,7 +207,7 @@
     "href": "UpskillingResearchersInML.html#recommendations-2",
     "title": "Upskilling Researchers in Machine Learning",
     "section": "Recommendations",
-    "text": "Recommendations\n\nSplit/shorter sessions (bearing in mind the scheduling challenges for researchers)\nSticking to break-schedule\nFollowing best practices for online audiences, among which\n\nget a Zoom DJ, some helpers, get multiple co-hosts\nkeep a QA document\nprepare your intro and outro\nmake attendees join from the same computer running the code\nWebinar: Tips & tricks for hosting a successful online event"
+    "text": "Recommendations\n\nSplit/shorter sessions (bearing in mind the scheduling challenges for researchers)\nStick to scheduled breaks\nFollow best practices for online audiences:\n\nget a Zoom DJ, some helpers, get multiple co-hosts\nkeep a QA document\nprepare your intro and outro\nmake attendees join from the same computer running the code\nWebinar: Tips & tricks for hosting a successful online event"
   },
   {
     "objectID": "UpskillingResearchersInML.html#uoa-workshops-3",
@@ -221,7 +221,7 @@
     "href": "UpskillingResearchersInML.html#nesi-workshops-3",
     "title": "Upskilling Researchers in Machine Learning",
     "section": "NeSI workshops",
-    "text": "NeSI workshops\n\n\n My rehearsal and source of inspiration 💓\n\nNeSI workshops\n\nML 101 – github.com/nesi/sklearn_tutorial\n\nScikit-learn Tutorial by Jake Vanderplas\nexisted online recordings  (very good to rehearse!)\nJupyter Notebook based\nvery few changes (updated package version)\n\nML 102 – github.com/nesi/ml102_workshop\n\nTensorFlow tutorials\nJupyter Notebook based\nadded an introduction\nadded section to submit a Slurm job"
+    "text": "NeSI workshops\n\n\n My rehearsal and source of inspiration 💓\n\nNeSI workshops\n\nML 101 – github.com/nesi/sklearn_tutorial\n\nScikit-learn Tutorial by Jake Vanderplas\nonline recordings exist  (very good to rehearse!)\nJupyter Notebook based\nvery few changes (updated package version)\n\nML 102 – github.com/nesi/ml102_workshop\n\nTensorFlow tutorials\nJupyter Notebook based\nadded an introduction\nadded section to submit a Slurm job"
   },
   {
     "objectID": "UpskillingResearchersInML.html#recommendations-3",
@@ -305,14 +305,14 @@
     "href": "LightningTalk.html#background",
     "title": "Developing a Carpentries-style Machine Learning workshop",
     "section": "Background",
-    "text": "Background\n\nMachine Learning (ML) or Artificial Intelligence (AI) are without a doubt a hot topics\nEmpowering reserachers to understand and use ML seems rewarding, but also challenging\nThe Carpentries  offer a proven teaching-style accounting for participants with limited IT experience\n\nCore aspects\n\nlive-coding\npositive attitude towards mistakes\nminimal prereuisites\nmaximising participant invovlement\n\n\nThe CeR (Centre for eResearch) at the University of Auckland acquired funding to further develop and run a series of workshops (also referred to as ML-Carp)\nTwo iterations (referred to as Run #1 and Run#2) took place so far. In March and September 2023."
+    "text": "Background\n\nMachine Learning (ML) or Artificial Intelligence (AI) are without a doubt hot topics\nEmpowering researchers to understand and use ML seems rewarding, but also challenging\nThe Carpentries  offer a proven teaching-style accounting for participants with limited IT experience\n\nCore aspects\n\nlive-coding\npositive attitude towards mistakes\nminimal prerequisites\nmaximising participant involvement\n\n\nThe CeR (Centre for eResearch) at the University of Auckland acquired funding to further develop and run a series of workshops (also referred to as ML-Carp)\nTwo iterations (referred to as Run #1 and Run#2) took place so far. In March and September 2023."
   },
   {
     "objectID": "LightningTalk.html#lesson-overview",
     "href": "LightningTalk.html#lesson-overview",
     "title": "Developing a Carpentries-style Machine Learning workshop",
     "section": "Lesson Overview",
-    "text": "Lesson Overview\n\n\n\nLesson Title\nStatus\nRun #1\nRun #2\n\n\n\n\n\nProgramming with Python\nReleased\nMon, Tue\n-\n\n\n\nIntroduction to Machine Learning with Scikit Learn\nAlpha\nWed, Thu\nMon, Tue\n\n\n\nIntroduction to Deep Learning\nBeta\nFri\nWed, Thu\n\n\n\n\n\n\n\n \n\n\n\n\n\n4h sessions over 4 consecutive afternoons\n\n\n\n\n\nDepending on Maturity, sessions were run with a small changes or substantially (re)developed.\nOne major change was Goolge Colab  being used instead of local Python installs."
+    "text": "Lesson Overview\n\n\n\nLesson Title\nStatus\nRun #1\nRun #2\n\n\n\n\n\nProgramming with Python\nReleased\nMon, Tue\n-\n\n\n\nIntroduction to Machine Learning with Scikit Learn\nAlpha\nWed, Thu\nMon, Tue\n\n\n\nIntroduction to Deep Learning\nBeta\nFri\nWed, Thu\n\n\n\n\n\n\n\n \n\n\n\n\n\n4h sessions over 4 consecutive afternoons\n\n\n\n\n\nDepending on Maturity, sessions were run with small changes or substantially (re)developed.\nOne major change was Goolge Colab  being used instead of local Python installs."
   },
   {
     "objectID": "LightningTalk.html#lesson-details",
@@ -361,6 +361,6 @@
     "href": "LightningTalk.html#participants-feelings---statements-and-adjustments",
     "title": "Developing a Carpentries-style Machine Learning workshop",
     "section": "Participants’ Feelings - Statements and Adjustments",
-    "text": "Participants’ Feelings - Statements and Adjustments\n\n\n\nobservation: Even at the very end of the sessions, questions, participantion and interest didn’t cease\n“Python lesson might be separated”\n\nRun #2: Python was removed from the curriculum\n\n“more breaks”\n\nRun #2: better adherence to schedule\n\n“stick to one coding interface”\n\nRun #2: only Colab, VSC etc. was linked to for post-workshop engagement\n\n\n\n\n\n\n\n\nNote\n\n\nAll statements are positively phrased; overall the results confirm a poasitive appreciation."
+    "text": "Participants’ Feelings - Statements and Adjustments\n\nobservation: At very end of the Runs, questions/participation/interest didn’t cease!\n“Python lesson might be separated”\n\nRun #2: Python was removed from the curriculum\n\n“more breaks”\n\nRun #2: better adherence to schedule\n\n“stick to one coding interface”\n\nRun #2: only Colab, VSC etc. was linked to for post-workshop engagement\n\n\n\n\n\n\n\n\nNote\n\n\nAll statements are positive phrased; overall the results confirm a poasitive appreciation."
   }
 ]
