@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/jensbri/QuartoSlides/Plots.html</loc>
-    <lastmod>2023-10-24T21:13:59.256Z</lastmod>
+    <loc>https://jensbri.github.io/QuartoSlides/ResBazPlanning.html</loc>
+    <lastmod>2024-03-18T01:13:00.462Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/jensbri/QuartoSlides/LightningTalk.html</loc>
-    <lastmod>2023-10-24T21:13:56.068Z</lastmod>
+    <loc>https://jensbri.github.io/QuartoSlides/LaTeX101.html</loc>
+    <lastmod>2024-03-18T01:13:00.442Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/jensbri/QuartoSlides/UpskillingResearchersInML.html</loc>
-    <lastmod>2023-10-24T21:13:53.248Z</lastmod>
+    <loc>https://jensbri.github.io/QuartoSlides/LightningTalk.html</loc>
+    <lastmod>2024-03-18T01:13:00.442Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/jensbri/QuartoSlides/ML-Recap.html</loc>
-    <lastmod>2023-10-24T21:13:50.916Z</lastmod>
+    <loc>https://jensbri.github.io/QuartoSlides/UpskillingResearchersInML.html</loc>
+    <lastmod>2024-03-18T01:13:00.462Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/jensbri/QuartoSlides/LaTeX101.html</loc>
-    <lastmod>2023-10-24T21:13:54.532Z</lastmod>
+    <loc>https://jensbri.github.io/QuartoSlides/Plots.html</loc>
+    <lastmod>2024-03-18T01:13:00.462Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/jensbri/QuartoSlides/ResBazPlanning.html</loc>
-    <lastmod>2023-10-24T21:13:57.296Z</lastmod>
+    <loc>https://jensbri.github.io/QuartoSlides/ML-Recap.html</loc>
+    <lastmod>2024-03-18T01:13:00.442Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jensbri.github.io/QuartoSlides/DataWorkflows2024.html</loc>
+    <lastmod>2024-03-18T01:13:00.430Z</lastmod>
   </url>
 </urlset>

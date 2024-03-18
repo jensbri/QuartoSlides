@@ -1,10 +1,178 @@
 [
   {
-    "objectID": "Plots.html",
-    "href": "Plots.html",
-    "title": "Quarto Basics",
-    "section": "",
-    "text": "Code\nimport plotly.express as px\nimport pandas as pd\npd.options.plotting.backend = \"plotly\"\nimport plotly.io as pio\nimport numpy as np\nimport plotly.graph_objects as go\nfrom plotly.subplots import make_subplots\nimport matplotlib.cm as cm\nimport plotly.subplots as sp\n\n\n\n\nCode\n# Custom colors\ncustom_colors = ['#00467F', '#009AC7', '#8D9091', '#A71930', '#7D0063', '#D2492A', '#55A51C',\n                 '#4F2D7F', '#005B82', '#00877C', '#0039A6', '#BA4482', '#006990']\n\n\n\n\nCode\npio.renderers.default = \"notebook\"\n# Read data from the CSV file\ndf = pd.read_csv('./InputDataR1.csv')\ndf_raw = df\ndfR2 = pd.read_csv('./InputDataR2.csv')\ndf2_raw = dfR2\ndf2 = df.drop([0, 1])\ndfR22 = dfR2.drop([0, 1])\n\n\n\noption_counts = df2['Q1'].value_counts()\noption_countsR2 = dfR22['Q1'].value_counts()\n\n# Create a DataFrame from the value_counts() result\noption_counts_df = pd.DataFrame({'Option': option_counts.index, 'R1': option_counts.values})\noption_counts_dfR2 = pd.DataFrame({'Option': option_countsR2.index, 'R2': option_countsR2.values})\noption_counts_df = option_counts_df.merge(option_counts_dfR2, on=\"Option\", how=\"outer\")\n\n# print(option_counts_df)\ntotal_r1 = option_counts_df.R1.sum()\ntotal_r2 = option_counts_df.R2.sum()\nattendance_ratio = total_r1/total_r2\n\ntrace1 = go.Pie(\n     values=option_counts_df.R1, \n     labels=option_counts_df.Option,\n     domain=dict(x=[0, 0.5*attendance_ratio]),\n     name=\"Run #1\",\n     hole=0.4,\n     hoverinfo=\"label+percent+name\",\n     title=f\"Run#1 &lt;br&gt; [{int(total_r1)}]\",\n     marker_colors=custom_colors\n)\n\n\n\ntrace2 = go.Pie(\n     values=option_counts_df.R2, \n     labels=option_counts_df.Option,\n     domain=dict(x=[0.5, 1.0]),\n     name=\"Run #2\",\n     hole=0.4,\n     hoverinfo=\"label+percent+name\",\n     title=f\"Run#2 &lt;br&gt; [{int(total_r2)}]\",\n     marker_colors=custom_colors\n)\n\nlayout = go.Layout(\n        font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n#      legend=dict(\n#         x=0.5,  # Center the legend horizontally\n#         y=-0.1,  # Position the legend just below the plot\n#         xanchor='center',  # Set the x anchor to center\n#         yanchor='top',  # Set the y anchor to the top\n#     )\n)\n#     title=\"Participants' Background\")\n\ndata = [trace1, trace2]\nfig = go.Figure(data=data, layout=layout)\nfig.show()\n# Save the figure as an SVG file\npio.write_image(fig, './UpskillingResearchersInML_Assets/ParticipantsBackground.svg', width=1800, height=600, scale=1)  # Adjust the scale as needed)\n\n\n\n                                                \n\n\n\n\nCode\n# print(option_counts_df.R1/option_counts_df.R1.sum()*100)\n# assign this as a new column to the existing dataframe option_counts_df\noption_counts_df['percentR1'] = (option_counts_df['R1'] / option_counts_df['R1'].sum() * 100).fillna(0)\noption_counts_df['percentR2'] = (option_counts_df['R2'] / option_counts_df['R2'].sum() * 100).fillna(0)\n\nprint(option_counts_df)\n\n\n                               Option   R1   R2  percentR1  percentR2\n0    Biomedical and clinical sciences  6.0  3.0      37.50  16.666667\n1                         Engineering  4.0  8.0      25.00  44.444444\n2        Built environment and design  1.0  NaN       6.25   0.000000\n3                           Economics  1.0  NaN       6.25   0.000000\n4                   Chemical sciences  1.0  NaN       6.25   0.000000\n5               Mathematical sciences  1.0  1.0       6.25   5.555556\n6                 Biological sciences  1.0  1.0       6.25   5.555556\n7                           Education  1.0  NaN       6.25   0.000000\n8                     Health sciences  NaN  4.0       0.00  22.222222\n9  Information and computing sciences  NaN  1.0       0.00   5.555556\n\n\n\n\nCode\noption_countsOSR1 = df2['Q2'].value_counts()\noption_countsOSR2 = dfR22['Q2'].value_counts()\n# Create a DataFrame from the value_counts() result\n\noption_counts_df = pd.DataFrame({'Option': option_countsOSR1.index, 'R1': option_countsOSR1.values})\noption_counts_dfR2 = pd.DataFrame({'Option': option_countsOSR2.index, 'R2': option_countsOSR2.values})\noption_counts_df = option_counts_df.merge(option_counts_dfR2, on=\"Option\", how=\"outer\")\n\n\ntrace1 = go.Pie(\n     values=option_counts_df.R1, \n     labels=option_counts_df.Option,\n     domain=dict(x=[0.0, 0.45]),  # Adjust the x values\n     name=\"Run #1\",\n     hole=0.4,\n     hoverinfo=\"label+percent+name\",\n     title=f\"Run#1 &lt;br&gt; [{int(total_r1)}]\",\n     marker_colors=custom_colors\n)\n\n\n\ntrace2 = go.Pie(\n     values=option_counts_df.R2, \n     labels=option_counts_df.Option,\n     domain=dict(x=[0.55, 1.0]),  # Adjust the x values\n     name=\"Run #2\",\n     hole=0.4,\n     hoverinfo=\"label+percent+name\",\n     title=f\"Run#2 &lt;br&gt; [{int(total_r2)}]\",\n     marker_colors=custom_colors\n)\n\nlayout = go.Layout(\n#     boxgap=0.1,\n    font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n\n)\n#     title=\"Participants' Background\")\ndata = [trace1, trace2]\nfig = go.Figure(data=data, layout=layout)\nconfig = {'responsive': False}\nfig.show()\n\n# Save the figure as an SVG file\npio.write_image(fig, './UpskillingResearchersInML_Assets/ParticipantsOS.svg', width=1800, height=600, scale=1)  # Adjust the scale as needed)\n\n\n\n                                                \n\n\n\n\nCode\n# List of column names you want to plot\ncolumns_to_plot = ['Q3_1', 'Q3_2', 'Q3_3', 'Q3_4', 'Q3_5', 'Q3_6']\n\ndef plot_columns_from_dataframe(dataframe1, dataframe2, columns_to_plot):\n    # String to be stripped from each element\n    string_to_strip = \"Please rate your level of agreement with the following statements (0 = complete disagreement, 100 = complete agreement). - \"\n\n    for column in columns_to_plot:\n        # Check if the column contains string values before applying .str.replace()\n        if df_raw[column].dtype == 'object':\n            df_raw[column] = df_raw[column].str.replace(string_to_strip, '', case=False)\n\n    # Convert the columns to float, handling non-numeric values by replacing them with NaN\n    for column in columns_to_plot:\n        dataframe1[column] = pd.to_numeric(dataframe1[column], errors='coerce')\n\n    # Create subplots\n    fig = make_subplots(rows=1, cols=1, shared_yaxes=True)\n\n    # custom_colors = ['color1', 'color2', 'color3', 'color4', 'color5', 'color6']  # Define your custom colors\n\n    for it_number, column in enumerate(columns_to_plot):\n        median_value_df1 = dataframe1[column].median()\n        subplot_df1 = go.Box(\n            y=dataframe1[column],\n            boxpoints='all',\n            jitter=0.3,\n            pointpos=-1.8,\n            line=dict(color=custom_colors[it_number]),\n            marker=dict(color=custom_colors[it_number]),\n            name=df_raw.loc[0,column]\n        )\n\n        median_value_df2 = dataframe2[column].median()\n        subplot_df2 = go.Box(\n            y=dataframe2[column],\n            boxpoints='all',\n            jitter=0.3,\n            pointpos=-1.8,\n            line=dict(color=custom_colors[it_number]),\n            marker=dict(color=custom_colors[it_number]),\n            showlegend=False,\n            # in f notation prepend Run#2 to the name followed b the it_number variable\n            name=f\"Run#2 Q {it_number+1}\"\n        )\n\n        # Add subplots to the figure\n        fig.add_trace(subplot_df1, row=1, col=1)\n        fig.add_trace(subplot_df2, row=1, col=1)\n\n        # # Add median annotations\n        # fig.add_annotation(\n        #     x=it_number + 1,\n        #     y=median_value_df1,\n        #     text=f'Median: {median_value_df1:.2f}',\n        #     font=dict(size=14, color=\"black\"),\n        #     showarrow=True,\n        #     arrowhead=7,\n        #     ax=0,\n        #     ay=-20,\n        #     row=1,\n        #     col=1\n        # )\n\n        # fig.add_annotation(\n        #     x=it_number + 1,\n        #     y=median_value_df2,\n        #     text=f'Median: {median_value_df2:.2f}',\n        #     font=dict(size=14, color=\"black\"),\n        #     showarrow=True,\n        #     arrowhead=7,\n        #     ax=0,\n        #     ay=-20,\n        #     row=1,\n        #     col=2\n        # )\n\n    # Customize the layout\n    fig.update_layout(\n        title=\"Agreement with statements: 0 = complete disagreement, 100 = complete agreement, Run#1 left, Run#2 right\",\n        font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n        # xaxis=dict(title=\"Columns\"),\n        # yaxis=dict(title=\"Values\")\n    )\n\n    # do not show the x axis labels\n    fig.update_xaxes(showticklabels=False)\n\n    # Add a subtitle-like text as an annotation\n    fig.add_annotation(\n        text=\"median across all data for Run#1: 85.5, Run #2: 86.25\",\n        xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n        x=0.5, y=1.05,  # Adjust the position\n        showarrow=False,  # Hide arrow\n        font=dict(size=16)  # Customize font size\n    )\n\n    # # Add a horizontal line to the boxplots\n    # average_values_df1 = dataframe1[columns_to_plot].mean()\n    # overall_avg_df1 = average_values_df1.mean()\n\n    # average_values_df2 = dataframe2[columns_to_plot].mean()\n    # overall_avg_df2 = average_values_df2.mean()\n\n    # fig.add_shape(\n    #     go.layout.Shape(\n    #         type=\"line\",\n    #         x0=0,\n    #         x1=len(columns_to_plot) + 1,\n    #         y0=overall_avg_df1,\n    #         y1=overall_avg_df1,\n    #         line=dict(color=\"red\", width=2),\n    #     ),\n    #     row=1,\n    #     col=1\n    # )\n\n    # fig.add_shape(\n    #     go.layout.Shape(\n    #         type=\"line\",\n    #         x0=0,\n    #         x1=len(columns_to_plot) + 1,\n    #         y0=overall_avg_df2,\n    #         y1=overall_avg_df2,\n    #         line=dict(color=\"red\", width=2),\n    #     ),\n    #     row=1,\n    #     col=2\n    # )\n\n    # fig.add_annotation(\n    #     x=len(columns_to_plot) + 1,\n    #     y=overall_avg_df1,\n    #     text=f'Overall avg: {overall_avg_df1:.2f}',\n    #     font=dict(size=14, color=\"red\"),\n    #     ax=0,\n    #     ay=20,\n    #     row=1,\n    #     col=1\n    # )\n\n    # fig.add_annotation(\n    #     x=len(columns_to_plot) + 1,\n    #     y=overall_avg_df2,\n    #     text=f'Overall avg: {overall_avg_df2:.2f}',\n    #     font=dict(size=14, color=\"red\"),\n    #     ax=0,\n    #     ay=20,\n    #     row=1,\n    #     col=2\n    # )\n\n    # Show the figure\n    fig.show()\n    # Save the figure as an SVG file\n    pio.write_image(fig, './UpskillingResearchersInML_Assets/ParticipantsAgreement.svg', width=1800, height=600, scale=1)  # Adjust the scale as needed)\n\n# Example usage:\n# Create or load your DataFrames and specify the list of columns to plot\n# df1 = pd.read_csv('your_dataframe1.csv')  # Or create your DataFrame\n# dataframe2 = pd.read_csv('your_dataframe2.csv')  # Or create your DataFrame\n# columns_to_plot = ['Q3_1', 'Q3_2', 'Q3_3', 'Q3_4', 'Q3_5', 'Q3_6']\n# plot_columns_from_dataframe(df1, dataframe2, columns_to_plot)\ncolumns_to_plot = ['Q3_1', 'Q3_2', 'Q3_3', 'Q3_4', 'Q3_5', 'Q3_6']\nplot_columns_from_dataframe(df2, dfR22, columns_to_plot)\n\n\n\n\n                                                \n\n\n\n\nCode\n# Calculate the median for each column\nmedians = df2[columns_to_plot].median()\n\n# Calculate the metric as the median of medians\noverall_median = medians.median()\n\nprint(overall_median)\n\n# Calculate the median for each column\nmedians = dfR22[columns_to_plot].median()\n\n# Calculate the metric as the median of medians\noverall_median = medians.median()\n\nprint(overall_median)\n\n\n\n85.5\n86.25\n\n\n\n\nCode\n# Load data from CSV into the 'zoom' DataFrame\nzoom = pd.read_csv(\"ZoomStats.csv\")\n\n# Create a list of unique days\nunique_days = zoom['Day'].unique()\n\n\n\n# Create subplots for each day\nfig = go.Figure()\n# config = {'responsive': False}\n\n\n# Create a bar for Run1 and Run2 for each unique day\nx_labels = []\nfor day in unique_days:\n    day_data = zoom[zoom['Day'] == day]\n    \n    fig.add_trace(go.Bar(\n        x=[f'Day {day} - Run1', f'Day {day} - Run2'],\n        y=[day_data['Run1'].values[0], day_data['Run2'].values[0]],\n        name=f'Day {day}',\n        text=[day_data['Run1'].values[0], day_data['Run2'].values[0]],\n        textposition='outside',  # Place the value annotations outside the bars\n        showlegend=False,  # Hide the legend\n        marker_color=[custom_colors[0], custom_colors[1]]\n    ))\n    \n    x_labels.extend([f'Day {day} - Run1', f'Day {day} - Run2'])\n\n# Update layout for the overall figure\nfig.update_layout(\n    title='Number of participants in Zoom meetings per day',\n    xaxis=dict(\n        # title='Day and Run',\n        tickmode='array',\n        tickvals=list(range(len(x_labels))),\n        ticktext=x_labels\n    ),\n    # yaxis=dict(title='Value'),\n    barmode='group',\n    # bargap=0.1,  # Adjust the bargap to your preferred spacing\n    font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n)\n\n\n\nhighest_value = max(zoom[['Run1', 'Run2']].values.flatten())\n# print(highest_value)\n\n\nfig.update_yaxes(range=[0, highest_value+4])  # Set the initial y-axis range\n\n# Add a subtitle-like text as an annotation\nfig.add_annotation(\n    text=\"deduplicated, not including instructors or helpers\",\n    xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n    x=0.5, y=1.05,  # Adjust the position\n    showarrow=False,  # Hide arrow\n    font=dict(size=16)  # Customize font size\n)\n\n\n# Show the figure\nfig.show()\n\n# Save the figure as an SVG file\npio.write_image(fig, './UpskillingResearchersInML_Assets/ZoomParticipants.svg')\n\n\n\n                                                \n\n\n\n\nCode\ndf_promR1 = df2['Q4']\ndf_promR1\ndf_promR1.dropna(inplace=True)\ndf_promR1.astype(int)\ndf_promR2 = dfR22['Q4']\ndf_promR2\ndf_promR2.dropna(inplace=True)\ndf_promR2.astype(int)\n\npromote = pd.concat([df_promR1.astype(int), df_promR2.astype(int)], axis=1)\n\n# # Rename the columns if needed (optional)\npromote.columns = ['Q4_R1', 'Q4_R2']\npromote\n\n# flatten the dataframe 'promote' \n# promote = promote.stack().reset_index()\n\noption_counts_R1 = promote['Q4_R1'].value_counts()\noption_counts_R2 = promote['Q4_R2'].value_counts()\n\npromote2 = pd.concat([option_counts_R1.astype(int), option_counts_R2.astype(int)], axis=1)\npromote2.columns = ['Q4_R1', 'Q4_R2']\npromote2\n\n# data_type = type(promote2['Q4_R1'].iloc[0])\n# print(data_type)\n\n# promote2.plot(kind='bar')\n\n# Create subplots for each day\nfig = go.Figure()\n# config = {'responsive': False}\n\n\n# Create a bar for Run1 and Run2 for each unique day\n\nfig.add_trace(go.Bar(\n    x=promote2.index,\n    y=promote2['Q4_R1'],\n    name=\"Run #1\",\n    text=promote2['Q4_R1'].values,\n    textposition='outside',  # Place the value annotations outside the bars\n    # showlegend=False,  # Hide the legend\n    marker_color=custom_colors[0]\n)\n)\n\nfig.add_trace(go.Bar(\n    x=promote2.index,\n    y=promote2['Q4_R2'],\n    name=\"Run #2\",\n    text=promote2['Q4_R2'].values,\n    textposition='outside',  # Place the value annotations outside the bars\n    # showlegend=False,  # Hide the legend\n    marker_color=custom_colors[1]\n)\n)\n\n\n# Update layout for the overall figure\nfig.update_layout(\n    title='How likely would you be to recommend this workshop to a colleague?',\n\n    barmode='group',\n    bargap=0.1,  # Adjust the bargap to your preferred spacing\n    font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n)\n\n\n\n# Add a subtitle-like text as an annotation\nfig.add_annotation(\n    text=\"0 = not likely at all ... 10 = extremely likely\",\n    xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n    x=0.5, y=-0.15,  # Adjust the position\n    showarrow=False,  # Hide arrow\n    font=dict(size=16)  # Customize font size\n)\n\n# Add a subtitle-like text as an annotation\nfig.add_annotation(\n    text=\"deduplicated, not including instructors or helpers\",\n    xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n    x=0.5, y=1.05,  # Adjust the position\n    showarrow=False,  # Hide arrow\n    font=dict(size=16)  # Customize font size\n)\n\nfig.update_xaxes(range=[0, 11])  # Set the initial x-axis range\nfig.update_yaxes(range=[0, 10])  # Set the initial y-axis range\n\n# Update x-axis ticks to display integers from 0 to 10\nfig.update_xaxes(\n    tickmode='array',\n    tickvals=list(range(11)),  # Set tick values from 0 to 10\n    ticktext=list(map(str, range(11)))  # Set tick labels as strings of integers from 0 to 10\n)\n\n# # Show the figure\nfig.show()\npio.write_image(fig, './UpskillingResearchersInML_Assets/ParticipantsRecommend.svg', width=1800, height=600, scale=1)  # Adjust the scale as needed)\n\n\n\n\n\n\n                                                \n\n\n\n\nCode\n# Load data from CSV into the 'zoom' DataFrame\nzoom = pd.read_csv(\"ZoomStats.csv\")\nzoom\n\n\n# Assuming you have a DataFrame or data source named 'zoom'\nfig = go.Figure()\n\nfig.add_trace(go.Scatter(x=zoom['Day'], y=zoom['Run1'], mode='lines+markers', name='Run#1', line=dict(width=2, color=custom_colors[0]), marker=dict(size=8, color=custom_colors[0])))\nfig.add_trace(go.Scatter(x=zoom['Day'], y=zoom['Run2'], mode='lines+markers', name='Run#2', line=dict(width=2, color=custom_colors[1]), marker=dict(size=8, color=custom_colors[1])))\n\n\ndef format_data_label(value):\n    if np.isnan(value) or value == \"\":\n        return \"\"\n    else:\n        return f\"{value:.0f}\"\n\nfig.update_layout(title='Attendees per Zoom session',\n                  xaxis_title='Day',\n                #   yaxis_title='Value'\n                  )\n\n# Create a text column for data values with custom formatting\ntext_values_run1 = [format_data_label(val) for val in zoom['Run1']]\ntext_values_run2 = [format_data_label(val) for val in zoom['Run2']]\n\n# Add data labels to each trace using add_trace\nfig.add_trace(go.Scatter(x=zoom['Day'], y=zoom['Run1'], mode='text', text=text_values_run1, textposition='top center', showlegend=False))\nfig.add_trace(go.Scatter(x=zoom['Day'], y=zoom['Run2'], mode='text', text=text_values_run2, textposition='bottom center', showlegend=False))\n\n# Set the y-axis scale to [0, 37]\nfig.update_yaxes(range=[0.1, 5.1])\nfig.update_yaxes(range=[0, 37])\n\n# Set x-axis ticks to integers\nfig.update_xaxes(tickmode='linear', dtick=1)\n\n\n\n\nfig.update_layout(\n        font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),)\n\n# Add a subtitle-like text as an annotation\nfig.add_annotation(\n    text=\"deduplicated, not including instructors or helpers\",\n    xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n    x=0.5, y=1.05,  # Adjust the position\n    showarrow=False,  # Hide arrow\n    font=dict(size=16)  # Customize font size\n)\n\n# Set hoverformat to display data labels without decimal places\nfig.update_traces(hoverinfo=\"y+text\", hoverlabel=dict(namelength=0), hovertemplate=\"%{y:.0f}\")\n\n\nfig.show()\n\n# Save the figure as an SVG file\npio.write_image(fig, './UpskillingResearchersInML_Assets/ZoomParticipantsLine.svg')"
+    "objectID": "ResBazPlanning.html#r",
+    "href": "ResBazPlanning.html#r",
+    "title": "ResBaz 2023 - Scheduling Assistance",
+    "section": "R",
+    "text": "R\n\nLet’s start with R.\nIt is very commonly used\nand it originated from research needs to undertake statistical analysis and to create graphics.\nNowadays, there are heaps of things that you can do with R and these are presented in the session\n“Introduction to R and R Studio”\n\nWhat you learned there will be expanded on in “Using R for statistical analysis” and even more in “Hands-on statistical analysis with R”"
+  },
+  {
+    "objectID": "ResBazPlanning.html#python",
+    "href": "ResBazPlanning.html#python",
+    "title": "ResBaz 2023 - Scheduling Assistance",
+    "section": "Python",
+    "text": "Python\n\nAnother popular programming language in the research Community is Python.\nPython is commonly employed for all kinds of research-tasks.\nTo get an overview, we reommend attending the taster session: “How Can Python Help Your Research?”.\n\nIf you have or already had developed a taste for Python, “Introduction to the Python Programming Language” gets you started with hands-on coding in Python\n\nIf you face challenges with handling/changing/manipulating not one but hundreds or more of files, “Python for Image Manipulation and Repeatable Research Pipelines” helps you in making Python do the work so you can free up some time to focus on research"
+  },
+  {
+    "objectID": "ResBazPlanning.html#cli",
+    "href": "ResBazPlanning.html#cli",
+    "title": "ResBaz 2023 - Scheduling Assistance",
+    "section": "CLI",
+    "text": "CLI\n\nEven though you can run many aspects of R and Python in a graphical user interface or gui, so independent of a command-line interface or CLI, many other software packages do have a cli version\nSome also refer to these as the terminal version.\n\nSometimes this might have even more functionality or\nyou can automate tedious tasks\nor its use contributes to a repeatable and hence reproduicble resareach workflow.\nThese things become more and more important."
+  },
+  {
+    "objectID": "ResBazPlanning.html#cli2",
+    "href": "ResBazPlanning.html#cli2",
+    "title": "ResBaz 2023 - Scheduling Assistance",
+    "section": "CLI2",
+    "text": "CLI2\n\nIn the session “introduction to command line” you will be familiarized with important commands but also the related mindset\nand syntax.\n\nA fancy way os daying how you have to type things out.\nOften upper or lower case, dashes and the sequence matter.\n\nAs a next step, you can apply these skills in the session “using the command line to find replace and manipulate data”\n\nThat session title gives a lot away\nand might save you hours of work"
+  },
+  {
+    "objectID": "LaTeX101.html#visualisations-in-tikz",
+    "href": "LaTeX101.html#visualisations-in-tikz",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "Visualisations in TikZ",
+    "text": "Visualisations in TikZ\nExample showing the power of the TikZ package"
+  },
+  {
+    "objectID": "LaTeX101.html#visualisations-in-tikz--1",
+    "href": "LaTeX101.html#visualisations-in-tikz--1",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "Visualisations in TikZ -1",
+    "text": "Visualisations in TikZ -1\n Source"
+  },
+  {
+    "objectID": "LaTeX101.html#visualisations-in-tikz--2",
+    "href": "LaTeX101.html#visualisations-in-tikz--2",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "Visualisations in TikZ -2",
+    "text": "Visualisations in TikZ -2\n Source"
+  },
+  {
+    "objectID": "LaTeX101.html#visualisations-in-tikz--3",
+    "href": "LaTeX101.html#visualisations-in-tikz--3",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "Visualisations in TikZ -3",
+    "text": "Visualisations in TikZ -3\n Source"
+  },
+  {
+    "objectID": "LaTeX101.html#visualisations-in-tikz--4",
+    "href": "LaTeX101.html#visualisations-in-tikz--4",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "Visualisations in TikZ -4",
+    "text": "Visualisations in TikZ -4\n Source"
+  },
+  {
+    "objectID": "LaTeX101.html#easily-go-from-one-to-two-column-layouts",
+    "href": "LaTeX101.html#easily-go-from-one-to-two-column-layouts",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "Easily go from one to two column layouts",
+    "text": "Easily go from one to two column layouts\n\n\n\\documentclass[10pt,a4paper,onesided]{article} \n\\usepackage{lipsum}\n\\begin{document}\n  \\section{My Title}\n  \\subsection{Sub-Section}\n  \\textbf{Printing 1 to 3 paragraphs}\\\\\n  \\lipsum[1-3]\n  \\subsection{Sub-Section}\n  \\lipsum[1]\n\\end{document}\nNote that: …onesided… \n\n#| \\documentclass[10pt,a4paper,twocolumn]{article} \n\\usepackage{lipsum}\n\\begin{document}\n  \\section{My Title}\n  \\subsection{Sub-Section}\n  \\textbf{Printing 1 to 3 paragraphs}\\\\\n  \\lipsum[1-3]\n  \\subsection{Sub-Section}\n  \\lipsum[1]\n\\end{document}\nNote that: …twocolumn…"
+  },
+  {
+    "objectID": "LaTeX101.html#mathsformulae",
+    "href": "LaTeX101.html#mathsformulae",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "Maths/Formulae",
+    "text": "Maths/Formulae"
+  },
+  {
+    "objectID": "LaTeX101.html#external-files",
+    "href": "LaTeX101.html#external-files",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "External Files",
+    "text": "External Files\n\nYou (usuall) reference external files; this means you might have a ‘Images’ folder. All updates (while maintaining the file name) come into effect quickly (after recompiling); consider a version control mechanism such as GitHub to avoid data loss\nThis also works for imported data (often in the csv file format) which you can get to automatically update tables\nEven layouts can be changed\n\nWorkflow for changing things in citations (Zotero) or getting a citation from a paper (three steps and done), backed up to GitHub, don’t worry\nUpdate a picture to the latest version, keep the name, don’t worry about overwriting, because you have it on GitHub\nBecause of LaTeXIt knowing the syntax can help you with creating vis. for your PowerPoint, Slides, … Presentation\nSyntax highlighting for code\nChange a caption on several figures, update the ToC,…"
+  },
+  {
+    "objectID": "LaTeX101.html#advantages",
+    "href": "LaTeX101.html#advantages",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "Advantages",
+    "text": "Advantages\n\n\n\n\n\n\nNote\n\n\nThere is a trade-off between time invested upfront (learning \\(\\LaTeX\\) etc. vs. and time saved in the long-run. As many of you might work on their PhD thesises, this time balance one day before the deadline vs. some hours or days can’t be traded-off 1:1\n\n\n\n\n(good) \\(\\LaTeX\\) output looks epic (at least in most cases)\n\nit decides where pictures are placed\nmaths is neatly rendered\nhow line-breaks happen (justify text is using a dictionary for line-breaks, unlike many wysiwyg editors)\nmulti-column layouts on one page"
+  },
+  {
+    "objectID": "LaTeX101.html#advantages---continued",
+    "href": "LaTeX101.html#advantages---continued",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "Advantages - continued",
+    "text": "Advantages - continued\n\nit is free and not tied to any big corporation, you can often write in any text editor, browser etc.\nit is no closed source file (unlike a .docx or so) this means we can use Git(Hub) EXAMPLE and other version control systems (we can run things like a diff on it, EXAMPLE CODE GOES HERE)\n\nno proprietary software that\n\nmight disappear from the market\ncharges you an arm and a leg especially over time with a subscription model (yes, I am looking at you, Adobe)\nmeans you can keep this compeltely offline/local/no-cloud, etc. good for Ethics Approvals and sensitive data, …\n\n\nyou can mostly get outputs to several outputs with altering a few lines (vs. clicking on every slide or here and there)"
+  },
+  {
+    "objectID": "LaTeX101.html#advantages---continued-1",
+    "href": "LaTeX101.html#advantages---continued-1",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "Advantages - continued",
+    "text": "Advantages - continued\n\nyou can customise it heavily\nyou can have inline comments (for future you, for your supervisor, to toggle things on/off)\nIf you ingest some code, tables, data, a lot of figures ResBaz Workshop Python for image manipulation and repeatable research pipelines, you will learn to love \\(\\LaTeX\\)\nReferencing is quite easy, especially if paired with a reference manager such as Zotero, see ResBaz session Managing References With Zotero\nMaths! \\(f_{c}=z^{2}+c\\) AND Mathpix Snipping\nPlotting (again some learning curve, but no Excel to Word to something schenanigans where you might miss out the latest version of a file and try to publish something wrong)\nsame goes for citations, referencing figures, placing figures (yes, you can specify that it shall be right there where you want it, but you can also let \\(\\LaTeX\\) work it’s magic)\nPortability: LaTeX documents are portable and can be easily converted to other formats, such as PDF, HTML, or EPUB."
+  },
+  {
+    "objectID": "LaTeX101.html#advantages---continued-2",
+    "href": "LaTeX101.html#advantages---continued-2",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "Advantages - continued",
+    "text": "Advantages - continued\nSymbols often render very neatly, sometimes workarounds are needed\nM\\={a}ori \nFor Macrons a more advanced approach is described here, as Unicode is mostly used, you can type Māori (so on a Mac use the long-press option ā to write Māori or change the keyboard style) or copy-paste such characters."
+  },
+  {
+    "objectID": "LaTeX101.html#disadvantages",
+    "href": "LaTeX101.html#disadvantages",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "Disadvantages",
+    "text": "Disadvantages\n\nit takes time to learn (Overleaf and other more relevant UI etc. make it easier)\nit can be very fiddely (if you want specifics with tables, or placing images)\nthe collaboration features are quite limited out of the box, yes, a lot can be done (see Eirian), but that mostly requires you to a) bring/acquire some coding knowledge, b) invest time; here, MS Word Clearly wins\nplugins such as Grammarly don’t work ootb, for VSCode, you can integrate these as an Extension, on Overleaf there is a buggy workaround"
+  },
+  {
+    "objectID": "LaTeX101.html#preamble",
+    "href": "LaTeX101.html#preamble",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "Preamble",
+    "text": "Preamble\nThis is similar to programming where you start with importing relevant libraries (things others did to make your life easier) and definitions (for example, colours)\n\\documentclass[twoside,openright,a4paper]\n\n\\usepackage[usenames, dvipsnames, table]{xcolor}\n\n\\addbibresource{references.bib}\n\n\\definecolor{uoadarkblue}{RGB}{0, 70, 127}"
+  },
+  {
+    "objectID": "LaTeX101.html#main-body",
+    "href": "LaTeX101.html#main-body",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "Main body",
+    "text": "Main body\nYou can either - write all your document in one text file (with the file extension *.tex) - \\(\\LaTeX\\) commands usually start with the backslash character - as in all coding, it is important to close brackets that you have opened and to be quite picky with the details - \\(\\LaTeX\\) is mostely whitespace-insensitive, this means you can write your .tex document without having to worry about empty lines, etc. This also means, if you want to include empty lines, you have to enforce them - \\\\ (two backslashes) - \\newline - \\hfill \\break - see also - It is good practice not to create one huge .tex file but to use the \\include command to include chapters\n\\include{Titlepage}\n\\part{Background}\n\\include{Chapters/Intro}"
+  },
+  {
+    "objectID": "LaTeX101.html#references-appendices-etc.",
+    "href": "LaTeX101.html#references-appendices-etc.",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "References, Appendices, etc.",
+    "text": "References, Appendices, etc.\n\nall of these can be ingested (reference to external files) in the preamble\nIt’s fair to consider this a strong-suit of \\(\\LaTeX\\)\ndetails exceed the scope of this introduction; more in-depth ResBaz sessions are offered (see Section 10) and you can refer to the template provided"
+  },
+  {
+    "objectID": "LaTeX101.html#how-to-get-latex---the-core",
+    "href": "LaTeX101.html#how-to-get-latex---the-core",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "How to get \\(\\LaTeX\\) - the core",
+    "text": "How to get \\(\\LaTeX\\) - the core\nIdea: As software-agnostic as possible - Download a \\(\\LaTeX\\) distribution, for example MiKTeX - install pandoc - use any texteditor - Windows: - Notepad - Mac: - TextEdit - Linux: - various - Cross-Platform: - VSCode - Sublime - on the commandline: type pandoc -i ~/Desktop/myWritings.tex -o ~/Desktop/MyRenderedLaTeX.pdf - inspect your neatly renedered document"
+  },
+  {
+    "objectID": "LaTeX101.html#how-to-get-latex---special-editors",
+    "href": "LaTeX101.html#how-to-get-latex---special-editors",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "How to get \\(\\LaTeX\\) - special editors",
+    "text": "How to get \\(\\LaTeX\\) - special editors\nThe idea is to have a local installation and a specialised editor - Texifier - TeXLive - TeXStudio - TeXMaker"
+  },
+  {
+    "objectID": "LaTeX101.html#how-to-get-latex---in-the-browser",
+    "href": "LaTeX101.html#how-to-get-latex---in-the-browser",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "How to get \\(\\LaTeX\\) - In the browser",
+    "text": "How to get \\(\\LaTeX\\) - In the browser\n\nOverleaf is quote famous for bringing $to the masses\nA pro and con at the same time: It runs in the cloud, you don’t need to install a \\(\\LaTeX\\) distribution, special editor, etc.\nRecently, they added “Overleaf On-Premises” to circumvent privacy challenges\nthere is a free plan which might be a good fit for beginners or if it is just you wokring on a dcument\nthere are paid plans, including student plans which are currently NZD109/year\n\nThe main advantages:\n\nInvite collaborators, so work on the same document at the same time\nHave a similar tracking mechanism as MS Word’s Track Changes\nSync to Dropbox, GitHub, etc.\n\n\nUoA Bioengineering staff/students get Overleaf premium free ALTERNATVIELY: There is another ResBaz session: Stop Paying for Free Software"
+  },
+  {
+    "objectID": "LaTeX101.html#how-to-get-latex---the-meta-version",
+    "href": "LaTeX101.html#how-to-get-latex---the-meta-version",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "How to get \\(\\LaTeX\\) - The meta version",
+    "text": "How to get \\(\\LaTeX\\) - The meta version\nQuarto can be considered one level above in terms of abstraction \n\n\\(\\LaTeX\\) is just one of its output, the other benefit is a direct integration with Python, R, Julia, Observable\nyou can write in markdown syntax (.md) so for example **my text** (md notation) as oppsed to \\textbf{my text}\nthe integration with code means you won’t have to copy-paste results back and forth\n\nthis point can’t be stressed enough! You are so likely to forget updating a plot\nyou also get reproducability, because it isn’t just a screen shot that is integrated into your document &lt;!– (There are approaches where you can get some (rudimentary) Python code into LaTeX, even into Overleaf, but these are mainly for handling several files (batch processing) keeping track of Python version- Coding colaborators can contribute via a Git workflow\n\nCommunicate results to non-coding collaborators using git (e.g., GitHub)\n\n\n\n\n\n\n\nOn a side-note\n\n\nThis deck of slides (based on RevealJS, it can also handle a lot of code."
+  },
+  {
+    "objectID": "LaTeX101.html#tables",
+    "href": "LaTeX101.html#tables",
+    "title": "LaTeX 101 - Don’t be scared",
+    "section": "Tables",
+    "text": "Tables\n\n\n\nA simple table in \\(\\LaTeX\\) syntax:\n\n\\begin{table}[]\n\\caption{My Example Table}\n\\label{tab:my-table}\n\\begin{tabular}{|l|l|l|l|l|}\n\\hline\ncountry     & 1999   & 2000   &  &  \\\\ \\hline\nAfghanistan & 745    & 2666   &  &  \\\\ \\hline\nBrazil      & 37737  & 80488  &  &  \\\\ \\hline\nChina       & 212258 & 213766 &  &  \\\\ \\hline\n\\end{tabular}\n\\end{table}\n\n\nAlternatively using markdown syntax:\n\n| country     | 1999   | 2000   |   |   |\n|-------------|--------|--------|---|---|\n| Afghanistan | 745    | 2666   |   |   |\n| Brazil      | 37737  | 80488  |   |   |\n| China       | 212258 | 213766 |   |   |\n\n\n\nTo be honest:\n\nBoth are a pain to format by hand\nYou shouldn’t work with your data in these. These are for publishing only.\nSome see spreadsheet software (MSExcel, Google Sheets, etc.) just suited for data entry, Python, R, OpenRefine, etc. are better alternatives whose learning curve isn’t as steep as you might expect and relevant sessions are also provided at this year’s ResBaz (see pointers)"
   },
   {
     "objectID": "LightningTalk.html#background",
@@ -168,6 +336,13 @@
     "text": "Recommendations\n\nRandom forest is a good first non-linear model to learn\n\nintuitive to understand how it works\ngood performances on tabular data\ndoesn’t require too much care in terms of data preparation\n\nResist the temptation of MLP (multi-layer perceptron) for an ML intro\n\nrequire more notions (architecture, training, data preprocessing, …)\nkeep it for Deep Learning introduction"
   },
   {
+    "objectID": "Plots.html",
+    "href": "Plots.html",
+    "title": "Quarto Basics",
+    "section": "",
+    "text": "Code\nimport plotly.express as px\nimport pandas as pd\npd.options.plotting.backend = \"plotly\"\nimport plotly.io as pio\nimport numpy as np\nimport plotly.graph_objects as go\nfrom plotly.subplots import make_subplots\nimport matplotlib.cm as cm\nimport plotly.subplots as sp\n\n\n\n\nCode\n# Custom colors\ncustom_colors = ['#00467F', '#009AC7', '#8D9091', '#A71930', '#7D0063', '#D2492A', '#55A51C',\n                 '#4F2D7F', '#005B82', '#00877C', '#0039A6', '#BA4482', '#006990']\n\n\n\n\nCode\npio.renderers.default = \"notebook\"\n# Read data from the CSV file\ndf = pd.read_csv('./InputDataR1.csv')\ndf_raw = df\ndfR2 = pd.read_csv('./InputDataR2.csv')\ndf2_raw = dfR2\ndf2 = df.drop([0, 1])\ndfR22 = dfR2.drop([0, 1])\n\n\n\noption_counts = df2['Q1'].value_counts()\noption_countsR2 = dfR22['Q1'].value_counts()\n\n# Create a DataFrame from the value_counts() result\noption_counts_df = pd.DataFrame({'Option': option_counts.index, 'R1': option_counts.values})\noption_counts_dfR2 = pd.DataFrame({'Option': option_countsR2.index, 'R2': option_countsR2.values})\noption_counts_df = option_counts_df.merge(option_counts_dfR2, on=\"Option\", how=\"outer\")\n\n# print(option_counts_df)\ntotal_r1 = option_counts_df.R1.sum()\ntotal_r2 = option_counts_df.R2.sum()\nattendance_ratio = total_r1/total_r2\n\ntrace1 = go.Pie(\n     values=option_counts_df.R1, \n     labels=option_counts_df.Option,\n     domain=dict(x=[0, 0.5*attendance_ratio]),\n     name=\"Run #1\",\n     hole=0.4,\n     hoverinfo=\"label+percent+name\",\n     title=f\"Run#1 &lt;br&gt; [{int(total_r1)}]\",\n     marker_colors=custom_colors\n)\n\n\n\ntrace2 = go.Pie(\n     values=option_counts_df.R2, \n     labels=option_counts_df.Option,\n     domain=dict(x=[0.5, 1.0]),\n     name=\"Run #2\",\n     hole=0.4,\n     hoverinfo=\"label+percent+name\",\n     title=f\"Run#2 &lt;br&gt; [{int(total_r2)}]\",\n     marker_colors=custom_colors\n)\n\nlayout = go.Layout(\n        font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n#      legend=dict(\n#         x=0.5,  # Center the legend horizontally\n#         y=-0.1,  # Position the legend just below the plot\n#         xanchor='center',  # Set the x anchor to center\n#         yanchor='top',  # Set the y anchor to the top\n#     )\n)\n#     title=\"Participants' Background\")\n\ndata = [trace1, trace2]\nfig = go.Figure(data=data, layout=layout)\nfig.show()\n# Save the figure as an SVG file\npio.write_image(fig, './UpskillingResearchersInML_Assets/ParticipantsBackground.svg', width=1800, height=600, scale=1)  # Adjust the scale as needed)\n\n\n                                                \n\n\n\n\nCode\n# print(option_counts_df.R1/option_counts_df.R1.sum()*100)\n# assign this as a new column to the existing dataframe option_counts_df\noption_counts_df['percentR1'] = (option_counts_df['R1'] / option_counts_df['R1'].sum() * 100).fillna(0)\noption_counts_df['percentR2'] = (option_counts_df['R2'] / option_counts_df['R2'].sum() * 100).fillna(0)\n\nprint(option_counts_df)\n\n\n                               Option   R1   R2  percentR1  percentR2\n0    Biomedical and clinical sciences  6.0  3.0      37.50  16.666667\n1                         Engineering  4.0  8.0      25.00  44.444444\n2        Built environment and design  1.0  NaN       6.25   0.000000\n3                           Economics  1.0  NaN       6.25   0.000000\n4                   Chemical sciences  1.0  NaN       6.25   0.000000\n5               Mathematical sciences  1.0  1.0       6.25   5.555556\n6                 Biological sciences  1.0  1.0       6.25   5.555556\n7                           Education  1.0  NaN       6.25   0.000000\n8                     Health sciences  NaN  4.0       0.00  22.222222\n9  Information and computing sciences  NaN  1.0       0.00   5.555556\n\n\n\n\nCode\noption_countsOSR1 = df2['Q2'].value_counts()\noption_countsOSR2 = dfR22['Q2'].value_counts()\n# Create a DataFrame from the value_counts() result\n\noption_counts_df = pd.DataFrame({'Option': option_countsOSR1.index, 'R1': option_countsOSR1.values})\noption_counts_dfR2 = pd.DataFrame({'Option': option_countsOSR2.index, 'R2': option_countsOSR2.values})\noption_counts_df = option_counts_df.merge(option_counts_dfR2, on=\"Option\", how=\"outer\")\n\n\ntrace1 = go.Pie(\n     values=option_counts_df.R1, \n     labels=option_counts_df.Option,\n     domain=dict(x=[0.0, 0.45]),  # Adjust the x values\n     name=\"Run #1\",\n     hole=0.4,\n     hoverinfo=\"label+percent+name\",\n     title=f\"Run#1 &lt;br&gt; [{int(total_r1)}]\",\n     marker_colors=custom_colors\n)\n\n\n\ntrace2 = go.Pie(\n     values=option_counts_df.R2, \n     labels=option_counts_df.Option,\n     domain=dict(x=[0.55, 1.0]),  # Adjust the x values\n     name=\"Run #2\",\n     hole=0.4,\n     hoverinfo=\"label+percent+name\",\n     title=f\"Run#2 &lt;br&gt; [{int(total_r2)}]\",\n     marker_colors=custom_colors\n)\n\nlayout = go.Layout(\n#     boxgap=0.1,\n    font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n\n)\n#     title=\"Participants' Background\")\ndata = [trace1, trace2]\nfig = go.Figure(data=data, layout=layout)\nconfig = {'responsive': False}\nfig.show()\n\n# Save the figure as an SVG file\npio.write_image(fig, './UpskillingResearchersInML_Assets/ParticipantsOS.svg', width=1800, height=600, scale=1)  # Adjust the scale as needed)\n\n\n                                                \n\n\n\n\nCode\n# List of column names you want to plot\ncolumns_to_plot = ['Q3_1', 'Q3_2', 'Q3_3', 'Q3_4', 'Q3_5', 'Q3_6']\n\ndef plot_columns_from_dataframe(dataframe1, dataframe2, columns_to_plot):\n    # String to be stripped from each element\n    string_to_strip = \"Please rate your level of agreement with the following statements (0 = complete disagreement, 100 = complete agreement). - \"\n\n    for column in columns_to_plot:\n        # Check if the column contains string values before applying .str.replace()\n        if df_raw[column].dtype == 'object':\n            df_raw[column] = df_raw[column].str.replace(string_to_strip, '', case=False)\n\n    # Convert the columns to float, handling non-numeric values by replacing them with NaN\n    for column in columns_to_plot:\n        dataframe1[column] = pd.to_numeric(dataframe1[column], errors='coerce')\n\n    # Create subplots\n    fig = make_subplots(rows=1, cols=1, shared_yaxes=True)\n\n    # custom_colors = ['color1', 'color2', 'color3', 'color4', 'color5', 'color6']  # Define your custom colors\n\n    for it_number, column in enumerate(columns_to_plot):\n        median_value_df1 = dataframe1[column].median()\n        subplot_df1 = go.Box(\n            y=dataframe1[column],\n            boxpoints='all',\n            jitter=0.3,\n            pointpos=-1.8,\n            line=dict(color=custom_colors[it_number]),\n            marker=dict(color=custom_colors[it_number]),\n            name=df_raw.loc[0,column]\n        )\n\n        median_value_df2 = dataframe2[column].median()\n        subplot_df2 = go.Box(\n            y=dataframe2[column],\n            boxpoints='all',\n            jitter=0.3,\n            pointpos=-1.8,\n            line=dict(color=custom_colors[it_number]),\n            marker=dict(color=custom_colors[it_number]),\n            showlegend=False,\n            # in f notation prepend Run#2 to the name followed b the it_number variable\n            name=f\"Run#2 Q {it_number+1}\"\n        )\n\n        # Add subplots to the figure\n        fig.add_trace(subplot_df1, row=1, col=1)\n        fig.add_trace(subplot_df2, row=1, col=1)\n\n        # # Add median annotations\n        # fig.add_annotation(\n        #     x=it_number + 1,\n        #     y=median_value_df1,\n        #     text=f'Median: {median_value_df1:.2f}',\n        #     font=dict(size=14, color=\"black\"),\n        #     showarrow=True,\n        #     arrowhead=7,\n        #     ax=0,\n        #     ay=-20,\n        #     row=1,\n        #     col=1\n        # )\n\n        # fig.add_annotation(\n        #     x=it_number + 1,\n        #     y=median_value_df2,\n        #     text=f'Median: {median_value_df2:.2f}',\n        #     font=dict(size=14, color=\"black\"),\n        #     showarrow=True,\n        #     arrowhead=7,\n        #     ax=0,\n        #     ay=-20,\n        #     row=1,\n        #     col=2\n        # )\n\n    # Customize the layout\n    fig.update_layout(\n        title=\"Agreement with statements: 0 = complete disagreement, 100 = complete agreement, Run#1 left, Run#2 right\",\n        font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n        # xaxis=dict(title=\"Columns\"),\n        # yaxis=dict(title=\"Values\")\n    )\n\n    # do not show the x axis labels\n    fig.update_xaxes(showticklabels=False)\n\n    # Add a subtitle-like text as an annotation\n    fig.add_annotation(\n        text=\"median across all data for Run#1: 85.5, Run #2: 86.25\",\n        xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n        x=0.5, y=1.05,  # Adjust the position\n        showarrow=False,  # Hide arrow\n        font=dict(size=16)  # Customize font size\n    )\n\n    # # Add a horizontal line to the boxplots\n    # average_values_df1 = dataframe1[columns_to_plot].mean()\n    # overall_avg_df1 = average_values_df1.mean()\n\n    # average_values_df2 = dataframe2[columns_to_plot].mean()\n    # overall_avg_df2 = average_values_df2.mean()\n\n    # fig.add_shape(\n    #     go.layout.Shape(\n    #         type=\"line\",\n    #         x0=0,\n    #         x1=len(columns_to_plot) + 1,\n    #         y0=overall_avg_df1,\n    #         y1=overall_avg_df1,\n    #         line=dict(color=\"red\", width=2),\n    #     ),\n    #     row=1,\n    #     col=1\n    # )\n\n    # fig.add_shape(\n    #     go.layout.Shape(\n    #         type=\"line\",\n    #         x0=0,\n    #         x1=len(columns_to_plot) + 1,\n    #         y0=overall_avg_df2,\n    #         y1=overall_avg_df2,\n    #         line=dict(color=\"red\", width=2),\n    #     ),\n    #     row=1,\n    #     col=2\n    # )\n\n    # fig.add_annotation(\n    #     x=len(columns_to_plot) + 1,\n    #     y=overall_avg_df1,\n    #     text=f'Overall avg: {overall_avg_df1:.2f}',\n    #     font=dict(size=14, color=\"red\"),\n    #     ax=0,\n    #     ay=20,\n    #     row=1,\n    #     col=1\n    # )\n\n    # fig.add_annotation(\n    #     x=len(columns_to_plot) + 1,\n    #     y=overall_avg_df2,\n    #     text=f'Overall avg: {overall_avg_df2:.2f}',\n    #     font=dict(size=14, color=\"red\"),\n    #     ax=0,\n    #     ay=20,\n    #     row=1,\n    #     col=2\n    # )\n\n    # Show the figure\n    fig.show()\n    # Save the figure as an SVG file\n    pio.write_image(fig, './UpskillingResearchersInML_Assets/ParticipantsAgreement.svg', width=1800, height=600, scale=1)  # Adjust the scale as needed)\n\n# Example usage:\n# Create or load your DataFrames and specify the list of columns to plot\n# df1 = pd.read_csv('your_dataframe1.csv')  # Or create your DataFrame\n# dataframe2 = pd.read_csv('your_dataframe2.csv')  # Or create your DataFrame\n# columns_to_plot = ['Q3_1', 'Q3_2', 'Q3_3', 'Q3_4', 'Q3_5', 'Q3_6']\n# plot_columns_from_dataframe(df1, dataframe2, columns_to_plot)\ncolumns_to_plot = ['Q3_1', 'Q3_2', 'Q3_3', 'Q3_4', 'Q3_5', 'Q3_6']\nplot_columns_from_dataframe(df2, dfR22, columns_to_plot)\n\n\n\n                                                \n\n\n\n\nCode\n# Calculate the median for each column\nmedians = df2[columns_to_plot].median()\n\n# Calculate the metric as the median of medians\noverall_median = medians.median()\n\nprint(overall_median)\n\n# Calculate the median for each column\nmedians = dfR22[columns_to_plot].median()\n\n# Calculate the metric as the median of medians\noverall_median = medians.median()\n\nprint(overall_median)\n\n\n\n85.5\n86.25\n\n\n\n\nCode\n# Load data from CSV into the 'zoom' DataFrame\nzoom = pd.read_csv(\"ZoomStats.csv\")\n\n# Create a list of unique days\nunique_days = zoom['Day'].unique()\n\n\n\n# Create subplots for each day\nfig = go.Figure()\n# config = {'responsive': False}\n\n\n# Create a bar for Run1 and Run2 for each unique day\nx_labels = []\nfor day in unique_days:\n    day_data = zoom[zoom['Day'] == day]\n    \n    fig.add_trace(go.Bar(\n        x=[f'Day {day} - Run1', f'Day {day} - Run2'],\n        y=[day_data['Run1'].values[0], day_data['Run2'].values[0]],\n        name=f'Day {day}',\n        text=[day_data['Run1'].values[0], day_data['Run2'].values[0]],\n        textposition='outside',  # Place the value annotations outside the bars\n        showlegend=False,  # Hide the legend\n        marker_color=[custom_colors[0], custom_colors[1]]\n    ))\n    \n    x_labels.extend([f'Day {day} - Run1', f'Day {day} - Run2'])\n\n# Update layout for the overall figure\nfig.update_layout(\n    title='Number of participants in Zoom meetings per day',\n    xaxis=dict(\n        # title='Day and Run',\n        tickmode='array',\n        tickvals=list(range(len(x_labels))),\n        ticktext=x_labels\n    ),\n    # yaxis=dict(title='Value'),\n    barmode='group',\n    # bargap=0.1,  # Adjust the bargap to your preferred spacing\n    font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n)\n\n\n\nhighest_value = max(zoom[['Run1', 'Run2']].values.flatten())\n# print(highest_value)\n\n\nfig.update_yaxes(range=[0, highest_value+4])  # Set the initial y-axis range\n\n# Add a subtitle-like text as an annotation\nfig.add_annotation(\n    text=\"deduplicated, not including instructors or helpers\",\n    xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n    x=0.5, y=1.05,  # Adjust the position\n    showarrow=False,  # Hide arrow\n    font=dict(size=16)  # Customize font size\n)\n\n\n# Show the figure\nfig.show()\n\n# Save the figure as an SVG file\npio.write_image(fig, './UpskillingResearchersInML_Assets/ZoomParticipants.svg')\n\n\n                                                \n\n\n\n\nCode\ndf_promR1 = df2['Q4']\ndf_promR1\ndf_promR1.dropna(inplace=True)\ndf_promR1.astype(int)\ndf_promR2 = dfR22['Q4']\ndf_promR2\ndf_promR2.dropna(inplace=True)\ndf_promR2.astype(int)\n\npromote = pd.concat([df_promR1.astype(int), df_promR2.astype(int)], axis=1)\n\n# # Rename the columns if needed (optional)\npromote.columns = ['Q4_R1', 'Q4_R2']\npromote\n\n# flatten the dataframe 'promote' \n# promote = promote.stack().reset_index()\n\noption_counts_R1 = promote['Q4_R1'].value_counts()\noption_counts_R2 = promote['Q4_R2'].value_counts()\n\npromote2 = pd.concat([option_counts_R1.astype(int), option_counts_R2.astype(int)], axis=1)\npromote2.columns = ['Q4_R1', 'Q4_R2']\npromote2\n\n# data_type = type(promote2['Q4_R1'].iloc[0])\n# print(data_type)\n\n# promote2.plot(kind='bar')\n\n# Create subplots for each day\nfig = go.Figure()\n# config = {'responsive': False}\n\n\n# Create a bar for Run1 and Run2 for each unique day\n\nfig.add_trace(go.Bar(\n    x=promote2.index,\n    y=promote2['Q4_R1'],\n    name=\"Run #1\",\n    text=promote2['Q4_R1'].values,\n    textposition='outside',  # Place the value annotations outside the bars\n    # showlegend=False,  # Hide the legend\n    marker_color=custom_colors[0]\n)\n)\n\nfig.add_trace(go.Bar(\n    x=promote2.index,\n    y=promote2['Q4_R2'],\n    name=\"Run #2\",\n    text=promote2['Q4_R2'].values,\n    textposition='outside',  # Place the value annotations outside the bars\n    # showlegend=False,  # Hide the legend\n    marker_color=custom_colors[1]\n)\n)\n\n\n# Update layout for the overall figure\nfig.update_layout(\n    title='How likely would you be to recommend this workshop to a colleague?',\n\n    barmode='group',\n    bargap=0.1,  # Adjust the bargap to your preferred spacing\n    font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n)\n\n\n\n# Add a subtitle-like text as an annotation\nfig.add_annotation(\n    text=\"0 = not likely at all ... 10 = extremely likely\",\n    xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n    x=0.5, y=-0.15,  # Adjust the position\n    showarrow=False,  # Hide arrow\n    font=dict(size=16)  # Customize font size\n)\n\n# Add a subtitle-like text as an annotation\nfig.add_annotation(\n    text=\"deduplicated, not including instructors or helpers\",\n    xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n    x=0.5, y=1.05,  # Adjust the position\n    showarrow=False,  # Hide arrow\n    font=dict(size=16)  # Customize font size\n)\n\nfig.update_xaxes(range=[0, 11])  # Set the initial x-axis range\nfig.update_yaxes(range=[0, 10])  # Set the initial y-axis range\n\n# Update x-axis ticks to display integers from 0 to 10\nfig.update_xaxes(\n    tickmode='array',\n    tickvals=list(range(11)),  # Set tick values from 0 to 10\n    ticktext=list(map(str, range(11)))  # Set tick labels as strings of integers from 0 to 10\n)\n\n# # Show the figure\nfig.show()\npio.write_image(fig, './UpskillingResearchersInML_Assets/ParticipantsRecommend.svg', width=1800, height=600, scale=1)  # Adjust the scale as needed)\n\n\n\n\n\n                                                \n\n\n\n\nCode\n# Load data from CSV into the 'zoom' DataFrame\nzoom = pd.read_csv(\"ZoomStats.csv\")\nzoom\n\n\n# Assuming you have a DataFrame or data source named 'zoom'\nfig = go.Figure()\n\nfig.add_trace(go.Scatter(x=zoom['Day'], y=zoom['Run1'], mode='lines+markers', name='Run#1', line=dict(width=2, color=custom_colors[0]), marker=dict(size=8, color=custom_colors[0])))\nfig.add_trace(go.Scatter(x=zoom['Day'], y=zoom['Run2'], mode='lines+markers', name='Run#2', line=dict(width=2, color=custom_colors[1]), marker=dict(size=8, color=custom_colors[1])))\n\n\ndef format_data_label(value):\n    if np.isnan(value) or value == \"\":\n        return \"\"\n    else:\n        return f\"{value:.0f}\"\n\nfig.update_layout(title='Attendees per Zoom session',\n                  xaxis_title='Day',\n                #   yaxis_title='Value'\n                  )\n\n# Create a text column for data values with custom formatting\ntext_values_run1 = [format_data_label(val) for val in zoom['Run1']]\ntext_values_run2 = [format_data_label(val) for val in zoom['Run2']]\n\n# Add data labels to each trace using add_trace\nfig.add_trace(go.Scatter(x=zoom['Day'], y=zoom['Run1'], mode='text', text=text_values_run1, textposition='top center', showlegend=False))\nfig.add_trace(go.Scatter(x=zoom['Day'], y=zoom['Run2'], mode='text', text=text_values_run2, textposition='bottom center', showlegend=False))\n\n# Set the y-axis scale to [0, 37]\nfig.update_yaxes(range=[0.1, 5.1])\nfig.update_yaxes(range=[0, 37])\n\n# Set x-axis ticks to integers\nfig.update_xaxes(tickmode='linear', dtick=1)\n\n\n\n\nfig.update_layout(\n        font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),)\n\n# Add a subtitle-like text as an annotation\nfig.add_annotation(\n    text=\"deduplicated, not including instructors or helpers\",\n    xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n    x=0.5, y=1.05,  # Adjust the position\n    showarrow=False,  # Hide arrow\n    font=dict(size=16)  # Customize font size\n)\n\n# Set hoverformat to display data labels without decimal places\nfig.update_traces(hoverinfo=\"y+text\", hoverlabel=dict(namelength=0), hovertemplate=\"%{y:.0f}\")\n\n\nfig.show()\n\n# Save the figure as an SVG file\npio.write_image(fig, './UpskillingResearchersInML_Assets/ZoomParticipantsLine.svg')"
+  },
+  {
     "objectID": "ML-Recap.html#introduction-to-machine-learning-with-scikit-learn",
     "href": "ML-Recap.html#introduction-to-machine-learning-with-scikit-learn",
     "title": "ML-Carp Recap and Outlook",
@@ -189,178 +364,31 @@
     "text": "Workflows for heavier computation\n\nGoogle Colab vs. locally installed Jupyter Notebooks or Plain Vanilla Python\n\nDo all use Colab ‘in the real world’ all the time? No!\n\nVSCode\nPython locally installed\n\nVirtual Environment\npip install\n\nusing GPU/Nectar/…"
   },
   {
-    "objectID": "LaTeX101.html#visualisations-in-tikz",
-    "href": "LaTeX101.html#visualisations-in-tikz",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "Visualisations in TikZ",
-    "text": "Visualisations in TikZ\nExample showing the power of the TikZ package"
+    "objectID": "DataWorkflows2024.html#this-session-vs.-related",
+    "href": "DataWorkflows2024.html#this-session-vs.-related",
+    "title": "Working with data in 2024",
+    "section": "This session vs. related",
+    "text": "This session vs. related\n\nThis session is the introduction. Let’s call it Level 1️⃣\n\nWe will mostly talk\nNick is the expert who taught Jens many things over the past years, we’ll replicate some of the back and forth\nWe will provide you with an overview\nyou are asked to think about examples you’d like see used in the upcoming sessions\n\nYou can decide if you just want to listen or if you want to follow along\n\nIf you want to get your hands dirty, hold your horses 🐴\ndon’t miss out now\nthe next sessions will be all about hands-on experience with the tools 🛠️\n\nThere is homework 💼\n\nsee later slides"
   },
   {
-    "objectID": "LaTeX101.html#visualisations-in-tikz--1",
-    "href": "LaTeX101.html#visualisations-in-tikz--1",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "Visualisations in TikZ -1",
-    "text": "Visualisations in TikZ -1\n Source"
+    "objectID": "DataWorkflows2024.html#homework",
+    "href": "DataWorkflows2024.html#homework",
+    "title": "Working with data in 2024",
+    "section": "Homework 💼",
+    "text": "Homework 💼\n\nInstall software \nGet a dataset (git pull/GitHub Desktop)\nrun this one line, to see what if it works."
   },
   {
-    "objectID": "LaTeX101.html#visualisations-in-tikz--2",
-    "href": "LaTeX101.html#visualisations-in-tikz--2",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "Visualisations in TikZ -2",
-    "text": "Visualisations in TikZ -2\n Source"
+    "objectID": "DataWorkflows2024.html#the-support-via-slack",
+    "href": "DataWorkflows2024.html#the-support-via-slack",
+    "title": "Working with data in 2024",
+    "section": "The support via Slack",
+    "text": "The support via Slack\n\nWe have a Slack channel\nWe will be available for questions\nThis is a premiere, so let’s see how many quesitons we can answer"
   },
   {
-    "objectID": "LaTeX101.html#visualisations-in-tikz--3",
-    "href": "LaTeX101.html#visualisations-in-tikz--3",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "Visualisations in TikZ -3",
-    "text": "Visualisations in TikZ -3\n Source"
-  },
-  {
-    "objectID": "LaTeX101.html#visualisations-in-tikz--4",
-    "href": "LaTeX101.html#visualisations-in-tikz--4",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "Visualisations in TikZ -4",
-    "text": "Visualisations in TikZ -4\n Source"
-  },
-  {
-    "objectID": "LaTeX101.html#easily-go-from-one-to-two-column-layouts",
-    "href": "LaTeX101.html#easily-go-from-one-to-two-column-layouts",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "Easily go from one to two column layouts",
-    "text": "Easily go from one to two column layouts\n\n\n\\documentclass[10pt,a4paper,onesided]{article} \n\\usepackage{lipsum}\n\\begin{document}\n  \\section{My Title}\n  \\subsection{Sub-Section}\n  \\textbf{Printing 1 to 3 paragraphs}\\\\\n  \\lipsum[1-3]\n  \\subsection{Sub-Section}\n  \\lipsum[1]\n\\end{document}\nNote that: …onesided… \n\n#| \\documentclass[10pt,a4paper,twocolumn]{article} \n\\usepackage{lipsum}\n\\begin{document}\n  \\section{My Title}\n  \\subsection{Sub-Section}\n  \\textbf{Printing 1 to 3 paragraphs}\\\\\n  \\lipsum[1-3]\n  \\subsection{Sub-Section}\n  \\lipsum[1]\n\\end{document}\nNote that: …twocolumn…"
-  },
-  {
-    "objectID": "LaTeX101.html#mathsformulae",
-    "href": "LaTeX101.html#mathsformulae",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "Maths/Formulae",
-    "text": "Maths/Formulae"
-  },
-  {
-    "objectID": "LaTeX101.html#external-files",
-    "href": "LaTeX101.html#external-files",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "External Files",
-    "text": "External Files\n\nYou (usuall) reference external files; this means you might have a ‘Images’ folder. All updates (while maintaining the file name) come into effect quickly (after recompiling); consider a version control mechanism such as GitHub to avoid data loss\nThis also works for imported data (often in the csv file format) which you can get to automatically update tables\nEven layouts can be changed\n\nWorkflow for changing things in citations (Zotero) or getting a citation from a paper (three steps and done), backed up to GitHub, don’t worry\nUpdate a picture to the latest version, keep the name, don’t worry about overwriting, because you have it on GitHub\nBecause of LaTeXIt knowing the syntax can help you with creating vis. for your PowerPoint, Slides, … Presentation\nSyntax highlighting for code\nChange a caption on several figures, update the ToC,…"
-  },
-  {
-    "objectID": "LaTeX101.html#advantages",
-    "href": "LaTeX101.html#advantages",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "Advantages",
-    "text": "Advantages\n\n\n\n\n\n\nNote\n\n\nThere is a trade-off between time invested upfront (learning \\(\\LaTeX\\) etc. vs. and time saved in the long-run. As many of you might work on their PhD thesises, this time balance one day before the deadline vs. some hours or days can’t be traded-off 1:1\n\n\n\n\n(good) \\(\\LaTeX\\) output looks epic (at least in most cases)\n\nit decides where pictures are placed\nmaths is neatly rendered\nhow line-breaks happen (justify text is using a dictionary for line-breaks, unlike many wysiwyg editors)\nmulti-column layouts on one page"
-  },
-  {
-    "objectID": "LaTeX101.html#advantages---continued",
-    "href": "LaTeX101.html#advantages---continued",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "Advantages - continued",
-    "text": "Advantages - continued\n\nit is free and not tied to any big corporation, you can often write in any text editor, browser etc.\nit is no closed source file (unlike a .docx or so) this means we can use Git(Hub) EXAMPLE and other version control systems (we can run things like a diff on it, EXAMPLE CODE GOES HERE)\n\nno proprietary software that\n\nmight disappear from the market\ncharges you an arm and a leg especially over time with a subscription model (yes, I am looking at you, Adobe)\nmeans you can keep this compeltely offline/local/no-cloud, etc. good for Ethics Approvals and sensitive data, …\n\n\nyou can mostly get outputs to several outputs with altering a few lines (vs. clicking on every slide or here and there)"
-  },
-  {
-    "objectID": "LaTeX101.html#advantages---continued-1",
-    "href": "LaTeX101.html#advantages---continued-1",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "Advantages - continued",
-    "text": "Advantages - continued\n\nyou can customise it heavily\nyou can have inline comments (for future you, for your supervisor, to toggle things on/off)\nIf you ingest some code, tables, data, a lot of figures ResBaz Workshop Python for image manipulation and repeatable research pipelines, you will learn to love \\(\\LaTeX\\)\nReferencing is quite easy, especially if paired with a reference manager such as Zotero, see ResBaz session Managing References With Zotero\nMaths! \\(f_{c}=z^{2}+c\\) AND Mathpix Snipping\nPlotting (again some learning curve, but no Excel to Word to something schenanigans where you might miss out the latest version of a file and try to publish something wrong)\nsame goes for citations, referencing figures, placing figures (yes, you can specify that it shall be right there where you want it, but you can also let \\(\\LaTeX\\) work it’s magic)\nPortability: LaTeX documents are portable and can be easily converted to other formats, such as PDF, HTML, or EPUB."
-  },
-  {
-    "objectID": "LaTeX101.html#advantages---continued-2",
-    "href": "LaTeX101.html#advantages---continued-2",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "Advantages - continued",
-    "text": "Advantages - continued\nSymbols often render very neatly, sometimes workarounds are needed\nM\\={a}ori \nFor Macrons a more advanced approach is described here, as Unicode is mostly used, you can type Māori (so on a Mac use the long-press option ā to write Māori or change the keyboard style) or copy-paste such characters."
-  },
-  {
-    "objectID": "LaTeX101.html#disadvantages",
-    "href": "LaTeX101.html#disadvantages",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "Disadvantages",
-    "text": "Disadvantages\n\nit takes time to learn (Overleaf and other more relevant UI etc. make it easier)\nit can be very fiddely (if you want specifics with tables, or placing images)\nthe collaboration features are quite limited out of the box, yes, a lot can be done (see Eirian), but that mostly requires you to a) bring/acquire some coding knowledge, b) invest time; here, MS Word Clearly wins\nplugins such as Grammarly don’t work ootb, for VSCode, you can integrate these as an Extension, on Overleaf there is a buggy workaround"
-  },
-  {
-    "objectID": "LaTeX101.html#preamble",
-    "href": "LaTeX101.html#preamble",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "Preamble",
-    "text": "Preamble\nThis is similar to programming where you start with importing relevant libraries (things others did to make your life easier) and definitions (for example, colours)\n\\documentclass[twoside,openright,a4paper]\n\n\\usepackage[usenames, dvipsnames, table]{xcolor}\n\n\\addbibresource{references.bib}\n\n\\definecolor{uoadarkblue}{RGB}{0, 70, 127}"
-  },
-  {
-    "objectID": "LaTeX101.html#main-body",
-    "href": "LaTeX101.html#main-body",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "Main body",
-    "text": "Main body\nYou can either - write all your document in one text file (with the file extension *.tex) - \\(\\LaTeX\\) commands usually start with the backslash character - as in all coding, it is important to close brackets that you have opened and to be quite picky with the details - \\(\\LaTeX\\) is mostely whitespace-insensitive, this means you can write your .tex document without having to worry about empty lines, etc. This also means, if you want to include empty lines, you have to enforce them - \\\\ (two backslashes) - \\newline - \\hfill \\break - see also - It is good practice not to create one huge .tex file but to use the \\include command to include chapters\n\\include{Titlepage}\n\\part{Background}\n\\include{Chapters/Intro}"
-  },
-  {
-    "objectID": "LaTeX101.html#references-appendices-etc.",
-    "href": "LaTeX101.html#references-appendices-etc.",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "References, Appendices, etc.",
-    "text": "References, Appendices, etc.\n\nall of these can be ingested (reference to external files) in the preamble\nIt’s fair to consider this a strong-suit of \\(\\LaTeX\\)\ndetails exceed the scope of this introduction; more in-depth ResBaz sessions are offered (see Section 10) and you can refer to the template provided"
-  },
-  {
-    "objectID": "LaTeX101.html#how-to-get-latex---the-core",
-    "href": "LaTeX101.html#how-to-get-latex---the-core",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "How to get \\(\\LaTeX\\) - the core",
-    "text": "How to get \\(\\LaTeX\\) - the core\nIdea: As software-agnostic as possible - Download a \\(\\LaTeX\\) distribution, for example MiKTeX - install pandoc - use any texteditor - Windows: - Notepad - Mac: - TextEdit - Linux: - various - Cross-Platform: - VSCode - Sublime - on the commandline: type pandoc -i ~/Desktop/myWritings.tex -o ~/Desktop/MyRenderedLaTeX.pdf - inspect your neatly renedered document"
-  },
-  {
-    "objectID": "LaTeX101.html#how-to-get-latex---special-editors",
-    "href": "LaTeX101.html#how-to-get-latex---special-editors",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "How to get \\(\\LaTeX\\) - special editors",
-    "text": "How to get \\(\\LaTeX\\) - special editors\nThe idea is to have a local installation and a specialised editor - Texifier - TeXLive - TeXStudio - TeXMaker"
-  },
-  {
-    "objectID": "LaTeX101.html#how-to-get-latex---in-the-browser",
-    "href": "LaTeX101.html#how-to-get-latex---in-the-browser",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "How to get \\(\\LaTeX\\) - In the browser",
-    "text": "How to get \\(\\LaTeX\\) - In the browser\n\nOverleaf is quote famous for bringing $to the masses\nA pro and con at the same time: It runs in the cloud, you don’t need to install a \\(\\LaTeX\\) distribution, special editor, etc.\nRecently, they added “Overleaf On-Premises” to circumvent privacy challenges\nthere is a free plan which might be a good fit for beginners or if it is just you wokring on a dcument\nthere are paid plans, including student plans which are currently NZD109/year\n\nThe main advantages:\n\nInvite collaborators, so work on the same document at the same time\nHave a similar tracking mechanism as MS Word’s Track Changes\nSync to Dropbox, GitHub, etc.\n\n\nUoA Bioengineering staff/students get Overleaf premium free ALTERNATVIELY: There is another ResBaz session: Stop Paying for Free Software"
-  },
-  {
-    "objectID": "LaTeX101.html#how-to-get-latex---the-meta-version",
-    "href": "LaTeX101.html#how-to-get-latex---the-meta-version",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "How to get \\(\\LaTeX\\) - The meta version",
-    "text": "How to get \\(\\LaTeX\\) - The meta version\nQuarto can be considered one level above in terms of abstraction \n\n\\(\\LaTeX\\) is just one of its output, the other benefit is a direct integration with Python, R, Julia, Observable\nyou can write in markdown syntax (.md) so for example **my text** (md notation) as oppsed to \\textbf{my text}\nthe integration with code means you won’t have to copy-paste results back and forth\n\nthis point can’t be stressed enough! You are so likely to forget updating a plot\nyou also get reproducability, because it isn’t just a screen shot that is integrated into your document &lt;!– (There are approaches where you can get some (rudimentary) Python code into LaTeX, even into Overleaf, but these are mainly for handling several files (batch processing) keeping track of Python version- Coding colaborators can contribute via a Git workflow\n\nCommunicate results to non-coding collaborators using git (e.g., GitHub)\n\n\n\n\n\n\n\nOn a side-note\n\n\nThis deck of slides (based on RevealJS, it can also handle a lot of code."
-  },
-  {
-    "objectID": "LaTeX101.html#tables",
-    "href": "LaTeX101.html#tables",
-    "title": "LaTeX 101 - Don’t be scared",
-    "section": "Tables",
-    "text": "Tables\n\n\n\nA simple table in \\(\\LaTeX\\) syntax:\n\n\\begin{table}[]\n\\caption{My Example Table}\n\\label{tab:my-table}\n\\begin{tabular}{|l|l|l|l|l|}\n\\hline\ncountry     & 1999   & 2000   &  &  \\\\ \\hline\nAfghanistan & 745    & 2666   &  &  \\\\ \\hline\nBrazil      & 37737  & 80488  &  &  \\\\ \\hline\nChina       & 212258 & 213766 &  &  \\\\ \\hline\n\\end{tabular}\n\\end{table}\n\n\nAlternatively using markdown syntax:\n\n| country     | 1999   | 2000   |   |   |\n|-------------|--------|--------|---|---|\n| Afghanistan | 745    | 2666   |   |   |\n| Brazil      | 37737  | 80488  |   |   |\n| China       | 212258 | 213766 |   |   |\n\n\n\nTo be honest:\n\nBoth are a pain to format by hand\nYou shouldn’t work with your data in these. These are for publishing only.\nSome see spreadsheet software (MSExcel, Google Sheets, etc.) just suited for data entry, Python, R, OpenRefine, etc. are better alternatives whose learning curve isn’t as steep as you might expect and relevant sessions are also provided at this year’s ResBaz (see pointers)"
-  },
-  {
-    "objectID": "ResBazPlanning.html#r",
-    "href": "ResBazPlanning.html#r",
-    "title": "ResBaz 2023 - Scheduling Assistance",
-    "section": "R",
-    "text": "R\n\nLet’s start with R.\nIt is very commonly used\nand it originated from research needs to undertake statistical analysis and to create graphics.\nNowadays, there are heaps of things that you can do with R and these are presented in the session\n“Introduction to R and R Studio”\n\nWhat you learned there will be expanded on in “Using R for statistical analysis” and even more in “Hands-on statistical analysis with R”"
-  },
-  {
-    "objectID": "ResBazPlanning.html#python",
-    "href": "ResBazPlanning.html#python",
-    "title": "ResBaz 2023 - Scheduling Assistance",
-    "section": "Python",
-    "text": "Python\n\nAnother popular programming language in the research Community is Python.\nPython is commonly employed for all kinds of research-tasks.\nTo get an overview, we reommend attending the taster session: “How Can Python Help Your Research?”.\n\nIf you have or already had developed a taste for Python, “Introduction to the Python Programming Language” gets you started with hands-on coding in Python\n\nIf you face challenges with handling/changing/manipulating not one but hundreds or more of files, “Python for Image Manipulation and Repeatable Research Pipelines” helps you in making Python do the work so you can free up some time to focus on research"
-  },
-  {
-    "objectID": "ResBazPlanning.html#cli",
-    "href": "ResBazPlanning.html#cli",
-    "title": "ResBaz 2023 - Scheduling Assistance",
-    "section": "CLI",
-    "text": "CLI\n\nEven though you can run many aspects of R and Python in a graphical user interface or gui, so independent of a command-line interface or CLI, many other software packages do have a cli version\nSome also refer to these as the terminal version.\n\nSometimes this might have even more functionality or\nyou can automate tedious tasks\nor its use contributes to a repeatable and hence reproduicble resareach workflow.\nThese things become more and more important."
-  },
-  {
-    "objectID": "ResBazPlanning.html#cli2",
-    "href": "ResBazPlanning.html#cli2",
-    "title": "ResBaz 2023 - Scheduling Assistance",
-    "section": "CLI2",
-    "text": "CLI2\n\nIn the session “introduction to command line” you will be familiarized with important commands but also the related mindset\nand syntax.\n\nA fancy way os daying how you have to type things out.\nOften upper or lower case, dashes and the sequence matter.\n\nAs a next step, you can apply these skills in the session “using the command line to find replace and manipulate data”\n\nThat session title gives a lot away\nand might save you hours of work"
+    "objectID": "DataWorkflows2024.html#the-next-session-or-level-2",
+    "href": "DataWorkflows2024.html#the-next-session-or-level-2",
+    "title": "Working with data in 2024",
+    "section": "The next session or Level 2️⃣",
+    "text": "The next session or Level 2️⃣\n\nHere we will go through several steps\nWe will use a real-world example\nIn case you, as a group, haven’t agreed on a dataset of highest relevance, to be used, we will provide one"
   }
 ]
