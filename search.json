@@ -399,10 +399,45 @@
     "text": "Useful links\n\nhow to create GitHub Issues right in VSC"
   },
   {
-    "objectID": "DataWorkflows2024.html#first-slide",
-    "href": "DataWorkflows2024.html#first-slide",
+    "objectID": "DataWorkflows2024.html#operating-systems",
+    "href": "DataWorkflows2024.html#operating-systems",
     "title": "Working with data in 2024",
-    "section": "First Slide",
-    "text": "First Slide\n\n\n\n\n\n\n\n\nflowchart LR\n    D(fa:fa-phone)--&gt;C[fa:fa-house]\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n    D(fa:fa-phone)--&gt;C[fa:fa-earth-americas]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\nState of the Art Workflows for working with data in 2024"
+    "section": "Operating Systems",
+    "text": "Operating Systems\n\nWindows\n\nWindows Subsystem for Linux WSL\n\nMacOS\n\ninstall Python via HomeBrew\n\nLinux\n\nUbuntu\nFedora\nDebian\nArch\n…"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#programming-language-python",
+    "href": "DataWorkflows2024.html#programming-language-python",
+    "title": "Working with data in 2024",
+    "section": "Programming Language: Python",
+    "text": "Programming Language: Python\n\n\n\nPython is\n\na high-level/abstract and general-purpose programming language\nan interpreted language (not compiled)\n\nPython is dynamically typed (no need to declare variables)\nPython is easy to\n\nread, maintain, write, debug, extend, integrate with other languages, deploy, scale, share, collaborate, teach"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#programming-language-python---continued",
+    "href": "DataWorkflows2024.html#programming-language-python---continued",
+    "title": "Working with data in 2024",
+    "section": "Programming Language: Python - continued",
+    "text": "Programming Language: Python - continued\n\n\n\n\n\n\nPersonal opinion\n\n\n\na common statement is that Python is slow\n\nin reality, you can run (encapsulated) other languages\n\nbeing a relatively abstract languge makes it suitable for many research projects (no need to reinvent the wheel)\nThe community is great!\n\nmost popular/most searched for on Google\nthere are tons of great libraries that can be used\nbecause Python is so popular, ChatGPT and other Machine Learning (ML) powered support tools can write pretty decent code (date of writing this = April 2024).\n\nsome report issues with libraries and changes to them\n\nthere are many ways of dependency management (requirements.txt or Poetry) version-controlling your code and making sure it is reproducible"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#ide---vsc-tla",
+    "href": "DataWorkflows2024.html#ide---vsc-tla",
+    "title": "Working with data in 2024",
+    "section": "IDE - VSC (TLA)",
+    "text": "IDE - VSC (TLA)\n\n\nAn IDE is an Integrated Development Environment. (a TLA is a Three Letter Acronym) You can do everything we will talk today in a simple text editor, using your operating system’s file explorer, a command-line terminal, but an IDE makes your life easier. - Visual Studio Code (VSC)  - VSCodium  - (open-source version that isn’t collection telemetry data) - PyCharm  and others specialised for certain programming languages\n\n more information on the official website\n\n\n\nPhoto courtesy of Visual Studio Code"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#how-to-navigate-in-vsc",
+    "href": "DataWorkflows2024.html#how-to-navigate-in-vsc",
+    "title": "Working with data in 2024",
+    "section": "How to navigate in VSC",
+    "text": "How to navigate in VSC\n\nif you are familiar with the layout, it is easy\nif you are a novice, it might overwhelm you\n\nJens: I have been there and I got lost\n\nthink of it as a\n\nfile explorer (usually on the left)\nterminal (usually at the bottom)\none or many editors (usually in the middle)\n\nat times they have preview windows, too\n\n\nthere are many plugins; we will use:\n\nGitHub\n\nGitHub CoPilot\n\nPython\n\nwe will create a virutal environment\n\nwe will show you (only show you) how to connect to a remote server (that might be another physical machine/like your computer at home or a cloud service, like the research infrastructure at the University of Auckland (UoA), Nectar of AWS)"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#git-and-github-and-github-actions",
+    "href": "DataWorkflows2024.html#git-and-github-and-github-actions",
+    "title": "Working with data in 2024",
+    "section": "Git and GitHub and GitHub Actions",
+    "text": "Git and GitHub and GitHub Actions\n\nGit is a version control system\n\nsparing you the technical details, and sharing a pragmatic view: This is (part of) what’s going on under the hood of GitHub\nwe recommend using Git in our RDM Workshops\n\nGitHub is a platform that hosts Git repositories\n\nto be blunt: This is how you interact with Git (there are alternatives/GitLab, BitBucket, …)\nit is also\n\na social network for developers\na place where you can find code, share code, collaborate on code, and get feedback on code\n\n\nYou can have public repositories (fancy way of saying project folders) in the general free plan, at UoA (and potentially other academic institutions) you can have free private repositories, too TODO #10\nGitHub Action (GHA)\n\nthis is a way to automate things\nin theory, you can do everything you can do on your computer, on GitHub; so you could use your smartphone to write code that is then executed on a server in the cloud\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\nState of the Art Workflows for working with data in 2024"
   }
 ]
