@@ -34,6 +34,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #383a42;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #383a42; } /* Normal */
+    code span.al { color: #95da4c; background-color: #4d1f24; font-weight: bold; } /* Alert */
+    code span.an { color: #50a14f; } /* Annotation */
+    code span.at { color: #a626a4; } /* Attribute */
+    code span.bn { color: #986801; } /* BaseN */
+    code span.bu { color: #a626a4; } /* BuiltIn */
+    code span.cf { color: #a626a4; } /* ControlFlow */
+    code span.ch { color: #50a14f; } /* Char */
+    code span.cn { color: #986801; } /* Constant */
+    code span.co { color: #a0a1a7; font-style: italic; } /* Comment */
+    code span.cv { color: #e45649; font-style: italic; } /* CommentVar */
+    code span.do { color: #e45649; } /* Documentation */
+    code span.dt { color: #a626a4; } /* DataType */
+    code span.dv { color: #986801; } /* DecVal */
+    code span.er { color: #f44747; text-decoration: underline; } /* Error */
+    code span.ex { color: #4078f2; font-weight: bold; } /* Extension */
+    code span.fl { color: #986801; } /* Float */
+    code span.fu { color: #4078f2; } /* Function */
+    code span.im { color: #50a14f; } /* Import */
+    code span.in { color: #c45b00; } /* Information */
+    code span.kw { color: #a626a4; } /* Keyword */
+    code span.op { color: #a626a4; } /* Operator */
+    code span.ot { color: #27ae60; } /* Other */
+    code span.pp { color: #a626a4; } /* Preprocessor */
+    code span.re { color: #2980b9; background-color: #153042; } /* RegionMarker */
+    code span.sc { color: #0184bc; } /* SpecialChar */
+    code span.ss { color: #da4453; } /* SpecialString */
+    code span.st { color: #50a14f; } /* String */
+    code span.va { color: #e45649; } /* Variable */
+    code span.vs { color: #da4453; } /* VerbatimString */
+    code span.wa { color: #da4453; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -352,7 +417,6 @@ Nick Young, Jens Brinkmann
 
   <p class="date">July, 2024</p>
 </section>
-<section>
 <section id="what-this-session-is-about-and-how-it-relates" class="title-slide slide level1 center">
 <h1>What this session is about and how it relates?</h1>
 <ul>
@@ -373,6 +437,43 @@ Nick Young, Jens Brinkmann
   B --&gt; D[get involved]
   C --&gt; E[get an overivew and hear buzzwords]
   D --&gt; F[get hands-on experience]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<section id="placeholder" class="title-slide slide level1 center">
+<h1>placeholder</h1>
+<div class="cell" data-reveal="true" data-fig-width="15" data-fig-height="5" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  %% A[Fahrenheit $$\frac{5}{9}$$] --&gt; B[Celsius]
+  %% A[Fahrenheit] --&gt;|"temp-32 * 5/9"| B[Celsius]
+  B --&gt; |"temp-273.15"| C[Kelvin]
+  A --&gt; C
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js"> graph LR
+      A["$$x^2$$"] --&gt;|"$$\sqrt{x+3}$$"| B("$$\frac{1}{2}$$")
+      A --&gt;|"$$\overbrace{a+b+c}^{\text{note}}$$"| C("$$\pi r^2$$")
+      B --&gt; D("$$x = \begin{cases} a &amp;\text{if } b \\ c &amp;\text{if } d \end{cases}$$")
+      C --&gt; E("$$x(t)=c_1\begin{bmatrix}-\cos{t}+\sin{t}\\ 2\cos{t} \end{bmatrix}e^{2t}$$")
 </pre>
 </div>
 <p></p></figure><p></p>
@@ -443,6 +544,7 @@ Nick Young, Jens Brinkmann
 <h2>Useful links</h2>
 <ul>
 <li><a href="https://code.visualstudio.com/blogs/2020/05/06/github-issues-integration">how to create GitHub Issues right in VSC</a></li>
+<li><a href="https://www.freecodecamp.org/news/understanding-open-source-software-lifecycles/">what do software verison numbers refer to</a></li>
 </ul>
 </section></section>
 <section>
@@ -597,13 +699,51 @@ Nick Young, Jens Brinkmann
 <li>a place where you can find code, share code, collaborate on code, and get feedback on code</li>
 </ul></li>
 </ul></li>
-<li>You can have public repositories (fancy way of saying <em>project folders</em>) in the general free plan, at UoA (and potentially other academic institutions) you can have free private repositories, too TODO #10</li>
+<li>You can have public repositories (fancy way of saying <em>project folders</em>) in the general free plan, at UoA (and potentially other academic institutions) you can have free private repositories, too <!-- TODO #10 --></li>
 <li>GitHub Action (GHA)
 <ul>
 <li>this is a way to automate things</li>
 <li>in theory, you can do everything you can do on your computer, on GitHub; so you could use your smartphone to write code that is then executed on a server in the cloud</li>
 </ul></li>
 </ul>
+<!-- TODO: #11 put some hello world example here -->
+</section>
+<section id="geopandas-and-folium" class="slide level2">
+<h2>Geopandas and Folium</h2>
+<ul>
+<li>Geopandas is a library that allows you to work with geospatial data</li>
+<li>Folium is a library that allows you to create interactive maps</li>
+<li></li>
+</ul>
+<!-- TODO: #12 have a look at the GitCarp lession -->
+<div class="sourceCode" id="annotated-cell-1"><pre class="sourceCode numberSource python code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-1-1"><a href="#annotated-cell-1-1"></a><span class="co"># Read the HTML content from the iframe source``</span></span>
+<span id="annotated-cell-1-2"><a href="#annotated-cell-1-2"></a><span class="co"># iframe_url = "https://carbon.now.sh/?bg=rgba%28255%2C255%2C255%2C1%29&amp;t=panda-syntax&amp;wt=none&amp;l=python&amp;width=680&amp;ds=false&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=true&amp;pv=0px&amp;ph=0px&amp;ln=false&amp;fl=1&amp;fm=Hack&amp;fs=13px&amp;lh=133%25&amp;si=false&amp;es=2x&amp;wm=false"</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-1-3" class="code-annotation-target"><a href="#annotated-cell-1-3"></a>iframe_url <span class="op">=</span> <span class="st">"https://carbon.now.sh/?bg=rgba</span><span class="sc">%28255%</span><span class="st">2C255%2C255%2C1%29&amp;t=panda-syntax&amp;wt=none&amp;l=python&amp;width=680&amp;ds=false&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=true&amp;pv=0px&amp;ph=0px&amp;ln=false&amp;fl=1&amp;fm=Hack&amp;fs=13px&amp;lh=133%25&amp;si=false&amp;es=2x&amp;wm=false"</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-1-4" class="code-annotation-target"><a href="#annotated-cell-1-4"></a>response <span class="op">=</span> requests.get(iframe_url)</span>
+<span id="annotated-cell-1-5"><a href="#annotated-cell-1-5"></a><span class="co"># print(response)</span></span>
+<span id="annotated-cell-1-6"><a href="#annotated-cell-1-6"></a>iframe_html <span class="op">=</span> response.content</span>
+<span id="annotated-cell-1-7"><a href="#annotated-cell-1-7"></a><span class="co"># print(iframe_html)</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-1-8" class="code-annotation-target"><a href="#annotated-cell-1-8"></a><span class="co"># Parse the iframe content using Beautiful Soup</span></span>
+<span id="annotated-cell-1-9"><a href="#annotated-cell-1-9"></a><span class="co"># print(soup)</span></span>
+<span id="annotated-cell-1-10"><a href="#annotated-cell-1-10"></a>extracted_content <span class="op">=</span> soup.body.prettify()  <span class="co"># Customize this based on your needs</span></span>
+<span id="annotated-cell-1-11"><a href="#annotated-cell-1-11"></a><span class="bu">print</span>(extracted_content)</span>
+<span id="annotated-cell-1-12"><a href="#annotated-cell-1-12"></a><span class="co"># save this as a html file</span></span>
+<span id="annotated-cell-1-13"><a href="#annotated-cell-1-13"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'carbon.html'</span>, <span class="st">'w'</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="annotated-cell-1-14"><a href="#annotated-cell-1-14"></a>    <span class="bu">file</span>.write(extracted_content)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="3" data-code-annotation="1">help here</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="4" data-code-annotation="2">there you go</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="8" data-code-annotation="3">something elese</span>
+</dd>
+</dl>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">

@@ -32,7 +32,7 @@
     "href": "DataWorkflows2024.html#useful-links",
     "title": "Working with data in 2024",
     "section": "Useful links",
-    "text": "Useful links\n\nhow to create GitHub Issues right in VSC"
+    "text": "Useful links\n\nhow to create GitHub Issues right in VSC\nwhat do software verison numbers refer to"
   },
   {
     "objectID": "DataWorkflows2024.html#operating-systems",
@@ -74,7 +74,14 @@
     "href": "DataWorkflows2024.html#git-and-github-and-github-actions",
     "title": "Working with data in 2024",
     "section": "Git and GitHub and GitHub Actions",
-    "text": "Git and GitHub and GitHub Actions\n\nGit is a version control system\n\nsparing you the technical details, and sharing a pragmatic view: This is (part of) what’s going on under the hood of GitHub\nwe recommend using Git in our RDM Workshops\n\nGitHub is a platform that hosts Git repositories\n\nto be blunt: This is how you interact with Git (there are alternatives/GitLab, BitBucket, …)\nit is also\n\na social network for developers\na place where you can find code, share code, collaborate on code, and get feedback on code\n\n\nYou can have public repositories (fancy way of saying project folders) in the general free plan, at UoA (and potentially other academic institutions) you can have free private repositories, too TODO #10\nGitHub Action (GHA)\n\nthis is a way to automate things\nin theory, you can do everything you can do on your computer, on GitHub; so you could use your smartphone to write code that is then executed on a server in the cloud\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\nState of the Art Workflows for working with data in 2024"
+    "text": "Git and GitHub and GitHub Actions\n\nGit is a version control system\n\nsparing you the technical details, and sharing a pragmatic view: This is (part of) what’s going on under the hood of GitHub\nwe recommend using Git in our RDM Workshops\n\nGitHub is a platform that hosts Git repositories\n\nto be blunt: This is how you interact with Git (there are alternatives/GitLab, BitBucket, …)\nit is also\n\na social network for developers\na place where you can find code, share code, collaborate on code, and get feedback on code\n\n\nYou can have public repositories (fancy way of saying project folders) in the general free plan, at UoA (and potentially other academic institutions) you can have free private repositories, too \nGitHub Action (GHA)\n\nthis is a way to automate things\nin theory, you can do everything you can do on your computer, on GitHub; so you could use your smartphone to write code that is then executed on a server in the cloud"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#geopandas-and-folium",
+    "href": "DataWorkflows2024.html#geopandas-and-folium",
+    "title": "Working with data in 2024",
+    "section": "Geopandas and Folium",
+    "text": "Geopandas and Folium\n\nGeopandas is a library that allows you to work with geospatial data\nFolium is a library that allows you to create interactive maps\n\n\n\n# Read the HTML content from the iframe source``\n# iframe_url = \"https://carbon.now.sh/?bg=rgba%28255%2C255%2C255%2C1%29&t=panda-syntax&wt=none&l=python&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=13px&lh=133%25&si=false&es=2x&wm=false\"\n1iframe_url = \"https://carbon.now.sh/?bg=rgba%28255%2C255%2C255%2C1%29&t=panda-syntax&wt=none&l=python&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=13px&lh=133%25&si=false&es=2x&wm=false\"\n2response = requests.get(iframe_url)\n# print(response)\niframe_html = response.content\n# print(iframe_html)\n3# Parse the iframe content using Beautiful Soup\n# print(soup)\nextracted_content = soup.body.prettify()  # Customize this based on your needs\nprint(extracted_content)\n# save this as a html file\nwith open('carbon.html', 'w') as file:\n    file.write(extracted_content)\n\n1\n\nhelp here\n\n2\n\nthere you go\n\n3\n\nsomething elese\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\nState of the Art Workflows for working with data in 2024"
   },
   {
     "objectID": "UpskillingResearchersInML.html#uoa-workshops",
