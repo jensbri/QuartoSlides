@@ -1,5 +1,5 @@
 ---
-title: "Working with data in 2024"
+title: "Joining the dots for modern data science workflows"
 subtitle: "State of the art workflows not just for Computer Scientists"
 author: "Nick Young, Jens Brinkmann"
 institute: "The University of Auckland"
@@ -313,6 +313,11 @@ Still, we will demonstrate it here
 # How to use Jupyter Notebooks
 
 - Jupyter Notebooks (file extension `.ipynb`) are a great way to interact with Python
+  - some history to be found [here](https://www.dataschool.io/jupyter-and-ipython-terminology/)
+  - "In 2011, the IPython Notebook was released. It was known as a "computational notebook" because it allowed you to weave together code, plots, and narrative text into a single document"
+  - "Also in 2015, IPython split into two projects: IPython (for Python-specific components) and Jupyter (for language-agnostic components). As part of that split, the IPython Notebook was renamed the Jupyter Notebook. The name "Jupyter" was inspired by the open languages of science: Julia, Python, and R"
+
+
 - As opposed to other langugages, where you mostly write a script, wait for it to compile or fail and run it, Jupyter Notebooks allow you to write code in cells and run them individually
 - This is also no silver bullet, but it is a great for initial development stages
   - later, you might want to chain together a multitude of scripts `.py` files
@@ -346,6 +351,9 @@ While this is the core example of this session, most of the workflows/the chain 
 
 <!-- TODO: @Nick Add Conent, please -->
 
+Starting point is [this](https://github.com/UoA-eResearch/SA2_2022_population/blob/main/making%20a%20map.ipynb)
+
+Will be a live-demo using VSC in the session.
 
 
 ## Outlook: Bundle this up as a Docker container
