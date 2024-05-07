@@ -70,28 +70,25 @@ revealjs-plugins:
 --- 
 
 
-# What this session is about and how it relates?
-- an introduction
-- there are realted sessions
-- there is homework :briefcase: 
-- if fully immerse yourself in all these sessions, you will get up to speed quickly. 
-- A good *bang for the buck* :money_with_wings:
+# Session descritpion
 
-```{mermaid}
-%%| fig-width: 15
-%%| fig-height: 5
-flowchart LR
-  A[fa:fa-phone] --> B{Decision}
-  B --> C[just observe]
-  B --> D[get involved]
-  C --> E[get an overivew and hear buzzwords]
-  D --> F[get hands-on experience]
-```
-# placeholder
 
+
+
+- This is an introduction and no previous knowledge is required
+- Aim of this session: **Showing** you how to get *from zero to hero* with Python and surrounding tools [^1]
+- The multitude of variables [^2] let us decide to have a one hour of *show and tell*, but come to [Hacky Hour](https://uoa-eresearch.github.io/HackyHour/), and we put **pointers ⁀➴ to relevant sessions**
+- Our example for today is plotting geospatial data using Python and Leaflet; but we also focus on showing an efficiently combination of state-of-the-art tools
+- Overall, we consider it a good *bang for the buck* :money_with_wings: given invested time vs. learning outcome
+
+[^1]: in a short time-frame but arguably with a steep learning curve. 
+[^2]: your machine, your operating system, a multitude of versions make it impossible to cover every aspect hands-on
+<!-- TODO #15 -->
+
+# Session overview
 <!-- Bump mermaid from 10.2.0 to 10.9.0 for katex math support -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.0/mermaid.min.js" integrity="sha512-gx05X612uoaolzJ5Ee/786b3th+qzAm90TOvRwZJwnE8yr0sHQG8eLxdR0/Hbqc2IFh2mWHzzXk79g3atNSwsQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+<!-- TODO #16 -->
 ```{mermaid}
 %%| fig-width: 15
 %%| fig-height: 5
@@ -101,45 +98,12 @@ graph LR
 %% -.blah blah.->
   B --> |"$$ (temp-273.15)$$"| C[Kelvin]
   A --> |abc<br>def<br>ghi| C
-
 ```
 
-## This session vs. related
-- This session is the introduction. Let's call it **Level** :one:
-  - We will mostly talk
-  - Nick is the expert who taught Jens many things over the past years, we'll replicate some of the back and forth
-  - We will provide you with an overview
-  - you are asked to think about **examples** you'd like see used in the upcoming sessions
-- You can decide if you just want to listen or if you want to follow along
-  - If you want to get your hands dirty, hold your horses :horse:
-  - don't miss out now
-  - the next sessions will be all about hands-on experience with the tools :hammer_and_wrench:
-- There is homework :briefcase: 
-  - see later slides
-
-
-<!-- TODO #6 PUT SOME ICONS (VSC, ... GIT, ... here) -->
-
-## Homework :briefcase: 
-- Install software
-<!-- TODO #7 put 3 tabs win,osx,linux -->
-- Get a dataset (git pull/GitHub Desktop)
-- run this one line, to see what if it works. 
-
-## The support via Slack
-- We have a Slack channel
-- We will be available for questions
-- This is a premiere, so let's see how many quesitons we can answer 
-
-## The next session or Level :two:
-- Here we will go through several steps
-- We will use a real-world example
-- In case you, as a group, haven't agreed on a dataset of highest relevance, to be used, we will provide one
-
-
-# The software 'stack' that we will use
-- [Visual Studi Code (VSC)](https://code.visualstudio.com/)
+# Overview of the the 'tools' and how we use them
+- (Operating System - out of scope)
 - [Python](https://www.python.org/)
+- [Visual Studio Code (VSC)](https://code.visualstudio.com/)
 - [Jupyter Notebooks](https://jupyter.org/)
 - [Git](https://git-scm.com/)
 - [GitHub](https://github.com/)
@@ -147,15 +111,7 @@ graph LR
 
 
 
-
-## Useful links
-- [how to create GitHub Issues right in VSC](https://code.visualstudio.com/blogs/2020/05/06/github-issues-integration)
-- [what do software verison numbers refer to](https://www.freecodecamp.org/news/understanding-open-source-software-lifecycles/)
-
-# Overview
-
-The stack
-
+# Other overview
 - Operating Systems ({{< fa brands apple >}}, {{< fa brands windows >}}, {{< fa brands linux >}})
 - {{< fa brands python >}} Python 
   - ![](/Data2024Assets/jupyter.svg){ height="1em" loading=lazy} Jupyter
@@ -164,24 +120,9 @@ The stack
   - GHA ([GitHubActions](https://github.com/features/actions)) {{< fa circle-play >}}
 <!-- TODO #9 -->
 
-
-
-## Operating Systems
-
-- Windows
-  - Windows Subsystem for Linux [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) 
-- MacOS
-  - install [Python via HomeBrew](https://docs.brew.sh/Homebrew-and-Python)
-- Linux
-  - Ubuntu
-  - Fedora
-  - Debian
-  - Arch
-  - ...
-
-## Programming Language: Python
+# Why Python?
 :::: {.columns}
-::: {.column width=60%}
+::: {.column width=70%}
 
 - Python is 
   - a high-level/abstract and general-purpose programming language
@@ -211,7 +152,22 @@ The stack
     - there are many ways of dependency management (`requirements.txt` or [Poetry](https://python-poetry.org/)) version-controlling your code and making sure it is reproducible
 :::
 
-## IDE - VSC (TLA)
+
+## Start with VSC on Windows/Linux/Mac
+
+- the idea here is that we all start at the same point
+- that is **after** (!) you have successfully installed Python on the (local/remote) machine you are using
+- we will not show you how to install Python on Windows, MacOS, and Linux
+- as anticipated in the very beginning, this variance of operating systems makes it impossible to cover every aspect hands-on
+
+As a rough guideline
+- Windows: Anaconda, Chocolatey, WSL2
+(WSL2, Homebrew?/Linux?)
+
+
+## How does the VSC interface work
+
+- these are IDE - VSC (TLA)
 
 ::: {.columns}
 ::: {.column width=50%}
@@ -253,13 +209,19 @@ Photo courtesy of [Visual Studio Code](https://code.visualstudio.com/docs/getsta
     - we will create a virutal environment
   - we will show you (only show you) how to connect to a remote server (that might be another physical machine/like your computer at home or a cloud service, like the research infrastructure at the University of Auckland (UoA), [Nectar](https://research-hub.auckland.ac.nz/research-software-and-computing/advanced-compute/nectar-research-cloud) of [AWS](https://aws.amazon.com/))
 
-## Git and GitHub and GitHub Actions
+# How to connect to a remote resource using VSC (that can be your LabPC, ResVM, Nectar, AWS,...)
+(go to SESSION UoA compute)
 
+# How and why to use Git 
+(go to SESSION Git or see online tutorials abc)
+
+Some initial clarification on *Git* vs *GitHub* and *GitHub Actions*
 - Git is a version control system
+  - think of it as a prgram that keeps track of changes in your code; this is more powerful than it might appear at the first glance!
   - sparing you the technical details, and sharing a pragmatic view: This is (part of) what's going on *under the hood* of GitHub
   - we recommend using Git in our [RDM Workshops](https://research-hub.auckland.ac.nz/guide-to-managing-research-data/rd-support-and-training/managing-research-data-workshops)
-- GitHub is a platform that hosts Git repositories
-  - to be blunt: This is how you interact with Git (there are alternatives/[GitLab](https://about.gitlab.com/), [BitBucket](https://bitbucket.org/product?&aceid=&adposition=&adgroup=146041740191&campaign=18815940148&creative=632894031333&device=c&keyword=bitbucket&matchtype=e&network=g&placement=&ds_kids=p74116809522&ds_e=GOOGLE&ds_eid=700000001551985&ds_e1=GOOGLE&gad_source=1&gclid=CjwKCAjw5ImwBhBtEiwAFHDZxx9EXw2lhK5gJQTVGjT44QGKC-UpJxjHi4_K7_sj5KkQjgTp03l8jRoCFOoQAvD_BwE&gclsrc=aw.ds), ...)
+- [GitHub](https://github.com/) is a platform that hosts Git repositories
+  - Oversimplified: This is how you interact with Git (there are alternatives/[GitLab](https://about.gitlab.com/), [BitBucket](https://bitbucket.org), ...)
   - it is also 
     - a social network for developers
     - a place where you can find code, share code, collaborate on code, and get feedback on code
@@ -267,18 +229,175 @@ Photo courtesy of [Visual Studio Code](https://code.visualstudio.com/docs/getsta
 <!-- TODO #10 -->
 - GitHub Action (GHA)
   - this is a way to automate things 
-  - in theory, you can do everything you can do on your computer, on GitHub; so you could use your smartphone to write code that is then executed on a server in the cloud
-
+  - think of it as a computer (more a Virtual Machine) that is running in the cloud and does things for you
+  - as such, in theory, you can do *everything* you can do on your *proper computer*, by using GitHub's infrastructure on your smartphone to write code that is then executed on a server in the cloud
+- see also https://www.freecodecamp.org/news/gitting-things-done-book
 <!-- TODO: #11 put some hello world example here -->
+<!-- TODO: #12 have a look at the GitCarp lession -->
+
+
+# How to use Python; a 30k feet overview pointing at some neat aspects
+
+::: {.callout-tip}
+## Relevant ResBaz Sessions
+- Victor Python 
+- 4h Python
+- UoA only: Python Researcher Development
+:::
+
+- let us start with a simple example
+```python
+print("Hello World")
+```
+- we can do math with variables
+```python
+a = 2 + 2
+print(a)
+```
+- it is coding, so we have to pay attention to detail
+```python
+a = 2 + 2
+print(A)
+```
+- we can and will use libraries
+- we can and will import data
+- plot
+- export data
+
+
+## How to leverage AI (GitHub CoPilot,...)
+::: {.callout-tip}
+## Relevant ResBaz Sessions
+- AI in research 
+:::
+This relevance of this is highly depending on your circumstances.
+Your institution and its stance on AI usage.
+Your personal stance on AI usage.
+The field you are working in and especially the sensitivity of the data you are working with.
+
+There are currently two main workflows:
+- auto-completion
+- write what you want to achieve as a comment and let the AI write the code for you
+
+::: {.callout-warning}
+While this is great, it is not a silver bullet.
+You need some basic knowledge to understand what is presented to you. To debug it. To adapt it to your needs.
+Still, we will demonstrate it here
+:::
+
+::: {.columns}
+::: {.column width=50%}
+- While writing this presentation, I used CoPilot and it suggested most of the text on the right-hand side
+- As you can quickly tell, it is fascinating what it does, but it far from perfect
+:::
+::: {.column width=50%}
+- GitHub CoPilot is a tool that can write code for you
+- it is based on OpenAI's GPT-3
+- it is a great tool to learn from
+- it is a great tool to get started with
+- it is a great tool to get unstuck
+- it is a great tool to get a second opinion
+- it is a great tool to get a first opinion
+- it is a great tool to get a third opinion
+- it is a great tool to get a fourth opinion
+- it is a great tool to get a fifth opinion
+- it is a great tool to get a sixth opinion
+- it is a great tool to get a seventh opinion
+- it is a great tool to get an eighth opinion
+- it is a great tool to get a ninth opinion
+- it is a great tool to get a tenth opinion
+- it is a great tool to get an eleventh opinion
+:::
+::::
+
+# How to use Jupyter Notebooks
+
+- Jupyter Notebooks (file extension `.ipynb`) are a great way to interact with Python
+- As opposed to other langugages, where you mostly write a script, wait for it to compile or fail and run it, Jupyter Notebooks allow you to write code in cells and run them individually
+- This is also no silver bullet, but it is a great for initial development stages
+  - later, you might want to chain together a multitude of scripts `.py` files
+- Jupyter Notebook are great for teaching, learning, sharing
+
+### Briefly: Jupyter on ...
+::: {.callout-tip}
+## Relevant ResBaz Sessions
+- Overview of compute options
+- Nectar
+- AWS and co
+- Docker
+:::
+
+One neat aspect of Jupyter Notebooks (that might not be obvious to the untrained eye) is that they are **not** bound to your local machine and you can interact with them through your browser.
+*Under the hood* can be executed on 
+- your local machine
+- a Virtual Machine (VM) in the cloud
+  - such as the [Nectar Research Cloud](https://ardc.edu.au/services/ardc-nectar-research-cloud/) for those who are eligible
+  - such as AWS, Azure, Google Cloud, ...
+- [Google Colab](https://colab.research.google.com/)
+- last but not least on NZ-wide HPC infrastructure [NeSI](https://www.nesi.org.nz/), especially [Jupyter on NeSI](https://docs.nesi.org.nz/Scientific_Computing/Interactive_computing_using_Jupyter/Jupyter_on_NeSI/)
+
+
+
+# Core session: GET THE REAL LEAFLET EXAMPLE DONE
+
+::: {.callout-note}
+While this is the core example of this session, most of the workflows/the chain of tools we use can be applied to a multitude of other tasks
+:::
+
+<!-- TODO: @Nick Add Conent, please -->
+
+
+
+## Outlook: Bundle this up as a Docker container
+::: {.callout-tip}
+## Relevant ResBaz Sessions
+- Containers/Luis
+:::
+
+
+## Outlook 2: Have it build/compile as GitHub Action (why do you use those, etc)
+<!-- TODO: #22 #21  MAYBE Have our map update via something in the browser and GHA reruns it. -->
+
+
+
+## Outlook 3: Publish your code, results: Figshare; have a data availbaility statement in your LaTeX,... 
+
+::: {.callout-tip}
+## Relevant ResBaz Sessions
+- LaTeX
+- Figshare
+- Overleaf
+- Data Management Plan
+- Data Availability Statement
+- Reproducibility
+- BinderHub
+:::
+<!-- TODO: link to Overleaf, to LaTeX session, Figshare -->
+
+## Reproducibility
+- for more reproducibility, we could run another session or include here
+- Docker but then the cpu architecture would have an impact
+- BinderHub is 
+  - UoA only 
+  - what happens if I *set all in stone today* and then return a couple of years later refresh of the underlying infrastructure and potentially get different results?
+
+
+
+
+
+
+
+
+
+
 
 ## Geopandas and Folium
 
 - Geopandas is a library that allows you to work with geospatial data
 - Folium is a library that allows you to create interactive maps
-- 
 
 
-<!-- TODO: #12 have a look at the GitCarp lession -->
+
 
 ```python
 # Read the HTML content from the iframe source``
@@ -300,3 +419,94 @@ with open('carbon.html', 'w') as file:
 1. help here
 2. there you go
 3. something elese
+
+
+
+# Homework :briefcase: 
+- Install software
+<!-- TODO #7 put 3 tabs win,osx,linux -->
+- Get a dataset (git pull/GitHub Desktop)
+- run this one line, to see what if it works. 
+
+## Useful links (General)
+- [how to create GitHub Issues right in VSC](https://code.visualstudio.com/blogs/2020/05/06/github-issues-integration) 
+  - you can use that to keep track of your to-do list without having to leave VSC!
+- [what do software verison numbers refer to](https://www.freecodecamp.org/news/understanding-open-source-software-lifecycles/)
+
+## Useful links (Python {{< fa brands python >}} specific) 
+
+- [Python.org](https://www.python.org/)
+- [Jupyter](https://jupyter.org/)
+
+Environments
+
+- [Anaconda](https://www.anaconda.com/)
+
+Editors (apart from VSC)
+
+- [PyCharm](https://www.jetbrains.com/pycharm/)
+
+Package Management
+
+- [PyPI](https://pypi.org/)
+- [Poetry](https://python-poetry.org/)
+
+Libraries
+- [Pandas](https://pandas.pydata.org/)
+- [Matplotlib](https://matplotlib.org/)
+
+Machine Learning
+- [TensorFlow](https://www.tensorflow.org/)
+- [PyTorch](https://pytorch.org/)
+- [Keras](https://keras.io/)
+- [Seaborn](https://seaborn.pydata.org/)
+- [Scikit-learn](https://scikit-learn.org/stable/)
+
+Web Development
+- [Django](https://www.djangoproject.com/)
+- [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [Streamlit](https://streamlit.io/)
+- [Dash](https://dash.plotly.com/)
+
+Visualisation
+- [Plotly](https://plotly.com/)
+- [Bokeh](https://docs.bokeh.org/en/latest/index.html)
+- [Altair](https://altair-viz.github.io/)
+- [Holoviews](http://holoviews.org/)
+- [Panel](https://panel.holoviz.org/)
+
+Geospatial
+- [GeoPandas](https://geopandas.org/en/stable/)
+- [Folium](https://python-visualization.github.io/folium/latest/)
+- [Leaflet](https://leafletjs.com/)
+- [Cartopy](https://scitools.org.uk/cartopy/docs/latest/)
+- [Basemap](https://matplotlib.org/basemap/)
+- [Shapely](https://shapely.readthedocs.io/en/stable/)
+- [GeoPy](https://geopy.readthedocs.io/en/stable/)
+- [GeoDjango](https://docs.djangoproject.com/en/3.2/ref/contrib/gis/)
+- [GeoAlchemy](https://geoalchemy-2.readthedocs.io/en/latest/)
+- [Fiona](https://fiona.readthedocs.io/en/latest/)
+- [Pyproj](https://pyproj4.github.io/pyproj/stable/)
+- [GDAL](https://gdal.org/)
+- [OpenLayers](https://openlayers.org/)
+
+  
+
+## Useful links (Operating Systems specific) 
+- Windows {{< fa brands windows >}}
+  - Anaconda and other installers that put a Windows-flavoured Python install 
+  <!-- -TODO #18  *Plain Vanilla* Python via this and that -->
+  - [Chocolatey](https://chocolatey.org/)
+  - Our recommendation: Windows Subsystem for Linux [WSL](https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux) 
+    - usually WSL2 to be installed via the Software Center
+  <!-- - TODO #17 here link to general installation guide -->
+- MacOS {{< fa brands apple >}}
+  <!-- TODO #20 #19 CONFIRM THIS - comes with own Python version (might require Dev Tools/XCdoe to be installed)? -->
+  - install [Python via HomeBrew](https://docs.brew.sh/Homebrew-and-Python)
+- Linux {{< fa brands linux >}}
+  - Ubuntu
+  - Fedora
+  - Debian
+  - Arch
+  - often come with Python pre-installed, otherwise use the package manager of your choice
