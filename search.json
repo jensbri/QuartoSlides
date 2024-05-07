@@ -1,54 +1,5 @@
 [
   {
-    "objectID": "DataWorkflows2024.html#this-session-vs.-related",
-    "href": "DataWorkflows2024.html#this-session-vs.-related",
-    "title": "Working with data in 2024",
-    "section": "This session vs. related",
-    "text": "This session vs. related\n\nThis session is the introduction. Let’s call it Level 1️⃣\n\nWe will mostly talk\nNick is the expert who taught Jens many things over the past years, we’ll replicate some of the back and forth\nWe will provide you with an overview\nyou are asked to think about examples you’d like see used in the upcoming sessions\n\nYou can decide if you just want to listen or if you want to follow along\n\nIf you want to get your hands dirty, hold your horses 🐴\ndon’t miss out now\nthe next sessions will be all about hands-on experience with the tools 🛠️\n\nThere is homework 💼\n\nsee later slides"
-  },
-  {
-    "objectID": "DataWorkflows2024.html#homework",
-    "href": "DataWorkflows2024.html#homework",
-    "title": "Working with data in 2024",
-    "section": "Homework 💼",
-    "text": "Homework 💼\n\nInstall software \nGet a dataset (git pull/GitHub Desktop)\nrun this one line, to see what if it works."
-  },
-  {
-    "objectID": "DataWorkflows2024.html#the-support-via-slack",
-    "href": "DataWorkflows2024.html#the-support-via-slack",
-    "title": "Working with data in 2024",
-    "section": "The support via Slack",
-    "text": "The support via Slack\n\nWe have a Slack channel\nWe will be available for questions\nThis is a premiere, so let’s see how many quesitons we can answer"
-  },
-  {
-    "objectID": "DataWorkflows2024.html#the-next-session-or-level-2",
-    "href": "DataWorkflows2024.html#the-next-session-or-level-2",
-    "title": "Working with data in 2024",
-    "section": "The next session or Level 2️⃣",
-    "text": "The next session or Level 2️⃣\n\nHere we will go through several steps\nWe will use a real-world example\nIn case you, as a group, haven’t agreed on a dataset of highest relevance, to be used, we will provide one"
-  },
-  {
-    "objectID": "DataWorkflows2024.html#useful-links",
-    "href": "DataWorkflows2024.html#useful-links",
-    "title": "Working with data in 2024",
-    "section": "Useful links",
-    "text": "Useful links\n\nhow to create GitHub Issues right in VSC\nwhat do software verison numbers refer to"
-  },
-  {
-    "objectID": "DataWorkflows2024.html#operating-systems",
-    "href": "DataWorkflows2024.html#operating-systems",
-    "title": "Working with data in 2024",
-    "section": "Operating Systems",
-    "text": "Operating Systems\n\nWindows\n\nWindows Subsystem for Linux WSL\n\nMacOS\n\ninstall Python via HomeBrew\n\nLinux\n\nUbuntu\nFedora\nDebian\nArch\n…"
-  },
-  {
-    "objectID": "DataWorkflows2024.html#programming-language-python",
-    "href": "DataWorkflows2024.html#programming-language-python",
-    "title": "Working with data in 2024",
-    "section": "Programming Language: Python",
-    "text": "Programming Language: Python\n\n\n\nPython is\n\na high-level/abstract and general-purpose programming language\nan interpreted language (not compiled)\n\nPython is dynamically typed (no need to declare variables)\nPython is easy to\n\nread, maintain, write, debug, extend, integrate with other languages, deploy, scale, share, collaborate, teach"
-  },
-  {
     "objectID": "DataWorkflows2024.html#programming-language-python---continued",
     "href": "DataWorkflows2024.html#programming-language-python---continued",
     "title": "Working with data in 2024",
@@ -56,11 +7,18 @@
     "text": "Programming Language: Python - continued\n\n\n\n\n\n\nPersonal opinion\n\n\n\na common statement is that Python is slow\n\nin reality, you can run (encapsulated) other languages\n\nbeing a relatively abstract languge makes it suitable for many research projects (no need to reinvent the wheel)\nThe community is great!\n\nmost popular/most searched for on Google\nthere are tons of great libraries that can be used\nbecause Python is so popular, ChatGPT and other Machine Learning (ML) powered support tools can write pretty decent code (date of writing this = April 2024).\n\nsome report issues with libraries and changes to them\n\nthere are many ways of dependency management (requirements.txt or Poetry) version-controlling your code and making sure it is reproducible"
   },
   {
-    "objectID": "DataWorkflows2024.html#ide---vsc-tla",
-    "href": "DataWorkflows2024.html#ide---vsc-tla",
+    "objectID": "DataWorkflows2024.html#start-with-vsc-on-windowslinuxmac",
+    "href": "DataWorkflows2024.html#start-with-vsc-on-windowslinuxmac",
     "title": "Working with data in 2024",
-    "section": "IDE - VSC (TLA)",
-    "text": "IDE - VSC (TLA)\n\n\nAn IDE is an Integrated Development Environment. (a TLA is a Three Letter Acronym) You can do everything we will talk today in a simple text editor, using your operating system’s file explorer, a command-line terminal, but an IDE makes your life easier. - Visual Studio Code (VSC)  - VSCodium  - (open-source version that isn’t collection telemetry data) - PyCharm  and others specialised for certain programming languages\n\n more information on the official website\n\n\n\nPhoto courtesy of Visual Studio Code"
+    "section": "Start with VSC on Windows/Linux/Mac",
+    "text": "Start with VSC on Windows/Linux/Mac\n\nthe idea here is that we all start at the same point\nthat is after (!) you have successfully installed Python on the (local/remote) machine you are using\nwe will not show you how to install Python on Windows, MacOS, and Linux\nas anticipated in the very beginning, this variance of operating systems makes it impossible to cover every aspect hands-on\n\nAs a rough guideline - Windows: Anaconda, Chocolatey, WSL2 (WSL2, Homebrew?/Linux?)"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#how-does-the-vsc-interface-work",
+    "href": "DataWorkflows2024.html#how-does-the-vsc-interface-work",
+    "title": "Working with data in 2024",
+    "section": "How does the VSC interface work",
+    "text": "How does the VSC interface work\n\nthese are IDE - VSC (TLA)\n\n\n\nAn IDE is an Integrated Development Environment. (a TLA is a Three Letter Acronym) You can do everything we will talk today in a simple text editor, using your operating system’s file explorer, a command-line terminal, but an IDE makes your life easier. - Visual Studio Code (VSC)  - VSCodium  - (open-source version that isn’t collection telemetry data) - PyCharm  and others specialised for certain programming languages\n\n more information on the official website\n\n\n\nPhoto courtesy of Visual Studio Code"
   },
   {
     "objectID": "DataWorkflows2024.html#how-to-navigate-in-vsc",
@@ -70,18 +28,67 @@
     "text": "How to navigate in VSC\n\nif you are familiar with the layout, it is easy\nif you are a novice, it might overwhelm you\n\nJens: I have been there and I got lost\n\nthink of it as a\n\nfile explorer (usually on the left)\nterminal (usually at the bottom)\none or many editors (usually in the middle)\n\nat times they have preview windows, too\n\n\nthere are many plugins; we will use:\n\nGitHub\n\nGitHub CoPilot\n\nPython\n\nwe will create a virutal environment\n\nwe will show you (only show you) how to connect to a remote server (that might be another physical machine/like your computer at home or a cloud service, like the research infrastructure at the University of Auckland (UoA), Nectar of AWS)"
   },
   {
-    "objectID": "DataWorkflows2024.html#git-and-github-and-github-actions",
-    "href": "DataWorkflows2024.html#git-and-github-and-github-actions",
+    "objectID": "DataWorkflows2024.html#how-to-leverage-ai-github-copilot",
+    "href": "DataWorkflows2024.html#how-to-leverage-ai-github-copilot",
     "title": "Working with data in 2024",
-    "section": "Git and GitHub and GitHub Actions",
-    "text": "Git and GitHub and GitHub Actions\n\nGit is a version control system\n\nsparing you the technical details, and sharing a pragmatic view: This is (part of) what’s going on under the hood of GitHub\nwe recommend using Git in our RDM Workshops\n\nGitHub is a platform that hosts Git repositories\n\nto be blunt: This is how you interact with Git (there are alternatives/GitLab, BitBucket, …)\nit is also\n\na social network for developers\na place where you can find code, share code, collaborate on code, and get feedback on code\n\n\nYou can have public repositories (fancy way of saying project folders) in the general free plan, at UoA (and potentially other academic institutions) you can have free private repositories, too \nGitHub Action (GHA)\n\nthis is a way to automate things\nin theory, you can do everything you can do on your computer, on GitHub; so you could use your smartphone to write code that is then executed on a server in the cloud"
+    "section": "How to leverage AI (GitHub CoPilot,…)",
+    "text": "How to leverage AI (GitHub CoPilot,…)\n\n\n\n\n\n\nRelevant ResBaz Sessions\n\n\n\nAI in research\n\n\n\n\nThis relevance of this is highly depending on your circumstances. Your institution and its stance on AI usage. Your personal stance on AI usage. The field you are working in and especially the sensitivity of the data you are working with.\nThere are currently two main workflows: - auto-completion - write what you want to achieve as a comment and let the AI write the code for you\n\n\n\n\n\n\nWarning\n\n\nWhile this is great, it is not a silver bullet. You need some basic knowledge to understand what is presented to you. To debug it. To adapt it to your needs. Still, we will demonstrate it here\n\n\n\n\n\n\nWhile writing this presentation, I used CoPilot and it suggested most of the text on the right-hand side\nAs you can quickly tell, it is fascinating what it does, but it far from perfect\n\n\n\nGitHub CoPilot is a tool that can write code for you\nit is based on OpenAI’s GPT-3\nit is a great tool to learn from\nit is a great tool to get started with\nit is a great tool to get unstuck\nit is a great tool to get a second opinion\nit is a great tool to get a first opinion\nit is a great tool to get a third opinion\nit is a great tool to get a fourth opinion\nit is a great tool to get a fifth opinion\nit is a great tool to get a sixth opinion\nit is a great tool to get a seventh opinion\nit is a great tool to get an eighth opinion\nit is a great tool to get a ninth opinion\nit is a great tool to get a tenth opinion\nit is a great tool to get an eleventh opinion"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#outlook-bundle-this-up-as-a-docker-container",
+    "href": "DataWorkflows2024.html#outlook-bundle-this-up-as-a-docker-container",
+    "title": "Working with data in 2024",
+    "section": "Outlook: Bundle this up as a Docker container",
+    "text": "Outlook: Bundle this up as a Docker container\n\n\n\n\n\n\nRelevant ResBaz Sessions\n\n\n\nContainers/Luis"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#outlook-2-have-it-buildcompile-as-github-action-why-do-you-use-those-etc",
+    "href": "DataWorkflows2024.html#outlook-2-have-it-buildcompile-as-github-action-why-do-you-use-those-etc",
+    "title": "Working with data in 2024",
+    "section": "Outlook 2: Have it build/compile as GitHub Action (why do you use those, etc)",
+    "text": "Outlook 2: Have it build/compile as GitHub Action (why do you use those, etc)"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#outlook-3-publish-your-code-results-figshare-have-a-data-availbaility-statement-in-your-latex",
+    "href": "DataWorkflows2024.html#outlook-3-publish-your-code-results-figshare-have-a-data-availbaility-statement-in-your-latex",
+    "title": "Working with data in 2024",
+    "section": "Outlook 3: Publish your code, results: Figshare; have a data availbaility statement in your LaTeX,…",
+    "text": "Outlook 3: Publish your code, results: Figshare; have a data availbaility statement in your LaTeX,…\n\n\n\n\n\n\nRelevant ResBaz Sessions\n\n\n\nLaTeX\nFigshare\nOverleaf\nData Management Plan\nData Availability Statement\nReproducibility\nBinderHub"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#reproducibility",
+    "href": "DataWorkflows2024.html#reproducibility",
+    "title": "Working with data in 2024",
+    "section": "Reproducibility",
+    "text": "Reproducibility\n\nfor more reproducibility, we could run another session or include here\nDocker but then the cpu architecture would have an impact\nBinderHub is\n\nUoA only\nwhat happens if I set all in stone today and then return a couple of years later refresh of the underlying infrastructure and potentially get different results?"
   },
   {
     "objectID": "DataWorkflows2024.html#geopandas-and-folium",
     "href": "DataWorkflows2024.html#geopandas-and-folium",
     "title": "Working with data in 2024",
     "section": "Geopandas and Folium",
-    "text": "Geopandas and Folium\n\nGeopandas is a library that allows you to work with geospatial data\nFolium is a library that allows you to create interactive maps\n\n\n\n# Read the HTML content from the iframe source``\n# iframe_url = \"https://carbon.now.sh/?bg=rgba%28255%2C255%2C255%2C1%29&t=panda-syntax&wt=none&l=python&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=13px&lh=133%25&si=false&es=2x&wm=false\"\n1iframe_url = \"https://carbon.now.sh/?bg=rgba%28255%2C255%2C255%2C1%29&t=panda-syntax&wt=none&l=python&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=13px&lh=133%25&si=false&es=2x&wm=false\"\n2response = requests.get(iframe_url)\n# print(response)\niframe_html = response.content\n# print(iframe_html)\n3# Parse the iframe content using Beautiful Soup\n# print(soup)\nextracted_content = soup.body.prettify()  # Customize this based on your needs\nprint(extracted_content)\n# save this as a html file\nwith open('carbon.html', 'w') as file:\n    file.write(extracted_content)\n\n1\n\nhelp here\n\n2\n\nthere you go\n\n3\n\nsomething elese\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\nState of the Art Workflows for working with data in 2024"
+    "text": "Geopandas and Folium\n\nGeopandas is a library that allows you to work with geospatial data\nFolium is a library that allows you to create interactive maps\n\n# Read the HTML content from the iframe source``\n# iframe_url = \"https://carbon.now.sh/?bg=rgba%28255%2C255%2C255%2C1%29&t=panda-syntax&wt=none&l=python&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=13px&lh=133%25&si=false&es=2x&wm=false\"\n1iframe_url = \"https://carbon.now.sh/?bg=rgba%28255%2C255%2C255%2C1%29&t=panda-syntax&wt=none&l=python&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=13px&lh=133%25&si=false&es=2x&wm=false\"\n2response = requests.get(iframe_url)\n# print(response)\niframe_html = response.content\n# print(iframe_html)\n3# Parse the iframe content using Beautiful Soup\n# print(soup)\nextracted_content = soup.body.prettify()  # Customize this based on your needs\nprint(extracted_content)\n# save this as a html file\nwith open('carbon.html', 'w') as file:\n    file.write(extracted_content)\n\n1\n\nhelp here\n\n2\n\nthere you go\n\n3\n\nsomething elese"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#useful-links-general",
+    "href": "DataWorkflows2024.html#useful-links-general",
+    "title": "Working with data in 2024",
+    "section": "Useful links (General)",
+    "text": "Useful links (General)\n\nhow to create GitHub Issues right in VSC\n\nyou can use that to keep track of your to-do list without having to leave VSC!\n\nwhat do software verison numbers refer to"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#useful-links-python-specific",
+    "href": "DataWorkflows2024.html#useful-links-python-specific",
+    "title": "Working with data in 2024",
+    "section": "Useful links (Python  specific)",
+    "text": "Useful links (Python  specific)\n\nPython.org\nJupyter\n\nEnvironments\n\nAnaconda\n\nEditors (apart from VSC)\n\nPyCharm\n\nPackage Management\n\nPyPI\nPoetry\n\nLibraries - Pandas - Matplotlib\nMachine Learning - TensorFlow - PyTorch - Keras - Seaborn - Scikit-learn\nWeb Development - Django - Flask - FastAPI - Streamlit - Dash\nVisualisation - Plotly - Bokeh - Altair - Holoviews - Panel\nGeospatial - GeoPandas - Folium - Leaflet - Cartopy - Basemap - Shapely - GeoPy - GeoDjango - GeoAlchemy - Fiona - Pyproj - GDAL - OpenLayers"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#useful-links-operating-systems-specific",
+    "href": "DataWorkflows2024.html#useful-links-operating-systems-specific",
+    "title": "Working with data in 2024",
+    "section": "Useful links (Operating Systems specific)",
+    "text": "Useful links (Operating Systems specific)\n\nWindows \n\nAnaconda and other installers that put a Windows-flavoured Python install \nChocolatey\nOur recommendation: Windows Subsystem for Linux WSL\n\nusually WSL2 to be installed via the Software Center \n\n\nMacOS  \n\ninstall Python via HomeBrew\n\nLinux \n\nUbuntu\nFedora\nDebian\nArch\noften come with Python pre-installed, otherwise use the package manager of your choice\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\nState of the Art Workflows for working with data in 2024"
   },
   {
     "objectID": "UpskillingResearchersInML.html#uoa-workshops",
