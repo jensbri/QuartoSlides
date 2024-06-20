@@ -400,7 +400,7 @@ svg.mermaid-js {
   .node polygon,
   .node rect {
     fill: var(--mermaid-node-bg-color) !important;
-    // stroke: var(--mermaid-node-bg-color) !important;
+    stroke: var(--mermaid-node-bg-color) !important;
   }
   .nodeLabel {
     color: var(--mermaid-node-fg-color) !important;

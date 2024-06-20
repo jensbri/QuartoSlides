@@ -1,0 +1,96 @@
+---
+title: "Introduction to Python"
+subtitle: "Focus on your research, let Python support you"
+author: "Ben Collings, Victor Gambarini, Jens Brinkmann"
+institute: "The University of Auckland"
+date: 2024-07-10
+date-format: "MMMM, YYYY"
+# bibliography: refs.bib
+from: markdown+emoji
+# embed-resources: false
+format:
+  revealjs:
+    # tbl-cap-location: bottom
+    # number-sections: true
+    theme: UoAtemplate.scss
+    highlight-style: atom-one
+    code-overflow: wrap
+    # highlight-style: monokai
+    # css: ./logo.css
+    # disableLayout: true
+    navigation-mode: vertical
+    controls-layout: bottom-right
+    controls-tutorial: true
+    transition: convex
+    width: 1600
+    height: 900
+    margin: 0.2
+    title-slide-attributes:
+        data-background-image: ResBaz_transparent_cropped.svg
+        # data-background-image: UoALogoDarkBlueRGBLandscape.png
+        data-background-size: 20%
+        # data-background-postion: right
+        data-background-position: 95% 76%
+        # data-background-position: bottom 10px right 20px
+    # background-image: ./ResBaz_transparent_Logo_cropped.svg
+    # background-opacity: 0.5
+    # background-position: bottom 10px right 20px
+    # background-size: contain
+    # data-background-repeat: no-repeat
+    # background-size: 80px
+    # background-repeat: no-repeat
+    # background-position: 0% 100%
+    # logo: ResBaz_transparent_cropped.svg
+    # self_contained: false
+    reveal_plugins: ["menu"]
+    reveal_options:
+      menu:
+        numbers: true
+    header: "Introduction to Python: Focus on your research, let Python support you"
+    # header-logo: UoALogoDarkBlueRGBLandscape.png
+    header-logo: ResBaz_transparent_cropped.svg
+    hide-from-titleSlide: all
+    filters:
+      - reveal-header
+      - line-highlight
+    mermaid:
+      theme: dark
+      fig-responsive: false  
+# include-in-header: 
+#   text: |
+#     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+editor:
+  render-on-save: true
+  # execute:
+  #   echo: false
+
+revealjs-plugins:
+  - attribution
+
+--- 
+The word integer comes from the Latin integer meaning "whole" or (literally) "untouched", from in ("not") plus tangere ("to touch"). "Entire" derives from the same origin via the French word entier, which means both entire and integer
+
+
+# mermaid chart top down with a link
+
+
+test
+```{mermaid}
+graph TD
+    A[Fundementals] -->|that enable us to| B(import an Excel File)
+    B --> C{Let me think}
+    C -->|One| D[generate several plot of the data with minimal code]
+    %% C -->|Two| E[iPhone]
+    %% C -->|Three| F[Car]
+    %% D --> G{Do I need a new laptop}
+    %% E --> G
+    %% F --> G
+    %% G -->|Yes| H[Buy Laptop]
+    %% G -->|No| I[Don't buy Laptop]
+    %% H --> J[Get money]
+    %% I --> J
+    %% J -->|Yes| K[Buy Laptop]
+    %% K --> L[Buy iPhone]
+    %% K --> M[Buy Car]
+```

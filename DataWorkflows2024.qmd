@@ -72,8 +72,33 @@ revealjs-plugins:
 
 # Session descritpion
 
+```mermaid
+mindmap
+  root((Root))
+    Branch 1
+      Node 1
+      Node 2
+    Branch 2
+      Node 3
+      Node 4
+```
 
+test [here](<a href="mailto:hello@hello.com?subject=Email Subject&body=Contents of email">hello@hello.com</a>)
 
+For GIT OVERVIEW use GitKraken.png to get the neat subway map visualisation
+Also add to Git:
+I think mention the different rights and responsibilities associated with artwork, documents and code - use the program/artwork/program, read and change the master/code behind the program/artwork, sharing the result, attribution
+Creative Commons has different variants, some more permissive than others.
+A "permissive" license like MIT and Apache allows your code to be used, adapted and shared by anyone for their own purpose including for commercialisation, and all they need to do is attribute you. A "copyleft" license (a play on the word copyright)  like GPL or CC BY-SA for artwork, gives the same rights, but requires people who adapt and share your code to make their code available using the same license. This can help ensure a thriving, open software community. On the other hand, a permissive license can be easier for people to use
+
+good summary on GitHub about Licenses: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#disclaimer
+
+![alt](Data2024Assets/ExampleGitHubMITLicense.jpg)
+
+Git Fail
+![alt]("Data2024Assets/GoogleGitHubAccident.png")
+
+<!-- TODO #23 should I get a temp VM for this to start absolutely clean slate/should I try 2 (win and linux?) -->
 
 - This is an introduction and no previous knowledge is required
 - Aim of this session: **Showing** you how to get *from zero to hero* with Python and surrounding tools [^1]
@@ -93,11 +118,9 @@ revealjs-plugins:
 %%| fig-width: 15
 %%| fig-height: 5
 graph LR
-  A[Fahrenheit] -->|a<br>b| B[Celsius]
-  A[Fahrenheit] -."$$ (temp-32) \cdot \frac{5}{9}$$".-> B[Celsius]
-%% -.blah blah.->
+    A[Fahrenheit] -."$$ (temp-32) \cdot \frac{5}{9}$$".-> B[Celsius]
   B --> |"$$ (temp-273.15)$$"| C[Kelvin]
-  A --> |abc<br>def<br>ghi| C
+  A --> |"$$ \frac{5}{9}\left(temp -32\right)+273.15 $$"| C
 ```
 
 # Overview of the the 'tools' and how we use them
@@ -350,13 +373,26 @@ While this is the core example of this session, most of the workflows/the chain 
 :::
 
 <!-- TODO: @Nick Add Conent, please -->
+<!-- TODO: #24 consider embedding some of the code as an ipynb embed -->
 
+
+
+::: {.columns}
+::: {.column width=50%}
 Starting point is [this](https://github.com/UoA-eResearch/SA2_2022_population/blob/main/making%20a%20map.ipynb)
+:::
+::: {.column width=50%}
+
+- ![alt](Data2024Assets/MapFinalResult.jpg)
+:::
+::::
 
 Will be a live-demo using VSC in the session.
 
 
+
 ## Outlook: Bundle this up as a Docker container
+
 ::: {.callout-tip}
 ## Relevant ResBaz Sessions
 - Containers/Luis
