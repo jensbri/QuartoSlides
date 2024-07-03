@@ -337,7 +337,7 @@ body {
  * IMAGES
  *********************************************/
 .reveal section img {
-  margin: 15px 0px;
+  margin: 0px 0px;
   background: rgba(255, 255, 255, 0.12);
   border: 0px solid #363636;
   box-shadow: 0 0 0px rgba(0, 0, 0, 0.15); }
@@ -419,3 +419,48 @@ svg.mermaid-js {
     background: white
   }
 }
+
+/*********************************************
+ * Custom callout
+ *********************************************/
+
+// replicate the CSS for a callout box with a custom title, icon, and default appearance
+
+.solutionbox {
+  margin-top: 1em;
+  margin-bottom: 1em;  
+  border-radius: .25rem;
+  border-left: solid #acacac .3rem;
+  border-right: solid 0.5px silver;
+  border-top: solid 0.5px silver;
+  border-bottom: solid 0.5px silver;
+  border-left-color: #eb5e23 !important;
+}
+
+.solutionbox-icon {
+  // height: 0.9rem;
+  // width: 0.9rem;
+  // display: inline-block;
+  // content: "";
+  // background-repeat: no-repeat;
+  // background-size: 0.9rem 0.9rem;
+  // margin-top: .5rem;
+  // padding-right: 1.25rem;
+  background-image: url('ResBazEmoji.png');
+}
+
+.solutionbox-header {
+  //margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-bottom: none;
+  font-weight: 600;
+  opacity: 85%;
+  font-size: 0.9rem;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  display: flex;
+  background-color: #b7b7ef;
+  height: 2em;
+  overflow: hidden;
+}
+
