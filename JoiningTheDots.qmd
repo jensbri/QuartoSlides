@@ -69,12 +69,12 @@ revealjs-plugins:
 
 --- 
 
-# Intro
+<!-- # Intro
 
 - Welcome
 - What this is about: a lot of reserach topics and perspectives
 - Nick Young and I condensed our takes into 1h
-  - When I say 'I', I often mean 'we'.
+  - When I say 'I', I often mean 'we'. -->
 
 # What this is
 
@@ -82,7 +82,7 @@ revealjs-plugins:
 - We try to go 'end-to-end' and consider Research Reproducibility/we anticipate an expert questioning our results and wanting to reproduce our results a few years after publication
 - Be aware: We use a geospatial example, but the tools and workflows are applicable to many research disciplines
  
-# Housekeeping
+# Housekeeping 🧹
 
 - This is a taster/talking-head, not a hands-on session  🗣️
 
