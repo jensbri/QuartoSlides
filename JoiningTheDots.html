@@ -413,462 +413,240 @@ Nick Young, Jens Brinkmann
 
   <p class="date">July, 2024</p>
 </section>
-<section id="welcome-to-the-session" class="title-slide slide level1 center">
-<h1>Welcome to the session</h1>
-<p>This session in 3 sentences:</p>
-<!-- ADD FRAGMENTS -->
-<ol type="1">
-<li>It is about modern data science workflows and shall be accessible to non-computer scientists</li>
-<li>We will demonstrate a chain of tools that are state-of-the-art in 2024 within the 1 hour we have</li>
-<li>No prerequisites, but you have to pay close attention (to get the most <em>bang for the buck</em> <span class="emoji" data-emoji="money_with_wings">💸</span> ) and we will provide you with a roadmap and code-example you can use to follow-up on the details later</li>
-</ol>
+<section class="slide level2">
+
+<!-- # Intro
+
+- Welcome
+- What this is about: a lot of reserach topics and perspectives
+- Nick Young and I condensed our takes into 1h
+  - When I say 'I', I often mean 'we'. -->
+</section>
+<section id="what-this-is" class="title-slide slide level1 center">
+<h1>What this is</h1>
+<ul>
+<li>In a nutshell, we show how to efficiently create a chain of our preferred tools to tackle a map visualisation part of a ficticious PhD</li>
+<li>We try to go ‘end-to-end’ and consider Research Reproducibility/we anticipate an expert questioning our results and wanting to reproduce our results a few years after publication</li>
+<li>Be aware: We use a geospatial example, but the tools and workflows are applicable to many research disciplines</li>
+</ul>
 </section>
 
 <section id="housekeeping" class="title-slide slide level1 center">
 <h1>Housekeeping 🧹</h1>
-<!-- TODO copy from Python4h -->
+<ul>
+<li><p>This is a taster/talking-head, not a hands-on session 🗣️</p></li>
+<li><p>We only have one hour 🕐 but you can learn a lot</p>
+<ul>
+<li>We hand-picked the most relevant bits</li>
+<li>we ask you not to prepare lunch or read a book or message others, just honour our work and time by trying to stay as alert ‼️ as possible.</li>
+<li>Resources shared later, always prioritise following-along over note-taking, etc. 📝</li>
+<li>This session <strong>won’t</strong> be recorded 📹</li>
+</ul></li>
+<li><p>Cameras on, please 📸</p></li>
+<li><p>Please mute your microphone 🎤<br>
+</p></li>
+<li><p>Questions later unless unavoidable now: Zoom chat 💬</p></li>
+<li><p>Be kind 😊</p>
+<ul>
+<li>all details of the Code of Conduct 🗞️ can be found <a href="https://resbaz.auckland.ac.nz/about/">here</a></li>
+</ul></li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Recommendation</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Now, buckle up 🏎️</li>
+<li>try to follow me, this is a lot of content.</li>
+<li>we iterate over the same topic 3 times, each time with a different approach</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 
-<section id="expectations" class="title-slide slide level1 center">
-<h1>Expectations</h1>
+<section id="handling-questions" class="title-slide slide level1 center">
+<h1>Handling questions</h1>
 <ul>
-<li>This is <strong>not</strong> a hands-on session, but I will try to show you as much as possible in the hour we have</li>
-<li>I will share the slides and code with you afterwards</li>
-<li>Though we use a geospatial dataset, that is just one example I picked
+<li>Probably very limited time for questions, but
+<ol type="a">
+<li><a href="https://resbaz.auckland.ac.nz/schedule/#session-090">Drop-in Clinic</a> (Tuesday/tomorrow, 3-4pm)</li>
+<li><a href="https://uoa-eresearch.github.io/HackyHour/">HackyHour</a> community and Slack channel (availble for all, not jut University of Auckland)</li>
+</ol></li>
+<li>Slides, repo, links shared afterwards</li>
+<li>pointers to relevant ResBaz sessions
 <ul>
-<li>the focus shall be on the tools and workflows we use; these can be applied to a multitude of other tasks</li>
+<li>some might be full</li>
+<li>some might share slides on request, might(!)</li>
 </ul></li>
-</ul>
-<!-- ADD MINDMAP -->
-<p>what you shouldn’t expect</p>
-<ul>
-<li>understanding of all the details (the code, the dataset, every option of the tools)</li>
-<li>installing all the software on your machine within this hour</li>
-<li>a comprehensive overview of all the tools and workflows available; we focus on a selection that we consider <em>a good bang for the buck</em></li>
-</ul>
-<p>what you should expect</p>
-<ul>
-<li>one end-to-end overview of the selected tools and workflows</li>
-<li>being able to follow along on an abstract level
-<ul>
-<li>for example: In the sense of: “I see how they use GitHub and roughly get what the roadmap is, but I don’t understand every detail and expect that I will have to look up some/many things later on”</li>
-</ul></li>
-</ul>
-<p>What is about to happen <strong>after</strong> this session?</p>
-<ul>
-<li>you are encouraged to give it a go yourself</li>
-<li>ask questions in the <a href="https://resbaz.auckland.ac.nz/schedule/#session-090">ResBaz Drop-In Clinic (HackyHour)</a> session (tomorrow, same time slot), the weekly <a href="https://uoa-eresearch.github.io/HackyHour/">Hacky Hour</a> or Slack channel <!-- TODO: clarify if Slack is available to all and our preferred means of interaction  --></li>
-<li>check out the linked resources</li>
-<li>Try the tools and workflows for youself
-<ul>
-<li>either based on your current/near-future research question(s)</li>
-<li>or if that is too demanding/too abstract/not fun enough, for a fun project you have in mind. Create your own Jump and Run game, catalogue your collection of something, make a fancy bucket list</li>
-</ul></li>
-<li>(within limitations; details below): Try to get some AI support</li>
 </ul>
 </section>
 
-<section id="session-descritpion" class="title-slide slide level1 center">
-<h1>Session descritpion</h1>
-<p>Operating Systems (<i class="fa-brands fa-apple" aria-label="apple"></i>, <i class="fa-brands fa-windows" aria-label="windows"></i>, <i class="fa-brands fa-linux" aria-label="linux"></i>) are deemed out of scope for this session - the demonstrated tools are available for all three major operating systems</p>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>We selected…</th>
-<th>because …</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><i class="fa-brands fa-python" aria-label="python"></i> <a href="https://python.org/">Python</a></td>
-<td>… it is <strong>awesome</strong> (abstract, relatively easy to learn, has a great community, tons of libraries)</td>
-</tr>
-<tr class="even">
-<td><img data-src="./Data2024Assets/jupyter.svg" style="height:1em" loading="lazy"> <a href="https://jupyter.org/">Jupyter</a></td>
-<td>… it gives us interactivity; we can super quickly try something out</td>
-</tr>
-<tr class="odd">
-<td><img data-src="./Data2024Assets/visual-studio-code.svg" style="height:1em" loading="lazy"> <a href="https://code.visualstudio.com/">VSC</a></td>
-<td>… it has a substantial <strong>user-base</strong>, is <strong>free</strong> and <strong>expandable</strong>, and is a great tool for working with Python</td>
-</tr>
-<tr class="even">
-<td><i class="fa-brands fa-git" aria-label="git"></i> /<a href="https://github.com/">GitHub</a> <i class="fa-brands fa-github" aria-label="github"></i></td>
-<td>… it makes our lives easier in many different ways: by enabling collaboration, project management, or even just as a logbook and backup</td>
-</tr>
-<tr class="odd">
-<td><img data-src="./Data2024Assets/geopandas_iconBW.png" style="height:1em" loading="lazy">&nbsp;<a href="https://geopandas.org/en/stable/">Geopandas</a> <br> <img data-src="./Data2024Assets/folium_logoBW2.png" style="height:1em" loading="lazy"> <a href="https://python-visualization.github.io/folium/latest/">Folium</a></td>
-<td>… these are good examples how Python libraries abstract cumbersome tasks/make working with geospatial data easy</td>
-</tr>
-</tbody>
-</table>
-<!-- TODO decide if GHA is still relevant?   - GHA ([GitHubActions](https://github.com/features/actions))  -->
-<p>What we touch upon but can’t fully resolve, especially in the research-context, is: - AI support (GitHub CoPilot, Microsoft CoPilot, …) - Licensing (MIT, Apache, GPL, Creative Commons, …) - sharing/ip As of designing this course in July 2024, for the University of Auckland, there is some guidance - gen ai - ATO for MS CoPilot - data sensitivity classification Overall: When in doubt, talk to relevant people</p>
-<!-- TODO: #25 Decide what level of detail of the following is needed, depends on the test-run to get timing, too -->
+<section id="go-go-go-wait-what" class="title-slide slide level1 center">
+<h1>Go, go, go! Wait, what?</h1>
+<ul>
+<li>Example = End-to-End workflow with data
+<ul>
+<li>Depth of covered aspect varies; also depends on your research</li>
+</ul></li>
+<li>I share opinions/experiences/preferences.
+<ul>
+<li>try to listen firstly; try it out; find your own solutions; share your findings/preferences/outputs with me later</li>
+</ul></li>
+<li>Focus is
+<ul>
+<li>recent (not dated)</li>
+<li>relevant (to many research disciplines, not just research involving geospatial)</li>
+<li>chain of tools and adequate usage to</li>
+<li>facilitate your research</li>
+</ul></li>
+</ul>
+<div class="callout callout-caution callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Goal: make your (research) lives easier</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Don’t reinvent the wheel 🛞
+<ul>
+<li>Use existing work IF ADEQUATE! (citing, data sensitivity, intellectual property, licenses, funding, … the list goes on!)</li>
+</ul></li>
+<li><em>Make it <a href="https://research-hub.auckland.ac.nz/guide-to-managing-research-data/ethics-integrity-and-compliance/fair-principles-for-research-data">FAIR</a></em> (Findable, Accessible, Interoperable, and Reusable) and benefit from that</li>
+<li>Focus on your research, not on learning tools</li>
+<li>keep Reproducibility in mind! Excellent <a href="https://book.the-turing-way.org/reproducible-research/reproducible-research">resource here</a></li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 
 <section>
-<section id="why-python" class="title-slide slide level1 center">
-<h1>Why Python?</h1>
-<div class="columns">
-<div class="column" style="width:70%;">
+<section id="overview-of-the-ficiticous-project" class="title-slide slide level1 center">
+<h1>Overview of the ficiticous project</h1>
 <ul>
-<li>Python is
+<li><p><strong>our project</strong> is part of a PhD project (usually 3-5 years runtime), how much of the shown workflows apply to your work differs</p></li>
+<li><p>from this 1 hour up to 3 years (or more?) and you can mix-and-match components</p></li>
+<li><p>We picked a <strong>geospatial</strong> example</p>
 <ul>
-<li>a high-level/abstract and general-purpose programming language</li>
-<li>an interpreted language (not compiled)</li>
+<li><strong>Why?</strong> Many can appreciate an enhanced map (other topics might require jargon, etc.)</li>
+<li>Even if your research does not invovle geospatial aspects: You are in the right session 😎 It is about <strong>the process not so much the product</strong></li>
 </ul></li>
-<li>Python is dynamically typed (no need to declare variables)</li>
-<li>Python is easy to
-<ul>
-<li><em>read, maintain, write, debug, extend, integrate with other languages, deploy, scale, share, collaborate, teach</em></li>
-</ul></li>
+<li><p>For this project, we made sure that we are allowed to obtain/capture | posess and store | use | (work on with AI support) | publish as it is <a href="https://research-hub.auckland.ac.nz/guide-to-managing-research-data/ethics-integrity-and-compliance/research-data-classification">not senstivite</a>.</p></li>
+<li><p>Parties that might have an influence: Ethics Committee, IP, Commerical Interest, Countries, supervisor,…</p></li>
 </ul>
-</div><div class="column" style="width:40%;">
-<p><img data-src="Data2024Assets/CvsPythonMeme.JPG"></p>
-</div></div>
 </section>
-<section id="programming-language-python---continued" class="slide level2">
-<h2>Programming Language: Python - continued</h2>
+<section id="more-details-about-data-sensitivity-etc." class="slide level2">
+<h2>More details about data sensitivity, etc.</h2>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Personal opinion</strong></p>
+<p><strong>Recommended ResBaz sessions</strong></p>
 </div>
 <div class="callout-content">
 <ul>
-<li>a common statement is that Python is slow
+<li>Just before this one: <a href="https://resbaz.auckland.ac.nz/schedule/#session-1">Managing Research Data</a> (which just ran prior to this session;
 <ul>
-<li>in reality, you can run (encapsulated) other languages</li>
+<li><a href="https://research-hub.auckland.ac.nz/guide-to-managing-research-data/rd-support-and-training/managing-research-data-workshops">repeated workshop at University of Auckland</a>)</li>
 </ul></li>
-<li>being a <strong>relatively abstract languge</strong> makes it suitable for many research projects (no need to reinvent the wheel)</li>
-<li>The <strong>community</strong> is great!
+<li>Potentially still available after this session:
 <ul>
-<li><strong>most popular</strong>/<a href="https://www.statista.com/chart/16567/popular-programming-languages/">most searched</a> for on Google</li>
-<li>there are tons of <strong>great libraries</strong> that can be used</li>
-<li>because Python is so popular, <strong>ChatGPT and other Machine Learning (ML) powered support tools</strong> can write pretty decent code (date of writing this = April 2024).</li>
-</ul></li>
-<li>some report issues with <strong>libraries</strong> and changes to them
-<ul>
-<li>there are many ways of dependency management (<code>requirements.txt</code> or <a href="https://python-poetry.org/">Poetry</a>) version-controlling your code and making sure it is reproducible</li>
-</ul></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="start-with-vsc-on-windowslinuxmac" class="slide level2">
-<h2>Start with VSC on Windows/Linux/Mac</h2>
-<ul>
-<li>the idea here is that we all start at the same point</li>
-<li>that is <strong>after</strong> (!) you have successfully installed Python on the (local/remote) machine you are using</li>
-<li>we will not show you how to install Python on Windows, MacOS, and Linux</li>
-<li>as anticipated in the very beginning, this variance of operating systems makes it impossible to cover every aspect hands-on</li>
-</ul>
-<p>As a rough guideline - Windows: Anaconda, Chocolatey, WSL2 (WSL2, Homebrew?/Linux?)</p>
-</section>
-<section id="how-does-the-vsc-interface-work" class="slide level2">
-<h2>How does the VSC interface work</h2>
-<ul>
-<li>these are IDE - VSC (TLA)</li>
-</ul>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>An IDE is an Integrated Development Environment. (a TLA is a Three Letter Acronym) You can do everything we will talk today in a simple text editor, using your operating system’s file explorer, a command-line terminal, but an IDE makes your life easier. - <a href="https://code.visualstudio.com/">Visual Studio Code (VSC)</a> <img data-src="./Data2024Assets/visual-studio-code.svg" style="height:1em" loading="lazy"> - VSCodium <img data-src="./Data2024Assets/VSCodium.png" style="height:1em" loading="lazy"> - (open-source version that isn’t collection telemetry data) - PyCharm <img data-src="./Data2024Assets/PyCharm_Icon (1).svg" style="height:1em" loading="lazy"> and others specialised for certain programming languages</p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="./Data2024Assets/VSCOverview.png" style="height:100.0%" loading="lazy"> <a href="[link](https://code.visualstudio.com/docs/getstarted/userinterface)">more information on the official website</a></p>
-</div></div>
-<div class="attribution">
-<p>Photo courtesy of <a href="https://code.visualstudio.com/docs/getstarted/userinterface">Visual Studio Code</a></p>
-</div>
-</section>
-<section id="how-to-navigate-in-vsc" class="slide level2">
-<h2>How to navigate in VSC</h2>
-<ul>
-<li>if you are familiar with the layout, it is easy</li>
-<li>if you are a novice, it might overwhelm you
-<ul>
-<li>I have been there and I got lost</li>
-</ul></li>
-<li>think of it as a
-<ul>
-<li>file explorer (usually on the left)</li>
-<li>terminal (usually at the bottom)</li>
-<li>one or many editors (usually in the middle)
-<ul>
-<li>at times they have preview windows, too</li>
-</ul></li>
-</ul></li>
-<li>there are many plugins; we will use:
-<ul>
-<li>GitHub
-<ul>
-<li>GitHub CoPilot</li>
-</ul></li>
-<li>Python
-<ul>
-<li>we will create a virutal environment</li>
-</ul></li>
-<li>we will show you (only show you) how to connect to a remote server (that might be another physical machine/like your computer at home or a cloud service, like the research infrastructure at the University of Auckland (UoA), <a href="https://research-hub.auckland.ac.nz/research-software-and-computing/advanced-compute/nectar-research-cloud">Nectar</a> of <a href="https://aws.amazon.com/">AWS</a>)</li>
+<li><a href="https://resbaz.auckland.ac.nz/schedule/#session-129">An introduction to cloud security for researchers</a></li>
+<li><a href="https://resbaz.auckland.ac.nz/schedule/#session-131">Data Management Planning</a></li>
+<li><a href="https://resbaz.auckland.ac.nz/schedule/#session-132">Health care data for research at the University of Auckland</a></li>
+<li><a href="https://resbaz.auckland.ac.nz/schedule/#session-130">Using digital tools for transcription</a></li>
+<li><a href="https://resbaz.auckland.ac.nz/schedule/#session-49">Research Data Collection &amp; Surveys with REDCap: An Overview</a></li>
+<li><a href="https://resbaz.auckland.ac.nz/schedule/#session-101">Tikanga, Māori Research Ethics and Māori Data Sovereignty</a></li>
+<li><a href="https://resbaz.auckland.ac.nz/schedule/#session-085">Introduction to Qualtrics for Research Surveys</a></li>
 </ul></li>
 </ul>
-</section></section>
-<section id="how-to-connect-to-a-remote-resource-using-vsc-that-can-be-your-labpc-resvm-nectar-aws" class="title-slide slide level1 center">
-<h1>How to connect to a remote resource using VSC (that can be your LabPC, ResVM, Nectar, AWS,…)</h1>
-<p>(go to SESSION UoA compute)</p>
-</section>
-
-<section id="reproducibility" class="title-slide slide level1 center">
-<h1>Reproducibility</h1>
-<ul>
-<li>this is a big topic in academia</li>
-<li>to superficially summarise: Instead of writing a publication and keeping your code and data to yourself, you want to enable others to reproduce your results</li>
-<li>while this has various other implications (Ethics, Intellectual Property, …), for now, we assume that this is all sorted</li>
-<li>some journals, etc. require you to provide your code and data (data availability statement, etc.)</li>
-</ul>
-<p>Let’s focus on the technical aspects with this example:</p>
-<ul>
-<li>let’s say you have input data that you store and properly enhance with metadata
-<ul>
-<li><strong>Dataset</strong>.
-<ul>
-<li>Where did you get it from? <code>Source URL?</code></li>
-<li>What version/date did you download it? <code>Version 17.2.1, 2024-JUL-08</code></li>
-<li>Is it acceptable that you copy and share it <code>CC-BY-SA</code> + Link</li>
-</ul></li>
-<li><strong>Code</strong>
-<ul>
-<li>you followed the Tidy Data principles: such as:
-<ul>
-<li>keep an untouched copy of your raw data</li>
-<li>keep a clear receipe of the steps you took (hard for spreadsheets, easy for code)</li>
-<li>you can use Git to version-control your code; it might be adequate for data, too; it might not</li>
-</ul></li>
-</ul></li>
-<li><strong>Infrastructure</strong>
-<ul>
-<li>you don’t start from scratch every time</li>
-<li>you base your work on others’</li>
-<li>that is fine and encouraged; we don’t want to code our <em>Microsoft Word</em>, in order to write a paper</li>
-<li>(among others/this is a non-exhausitve list), three aspects follow TODO: PUT A PYRAMID VISUALISATION HERE
-<ul>
-<li>the machine the code runs on (that might have an influence on how random numbers are generated; how many bits a certain data type has, etc.). For some research that might not be relevant, for others it is crucial</li>
-<li>the Python version (for example, Python 2 vs Python 3 had breaking changes)</li>
-<li>the libraries you use (their syntax changes, they might not exist anymore)</li>
-<li>if you use indeterministic models (some ML approaches), the random seed might be important or it might not be 100% reproducitble; that’s often fine if you minimise the potential</li>
-</ul></li>
-<li>While achieving <strong>full reproducibility</strong> is a challange (you’d have to keep/maintain/trouble-shoot a physical machine with the same CPU running everything; you wouldn’t be able to patch its security vulnerabilities, etc.), there are certain steps you can take are <em>in the right direction</em></li>
-<li>TODO PUT THE INVERSE PYRAMID HERE
-<ul>
-<li>keep track of your libraries and their versions
-<ul>
-<li>you can use a <code>requirements.txt</code> file</li>
-<li>you can use <a href="https://python-poetry.org/">Poetry</a></li>
-<li>you can use <a href="https://docs.conda.io/en/latest/">Conda</a></li>
-<li>potential challenge: These libraries are taken offline; you just point to the relevant version; you don’t keep/download/save/backup the relevant version</li>
-</ul></li>
-<li>you can Containerise your environment; or parts of it
-<ul>
-<li>you can use <a href="https://www.docker.com/">Docker</a> LINK TO OTHER SESSION
-<ul>
-<li>in essence: You define the operating system (<code>Ubuntu version 22.04</code>)</li>
-<li>You define the exact Python version (<code>Python 3.10.2</code>)</li>
-<li>You use the above methods to extract libraries and their versions (<code>pip freeze &gt; requirements.txt</code>)</li>
-</ul></li>
-</ul></li>
-<li>you run it on a certain cloud infrastructure; this might go away/change</li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li>RO Crate</li>
-</ul>
-</section>
-
-<section id="how-and-why-to-use-git" class="title-slide slide level1 center">
-<h1>How and why to use Git</h1>
-
-<img data-src="Data2024Assets/folium_logo.png" class="r-stretch quarto-figure-center"><p class="caption">alt</p><div class="callout callout-note no-icon callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<p><strong><i class="fa-solid fa-quote-right" aria-label="quote-right"></i> test</strong></p>
-</div>
-<div class="callout-content">
-<p>Some text.</p>
 </div>
 </div>
 </div>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>This is my test note</strong></p>
-</div>
-<div class="callout-content">
-<p>And some content inside of it</p>
-</div>
-</div>
-</div>
-<div class="solutionbox">
-<div class="solutionbox-header">
-<div class="solutionbox-icon">
-
-</div>
-<p>This is my test solution</p>
-</div>
-<div class="solutionbox-body">
-<p>And some content inside of it</p>
-</div>
-</div>
-<!-- :::{.solutionbox}
-
-::::{.solutionbox-header}
-<!-- Relevant ResBaz Sessions
-::::
-
-::::{.solutionbox-body}
-consider attending [ResBaz Git-Session](https://resbaz.auckland.ac.nz/schedule/#session-125) 
-::::
-
-::: -->
-<p>Some initial clarification on <em>Git</em> vs <em>GitHub</em> and <em>GitHub Actions</em> - | <i class="fa-brands fa-git" aria-label="git"></i> is a version control system - consider it a record of changes in your code - how powerful that is might not be obvious - details to be found in the book <a href="https://www.freecodecamp.org/news/gitting-things-done-book">Gitting Things Done</a>, for example - we recommend using Git in our <a href="https://research-hub.auckland.ac.nz/guide-to-managing-research-data/rd-support-and-training/managing-research-data-workshops">RDM Workshops</a> - | <i class="fa-brands fa-git" aria-label="git"></i> /<a href="https://github.com/">GitHub</a> <i class="fa-brands fa-github" aria-label="github"></i> is a platform that hosts Git repositories - Oversimplified: This is how you interact with Git (there are alternatives/<a href="https://about.gitlab.com/">GitLab</a>, <a href="https://bitbucket.org">BitBucket</a>, …) - it is also - a social network for developers - a place where you can find code, share code, collaborate on code, and get feedback on code - You can have public repositories (fancy way of saying <em>project folders</em>) in the general free plan, at UoA (and potentially other academic institutions) you can have free private repositories, too <!-- TODO #10 --> - GitHub Action (GHA) - this is a way to automate things - think of it as a computer (more a Virtual Machine) that is running in the cloud and does things for you - as such, in theory, you can do <em>everything</em> you can do on your <em>proper computer</em>, by using GitHub’s infrastructure on your smartphone to write code that is then executed on a server in the cloud</p>
-</section>
-
-<section>
-<section id="how-to-use-python-a-30k-feet-overview-pointing-at-some-neat-aspects" class="title-slide slide level1 center">
-<h1>How to use Python; a 30k feet overview pointing at some neat aspects</h1>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Relevant ResBaz Sessions</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li>Victor Python</li>
-<li>4h Python</li>
-<li>UoA only: Python Researcher Development</li>
-</ul>
-</div>
-</div>
-</div>
-<ul>
-<li>let us start with a simple example</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="bu">print</span>(<span class="st">"Hello World"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>we can do math with variables</li>
-</ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
-<span id="cb2-2"><a></a><span class="bu">print</span>(a)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>it is coding, so we have to pay attention to detail</li>
-</ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
-<span id="cb3-2"><a></a><span class="bu">print</span>(A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>we can and will use libraries</li>
-<li>we can and will import data</li>
-<li>plot</li>
-<li>export data</li>
-</ul>
-</section>
-<section id="how-to-leverage-ai-github-copilot" class="slide level2">
-<h2>How to leverage AI (GitHub CoPilot,…)</h2>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Relevant ResBaz Sessions</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li>AI in research</li>
-</ul>
-</div>
-</div>
-</div>
-<p>This relevance of this is highly depending on your circumstances. Your institution and its stance on AI usage. Your personal stance on AI usage. The field you are working in and especially the sensitivity of the data you are working with.</p>
-<p>There are currently two main workflows: - auto-completion - write what you want to achieve as a comment and let the AI write the code for you</p>
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Warning</strong></p>
-</div>
-<div class="callout-content">
-<p>While this is great, it is not a silver bullet. You need some basic knowledge to understand what is presented to you. To debug it. To adapt it to your needs. Still, we will demonstrate it here</p>
-</div>
-</div>
-</div>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>GitHub CoPilot is a tool that can write code for you
-<ul>
-<li>the worflow is that you write a comment and CoPilot suggests code</li>
-</ul></li>
-<li>ChatGPT/Bing/…
-<ul>
-<li>you can ask questions and get code snippets As of now (July 2024), for simple tasks try CoPilot, for more complex tasks try ChatGPT, etc.</li>
-</ul></li>
-<li>While creating this very presentation, I used CoPilot and it suggested most of the text on the right-hand side</li>
-<li>As you can quickly tell, it is fascinating what it does, but it far from perfect</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p>Here comes the auto-completed list: - it is based on OpenAI’s GPT-3 - it is a great tool to learn from - it is a great tool to get started with - it is a great tool to get unstuck - it is a great tool to get a second opinion - it is a great tool to get a first opinion - it is a great tool to get a third opinion - it is a great tool to get a fourth opinion - it is a great tool to get a fifth opinion - it is a great tool to get a sixth opinion - it is a great tool to get a seventh opinion - it is a great tool to get an eighth opinion - it is a great tool to get a ninth opinion - it is a great tool to get a tenth opinion - it is a great tool to get an eleventh opinion</p>
-</div></div>
 </section></section>
 <section>
-<section id="how-to-use-jupyter-notebooks" class="title-slide slide level1 center">
-<h1>How to use Jupyter Notebooks</h1>
+<section id="the-workflows-components---a-pyramid-scheme" class="title-slide slide level1 center">
+<h1>The workflow’s <em>components</em> - a Pyramid scheme</h1>
+
+<img data-src="Data2024Assets/Pyramid.svg" class="r-stretch"><aside class="notes">
 <ul>
-<li>Jupyter Notebooks (file extension <code>.ipynb</code>) are a great way to interact with Python
+<li>we have some data.</li>
+<li>how that was generated is out of scope of this session</li>
+<li>at ResBas at TABLE day x, Qualtrics for quantitative, nVivo for qualitative, RedCap for sensitive, but you might pick up on your predecessor’s work, you might have sensors in the field, you might scrape bits and pieces of the internet</li>
+<li>we <strong>have that data</strong> implies that it shouldn’t just sit on our local laptop that we might forget on the bus, it shouldn’t be on that harddrive that might fail,… MORE IN RDM session
 <ul>
-<li>some history to be found <a href="https://www.dataschool.io/jupyter-and-ipython-terminology/">here</a></li>
-<li>“In 2011, the IPython Notebook was released. It was known as a”computational notebook” because it allowed you to weave together code, plots, and narrative text into a single document”</li>
-<li>“Also in 2015, IPython split into two projects: IPython (for Python-specific components) and Jupyter (for language-agnostic components). As part of that split, the IPython Notebook was renamed the Jupyter Notebook. The name”Jupyter” was inspired by the open languages of science: Julia, Python, and R”</li>
+<li>if it is sensitive, at the UoA, we currently store such data on a network drive (link)</li>
+<li>if non-sensitive, no other restrictions (think: no need to guarantee that it stays within NZ, IP,…) it can be on the cloud, UoA = DropBox</li>
+<li>it can be on some server, UK Biobank, …</li>
+<li>long story short, here in this session, we expect to ‘have the data’.</li>
 </ul></li>
-<li>As opposed to other langugages, where you mostly write a script, wait for it to compile or fail and run it, Jupyter Notebooks allow you to write code in cells and run them individually</li>
-<li>This is also no silver bullet, but it is a great for initial development stages
+<li>we want to work on the data</li>
+<li>physical computer</li>
+<li>operating system</li>
+<li>programming language</li>
+<li>programming environment/IDE</li>
+<li>(a notebook)</li>
+<li>our code
 <ul>
-<li>later, you might want to chain together a multitude of scripts <code>.py</code> files</li>
+<li>ingesting the data</li>
+<li>ingesting libraries (more about that in a second)</li>
+<li>code we create</li>
 </ul></li>
-<li>Jupyter Notebook are great for teaching, learning, sharing</li>
+<li>outputs (might be number/the average age is 42, can be a graph, can be a video with an ML based live segmentation algo, can be a map, yes, a map, let’s try that later on)</li>
+<li>we want all this effort to persist. We want to maximie reproducibility. This is a big topic. We won’t get 100% reproducibility. But we can be ‘directionally correct’ and by following (some of) the suggested workflows, maybe based on the 80-20 rule. Based on your specific research, that can be more a 95-5 split or 10-90. Still 10% better than not worrying about it</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="component-1-the-physical-computer" class="slide level2">
+<h2>Component 1: the physical computer</h2>
+<p><img data-src="Data2024Assets/Pyramid01comp.svg" class="absolute" style="top: 120px; right: 10px; width: 450px; height: 250px; "></p>
+<ul>
+<li>this can be many things
+<ul>
+<li>your local laptop (don’t forget it on the bus 🚌)</li>
+<li>your office computer 🏢</li>
+<li>your lab-groups’ computer 🔬</li>
+<li>a Virtual Machine 📡
+<ul>
+<li>3 sentences about VMs</li>
+<li>we will use one in our project</li>
+</ul></li>
+<li>a cloud resource ☁️ (might be obfuscated, might be a server similar to a VM)</li>
+</ul></li>
 </ul>
 </section>
-<h3 id="briefly-jupyter-on">Briefly: Jupyter on …</h3>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Relevant ResBaz Sessions</strong></p>
-</div>
-<div class="callout-content">
+<section id="component-2-the-operating-system" class="slide level2">
+<h2>Component 2: the operating system</h2>
+<p><img data-src="Data2024Assets/Pyramid02OS.svg" class="absolute" style="top: 120px; right: 10px; width: 450px; height: 250px; "></p>
 <ul>
-<li>Overview of compute options</li>
-<li>Nectar</li>
-<li>AWS and co</li>
-<li>Docker</li>
+<li>Selected tools are maximised for
+<ul>
+<li>being Operating System (OS) agnostic</li>
+<li>they <strong>should</strong> work on many systems</li>
+<li>some (!) trouble-shotting in aforementioned <a href="https://resbaz.auckland.ac.nz/schedule/#session-090">Drop-in Clinic</a> or <a href="https://uoa-eresearch.github.io/HackyHour/">over Slack</a></li>
+</ul></li>
 </ul>
-</div>
-</div>
-</div>
-<p>One neat aspect of Jupyter Notebooks (that might not be obvious to the untrained eye) is that they are <strong>not</strong> bound to your local machine and you can interact with them through your browser. <em>Under the hood</em> can be executed on - your local machine - a Virtual Machine (VM) in the cloud - such as the <a href="https://ardc.edu.au/services/ardc-nectar-research-cloud/">Nectar Research Cloud</a> for those who are eligible - such as AWS, Azure, Google Cloud, … - <a href="https://colab.research.google.com/">Google Colab</a> - last but not least on NZ-wide HPC infrastructure <a href="https://www.nesi.org.nz/">NeSI</a>, especially <a href="https://docs.nesi.org.nz/Scientific_Computing/Interactive_computing_using_Jupyter/Jupyter_on_NeSI/">Jupyter on NeSI</a></p></section>
-<section>
-<section id="core-session-get-the-real-leaflet-example-done" class="title-slide slide level1 center">
-<h1>Core session: GET THE REAL LEAFLET EXAMPLE DONE</h1>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -878,193 +656,465 @@ consider attending [ResBaz Git-Session](https://resbaz.auckland.ac.nz/schedule/#
 <p><strong>Note</strong></p>
 </div>
 <div class="callout-content">
-<p>While this is the core example of this session, most of the workflows/the chain of tools we use can be applied to a multitude of other tasks</p>
+<p>because of the way we interact with the core-coding task, we don’t see too much of the OS</p>
 </div>
 </div>
 </div>
-<!-- TODO: @Nick Add Conent, please -->
-<!-- TODO: #24 consider embedding some of the code as an ipynb embed -->
+</section>
+<section id="component-3-the-programming-language" class="slide level2">
+<h2>Component 3: the programming language</h2>
+<p><img data-src="Data2024Assets/Pyramid03Lang.svg" class="absolute" style="top: 120px; right: 10px; width: 450px; height: 250px; "></p>
+<ul>
+<li>we will use Python 🐍</li>
+<li>Python vs.&nbsp;R vs.&nbsp;C vs.&nbsp;Rust vs.&nbsp;JS, … is out of scope</li>
+<li>if availabile try one of these sessions</li>
+<li>My summary: If your goal is…
+<ul>
+<li>… efficient Machine Learning: <a href="https://resbaz.auckland.ac.nz/schedule/#session-60">Julia</a></li>
+<li>… statistics and refined plots (yes, I am looking at you, <a href="https://ggplot2.tidyverse.org/">ggplot2</a>): <a href="https://resbaz.auckland.ac.nz/schedule/#session-56">R</a></li>
+<li>… the Swiss Army Knife®: <a href="https://resbaz.auckland.ac.nz/schedule/#session-111">Python</a></li>
+</ul></li>
+</ul>
+<p>(all running Wed. 1-5pm)</p>
+</section>
+<section id="component-4-libraries" class="slide level2">
+<h2>Component 4: Libraries</h2>
+<p><img data-src="Data2024Assets/Pyramid04Lib.svg" class="absolute" style="top: 120px; right: 10px; width: 450px; height: 250px; "></p>
+<ul>
+<li>Python has a vast amount of libraries</li>
+<li>we will use <a href="https://geopandas.org/">GeoPandas</a> among others</li>
+<li>more pro/con is about to follow in due course</li>
+</ul>
+</section>
+<section id="component-5-the-programming-environment" class="slide level2">
+<h2>Component 5: the programming environment</h2>
+<p><img data-src="Data2024Assets/Pyramid05IDE.svg" class="absolute" style="top: 120px; right: 10px; width: 450px; height: 250px; "> We have two main appraoches</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>Starting point is <a href="https://github.com/UoA-eResearch/SA2_2022_population/blob/main/making%20a%20map.ipynb">this</a></p>
-</div><div class="column" style="width:50%;">
+<p><img data-src="Data2024Assets/HelloWorldPy.svg" width="450"></p>
+<p>Use this to:</p>
 <ul>
-<li><div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="Data2024Assets/MapFinalResult.jpg"></p>
-<figcaption>alt</figcaption>
-</figure>
-</div></li>
+<li>automatically, for ex. every night at 11pm (cron-job)</li>
+<li>chain one scripts output as an input to another script (build a pipeline)</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="Data2024Assets/HelloWorldJupyter.svg" width="450"></p>
+<p>Use this to:</p>
+<ul>
+<li>develop your code</li>
+<li>explore your data</li>
+<li>get interactivity</li>
+<li>run bits and pieces in Isolation</li>
 </ul>
 </div></div>
-<p>Will be a live-demo using VSC in the session.</p>
 </section>
-<section id="outlook-bundle-this-up-as-a-docker-container" class="slide level2">
-<h2>Outlook: Bundle this up as a Docker container</h2>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Relevant ResBaz Sessions</strong></p>
-</div>
-<div class="callout-content">
+<section id="option-a-command-line-based" class="slide level2">
+<h2>Option A: Command-line-based</h2>
 <ul>
-<li>Containers/Luis</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="outlook-2-have-it-buildcompile-as-github-action-why-do-you-use-those-etc" class="slide level2">
-<h2>Outlook 2: Have it build/compile as GitHub Action (why do you use those, etc)</h2>
-<!-- TODO: #22 #21  MAYBE Have our map update via something in the browser and GHA reruns it. -->
-</section>
-<section id="outlook-3-publish-your-code-results-figshare-have-a-data-availbaility-statement-in-your-latex" class="slide level2">
-<h2>Outlook 3: Publish your code, results: Figshare; have a data availbaility statement in your LaTeX,…</h2>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Relevant ResBaz Sessions</strong></p>
-</div>
-<div class="callout-content">
+<li>we can get a lot done by only using a command-line interface (aka CLI/terminal/console/shell/BaSH/ZSH/Fish/…)</li>
+<li>open locally or log in to a VM (via <a href="https://en.wikipedia.org/wiki/Secure_Shell">SSH</a>, etc.)</li>
+<li>we can code in a text editor
 <ul>
-<li>LaTeX</li>
-<li>Figshare</li>
-<li>Overleaf</li>
-<li>Data Management Plan</li>
-<li>Data Availability Statement</li>
-<li>Reproducibility</li>
-<li>BinderHub</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- TODO: link to Overleaf, to LaTeX session, Figshare -->
-</section>
-<section id="reproducibility-1" class="slide level2">
-<h2>Reproducibility</h2>
-<ul>
-<li>for more reproducibility, we could run another session or include here</li>
-<li>Docker but then the cpu architecture would have an impact</li>
-<li>BinderHub is
-<ul>
-<li>UoA only</li>
-<li>what happens if I <em>set all in stone today</em> and then return a couple of years later refresh of the underlying infrastructure and potentially get different results?</li>
+<li>that can be <a href="https://ex-vi.sourceforge.net/">VI</a>/<a href="https://www.vim.org/">VIM</a>/<a href="https://nano-editor.org/">nano</a>/…</li>
 </ul></li>
 </ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Recommended ResBaz session</strong></p>
+</div>
+<div class="callout-content">
+<p><a href="https://resbaz.auckland.ac.nz/schedule/#session-57">Introduction to the Command Line</a> (Wed. 10am-3pm)</p>
+</div>
+</div>
+</div>
+<p>TODO #26 VIDEO HOW WE LOG IN VIA SSH. HOW WE CREATE A .PY FILE AND EXECUTE IT</p>
 </section>
-<section id="geopandas-and-folium" class="slide level2">
-<h2>Geopandas and Folium</h2>
+<section id="option-b-gui-based-.py-files" class="slide level2">
+<h2>Option B: GUI-based; <code>.py</code> files</h2>
+<p><code>GUI = graphical user interface</code></p>
 <ul>
-<li>Geopandas is a library that allows you to work with geospatial data</li>
-<li>Folium is a library that allows you to create interactive maps</li>
+<li>why do we use a GUI? To get help!
+<ul>
+<li>syntax highlighting</li>
+<li>auto-complete</li>
+<li>potentially AI-support <sup>1</sup></li>
+</ul></li>
+<li>we can use our local computer (<i class="fa-brands fa-apple" aria-label="apple"></i>, <i class="fa-brands fa-windows" aria-label="windows"></i>, <i class="fa-brands fa-linux" aria-label="linux"></i>) or <i class="fa-brands fa-linux" aria-label="linux"></i> <a href="https://unix.stackexchange.com/questions/12755/how-to-forward-x-over-ssh-to-run-graphics-applications-remotely">x11</a>/<i class="fa-brands fa-windows" aria-label="windows"></i> <a href="https://en.wikipedia.org/wiki/Remote_Desktop_Protocol">rdp</a> into a virtual machine</li>
+<li>there is again quite a variety</li>
+<li>I pick <a href="https://code.visualstudio.com/">Visusal Studio Code (VSC)</a>, others use <a href="https://www.jetbrains.com/pycharm/">Jetbrains PyCharm</a>, etc.
+<ul>
+<li><a href="https://vscodium.com/">VSCodium</a>: open-source adaption without telemetry; no MS VS Marketplace but its own; at times less smooth</li>
+</ul></li>
 </ul>
-<div class="sourceCode" id="annotated-cell-4"><pre class="sourceCode numberSource python code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode python"><span id="annotated-cell-4-1"><a href="#annotated-cell-4-1"></a><span class="co"># Read the HTML content from the iframe source``</span></span>
-<span id="annotated-cell-4-2"><a href="#annotated-cell-4-2"></a><span class="co"># iframe_url = "https://carbon.now.sh/?bg=rgba%28255%2C255%2C255%2C1%29&amp;t=panda-syntax&amp;wt=none&amp;l=python&amp;width=680&amp;ds=false&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=true&amp;pv=0px&amp;ph=0px&amp;ln=false&amp;fl=1&amp;fm=Hack&amp;fs=13px&amp;lh=133%25&amp;si=false&amp;es=2x&amp;wm=false"</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-4-3" class="code-annotation-target"><a href="#annotated-cell-4-3"></a>iframe_url <span class="op">=</span> <span class="st">"https://carbon.now.sh/?bg=rgba</span><span class="sc">%28255%</span><span class="st">2C255%2C255%2C1%29&amp;t=panda-syntax&amp;wt=none&amp;l=python&amp;width=680&amp;ds=false&amp;dsyoff=20px&amp;dsblur=68px&amp;wc=true&amp;wa=true&amp;pv=0px&amp;ph=0px&amp;ln=false&amp;fl=1&amp;fm=Hack&amp;fs=13px&amp;lh=133%25&amp;si=false&amp;es=2x&amp;wm=false"</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-4-4" class="code-annotation-target"><a href="#annotated-cell-4-4"></a>response <span class="op">=</span> requests.get(iframe_url)</span>
-<span id="annotated-cell-4-5"><a href="#annotated-cell-4-5"></a><span class="co"># print(response)</span></span>
-<span id="annotated-cell-4-6"><a href="#annotated-cell-4-6"></a>iframe_html <span class="op">=</span> response.content</span>
-<span id="annotated-cell-4-7"><a href="#annotated-cell-4-7"></a><span class="co"># print(iframe_html)</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-4-8" class="code-annotation-target"><a href="#annotated-cell-4-8"></a><span class="co"># Parse the iframe content using Beautiful Soup</span></span>
-<span id="annotated-cell-4-9"><a href="#annotated-cell-4-9"></a><span class="co"># print(soup)</span></span>
-<span id="annotated-cell-4-10"><a href="#annotated-cell-4-10"></a>extracted_content <span class="op">=</span> soup.body.prettify()  <span class="co"># Customize this based on your needs</span></span>
-<span id="annotated-cell-4-11"><a href="#annotated-cell-4-11"></a><span class="bu">print</span>(extracted_content)</span>
-<span id="annotated-cell-4-12"><a href="#annotated-cell-4-12"></a><span class="co"># save this as a html file</span></span>
-<span id="annotated-cell-4-13"><a href="#annotated-cell-4-13"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'carbon.html'</span>, <span class="st">'w'</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
-<span id="annotated-cell-4-14"><a href="#annotated-cell-4-14"></a>    <span class="bu">file</span>.write(extracted_content)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<dl class="code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
-<dd>
-<span data-code-cell="annotated-cell-4" data-code-lines="3" data-code-annotation="1">help here</span>
-</dd>
-<dt data-target-cell="annotated-cell-4" data-target-annotation="2">2</dt>
-<dd>
-<span data-code-cell="annotated-cell-4" data-code-lines="4" data-code-annotation="2">there you go</span>
-</dd>
-<dt data-target-cell="annotated-cell-4" data-target-annotation="3">3</dt>
-<dd>
-<span data-code-cell="annotated-cell-4" data-code-lines="8" data-code-annotation="3">something elese</span>
-</dd>
-</dl>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>AI: even if you try your best to do all correct, treat sensitive data respectfully, for example, use the University-provided systems,… using tools like AI Coding Support (GitHub CoPilot) might make most of these efforts useless; sensitive data might (!) be fed back for training purposes, etc. If in doubt, take the pessimistic approach (expect that <strong>it calls home</strong>) and talk to relevant people (Ethics-advisors, eResearch support, supervisor,…)</p></li></ol></aside></section>
+<section id="live-demovideo" class="slide level2">
+<h2>LIVE DEMO/VIDEO</h2>
+<p>Let’s try to write another hello-wordl, just like we did on the CLI. Cmd-N, save, file name, .py extension. Go to Terminal. Execute it <code>python helloworld.py</code></p>
+<aside class="notes">
+<ul>
+<li>personal experience: VSC is powerful, yet quite streamlined.</li>
+<li>double-edged-sword: simple vs.&nbsp;overwhelming</li>
+<li>prevent you from having this feeling, too.</li>
+<li>each project (connection to a VM): own window,
+<ul>
+<li>can run mulitple concurrently</li>
+</ul></li>
+<li>sidebar (most things can be customised, put into other places, etc.) here it shows a file explorer.
+<ul>
+<li>maybe not impressive</li>
+<li>remote VM, not the local machine</li>
+<li>even drag and drop things. Really neat.</li>
+</ul></li>
+<li>we have a (or several) built-in command-line applications (BaSH, ZSH, …
+<ul>
+<li>I can navigate to a sub-folder and click open terminal here)</li>
+</ul></li>
+<li>top-right corner
+<ul>
+<li>where the magic</li>
+<li>we write our code</li>
+<li>several windows possible; we can have previews, …</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="option-b---jupyter-notebooks.ipynb-files" class="slide level2">
+<h2>Option B - Jupyter Notebooks/<code>.ipynb</code> files:</h2>
+<ul>
+<li>maximise the GUI-use: <a href="https://jupyter.org/">Jupyter Notebooks</a><sup>1</sup></li>
+<li>Imagine a pharmacy-student’s lab notebook.
+<ul>
+<li>There are some hard-facts (graphs, print-outs,…) and explanations around it</li>
+</ul></li>
+<li>in Jupyter, we can have code blocks, text blocks, images, …
+<ul>
+<li>to beautify we can use <code>markdown</code> syntax
+<ul>
+<li>a different take than MS-Word cusor-highlight-text-to-bold approach</li>
+</ul></li>
+</ul></li>
+<li>but: Why add explanations/metadata in the first place? - collaboration/colleagues need to know rationale/units [<span class="math inline">\(m\)</span> vs <span class="math inline">\(mm\)</span>] - <strong>future-you</strong>:
+<ul>
+<li>again: <a href="https://research-hub.auckland.ac.nz/guide-to-managing-research-data/ethics-integrity-and-compliance/fair-principles-for-research-data">FAIR</a> and metadata, utlimately: get more research impact</li>
+</ul></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>formerly IPythonNotebook, hence the file extension .ipynb</p></li></ol></aside></section>
+<section id="live-demo-lets-create-a-new-jupyter-notebook-write-a-hello-world-run-it-save-it-and-push-it-to-github" class="slide level2">
+<h2>Live Demo: Let’s create a new Jupyter Notebook, write a hello-world, run it, save it, and push it to GitHub</h2>
+<aside class="notes">
+<ul>
+<li>Now, VSC has syntax highlighting.
+<ul>
+<li>reserved keyword, such as <code>if</code> changes colour</li>
+<li>it indents my new line
+<ul>
+<li>indentation is very important in Python</li>
+</ul></li>
+<li>while you can do all that it is harded in a simplistic text editor</li>
+</ul></li>
+<li>same idea; but instead of calling our script (the .py file) via the command-line, we can press the little play button</li>
+<li>turns our coded md to visually pleasing</li>
+<li>one. See how our heading levels</li>
+<li>give us a little ToC on the bottom-left?</li>
+<li>And we get the output below each cell.</li>
+<li>Bonus: Once we have several cells, we can intentionally press the play button here and there; observe how the numbers change</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
+<section id="pyramid-revisited-research-reproducibility-perspective" class="title-slide slide level1 center">
+<h1>Pyramid revisited: Research Reproducibility perspective</h1>
+<ul>
+<li>What can we do to maximise <a href="https://book.the-turing-way.org/reproducible-research/reproducible-research">Reproducibility</a>?<sup>1</sup></li>
+<li>Handling data with code has some advantages over GUI spreadsheet tools where you accidentally click on a cell and move it, etc.</li>
+</ul>
+<p><img data-src="Data2024Assets/ReproPyramid.svg" width="1450"> <!-- ![](Data2024Assets/ReproPyramid.svg) --></p>
+<aside class="notes">
+<ul>
+<li>Pyramid from a reproducibility perspective</li>
+<li>A peer-reviewer wants to reproduce our results</li>
+<li>the data
+<ul>
+<li>—after Ethics-agreed — we share that with the reviewer</li>
+<li>remember: IP, etc.</li>
+</ul></li>
+<li>the code
+<ul>
+<li>that’s on GitHub or another repo Bottom-up:</li>
+</ul></li>
+<li>Computer: CPU architecutre can have an influence (how random numbers are generated)</li>
+<li>OS: the Operating System (and the specific version) can have similar influences AND what version of anything above is available</li>
+<li>Python had breaking changes and you still might see some <code>residue</code>from version 2.7 vs.&nbsp;3.x</li>
+<li>libraries: We will cover some of that soon</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>on a side-note, some ML-based approaches are not even 100% reproducible if you run the same cell over and over again</p></li></ol></aside></section>
+
 <section>
-<section id="homework" class="title-slide slide level1 center">
-<h1>Homework <span class="emoji" data-emoji="briefcase">💼</span></h1>
+<section id="intermezzo-lets-see-some-of-that-in-action" class="title-slide slide level1 center">
+<h1>Intermezzo: Let’s see some of that in action</h1>
+<p>LIVE DEMO: 5 lines of code</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a></a>pd.options.plotting.backend <span class="op">=</span> <span class="st">"plotly"</span></span>
+<span id="cb1-3"><a></a><span class="im">import</span> yfinance</span>
+<span id="cb1-4"><a></a>df <span class="op">=</span> yfinance.Ticker(<span class="st">"^NZ50"</span>).history(period<span class="op">=</span><span class="st">"max"</span>)<span class="co"># Load data from Yahoo Finance</span></span>
+<span id="cb1-5"><a></a>df[[<span class="st">"Open"</span>, <span class="st">"Close"</span>, <span class="st">"High"</span>, <span class="st">"Low"</span>]].plot(labels<span class="op">=</span>{<span class="st">"value"</span>: <span class="st">"$ NZD"</span>}, title<span class="op">=</span><span class="st">"NZX 50 Index"</span>) <span class="co"># plot it</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="version-control-with-git-and-github" class="slide level2">
+<h2>Version Control with Git and GitHub</h2>
 <ul>
-<li>Install software <!-- TODO #7 put 3 tabs win,osx,linux --></li>
-<li>Get a dataset (git pull/GitHub Desktop)</li>
-<li>run this one line, to see what if it works.</li>
+<li>local machine only(bus 🚌 risk) even VM (decommissoned?) <em>isn’t enough</em></li>
+<li><code>if</code> <strong>all</strong> stakeholders agree (Research Data Policy, Ethics Commission, IP Advisor, Funder,…)
+<ul>
+<li>we can host our code on <strong>version controlled repository</strong></li>
+</ul></li>
+<li>track changes (what changed from previous to now, what from now to 23 days ago)</li>
+<li>we don’t want file names such as <code>Thesis final final really final 2 july.docx</code></li>
+<li>code is mostly plain text (not <code>.docx</code>,…), we can use thigs like a <code>diff</code></li>
+<li>while <i class="fa-brands fa-git" aria-label="git"></i> <sup>1</sup> is the underlying ‘technique’/foundation <a href="https://github.com/">GitHub</a> <i class="fa-brands fa-github" aria-label="github"></i> is one(!) commercial (now owned by Microsoft) entity
+<ul>
+<li>there are alternatives, <a href="https://www.gitlab.com/">GitLab</a>, <a href="https://bitbucket.org">BitBucket</a>, …</li>
+<li>some are open source, some run in the cloud, some run on your local machine</li>
+</ul></li>
+<li>we don’t have the time for the details, but we have <a href="https://resbaz.auckland.ac.nz/schedule/#session-125">Introduction to version control with Git</a> (Thu, 9am-12pm)</li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>ɡɪt is a distributed version control system that tracks versions of files developed by Linus Torvalds</p></li></ol></aside></section>
+<section id="vsc-and-github" class="slide level2">
+<h2>VSC and GitHub</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ul>
+<li>VSC we can either use the lefthand <em>side-panel</em> for git (once extension is installed), or we can use the <em>CLI</em> below to do
+<ul>
+<li><code>git status</code>, <code>git diff</code>, <code>git commit -am "present-tense active what I did"</code><sup>1</sup>, <code>git push</code></li>
+</ul></li>
+<li>GitHub can also provide us with
+<ul>
+<li>GitHub Actions (<em>throw-away</em>-VMs running on MSAzure)</li>
+<li>Some basic Project Management via <a href="https://code.visualstudio.com/blogs/2020/05/06/github-issues-integration">Issues</a></li>
+<li>Collaboration (allow other to work on your code)</li>
+<li>private and public repos</li>
+<li>there are academic discounts, …</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><!-- ![](Data2024Assets/GitGraph.jpg){width="450"} --> <img data-src="Data2024Assets/GitGraph.jpg"></p>
+</div></div>
+<aside><ol class="aside-footnotes"><li id="fn5"><p>example: ‘Fix typo in introduction to user guide’ how to write proper commit messages <a href="https://cbea.ms/git-commit/">here</a> </p></li></ol></aside></section>
+<section id="packages-a-gift-a-curse" class="slide level2">
+<h2>Packages 🎁 : A gift 👑 &amp; a curse 🤬</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>A gift 👑 because:</p>
+<ul>
+<li>Python makes it easy to integrate</li>
+<li>incredible amount of packages exist</li>
+<li>so no reinventing the wheel (build on other peoples’ extended efforts)<sup>1</sup></li>
+</ul>
+<p>A curse 🤬 because:</p>
+<ul>
+<li>things tend to break
+<ul>
+<li>people discontinue packages</li>
+<li>breaking changes require us to change our syntax</li>
+<li>packages depend on other packages (think of a big tree🌲)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p>But! We are not the first people to run into such challenges</p>
+<ul>
+<li><p>package management: there are different ways of minimising that impact; let me show 3</p>
+<ul>
+<li>manually creating a <code>references.txt</code> file <em>(part of the following demo)</em></li>
+<li><code>pip freeze &gt; references.txt</code> <em>(also part of the following demo)</em></li>
+<li><a href="https://python-poetry.org/">poetry</a></li>
+</ul></li>
+<li><p>there are others, <a href="https://www.anaconda.com/download">Anaconda</a>, <a href="https://hatch.pypa.io/latest/">Hatch</a>, just to name a few</p></li>
+</ul>
+</div></div>
+<aside><ol class="aside-footnotes"><li id="fn6"><p>proper referencing is crucial, code is not different from other academic tasks in this respect</p></li></ol></aside></section></section>
+<section id="to-venv-or-not-to-venv" class="title-slide slide level1 center">
+<h1>To <code>venv</code> or not to <code>venv</code>?</h1>
+<ul>
+<li>(This topic is not crucial, I know people who use it frequently and other that are successful and don’t do it at all)</li>
+<li>What is this <code>venv</code>? This is one way (there are others) of creating a virtual environment.</li>
+<li>Each <code>venv</code> can have its own packages and versions; as opposed to a global enviroment (so you can run the old and the new version in paralell and test, etc.)</li>
+<li>Some consider it good practice to keep one <code>venv</code> per project. If you research and use of Python on one specific machine is just about one project, this might be ignorable; <code>poetry</code> spins up a virtual environment anyways for you</li>
+<li>overall, this kind of encapsulation can support Reproducibility</li>
+</ul>
+<p>VIDEO here I install everything with <code>pip install requirements.txt</code></p>
+</section>
+
+<section id="revisit-the-pyramid" class="title-slide slide level1 center">
+<h1>Revisit the Pyramid</h1>
+<p>(input data properly stored ✅ we use an IDE (VSC) ✅ use package management ✅)</p>
+<p><img data-src="Data2024Assets/Pyramid.svg" class="absolute" style="top: 10px; right: 10px; width: 200px; "></p>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ul>
+<li>Containers (Think of a mini-VM) <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a> - Pick/reference an OS (say Ubuntu 22.4) + a Python version (say 3.11.6), etc. your local/VM machine runs Kernel and VSC - put the result on <a href="https://hub.docker.com/">DockerHub</a></li>
+<li><a href="https://research-hub.auckland.ac.nz/research-software-and-computing/advanced-compute/nectar-binderhub">BinderHub</a>: package a remote Git repository into an interactive Jupyter notebook for displaying code and output</li>
+<li><a href="https://www.researchobject.org/ro-crate/">Research Object</a> (RO) Crate: an approach to package research data and its metadata human and machine readable, <a href="https://about.workflowhub.eu/Workflow-RO-Crate/">Workflow</a> hub can ingest or generate an RO-Crate that describes the complete processes, authorship, and requirements of a computational workflow</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img data-src="Data2024Assets/ContainerBreadChef.jpg" width="450"></p>
+</div></div>
+</section>
+
+<section id="lets-iterate-the-pyramid-adapted-to-baking-bread" class="title-slide slide level1 center">
+<h1>Let’s iterate: The pyramid adapted to baking bread <span class="emoji" data-emoji="bread">🍞</span></h1>
+
+<img data-src="Data2024Assets/BreadmakerAllInOne.jpg" class="r-stretch"><aside class="notes">
+<p>We use a not-so-romantic automatic breadmaker | That’s hardware/the computer layer One (of potentially three) pan goes in there | That’s the OS Our cookbook is written in a langugae | That’s Python in our case The cooking instrcutions/steps | That’s the code we produce The ingredients list | That’s like the libraries we use The breadmaker’s display/keys | That’s like our IDE/VSC To stay within this metaphore, we can further explore: The ingredients list might tell you to get something to sprinkle on top of the bread: ‘nut mix’ = <code>pandas</code> ‘Brand ABC’s fruity nut mix’ = <code>pandas 1.3.3</code> Both of these are pointers; you keep track what to buy, you don’t buy some extra.</p>
+<p>If you buy a second breadmaker and all the ingredients and then keep them in your ficticious magic time capsule | this is like downloading all the used packages and keeping them in full there …then you put the whole kitchen in a container…</p>
+<p>But what about the excact air temperature and humdity level once you baked this masterpiece of a bread? You see: Just like 100% Reproducibility is (almost?) impossible to achieve in research, it is similarly in this baking example. But: If the alternatives are that you keep all data, code, … on your laptop which you might leave on the bus, then the good old 80-20 (maybe 70-30 or 10-90 depending on your research’s needs) comes into play</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section>
+<section id="finally-the-geospatial-example" class="title-slide slide level1 center">
+<h1>Finally: The geospatial example</h1>
+<ul>
+<li>this was quite a lot to take in</li>
+<li>we used the Pyramid
+<ul>
+<li>we revisited it from multiple perspectives</li>
+</ul></li>
+<li>With only 5 lines of code, we looked at stock prices</li>
+<li>we thought about yummy bread <span class="emoji" data-emoji="bread">🍞</span></li>
 </ul>
 </section>
-<section id="useful-links-general" class="slide level2">
-<h2>Useful links (General)</h2>
+<section id="mapping-our-geospatial-example-to-the-pyramid" class="slide level2">
+<h2>Mapping our geospatial example to the Pyramid</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Data Input</td>
+<td>Download dataset</td>
+</tr>
+<tr class="even">
+<td>Computer</td>
+<td>We use a VM (on <a href="https://research-hub.auckland.ac.nz/research-software-and-computing/advanced-compute/nectar-research-cloud">Nectar</a>)</td>
+</tr>
+<tr class="odd">
+<td>OS</td>
+<td>We use <code>Ubuntu 22.4</code></td>
+</tr>
+<tr class="even">
+<td>Language</td>
+<td><code>Python</code></td>
+</tr>
+<tr class="odd">
+<td>Libraries</td>
+<td><code>Geopandas</code> among others</td>
+</tr>
+<tr class="even">
+<td>IDE</td>
+<td><code>VSC</code> to run a Jupyter Notebook (ssh’d to VM)</td>
+</tr>
+<tr class="odd">
+<td>Code</td>
+<td>On <code>GitHub</code></td>
+</tr>
+<tr class="even">
+<td>Research Outputs</td>
+<td>Map published to website/<code>GitHub Action</code> (bit out of scope)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="prepwork" class="slide level2">
+<h2>Prepwork</h2>
+<p>VIDEO</p>
 <ul>
-<li><a href="https://code.visualstudio.com/blogs/2020/05/06/github-issues-integration">how to create GitHub Issues right in VSC</a>
-<ul>
-<li>you can use that to keep track of your to-do list without having to leave VSC!</li>
-</ul></li>
-<li><a href="https://www.freecodecamp.org/news/understanding-open-source-software-lifecycles/">what do software verison numbers refer to</a></li>
+<li>(VM is created, VSC is installed, plugins are installed, python-is-python3)</li>
+<li>Open VSC</li>
+<li>ssh</li>
+<li>create venv</li>
+<li>create ipynb (maybe touch via console or left panel)</li>
+<li>(copy-)paste in md headings/skeleton structure</li>
+<li>push run button</li>
+<li>select kernel</li>
+<li>(not sure: create new gh repo, make private)</li>
+<li>(not sure where/how: magically we know all needed libs; pip freeze it)</li>
+<li>show commit in VSC extension</li>
+<li>navigate to website and see what we did</li>
 </ul>
 </section>
-<section id="useful-links-python-specific" class="slide level2">
-<h2>Useful links (Python <i class="fa-brands fa-python" aria-label="python"></i> specific)</h2>
+<section id="background-what-we-plot" class="slide level2">
+<h2>Background: What we plot</h2>
 <ul>
-<li><a href="https://www.python.org/">Python.org</a></li>
-<li><a href="https://jupyter.org/">Jupyter</a></li>
-</ul>
-<p>Environments</p>
+<li>StatsNZ decomposes New Zealand into Statistical Areas
 <ul>
-<li><a href="https://www.anaconda.com/">Anaconda</a></li>
-</ul>
-<p>Editors (apart from VSC)</p>
-<ul>
-<li><a href="https://www.jetbrains.com/pycharm/">PyCharm</a></li>
-</ul>
-<p>Package Management - <a href="https://pypi.org/">PyPI</a> - <a href="https://python-poetry.org/">Poetry</a></p>
-<p>Libraries - <a href="https://pandas.pydata.org/">Pandas</a> - <a href="https://matplotlib.org/">Matplotlib</a></p>
-<p>Machine Learning - <a href="https://www.tensorflow.org/">TensorFlow</a> - <a href="https://pytorch.org/">PyTorch</a> - <a href="https://keras.io/">Keras</a> - <a href="https://seaborn.pydata.org/">Seaborn</a> - <a href="https://scikit-learn.org/stable/">Scikit-learn</a></p>
-<p>Web Development - <a href="https://www.djangoproject.com/">Django</a> - <a href="https://flask.palletsprojects.com/en/2.0.x/">Flask</a> - <a href="https://fastapi.tiangolo.com/">FastAPI</a> - <a href="https://streamlit.io/">Streamlit</a> - <a href="https://dash.plotly.com/">Dash</a></p>
-<p>Visualisation - <a href="https://plotly.com/">Plotly</a> - <a href="https://docs.bokeh.org/en/latest/index.html">Bokeh</a> - <a href="https://altair-viz.github.io/">Altair</a> - <a href="http://holoviews.org/">Holoviews</a> - <a href="https://panel.holoviz.org/">Panel</a></p>
-<p>Geospatial - <a href="https://geopandas.org/en/stable/">GeoPandas</a> - <a href="https://python-visualization.github.io/folium/latest/">Folium</a> - <a href="https://leafletjs.com/">Leaflet</a> - <a href="https://scitools.org.uk/cartopy/docs/latest/">Cartopy</a> - <a href="https://matplotlib.org/basemap/">Basemap</a> - <a href="https://shapely.readthedocs.io/en/stable/">Shapely</a> - <a href="https://geopy.readthedocs.io/en/stable/">GeoPy</a> - <a href="https://docs.djangoproject.com/en/3.2/ref/contrib/gis/">GeoDjango</a> - <a href="https://geoalchemy-2.readthedocs.io/en/latest/">GeoAlchemy</a> - <a href="https://fiona.readthedocs.io/en/latest/">Fiona</a> - <a href="https://pyproj4.github.io/pyproj/stable/">Pyproj</a> - <a href="https://gdal.org/">GDAL</a> - <a href="https://openlayers.org/">OpenLayers</a></p>
-</section>
-<section id="useful-links-operating-systems-specific" class="slide level2">
-<h2>Useful links (Operating Systems specific)</h2>
-<ul>
-<li>Windows <i class="fa-brands fa-windows" aria-label="windows"></i>
-<ul>
-<li>Anaconda and other installers that put a Windows-flavoured Python install <!-- -TODO #18  *Plain Vanilla* Python via this and that --></li>
-<li><a href="https://chocolatey.org/">Chocolatey</a></li>
-<li>Our recommendation: Windows Subsystem for Linux <a href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL</a>
-<ul>
-<li>usually WSL2 to be installed via the Software Center <!-- - TODO #17 here link to general installation guide --></li>
+<li>each SA should encapsule people of similar socio-economical background</li>
+<li>there are 3 resolutions (SA1 = x people, SA2 = y people, SA3 = z people)</li>
+<li>we pick SA2</li>
 </ul></li>
-</ul></li>
-<li>MacOS <i class="fa-brands fa-apple" aria-label="apple"></i> <!-- TODO #20 #19 CONFIRM THIS - comes with own Python version (might require Dev Tools/XCdoe to be installed)? -->
+<li>we want to plot the
 <ul>
-<li>install <a href="https://docs.brew.sh/Homebrew-and-Python">Python via HomeBrew</a></li>
-</ul></li>
-<li>Linux <i class="fa-brands fa-linux" aria-label="linux"></i>
-<ul>
-<li>many distributions come with Python pre-installed, otherwise use the package manager of your choice</li>
+<li>boundaries (polygon on the map)</li>
+<li>name of each SA2</li>
+<li>number of people and show this on an interactive map in a browser</li>
 </ul></li>
 </ul>
-<p>For GIT OVERVIEW use GitKraken.png to get the neat subway map visualisation Also add to Git: I think mention the different rights and responsibilities associated with artwork, documents and code - use the program/artwork/program, read and change the master/code behind the program/artwork, sharing the result, attribution Creative Commons has different variants, some more permissive than others. A “permissive” license like MIT and Apache allows your code to be used, adapted and shared by anyone for their own purpose including for commercialisation, and all they need to do is attribute you. A “copyleft” license (a play on the word copyright) like GPL or CC BY-SA for artwork, gives the same rights, but requires people who adapt and share your code to make their code available using the same license. This can help ensure a thriving, open software community. On the other hand, a permissive license can be easier for people to use</p>
-<p>good summary on GitHub about Licenses: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#disclaimer</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="Data2024Assets/ExampleGitHubMITLicense.jpg"></p>
-<figcaption>alt</figcaption>
-</figure>
-</div>
-<!-- Git Fail
-![alt]("Data2024Assets/GoogleGitHubAccident.png") -->
-<!-- TODO #23 should I get a temp VM for this to start absolutely clean slate/should I try 2 (win and linux?) -->
+</section></section>
+<section id="skeleton-headlines" class="title-slide slide level1 center">
+<h1>Skeleton headlines</h1>
+<ul>
+<li>import the data</li>
+<li>work on it</li>
+<li>plot it</li>
+</ul>
+<p>GHA TO SERVE?</p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -1085,7 +1135,9 @@ consider attending [ResBaz Git-Session](https://resbaz.auckland.ac.nz/schedule/#
 <p> </p>
 </div>
 </div>
-</section></section>
+</section>
+
+
     </div>
   </div>
 

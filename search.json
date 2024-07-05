@@ -1,94 +1,31 @@
 [
   {
-    "objectID": "DataWorkflows2024.html#programming-language-python---continued",
-    "href": "DataWorkflows2024.html#programming-language-python---continued",
-    "title": "Working with data in 2024",
-    "section": "Programming Language: Python - continued",
-    "text": "Programming Language: Python - continued\n\n\n\n\n\n\nPersonal opinion\n\n\n\na common statement is that Python is slow\n\nin reality, you can run (encapsulated) other languages\n\nbeing a relatively abstract languge makes it suitable for many research projects (no need to reinvent the wheel)\nThe community is great!\n\nmost popular/most searched for on Google\nthere are tons of great libraries that can be used\nbecause Python is so popular, ChatGPT and other Machine Learning (ML) powered support tools can write pretty decent code (date of writing this = April 2024).\n\nsome report issues with libraries and changes to them\n\nthere are many ways of dependency management (requirements.txt or Poetry) version-controlling your code and making sure it is reproducible"
+    "objectID": "ResBazPlanning.html#r",
+    "href": "ResBazPlanning.html#r",
+    "title": "ResBaz 2023 - Scheduling Assistance",
+    "section": "R",
+    "text": "R\n\nLet’s start with R.\nIt is very commonly used\nand it originated from research needs to undertake statistical analysis and to create graphics.\nNowadays, there are heaps of things that you can do with R and these are presented in the session\n“Introduction to R and R Studio”\n\nWhat you learned there will be expanded on in “Using R for statistical analysis” and even more in “Hands-on statistical analysis with R”"
   },
   {
-    "objectID": "DataWorkflows2024.html#start-with-vsc-on-windowslinuxmac",
-    "href": "DataWorkflows2024.html#start-with-vsc-on-windowslinuxmac",
-    "title": "Working with data in 2024",
-    "section": "Start with VSC on Windows/Linux/Mac",
-    "text": "Start with VSC on Windows/Linux/Mac\n\nthe idea here is that we all start at the same point\nthat is after (!) you have successfully installed Python on the (local/remote) machine you are using\nwe will not show you how to install Python on Windows, MacOS, and Linux\nas anticipated in the very beginning, this variance of operating systems makes it impossible to cover every aspect hands-on\n\nAs a rough guideline - Windows: Anaconda, Chocolatey, WSL2 (WSL2, Homebrew?/Linux?)"
+    "objectID": "ResBazPlanning.html#python",
+    "href": "ResBazPlanning.html#python",
+    "title": "ResBaz 2023 - Scheduling Assistance",
+    "section": "Python",
+    "text": "Python\n\nAnother popular programming language in the research Community is Python.\nPython is commonly employed for all kinds of research-tasks.\nTo get an overview, we reommend attending the taster session: “How Can Python Help Your Research?”.\n\nIf you have or already had developed a taste for Python, “Introduction to the Python Programming Language” gets you started with hands-on coding in Python\n\nIf you face challenges with handling/changing/manipulating not one but hundreds or more of files, “Python for Image Manipulation and Repeatable Research Pipelines” helps you in making Python do the work so you can free up some time to focus on research"
   },
   {
-    "objectID": "DataWorkflows2024.html#how-does-the-vsc-interface-work",
-    "href": "DataWorkflows2024.html#how-does-the-vsc-interface-work",
-    "title": "Working with data in 2024",
-    "section": "How does the VSC interface work",
-    "text": "How does the VSC interface work\n\nthese are IDE - VSC (TLA)\n\n\n\nAn IDE is an Integrated Development Environment. (a TLA is a Three Letter Acronym) You can do everything we will talk today in a simple text editor, using your operating system’s file explorer, a command-line terminal, but an IDE makes your life easier. - Visual Studio Code (VSC)  - VSCodium  - (open-source version that isn’t collection telemetry data) - PyCharm  and others specialised for certain programming languages\n\n more information on the official website\n\n\n\nPhoto courtesy of Visual Studio Code"
+    "objectID": "ResBazPlanning.html#cli",
+    "href": "ResBazPlanning.html#cli",
+    "title": "ResBaz 2023 - Scheduling Assistance",
+    "section": "CLI",
+    "text": "CLI\n\nEven though you can run many aspects of R and Python in a graphical user interface or gui, so independent of a command-line interface or CLI, many other software packages do have a cli version\nSome also refer to these as the terminal version.\n\nSometimes this might have even more functionality or\nyou can automate tedious tasks\nor its use contributes to a repeatable and hence reproduicble resareach workflow.\nThese things become more and more important."
   },
   {
-    "objectID": "DataWorkflows2024.html#how-to-navigate-in-vsc",
-    "href": "DataWorkflows2024.html#how-to-navigate-in-vsc",
-    "title": "Working with data in 2024",
-    "section": "How to navigate in VSC",
-    "text": "How to navigate in VSC\n\nif you are familiar with the layout, it is easy\nif you are a novice, it might overwhelm you\n\nJens: I have been there and I got lost\n\nthink of it as a\n\nfile explorer (usually on the left)\nterminal (usually at the bottom)\none or many editors (usually in the middle)\n\nat times they have preview windows, too\n\n\nthere are many plugins; we will use:\n\nGitHub\n\nGitHub CoPilot\n\nPython\n\nwe will create a virutal environment\n\nwe will show you (only show you) how to connect to a remote server (that might be another physical machine/like your computer at home or a cloud service, like the research infrastructure at the University of Auckland (UoA), Nectar of AWS)"
-  },
-  {
-    "objectID": "DataWorkflows2024.html#how-to-leverage-ai-github-copilot",
-    "href": "DataWorkflows2024.html#how-to-leverage-ai-github-copilot",
-    "title": "Working with data in 2024",
-    "section": "How to leverage AI (GitHub CoPilot,…)",
-    "text": "How to leverage AI (GitHub CoPilot,…)\n\n\n\n\n\n\nRelevant ResBaz Sessions\n\n\n\nAI in research\n\n\n\n\nThis relevance of this is highly depending on your circumstances. Your institution and its stance on AI usage. Your personal stance on AI usage. The field you are working in and especially the sensitivity of the data you are working with.\nThere are currently two main workflows: - auto-completion - write what you want to achieve as a comment and let the AI write the code for you\n\n\n\n\n\n\nWarning\n\n\nWhile this is great, it is not a silver bullet. You need some basic knowledge to understand what is presented to you. To debug it. To adapt it to your needs. Still, we will demonstrate it here\n\n\n\n\n\n\nWhile writing this presentation, I used CoPilot and it suggested most of the text on the right-hand side\nAs you can quickly tell, it is fascinating what it does, but it far from perfect\n\n\n\nGitHub CoPilot is a tool that can write code for you\nit is based on OpenAI’s GPT-3\nit is a great tool to learn from\nit is a great tool to get started with\nit is a great tool to get unstuck\nit is a great tool to get a second opinion\nit is a great tool to get a first opinion\nit is a great tool to get a third opinion\nit is a great tool to get a fourth opinion\nit is a great tool to get a fifth opinion\nit is a great tool to get a sixth opinion\nit is a great tool to get a seventh opinion\nit is a great tool to get an eighth opinion\nit is a great tool to get a ninth opinion\nit is a great tool to get a tenth opinion\nit is a great tool to get an eleventh opinion"
-  },
-  {
-    "objectID": "DataWorkflows2024.html#outlook-bundle-this-up-as-a-docker-container",
-    "href": "DataWorkflows2024.html#outlook-bundle-this-up-as-a-docker-container",
-    "title": "Working with data in 2024",
-    "section": "Outlook: Bundle this up as a Docker container",
-    "text": "Outlook: Bundle this up as a Docker container\n\n\n\n\n\n\nRelevant ResBaz Sessions\n\n\n\nContainers/Luis"
-  },
-  {
-    "objectID": "DataWorkflows2024.html#outlook-2-have-it-buildcompile-as-github-action-why-do-you-use-those-etc",
-    "href": "DataWorkflows2024.html#outlook-2-have-it-buildcompile-as-github-action-why-do-you-use-those-etc",
-    "title": "Working with data in 2024",
-    "section": "Outlook 2: Have it build/compile as GitHub Action (why do you use those, etc)",
-    "text": "Outlook 2: Have it build/compile as GitHub Action (why do you use those, etc)"
-  },
-  {
-    "objectID": "DataWorkflows2024.html#outlook-3-publish-your-code-results-figshare-have-a-data-availbaility-statement-in-your-latex",
-    "href": "DataWorkflows2024.html#outlook-3-publish-your-code-results-figshare-have-a-data-availbaility-statement-in-your-latex",
-    "title": "Working with data in 2024",
-    "section": "Outlook 3: Publish your code, results: Figshare; have a data availbaility statement in your LaTeX,…",
-    "text": "Outlook 3: Publish your code, results: Figshare; have a data availbaility statement in your LaTeX,…\n\n\n\n\n\n\nRelevant ResBaz Sessions\n\n\n\nLaTeX\nFigshare\nOverleaf\nData Management Plan\nData Availability Statement\nReproducibility\nBinderHub"
-  },
-  {
-    "objectID": "DataWorkflows2024.html#reproducibility",
-    "href": "DataWorkflows2024.html#reproducibility",
-    "title": "Working with data in 2024",
-    "section": "Reproducibility",
-    "text": "Reproducibility\n\nfor more reproducibility, we could run another session or include here\nDocker but then the cpu architecture would have an impact\nBinderHub is\n\nUoA only\nwhat happens if I set all in stone today and then return a couple of years later refresh of the underlying infrastructure and potentially get different results?"
-  },
-  {
-    "objectID": "DataWorkflows2024.html#geopandas-and-folium",
-    "href": "DataWorkflows2024.html#geopandas-and-folium",
-    "title": "Working with data in 2024",
-    "section": "Geopandas and Folium",
-    "text": "Geopandas and Folium\n\nGeopandas is a library that allows you to work with geospatial data\nFolium is a library that allows you to create interactive maps\n\n# Read the HTML content from the iframe source``\n# iframe_url = \"https://carbon.now.sh/?bg=rgba%28255%2C255%2C255%2C1%29&t=panda-syntax&wt=none&l=python&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=13px&lh=133%25&si=false&es=2x&wm=false\"\n1iframe_url = \"https://carbon.now.sh/?bg=rgba%28255%2C255%2C255%2C1%29&t=panda-syntax&wt=none&l=python&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=13px&lh=133%25&si=false&es=2x&wm=false\"\n2response = requests.get(iframe_url)\n# print(response)\niframe_html = response.content\n# print(iframe_html)\n3# Parse the iframe content using Beautiful Soup\n# print(soup)\nextracted_content = soup.body.prettify()  # Customize this based on your needs\nprint(extracted_content)\n# save this as a html file\nwith open('carbon.html', 'w') as file:\n    file.write(extracted_content)\n\n1\n\nhelp here\n\n2\n\nthere you go\n\n3\n\nsomething elese"
-  },
-  {
-    "objectID": "DataWorkflows2024.html#useful-links-general",
-    "href": "DataWorkflows2024.html#useful-links-general",
-    "title": "Working with data in 2024",
-    "section": "Useful links (General)",
-    "text": "Useful links (General)\n\nhow to create GitHub Issues right in VSC\n\nyou can use that to keep track of your to-do list without having to leave VSC!\n\nwhat do software verison numbers refer to"
-  },
-  {
-    "objectID": "DataWorkflows2024.html#useful-links-python-specific",
-    "href": "DataWorkflows2024.html#useful-links-python-specific",
-    "title": "Working with data in 2024",
-    "section": "Useful links (Python  specific)",
-    "text": "Useful links (Python  specific)\n\nPython.org\nJupyter\n\nEnvironments\n\nAnaconda\n\nEditors (apart from VSC)\n\nPyCharm\n\nPackage Management\n\nPyPI\nPoetry\n\nLibraries - Pandas - Matplotlib\nMachine Learning - TensorFlow - PyTorch - Keras - Seaborn - Scikit-learn\nWeb Development - Django - Flask - FastAPI - Streamlit - Dash\nVisualisation - Plotly - Bokeh - Altair - Holoviews - Panel\nGeospatial - GeoPandas - Folium - Leaflet - Cartopy - Basemap - Shapely - GeoPy - GeoDjango - GeoAlchemy - Fiona - Pyproj - GDAL - OpenLayers"
-  },
-  {
-    "objectID": "DataWorkflows2024.html#useful-links-operating-systems-specific",
-    "href": "DataWorkflows2024.html#useful-links-operating-systems-specific",
-    "title": "Working with data in 2024",
-    "section": "Useful links (Operating Systems specific)",
-    "text": "Useful links (Operating Systems specific)\n\nWindows \n\nAnaconda and other installers that put a Windows-flavoured Python install \nChocolatey\nOur recommendation: Windows Subsystem for Linux WSL\n\nusually WSL2 to be installed via the Software Center \n\n\nMacOS  \n\ninstall Python via HomeBrew\n\nLinux \n\nUbuntu\nFedora\nDebian\nArch\noften come with Python pre-installed, otherwise use the package manager of your choice\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\nState of the Art Workflows for working with data in 2024"
+    "objectID": "ResBazPlanning.html#cli2",
+    "href": "ResBazPlanning.html#cli2",
+    "title": "ResBaz 2023 - Scheduling Assistance",
+    "section": "CLI2",
+    "text": "CLI2\n\nIn the session “introduction to command line” you will be familiarized with important commands but also the related mindset\nand syntax.\n\nA fancy way os daying how you have to type things out.\nOften upper or lower case, dashes and the sequence matter.\n\nAs a next step, you can apply these skills in the session “using the command line to find replace and manipulate data”\n\nThat session title gives a lot away\nand might save you hours of work"
   },
   {
     "objectID": "UpskillingResearchersInML.html#uoa-workshops",
@@ -187,97 +124,6 @@
     "title": "Upskilling Researchers in Machine Learning",
     "section": "Recommendations",
     "text": "Recommendations\n\nRandom forest is a good first non-linear model to learn\n\nintuitive to understand how it works\ngood performances on tabular data\ndoesn’t require too much care in terms of data preparation\n\nResist the temptation of MLP (multi-layer perceptron) for an ML intro\n\nrequire more notions (architecture, training, data preprocessing, …)\nkeep it for Deep Learning introduction"
-  },
-  {
-    "objectID": "LightningTalk.html#background",
-    "href": "LightningTalk.html#background",
-    "title": "Developing a Carpentries-style Machine Learning workshop",
-    "section": "Background",
-    "text": "Background\n\nMachine Learning (ML) or Artificial Intelligence (AI) are without a doubt hot topics\nEmpowering researchers to understand and use ML seems rewarding, but also challenging\nThe Carpentries  offer a proven teaching-style accounting for participants with limited IT experience\n\nCore aspects\n\nlive-coding\npositive attitude towards mistakes\nminimal prerequisites\nmaximising participant involvement\n\n\nThe CeR (Centre for eResearch) at the University of Auckland acquired funding to further develop and run a series of workshops (also referred to as ML-Carp)\nTwo iterations (referred to as Run #1 and Run#2) took place so far. In March and September 2023."
-  },
-  {
-    "objectID": "LightningTalk.html#lesson-overview",
-    "href": "LightningTalk.html#lesson-overview",
-    "title": "Developing a Carpentries-style Machine Learning workshop",
-    "section": "Lesson Overview",
-    "text": "Lesson Overview\n\n\n\nLesson Title\nStatus\nRun #1\nRun #2\n\n\n\n\n\nProgramming with Python\nReleased\nMon, Tue\n-\n\n\n\nIntroduction to Machine Learning with Scikit Learn\nAlpha\nWed, Thu\nMon, Tue\n\n\n\nIntroduction to Deep Learning\nBeta\nFri\nWed, Thu\n\n\n\n\n\n\n\n \n\n\n\n\n\n4h sessions over 4 consecutive afternoons\n\n\n\n\n\nDepending on Maturity, sessions were run with small changes or substantially (re)developed.\nOne major change was Goolge Colab  being used instead of local Python installs."
-  },
-  {
-    "objectID": "LightningTalk.html#lesson-details",
-    "href": "LightningTalk.html#lesson-details",
-    "title": "Developing a Carpentries-style Machine Learning workshop",
-    "section": "Lesson Details",
-    "text": "Lesson Details\n\n\n\nProgramming with Python\nIntroduction to Machine Learning with Scikit Learn and Python\nIntroduction to deep learning\n\n\n\n\nPython Fundamentals\nIntroduction\nIntroduction\n\n\nAnalyzing Patient Data\nSupervised methods - Regression\nClassification by a neural network using Keras\n\n\nVisualizing Tabular Data\nSupervised methods - Classification\nMonitor the training process\n\n\nStoring Multiple Values in Lists\nEnsemble methods\nAdvanced layer types\n\n\nRepeating Actions with Loops\nUnsupervised methods - Clustering\nOutlook\n\n\nAnalyzing Data from Multiple Files\nUnsupervised methods - Dimensionality reduction\n\n\n\nMaking Choices\nNeural Networks\n\n\n\nCreating Functions\nEthics and the Implications of Machine Learning\n\n\n\nErrors and Exceptions\nFind out more\n\n\n\nDefensive Programming\n\n\n\n\nDebugging\n\n\n\n\nCommand-Line Programs"
-  },
-  {
-    "objectID": "LightningTalk.html#participants-background",
-    "href": "LightningTalk.html#participants-background",
-    "title": "Developing a Carpentries-style Machine Learning workshop",
-    "section": "Participants’ Background",
-    "text": "Participants’ Background"
-  },
-  {
-    "objectID": "LightningTalk.html#participants-os",
-    "href": "LightningTalk.html#participants-os",
-    "title": "Developing a Carpentries-style Machine Learning workshop",
-    "section": "Participants’ OS",
-    "text": "Participants’ OS"
-  },
-  {
-    "objectID": "LightningTalk.html#participants-feelings---metrics",
-    "href": "LightningTalk.html#participants-feelings---metrics",
-    "title": "Developing a Carpentries-style Machine Learning workshop",
-    "section": "Participants’ Feelings - Metrics",
-    "text": "Participants’ Feelings - Metrics"
-  },
-  {
-    "objectID": "LightningTalk.html#zoom-attendance",
-    "href": "LightningTalk.html#zoom-attendance",
-    "title": "Developing a Carpentries-style Machine Learning workshop",
-    "section": "Zoom attendance",
-    "text": "Zoom attendance"
-  },
-  {
-    "objectID": "LightningTalk.html#participants-promotiondemotion",
-    "href": "LightningTalk.html#participants-promotiondemotion",
-    "title": "Developing a Carpentries-style Machine Learning workshop",
-    "section": "Participants Promotion/Demotion",
-    "text": "Participants Promotion/Demotion"
-  },
-  {
-    "objectID": "LightningTalk.html#participants-feelings---statements-and-adjustments",
-    "href": "LightningTalk.html#participants-feelings---statements-and-adjustments",
-    "title": "Developing a Carpentries-style Machine Learning workshop",
-    "section": "Participants’ Feelings - Statements and Adjustments",
-    "text": "Participants’ Feelings - Statements and Adjustments\n\nobservation: At very end of the Runs, questions/participation/interest didn’t cease!\n“Python lesson might be separated”\n\nRun #2: Python was removed from the curriculum\n\n“more breaks”\n\nRun #2: better adherence to schedule\n\n“stick to one coding interface”\n\nRun #2: only Colab, VSC etc. was linked to for post-workshop engagement\n\n\n\n\n\n\n\n\nNote\n\n\nAll statements are positive phrased; overall the results confirm a poasitive appreciation."
-  },
-  {
-    "objectID": "ResBazPlanning.html#r",
-    "href": "ResBazPlanning.html#r",
-    "title": "ResBaz 2023 - Scheduling Assistance",
-    "section": "R",
-    "text": "R\n\nLet’s start with R.\nIt is very commonly used\nand it originated from research needs to undertake statistical analysis and to create graphics.\nNowadays, there are heaps of things that you can do with R and these are presented in the session\n“Introduction to R and R Studio”\n\nWhat you learned there will be expanded on in “Using R for statistical analysis” and even more in “Hands-on statistical analysis with R”"
-  },
-  {
-    "objectID": "ResBazPlanning.html#python",
-    "href": "ResBazPlanning.html#python",
-    "title": "ResBaz 2023 - Scheduling Assistance",
-    "section": "Python",
-    "text": "Python\n\nAnother popular programming language in the research Community is Python.\nPython is commonly employed for all kinds of research-tasks.\nTo get an overview, we reommend attending the taster session: “How Can Python Help Your Research?”.\n\nIf you have or already had developed a taste for Python, “Introduction to the Python Programming Language” gets you started with hands-on coding in Python\n\nIf you face challenges with handling/changing/manipulating not one but hundreds or more of files, “Python for Image Manipulation and Repeatable Research Pipelines” helps you in making Python do the work so you can free up some time to focus on research"
-  },
-  {
-    "objectID": "ResBazPlanning.html#cli",
-    "href": "ResBazPlanning.html#cli",
-    "title": "ResBaz 2023 - Scheduling Assistance",
-    "section": "CLI",
-    "text": "CLI\n\nEven though you can run many aspects of R and Python in a graphical user interface or gui, so independent of a command-line interface or CLI, many other software packages do have a cli version\nSome also refer to these as the terminal version.\n\nSometimes this might have even more functionality or\nyou can automate tedious tasks\nor its use contributes to a repeatable and hence reproduicble resareach workflow.\nThese things become more and more important."
-  },
-  {
-    "objectID": "ResBazPlanning.html#cli2",
-    "href": "ResBazPlanning.html#cli2",
-    "title": "ResBaz 2023 - Scheduling Assistance",
-    "section": "CLI2",
-    "text": "CLI2\n\nIn the session “introduction to command line” you will be familiarized with important commands but also the related mindset\nand syntax.\n\nA fancy way os daying how you have to type things out.\nOften upper or lower case, dashes and the sequence matter.\n\nAs a next step, you can apply these skills in the session “using the command line to find replace and manipulate data”\n\nThat session title gives a lot away\nand might save you hours of work"
   },
   {
     "objectID": "LaTeX101.html#visualisations-in-tikz",
@@ -424,14 +270,98 @@
     "href": "LaTeX101.html#tables",
     "title": "LaTeX 101 - Don’t be scared",
     "section": "Tables",
-    "text": "Tables\n\n\n\nA simple table in \\(\\LaTeX\\) syntax:\n\n\\begin{table}[]\n\\caption{My Example Table}\n\\label{tab:my-table}\n\\begin{tabular}{|l|l|l|l|l|}\n\\hline\ncountry     & 1999   & 2000   &  &  \\\\ \\hline\nAfghanistan & 745    & 2666   &  &  \\\\ \\hline\nBrazil      & 37737  & 80488  &  &  \\\\ \\hline\nChina       & 212258 & 213766 &  &  \\\\ \\hline\n\\end{tabular}\n\\end{table}\n\n\nAlternatively using markdown syntax:\n\n| country     | 1999   | 2000   |   |   |\n|-------------|--------|--------|---|---|\n| Afghanistan | 745    | 2666   |   |   |\n| Brazil      | 37737  | 80488  |   |   |\n| China       | 212258 | 213766 |   |   |\n\n\n\nTo be honest:\n\nBoth are a pain to format by hand\nYou shouldn’t work with your data in these. These are for publishing only.\nSome see spreadsheet software (MSExcel, Google Sheets, etc.) just suited for data entry, Python, R, OpenRefine, etc. are better alternatives whose learning curve isn’t as steep as you might expect and relevant sessions are also provided at this year’s ResBaz (see pointers)"
+    "text": "Tables\n\n\n\nA simple table in \\(\\LaTeX\\) syntax:\n\n\\begin{table}[]\n\\caption{My Example Table}\n\\label{tab:my-table}\n\\begin{tabular}{|l|l|l|l|l|}\n\\hline\ncountry     & 1999   & 2000   &  &  \\\\ \\hline\nAfghanistan & 745    & 2666   &  &  \\\\ \\hline\nBrazil      & 37737  & 80488  &  &  \\\\ \\hline\nChina       & 212258 & 213766 &  &  \\\\ \\hline\n\\end{tabular}\n\\end{table}\n\n\nAlternatively using markdown syntax:\n\n| country     | 1999   | 2000   |   |   |\n|-------------|--------|--------|---|---|\n| Afghanistan | 745    | 2666   |   |   |\n| Brazil      | 37737  | 80488  |   |   |\n| China       | 212258 | 213766 |   |   |\n\n\nTo be honest:\n\nBoth are a pain to format by hand\nYou shouldn’t work with your data in these. These are for publishing only.\nSome see spreadsheet software (MSExcel, Google Sheets, etc.) just suited for data entry, Python, R, OpenRefine, etc. are better alternatives whose learning curve isn’t as steep as you might expect and relevant sessions are also provided at this year’s ResBaz (see pointers)"
   },
   {
-    "objectID": "Plots.html",
-    "href": "Plots.html",
-    "title": "Quarto Basics",
-    "section": "",
-    "text": "Code\nimport plotly.express as px\nimport pandas as pd\npd.options.plotting.backend = \"plotly\"\nimport plotly.io as pio\nimport numpy as np\nimport plotly.graph_objects as go\nfrom plotly.subplots import make_subplots\nimport matplotlib.cm as cm\nimport plotly.subplots as sp\n\n\n\n\nCode\n# Custom colors\ncustom_colors = ['#00467F', '#009AC7', '#8D9091', '#A71930', '#7D0063', '#D2492A', '#55A51C',\n                 '#4F2D7F', '#005B82', '#00877C', '#0039A6', '#BA4482', '#006990']\n\n\n\n\nCode\npio.renderers.default = \"notebook\"\n# Read data from the CSV file\ndf = pd.read_csv('./InputDataR1.csv')\ndf_raw = df\ndfR2 = pd.read_csv('./InputDataR2.csv')\ndf2_raw = dfR2\ndf2 = df.drop([0, 1])\ndfR22 = dfR2.drop([0, 1])\n\n\n\noption_counts = df2['Q1'].value_counts()\noption_countsR2 = dfR22['Q1'].value_counts()\n\n# Create a DataFrame from the value_counts() result\noption_counts_df = pd.DataFrame({'Option': option_counts.index, 'R1': option_counts.values})\noption_counts_dfR2 = pd.DataFrame({'Option': option_countsR2.index, 'R2': option_countsR2.values})\noption_counts_df = option_counts_df.merge(option_counts_dfR2, on=\"Option\", how=\"outer\")\n\n# print(option_counts_df)\ntotal_r1 = option_counts_df.R1.sum()\ntotal_r2 = option_counts_df.R2.sum()\nattendance_ratio = total_r1/total_r2\n\ntrace1 = go.Pie(\n     values=option_counts_df.R1, \n     labels=option_counts_df.Option,\n     domain=dict(x=[0, 0.5*attendance_ratio]),\n     name=\"Run #1\",\n     hole=0.4,\n     hoverinfo=\"label+percent+name\",\n     title=f\"Run#1 &lt;br&gt; [{int(total_r1)}]\",\n     marker_colors=custom_colors\n)\n\n\n\ntrace2 = go.Pie(\n     values=option_counts_df.R2, \n     labels=option_counts_df.Option,\n     domain=dict(x=[0.5, 1.0]),\n     name=\"Run #2\",\n     hole=0.4,\n     hoverinfo=\"label+percent+name\",\n     title=f\"Run#2 &lt;br&gt; [{int(total_r2)}]\",\n     marker_colors=custom_colors\n)\n\nlayout = go.Layout(\n        font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n#      legend=dict(\n#         x=0.5,  # Center the legend horizontally\n#         y=-0.1,  # Position the legend just below the plot\n#         xanchor='center',  # Set the x anchor to center\n#         yanchor='top',  # Set the y anchor to the top\n#     )\n)\n#     title=\"Participants' Background\")\n\ndata = [trace1, trace2]\nfig = go.Figure(data=data, layout=layout)\nfig.show()\n# Save the figure as an SVG file\npio.write_image(fig, './UpskillingResearchersInML_Assets/ParticipantsBackground.svg', width=1800, height=600, scale=1)  # Adjust the scale as needed)\n\n\n                                                \n\n\n\n\nCode\n# print(option_counts_df.R1/option_counts_df.R1.sum()*100)\n# assign this as a new column to the existing dataframe option_counts_df\noption_counts_df['percentR1'] = (option_counts_df['R1'] / option_counts_df['R1'].sum() * 100).fillna(0)\noption_counts_df['percentR2'] = (option_counts_df['R2'] / option_counts_df['R2'].sum() * 100).fillna(0)\n\nprint(option_counts_df)\n\n\n                               Option   R1   R2  percentR1  percentR2\n0    Biomedical and clinical sciences  6.0  3.0      37.50  16.666667\n1                         Engineering  4.0  8.0      25.00  44.444444\n2        Built environment and design  1.0  NaN       6.25   0.000000\n3                           Economics  1.0  NaN       6.25   0.000000\n4                   Chemical sciences  1.0  NaN       6.25   0.000000\n5               Mathematical sciences  1.0  1.0       6.25   5.555556\n6                 Biological sciences  1.0  1.0       6.25   5.555556\n7                           Education  1.0  NaN       6.25   0.000000\n8                     Health sciences  NaN  4.0       0.00  22.222222\n9  Information and computing sciences  NaN  1.0       0.00   5.555556\n\n\n\n\nCode\noption_countsOSR1 = df2['Q2'].value_counts()\noption_countsOSR2 = dfR22['Q2'].value_counts()\n# Create a DataFrame from the value_counts() result\n\noption_counts_df = pd.DataFrame({'Option': option_countsOSR1.index, 'R1': option_countsOSR1.values})\noption_counts_dfR2 = pd.DataFrame({'Option': option_countsOSR2.index, 'R2': option_countsOSR2.values})\noption_counts_df = option_counts_df.merge(option_counts_dfR2, on=\"Option\", how=\"outer\")\n\n\ntrace1 = go.Pie(\n     values=option_counts_df.R1, \n     labels=option_counts_df.Option,\n     domain=dict(x=[0.0, 0.45]),  # Adjust the x values\n     name=\"Run #1\",\n     hole=0.4,\n     hoverinfo=\"label+percent+name\",\n     title=f\"Run#1 &lt;br&gt; [{int(total_r1)}]\",\n     marker_colors=custom_colors\n)\n\n\n\ntrace2 = go.Pie(\n     values=option_counts_df.R2, \n     labels=option_counts_df.Option,\n     domain=dict(x=[0.55, 1.0]),  # Adjust the x values\n     name=\"Run #2\",\n     hole=0.4,\n     hoverinfo=\"label+percent+name\",\n     title=f\"Run#2 &lt;br&gt; [{int(total_r2)}]\",\n     marker_colors=custom_colors\n)\n\nlayout = go.Layout(\n#     boxgap=0.1,\n    font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n\n)\n#     title=\"Participants' Background\")\ndata = [trace1, trace2]\nfig = go.Figure(data=data, layout=layout)\nconfig = {'responsive': False}\nfig.show()\n\n# Save the figure as an SVG file\npio.write_image(fig, './UpskillingResearchersInML_Assets/ParticipantsOS.svg', width=1800, height=600, scale=1)  # Adjust the scale as needed)\n\n\n                                                \n\n\n\n\nCode\n# List of column names you want to plot\ncolumns_to_plot = ['Q3_1', 'Q3_2', 'Q3_3', 'Q3_4', 'Q3_5', 'Q3_6']\n\ndef plot_columns_from_dataframe(dataframe1, dataframe2, columns_to_plot):\n    # String to be stripped from each element\n    string_to_strip = \"Please rate your level of agreement with the following statements (0 = complete disagreement, 100 = complete agreement). - \"\n\n    for column in columns_to_plot:\n        # Check if the column contains string values before applying .str.replace()\n        if df_raw[column].dtype == 'object':\n            df_raw[column] = df_raw[column].str.replace(string_to_strip, '', case=False)\n\n    # Convert the columns to float, handling non-numeric values by replacing them with NaN\n    for column in columns_to_plot:\n        dataframe1[column] = pd.to_numeric(dataframe1[column], errors='coerce')\n\n    # Create subplots\n    fig = make_subplots(rows=1, cols=1, shared_yaxes=True)\n\n    # custom_colors = ['color1', 'color2', 'color3', 'color4', 'color5', 'color6']  # Define your custom colors\n\n    for it_number, column in enumerate(columns_to_plot):\n        median_value_df1 = dataframe1[column].median()\n        subplot_df1 = go.Box(\n            y=dataframe1[column],\n            boxpoints='all',\n            jitter=0.3,\n            pointpos=-1.8,\n            line=dict(color=custom_colors[it_number]),\n            marker=dict(color=custom_colors[it_number]),\n            name=df_raw.loc[0,column]\n        )\n\n        median_value_df2 = dataframe2[column].median()\n        subplot_df2 = go.Box(\n            y=dataframe2[column],\n            boxpoints='all',\n            jitter=0.3,\n            pointpos=-1.8,\n            line=dict(color=custom_colors[it_number]),\n            marker=dict(color=custom_colors[it_number]),\n            showlegend=False,\n            # in f notation prepend Run#2 to the name followed b the it_number variable\n            name=f\"Run#2 Q {it_number+1}\"\n        )\n\n        # Add subplots to the figure\n        fig.add_trace(subplot_df1, row=1, col=1)\n        fig.add_trace(subplot_df2, row=1, col=1)\n\n        # # Add median annotations\n        # fig.add_annotation(\n        #     x=it_number + 1,\n        #     y=median_value_df1,\n        #     text=f'Median: {median_value_df1:.2f}',\n        #     font=dict(size=14, color=\"black\"),\n        #     showarrow=True,\n        #     arrowhead=7,\n        #     ax=0,\n        #     ay=-20,\n        #     row=1,\n        #     col=1\n        # )\n\n        # fig.add_annotation(\n        #     x=it_number + 1,\n        #     y=median_value_df2,\n        #     text=f'Median: {median_value_df2:.2f}',\n        #     font=dict(size=14, color=\"black\"),\n        #     showarrow=True,\n        #     arrowhead=7,\n        #     ax=0,\n        #     ay=-20,\n        #     row=1,\n        #     col=2\n        # )\n\n    # Customize the layout\n    fig.update_layout(\n        title=\"Agreement with statements: 0 = complete disagreement, 100 = complete agreement, Run#1 left, Run#2 right\",\n        font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n        # xaxis=dict(title=\"Columns\"),\n        # yaxis=dict(title=\"Values\")\n    )\n\n    # do not show the x axis labels\n    fig.update_xaxes(showticklabels=False)\n\n    # Add a subtitle-like text as an annotation\n    fig.add_annotation(\n        text=\"median across all data for Run#1: 85.5, Run #2: 86.25\",\n        xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n        x=0.5, y=1.05,  # Adjust the position\n        showarrow=False,  # Hide arrow\n        font=dict(size=16)  # Customize font size\n    )\n\n    # # Add a horizontal line to the boxplots\n    # average_values_df1 = dataframe1[columns_to_plot].mean()\n    # overall_avg_df1 = average_values_df1.mean()\n\n    # average_values_df2 = dataframe2[columns_to_plot].mean()\n    # overall_avg_df2 = average_values_df2.mean()\n\n    # fig.add_shape(\n    #     go.layout.Shape(\n    #         type=\"line\",\n    #         x0=0,\n    #         x1=len(columns_to_plot) + 1,\n    #         y0=overall_avg_df1,\n    #         y1=overall_avg_df1,\n    #         line=dict(color=\"red\", width=2),\n    #     ),\n    #     row=1,\n    #     col=1\n    # )\n\n    # fig.add_shape(\n    #     go.layout.Shape(\n    #         type=\"line\",\n    #         x0=0,\n    #         x1=len(columns_to_plot) + 1,\n    #         y0=overall_avg_df2,\n    #         y1=overall_avg_df2,\n    #         line=dict(color=\"red\", width=2),\n    #     ),\n    #     row=1,\n    #     col=2\n    # )\n\n    # fig.add_annotation(\n    #     x=len(columns_to_plot) + 1,\n    #     y=overall_avg_df1,\n    #     text=f'Overall avg: {overall_avg_df1:.2f}',\n    #     font=dict(size=14, color=\"red\"),\n    #     ax=0,\n    #     ay=20,\n    #     row=1,\n    #     col=1\n    # )\n\n    # fig.add_annotation(\n    #     x=len(columns_to_plot) + 1,\n    #     y=overall_avg_df2,\n    #     text=f'Overall avg: {overall_avg_df2:.2f}',\n    #     font=dict(size=14, color=\"red\"),\n    #     ax=0,\n    #     ay=20,\n    #     row=1,\n    #     col=2\n    # )\n\n    # Show the figure\n    fig.show()\n    # Save the figure as an SVG file\n    pio.write_image(fig, './UpskillingResearchersInML_Assets/ParticipantsAgreement.svg', width=1800, height=600, scale=1)  # Adjust the scale as needed)\n\n# Example usage:\n# Create or load your DataFrames and specify the list of columns to plot\n# df1 = pd.read_csv('your_dataframe1.csv')  # Or create your DataFrame\n# dataframe2 = pd.read_csv('your_dataframe2.csv')  # Or create your DataFrame\n# columns_to_plot = ['Q3_1', 'Q3_2', 'Q3_3', 'Q3_4', 'Q3_5', 'Q3_6']\n# plot_columns_from_dataframe(df1, dataframe2, columns_to_plot)\ncolumns_to_plot = ['Q3_1', 'Q3_2', 'Q3_3', 'Q3_4', 'Q3_5', 'Q3_6']\nplot_columns_from_dataframe(df2, dfR22, columns_to_plot)\n\n\n\n                                                \n\n\n\n\nCode\n# Calculate the median for each column\nmedians = df2[columns_to_plot].median()\n\n# Calculate the metric as the median of medians\noverall_median = medians.median()\n\nprint(overall_median)\n\n# Calculate the median for each column\nmedians = dfR22[columns_to_plot].median()\n\n# Calculate the metric as the median of medians\noverall_median = medians.median()\n\nprint(overall_median)\n\n\n\n85.5\n86.25\n\n\n\n\nCode\n# Load data from CSV into the 'zoom' DataFrame\nzoom = pd.read_csv(\"ZoomStats.csv\")\n\n# Create a list of unique days\nunique_days = zoom['Day'].unique()\n\n\n\n# Create subplots for each day\nfig = go.Figure()\n# config = {'responsive': False}\n\n\n# Create a bar for Run1 and Run2 for each unique day\nx_labels = []\nfor day in unique_days:\n    day_data = zoom[zoom['Day'] == day]\n    \n    fig.add_trace(go.Bar(\n        x=[f'Day {day} - Run1', f'Day {day} - Run2'],\n        y=[day_data['Run1'].values[0], day_data['Run2'].values[0]],\n        name=f'Day {day}',\n        text=[day_data['Run1'].values[0], day_data['Run2'].values[0]],\n        textposition='outside',  # Place the value annotations outside the bars\n        showlegend=False,  # Hide the legend\n        marker_color=[custom_colors[0], custom_colors[1]]\n    ))\n    \n    x_labels.extend([f'Day {day} - Run1', f'Day {day} - Run2'])\n\n# Update layout for the overall figure\nfig.update_layout(\n    title='Number of participants in Zoom meetings per day',\n    xaxis=dict(\n        # title='Day and Run',\n        tickmode='array',\n        tickvals=list(range(len(x_labels))),\n        ticktext=x_labels\n    ),\n    # yaxis=dict(title='Value'),\n    barmode='group',\n    # bargap=0.1,  # Adjust the bargap to your preferred spacing\n    font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n)\n\n\n\nhighest_value = max(zoom[['Run1', 'Run2']].values.flatten())\n# print(highest_value)\n\n\nfig.update_yaxes(range=[0, highest_value+4])  # Set the initial y-axis range\n\n# Add a subtitle-like text as an annotation\nfig.add_annotation(\n    text=\"deduplicated, not including instructors or helpers\",\n    xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n    x=0.5, y=1.05,  # Adjust the position\n    showarrow=False,  # Hide arrow\n    font=dict(size=16)  # Customize font size\n)\n\n\n# Show the figure\nfig.show()\n\n# Save the figure as an SVG file\npio.write_image(fig, './UpskillingResearchersInML_Assets/ZoomParticipants.svg')\n\n\n                                                \n\n\n\n\nCode\ndf_promR1 = df2['Q4']\ndf_promR1\ndf_promR1.dropna(inplace=True)\ndf_promR1.astype(int)\ndf_promR2 = dfR22['Q4']\ndf_promR2\ndf_promR2.dropna(inplace=True)\ndf_promR2.astype(int)\n\npromote = pd.concat([df_promR1.astype(int), df_promR2.astype(int)], axis=1)\n\n# # Rename the columns if needed (optional)\npromote.columns = ['Q4_R1', 'Q4_R2']\npromote\n\n# flatten the dataframe 'promote' \n# promote = promote.stack().reset_index()\n\noption_counts_R1 = promote['Q4_R1'].value_counts()\noption_counts_R2 = promote['Q4_R2'].value_counts()\n\npromote2 = pd.concat([option_counts_R1.astype(int), option_counts_R2.astype(int)], axis=1)\npromote2.columns = ['Q4_R1', 'Q4_R2']\npromote2\n\n# data_type = type(promote2['Q4_R1'].iloc[0])\n# print(data_type)\n\n# promote2.plot(kind='bar')\n\n# Create subplots for each day\nfig = go.Figure()\n# config = {'responsive': False}\n\n\n# Create a bar for Run1 and Run2 for each unique day\n\nfig.add_trace(go.Bar(\n    x=promote2.index,\n    y=promote2['Q4_R1'],\n    name=\"Run #1\",\n    text=promote2['Q4_R1'].values,\n    textposition='outside',  # Place the value annotations outside the bars\n    # showlegend=False,  # Hide the legend\n    marker_color=custom_colors[0]\n)\n)\n\nfig.add_trace(go.Bar(\n    x=promote2.index,\n    y=promote2['Q4_R2'],\n    name=\"Run #2\",\n    text=promote2['Q4_R2'].values,\n    textposition='outside',  # Place the value annotations outside the bars\n    # showlegend=False,  # Hide the legend\n    marker_color=custom_colors[1]\n)\n)\n\n\n# Update layout for the overall figure\nfig.update_layout(\n    title='How likely would you be to recommend this workshop to a colleague?',\n\n    barmode='group',\n    bargap=0.1,  # Adjust the bargap to your preferred spacing\n    font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n)\n\n\n\n# Add a subtitle-like text as an annotation\nfig.add_annotation(\n    text=\"0 = not likely at all ... 10 = extremely likely\",\n    xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n    x=0.5, y=-0.15,  # Adjust the position\n    showarrow=False,  # Hide arrow\n    font=dict(size=16)  # Customize font size\n)\n\n# Add a subtitle-like text as an annotation\nfig.add_annotation(\n    text=\"deduplicated, not including instructors or helpers\",\n    xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n    x=0.5, y=1.05,  # Adjust the position\n    showarrow=False,  # Hide arrow\n    font=dict(size=16)  # Customize font size\n)\n\nfig.update_xaxes(range=[0, 11])  # Set the initial x-axis range\nfig.update_yaxes(range=[0, 10])  # Set the initial y-axis range\n\n# Update x-axis ticks to display integers from 0 to 10\nfig.update_xaxes(\n    tickmode='array',\n    tickvals=list(range(11)),  # Set tick values from 0 to 10\n    ticktext=list(map(str, range(11)))  # Set tick labels as strings of integers from 0 to 10\n)\n\n# # Show the figure\nfig.show()\npio.write_image(fig, './UpskillingResearchersInML_Assets/ParticipantsRecommend.svg', width=1800, height=600, scale=1)  # Adjust the scale as needed)\n\n\n\n\n\n                                                \n\n\n\n\nCode\n# Load data from CSV into the 'zoom' DataFrame\nzoom = pd.read_csv(\"ZoomStats.csv\")\nzoom\n\n\n# Assuming you have a DataFrame or data source named 'zoom'\nfig = go.Figure()\n\nfig.add_trace(go.Scatter(x=zoom['Day'], y=zoom['Run1'], mode='lines+markers', name='Run#1', line=dict(width=2, color=custom_colors[0]), marker=dict(size=8, color=custom_colors[0])))\nfig.add_trace(go.Scatter(x=zoom['Day'], y=zoom['Run2'], mode='lines+markers', name='Run#2', line=dict(width=2, color=custom_colors[1]), marker=dict(size=8, color=custom_colors[1])))\n\n\ndef format_data_label(value):\n    if np.isnan(value) or value == \"\":\n        return \"\"\n    else:\n        return f\"{value:.0f}\"\n\nfig.update_layout(title='Attendees per Zoom session',\n                  xaxis_title='Day',\n                #   yaxis_title='Value'\n                  )\n\n# Create a text column for data values with custom formatting\ntext_values_run1 = [format_data_label(val) for val in zoom['Run1']]\ntext_values_run2 = [format_data_label(val) for val in zoom['Run2']]\n\n# Add data labels to each trace using add_trace\nfig.add_trace(go.Scatter(x=zoom['Day'], y=zoom['Run1'], mode='text', text=text_values_run1, textposition='top center', showlegend=False))\nfig.add_trace(go.Scatter(x=zoom['Day'], y=zoom['Run2'], mode='text', text=text_values_run2, textposition='bottom center', showlegend=False))\n\n# Set the y-axis scale to [0, 37]\nfig.update_yaxes(range=[0.1, 5.1])\nfig.update_yaxes(range=[0, 37])\n\n# Set x-axis ticks to integers\nfig.update_xaxes(tickmode='linear', dtick=1)\n\n\n\n\nfig.update_layout(\n        font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),)\n\n# Add a subtitle-like text as an annotation\nfig.add_annotation(\n    text=\"deduplicated, not including instructors or helpers\",\n    xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n    x=0.5, y=1.05,  # Adjust the position\n    showarrow=False,  # Hide arrow\n    font=dict(size=16)  # Customize font size\n)\n\n# Set hoverformat to display data labels without decimal places\nfig.update_traces(hoverinfo=\"y+text\", hoverlabel=dict(namelength=0), hovertemplate=\"%{y:.0f}\")\n\n\nfig.show()\n\n# Save the figure as an SVG file\npio.write_image(fig, './UpskillingResearchersInML_Assets/ZoomParticipantsLine.svg')"
+    "objectID": "DataWorkflows2024.html#programming-language-python---continued",
+    "href": "DataWorkflows2024.html#programming-language-python---continued",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Programming Language: Python - continued",
+    "text": "Programming Language: Python - continued\n\n\n\n\n\n\nPersonal opinion\n\n\n\na common statement is that Python is slow\n\nin reality, you can run (encapsulated) other languages\n\nbeing a relatively abstract languge makes it suitable for many research projects (no need to reinvent the wheel)\nThe community is great!\n\nmost popular/most searched for on Google\nthere are tons of great libraries that can be used\nbecause Python is so popular, ChatGPT and other Machine Learning (ML) powered support tools can write pretty decent code (date of writing this = April 2024).\n\nsome report issues with libraries and changes to them\n\nthere are many ways of dependency management (requirements.txt or Poetry) version-controlling your code and making sure it is reproducible"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#start-with-vsc-on-windowslinuxmac",
+    "href": "DataWorkflows2024.html#start-with-vsc-on-windowslinuxmac",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Start with VSC on Windows/Linux/Mac",
+    "text": "Start with VSC on Windows/Linux/Mac\n\nthe idea here is that we all start at the same point\nthat is after (!) you have successfully installed Python on the (local/remote) machine you are using\nwe will not show you how to install Python on Windows, MacOS, and Linux\nas anticipated in the very beginning, this variance of operating systems makes it impossible to cover every aspect hands-on\n\nAs a rough guideline - Windows: Anaconda, Chocolatey, WSL2 (WSL2, Homebrew?/Linux?)"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#how-does-the-vsc-interface-work",
+    "href": "DataWorkflows2024.html#how-does-the-vsc-interface-work",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "How does the VSC interface work",
+    "text": "How does the VSC interface work\n\nthese are IDE - VSC (TLA)\n\n\n\nAn IDE is an Integrated Development Environment. (a TLA is a Three Letter Acronym) You can do everything we will talk today in a simple text editor, using your operating system’s file explorer, a command-line terminal, but an IDE makes your life easier. - Visual Studio Code (VSC)  - VSCodium  - (open-source version that isn’t collection telemetry data) - PyCharm  and others specialised for certain programming languages\n\n more information on the official website\n\n\nPhoto courtesy of Visual Studio Code"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#how-to-navigate-in-vsc",
+    "href": "DataWorkflows2024.html#how-to-navigate-in-vsc",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "How to navigate in VSC",
+    "text": "How to navigate in VSC\n\nif you are familiar with the layout, it is easy\nif you are a novice, it might overwhelm you\n\nI have been there and I got lost\n\nthink of it as a\n\nfile explorer (usually on the left)\nterminal (usually at the bottom)\none or many editors (usually in the middle)\n\nat times they have preview windows, too\n\n\nthere are many plugins; we will use:\n\nGitHub\n\nGitHub CoPilot\n\nPython\n\nwe will create a virutal environment\n\nwe will show you (only show you) how to connect to a remote server (that might be another physical machine/like your computer at home or a cloud service, like the research infrastructure at the University of Auckland (UoA), Nectar of AWS)"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#how-to-leverage-ai-github-copilot",
+    "href": "DataWorkflows2024.html#how-to-leverage-ai-github-copilot",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "How to leverage AI (GitHub CoPilot,…)",
+    "text": "How to leverage AI (GitHub CoPilot,…)\n\n\n\n\n\n\nRelevant ResBaz Sessions\n\n\n\nAI in research\n\n\n\n\nThis relevance of this is highly depending on your circumstances. Your institution and its stance on AI usage. Your personal stance on AI usage. The field you are working in and especially the sensitivity of the data you are working with.\nThere are currently two main workflows: - auto-completion - write what you want to achieve as a comment and let the AI write the code for you\n\n\n\n\n\n\nWarning\n\n\nWhile this is great, it is not a silver bullet. You need some basic knowledge to understand what is presented to you. To debug it. To adapt it to your needs. Still, we will demonstrate it here\n\n\n\n\n\n\nGitHub CoPilot is a tool that can write code for you\n\nthe worflow is that you write a comment and CoPilot suggests code\n\nChatGPT/Bing/…\n\nyou can ask questions and get code snippets As of now (July 2024), for simple tasks try CoPilot, for more complex tasks try ChatGPT, etc.\n\nWhile creating this very presentation, I used CoPilot and it suggested most of the text on the right-hand side\nAs you can quickly tell, it is fascinating what it does, but it far from perfect\n\n\nHere comes the auto-completed list: - it is based on OpenAI’s GPT-3 - it is a great tool to learn from - it is a great tool to get started with - it is a great tool to get unstuck - it is a great tool to get a second opinion - it is a great tool to get a first opinion - it is a great tool to get a third opinion - it is a great tool to get a fourth opinion - it is a great tool to get a fifth opinion - it is a great tool to get a sixth opinion - it is a great tool to get a seventh opinion - it is a great tool to get an eighth opinion - it is a great tool to get a ninth opinion - it is a great tool to get a tenth opinion - it is a great tool to get an eleventh opinion"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#outlook-bundle-this-up-as-a-docker-container",
+    "href": "DataWorkflows2024.html#outlook-bundle-this-up-as-a-docker-container",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Outlook: Bundle this up as a Docker container",
+    "text": "Outlook: Bundle this up as a Docker container\n\n\n\n\n\n\nRelevant ResBaz Sessions\n\n\n\nContainers/Luis"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#outlook-2-have-it-buildcompile-as-github-action-why-do-you-use-those-etc",
+    "href": "DataWorkflows2024.html#outlook-2-have-it-buildcompile-as-github-action-why-do-you-use-those-etc",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Outlook 2: Have it build/compile as GitHub Action (why do you use those, etc)",
+    "text": "Outlook 2: Have it build/compile as GitHub Action (why do you use those, etc)"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#outlook-3-publish-your-code-results-figshare-have-a-data-availbaility-statement-in-your-latex",
+    "href": "DataWorkflows2024.html#outlook-3-publish-your-code-results-figshare-have-a-data-availbaility-statement-in-your-latex",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Outlook 3: Publish your code, results: Figshare; have a data availbaility statement in your LaTeX,…",
+    "text": "Outlook 3: Publish your code, results: Figshare; have a data availbaility statement in your LaTeX,…\n\n\n\n\n\n\nRelevant ResBaz Sessions\n\n\n\nLaTeX\nFigshare\nOverleaf\nData Management Plan\nData Availability Statement\nReproducibility\nBinderHub"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#reproducibility-1",
+    "href": "DataWorkflows2024.html#reproducibility-1",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Reproducibility",
+    "text": "Reproducibility\n\nfor more reproducibility, we could run another session or include here\nDocker but then the cpu architecture would have an impact\nBinderHub is\n\nUoA only\nwhat happens if I set all in stone today and then return a couple of years later refresh of the underlying infrastructure and potentially get different results?"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#geopandas-and-folium",
+    "href": "DataWorkflows2024.html#geopandas-and-folium",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Geopandas and Folium",
+    "text": "Geopandas and Folium\n\nGeopandas is a library that allows you to work with geospatial data\nFolium is a library that allows you to create interactive maps\n\n# Read the HTML content from the iframe source``\n# iframe_url = \"https://carbon.now.sh/?bg=rgba%28255%2C255%2C255%2C1%29&t=panda-syntax&wt=none&l=python&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=13px&lh=133%25&si=false&es=2x&wm=false\"\n1iframe_url = \"https://carbon.now.sh/?bg=rgba%28255%2C255%2C255%2C1%29&t=panda-syntax&wt=none&l=python&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=13px&lh=133%25&si=false&es=2x&wm=false\"\n2response = requests.get(iframe_url)\n# print(response)\niframe_html = response.content\n# print(iframe_html)\n3# Parse the iframe content using Beautiful Soup\n# print(soup)\nextracted_content = soup.body.prettify()  # Customize this based on your needs\nprint(extracted_content)\n# save this as a html file\nwith open('carbon.html', 'w') as file:\n    file.write(extracted_content)\n\n1\n\nhelp here\n\n2\n\nthere you go\n\n3\n\nsomething elese"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#useful-links-general",
+    "href": "DataWorkflows2024.html#useful-links-general",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Useful links (General)",
+    "text": "Useful links (General)\n\nhow to create GitHub Issues right in VSC\n\nyou can use that to keep track of your to-do list without having to leave VSC!\n\nwhat do software verison numbers refer to"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#useful-links-python-specific",
+    "href": "DataWorkflows2024.html#useful-links-python-specific",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Useful links (Python  specific)",
+    "text": "Useful links (Python  specific)\n\nPython.org\nJupyter\n\nEnvironments\n\nAnaconda\n\nEditors (apart from VSC)\n\nPyCharm\n\nPackage Management - PyPI - Poetry\nLibraries - Pandas - Matplotlib\nMachine Learning - TensorFlow - PyTorch - Keras - Seaborn - Scikit-learn\nWeb Development - Django - Flask - FastAPI - Streamlit - Dash\nVisualisation - Plotly - Bokeh - Altair - Holoviews - Panel\nGeospatial - GeoPandas - Folium - Leaflet - Cartopy - Basemap - Shapely - GeoPy - GeoDjango - GeoAlchemy - Fiona - Pyproj - GDAL - OpenLayers"
+  },
+  {
+    "objectID": "DataWorkflows2024.html#useful-links-operating-systems-specific",
+    "href": "DataWorkflows2024.html#useful-links-operating-systems-specific",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Useful links (Operating Systems specific)",
+    "text": "Useful links (Operating Systems specific)\n\nWindows \n\nAnaconda and other installers that put a Windows-flavoured Python install \nChocolatey\nOur recommendation: Windows Subsystem for Linux WSL\n\nusually WSL2 to be installed via the Software Center \n\n\nMacOS  \n\ninstall Python via HomeBrew\n\nLinux \n\nmany distributions come with Python pre-installed, otherwise use the package manager of your choice\n\n\nFor GIT OVERVIEW use GitKraken.png to get the neat subway map visualisation Also add to Git: I think mention the different rights and responsibilities associated with artwork, documents and code - use the program/artwork/program, read and change the master/code behind the program/artwork, sharing the result, attribution Creative Commons has different variants, some more permissive than others. A “permissive” license like MIT and Apache allows your code to be used, adapted and shared by anyone for their own purpose including for commercialisation, and all they need to do is attribute you. A “copyleft” license (a play on the word copyright) like GPL or CC BY-SA for artwork, gives the same rights, but requires people who adapt and share your code to make their code available using the same license. This can help ensure a thriving, open software community. On the other hand, a permissive license can be easier for people to use\ngood summary on GitHub about Licenses: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#disclaimer\n\n\n\nalt\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\nState of the Art Workflows for working with data in 2024"
   },
   {
     "objectID": "ML-Recap.html#introduction-to-machine-learning-with-scikit-learn",
@@ -453,5 +383,194 @@
     "title": "ML-Carp Recap and Outlook",
     "section": "Workflows for heavier computation",
     "text": "Workflows for heavier computation\n\nGoogle Colab vs. locally installed Jupyter Notebooks or Plain Vanilla Python\n\nDo all use Colab ‘in the real world’ all the time? No!\n\nVSCode\nPython locally installed\n\nVirtual Environment\npip install\n\nusing GPU/Nectar/…"
+  },
+  {
+    "objectID": "LightningTalk.html#background",
+    "href": "LightningTalk.html#background",
+    "title": "Developing a Carpentries-style Machine Learning workshop",
+    "section": "Background",
+    "text": "Background\n\nMachine Learning (ML) or Artificial Intelligence (AI) are without a doubt hot topics\nEmpowering researchers to understand and use ML seems rewarding, but also challenging\nThe Carpentries  offer a proven teaching-style accounting for participants with limited IT experience\n\nCore aspects\n\nlive-coding\npositive attitude towards mistakes\nminimal prerequisites\nmaximising participant involvement\n\n\nThe CeR (Centre for eResearch) at the University of Auckland acquired funding to further develop and run a series of workshops (also referred to as ML-Carp)\nTwo iterations (referred to as Run #1 and Run#2) took place so far. In March and September 2023."
+  },
+  {
+    "objectID": "LightningTalk.html#lesson-overview",
+    "href": "LightningTalk.html#lesson-overview",
+    "title": "Developing a Carpentries-style Machine Learning workshop",
+    "section": "Lesson Overview",
+    "text": "Lesson Overview\n\n\n\nLesson Title\nStatus\nRun #1\nRun #2\n\n\n\n\n\nProgramming with Python\nReleased\nMon, Tue\n-\n\n\n\nIntroduction to Machine Learning with Scikit Learn\nAlpha\nWed, Thu\nMon, Tue\n\n\n\nIntroduction to Deep Learning\nBeta\nFri\nWed, Thu\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n4h sessions over 4 consecutive afternoons\n\n\n\n\n\nDepending on Maturity, sessions were run with small changes or substantially (re)developed.\nOne major change was Goolge Colab  being used instead of local Python installs."
+  },
+  {
+    "objectID": "LightningTalk.html#lesson-details",
+    "href": "LightningTalk.html#lesson-details",
+    "title": "Developing a Carpentries-style Machine Learning workshop",
+    "section": "Lesson Details",
+    "text": "Lesson Details\n\n\n\nProgramming with Python\nIntroduction to Machine Learning with Scikit Learn and Python\nIntroduction to deep learning\n\n\n\n\nPython Fundamentals\nIntroduction\nIntroduction\n\n\nAnalyzing Patient Data\nSupervised methods - Regression\nClassification by a neural network using Keras\n\n\nVisualizing Tabular Data\nSupervised methods - Classification\nMonitor the training process\n\n\nStoring Multiple Values in Lists\nEnsemble methods\nAdvanced layer types\n\n\nRepeating Actions with Loops\nUnsupervised methods - Clustering\nOutlook\n\n\nAnalyzing Data from Multiple Files\nUnsupervised methods - Dimensionality reduction\n\n\n\nMaking Choices\nNeural Networks\n\n\n\nCreating Functions\nEthics and the Implications of Machine Learning\n\n\n\nErrors and Exceptions\nFind out more\n\n\n\nDefensive Programming\n\n\n\n\nDebugging\n\n\n\n\nCommand-Line Programs"
+  },
+  {
+    "objectID": "LightningTalk.html#participants-background",
+    "href": "LightningTalk.html#participants-background",
+    "title": "Developing a Carpentries-style Machine Learning workshop",
+    "section": "Participants’ Background",
+    "text": "Participants’ Background"
+  },
+  {
+    "objectID": "LightningTalk.html#participants-os",
+    "href": "LightningTalk.html#participants-os",
+    "title": "Developing a Carpentries-style Machine Learning workshop",
+    "section": "Participants’ OS",
+    "text": "Participants’ OS"
+  },
+  {
+    "objectID": "LightningTalk.html#participants-feelings---metrics",
+    "href": "LightningTalk.html#participants-feelings---metrics",
+    "title": "Developing a Carpentries-style Machine Learning workshop",
+    "section": "Participants’ Feelings - Metrics",
+    "text": "Participants’ Feelings - Metrics"
+  },
+  {
+    "objectID": "LightningTalk.html#zoom-attendance",
+    "href": "LightningTalk.html#zoom-attendance",
+    "title": "Developing a Carpentries-style Machine Learning workshop",
+    "section": "Zoom attendance",
+    "text": "Zoom attendance"
+  },
+  {
+    "objectID": "LightningTalk.html#participants-promotiondemotion",
+    "href": "LightningTalk.html#participants-promotiondemotion",
+    "title": "Developing a Carpentries-style Machine Learning workshop",
+    "section": "Participants Promotion/Demotion",
+    "text": "Participants Promotion/Demotion"
+  },
+  {
+    "objectID": "LightningTalk.html#participants-feelings---statements-and-adjustments",
+    "href": "LightningTalk.html#participants-feelings---statements-and-adjustments",
+    "title": "Developing a Carpentries-style Machine Learning workshop",
+    "section": "Participants’ Feelings - Statements and Adjustments",
+    "text": "Participants’ Feelings - Statements and Adjustments\n\nobservation: At very end of the Runs, questions/participation/interest didn’t cease!\n“Python lesson might be separated”\n\nRun #2: Python was removed from the curriculum\n\n“more breaks”\n\nRun #2: better adherence to schedule\n\n“stick to one coding interface”\n\nRun #2: only Colab, VSC etc. was linked to for post-workshop engagement\n\n\n\n\n\n\n\n\nNote\n\n\nAll statements are positive phrased; overall the results confirm a poasitive appreciation."
+  },
+  {
+    "objectID": "JoiningTheDots.html#more-details-about-data-sensitivity-etc.",
+    "href": "JoiningTheDots.html#more-details-about-data-sensitivity-etc.",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "More details about data sensitivity, etc.",
+    "text": "More details about data sensitivity, etc.\n\n\n\n\n\n\nRecommended ResBaz sessions\n\n\n\nJust before this one: Managing Research Data (which just ran prior to this session;\n\nrepeated workshop at University of Auckland)\n\nPotentially still available after this session:\n\nAn introduction to cloud security for researchers\nData Management Planning\nHealth care data for research at the University of Auckland\nUsing digital tools for transcription\nResearch Data Collection & Surveys with REDCap: An Overview\nTikanga, Māori Research Ethics and Māori Data Sovereignty\nIntroduction to Qualtrics for Research Surveys"
+  },
+  {
+    "objectID": "JoiningTheDots.html#component-1-the-physical-computer",
+    "href": "JoiningTheDots.html#component-1-the-physical-computer",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Component 1: the physical computer",
+    "text": "Component 1: the physical computer\n\n\nthis can be many things\n\nyour local laptop (don’t forget it on the bus 🚌)\nyour office computer 🏢\nyour lab-groups’ computer 🔬\na Virtual Machine 📡\n\n3 sentences about VMs\nwe will use one in our project\n\na cloud resource ☁️ (might be obfuscated, might be a server similar to a VM)"
+  },
+  {
+    "objectID": "JoiningTheDots.html#component-2-the-operating-system",
+    "href": "JoiningTheDots.html#component-2-the-operating-system",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Component 2: the operating system",
+    "text": "Component 2: the operating system\n\n\nSelected tools are maximised for\n\nbeing Operating System (OS) agnostic\nthey should work on many systems\nsome (!) trouble-shotting in aforementioned Drop-in Clinic or over Slack\n\n\n\n\n\n\n\n\nNote\n\n\nbecause of the way we interact with the core-coding task, we don’t see too much of the OS"
+  },
+  {
+    "objectID": "JoiningTheDots.html#component-3-the-programming-language",
+    "href": "JoiningTheDots.html#component-3-the-programming-language",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Component 3: the programming language",
+    "text": "Component 3: the programming language\n\n\nwe will use Python 🐍\nPython vs. R vs. C vs. Rust vs. JS, … is out of scope\nif availabile try one of these sessions\nMy summary: If your goal is…\n\n… efficient Machine Learning: Julia\n… statistics and refined plots (yes, I am looking at you, ggplot2): R\n… the Swiss Army Knife®: Python\n\n\n(all running Wed. 1-5pm)"
+  },
+  {
+    "objectID": "JoiningTheDots.html#component-4-libraries",
+    "href": "JoiningTheDots.html#component-4-libraries",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Component 4: Libraries",
+    "text": "Component 4: Libraries\n\n\nPython has a vast amount of libraries\nwe will use GeoPandas among others\nmore pro/con is about to follow in due course"
+  },
+  {
+    "objectID": "JoiningTheDots.html#component-5-the-programming-environment",
+    "href": "JoiningTheDots.html#component-5-the-programming-environment",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Component 5: the programming environment",
+    "text": "Component 5: the programming environment\n We have two main appraoches\n\n\n\nUse this to:\n\nautomatically, for ex. every night at 11pm (cron-job)\nchain one scripts output as an input to another script (build a pipeline)\n\n\n\nUse this to:\n\ndevelop your code\nexplore your data\nget interactivity\nrun bits and pieces in Isolation"
+  },
+  {
+    "objectID": "JoiningTheDots.html#option-a-command-line-based",
+    "href": "JoiningTheDots.html#option-a-command-line-based",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Option A: Command-line-based",
+    "text": "Option A: Command-line-based\n\nwe can get a lot done by only using a command-line interface (aka CLI/terminal/console/shell/BaSH/ZSH/Fish/…)\nopen locally or log in to a VM (via SSH, etc.)\nwe can code in a text editor\n\nthat can be VI/VIM/nano/…\n\n\n\n\n\n\n\n\nRecommended ResBaz session\n\n\nIntroduction to the Command Line (Wed. 10am-3pm)\n\n\n\nTODO #26 VIDEO HOW WE LOG IN VIA SSH. HOW WE CREATE A .PY FILE AND EXECUTE IT"
+  },
+  {
+    "objectID": "JoiningTheDots.html#option-b-gui-based-.py-files",
+    "href": "JoiningTheDots.html#option-b-gui-based-.py-files",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Option B: GUI-based; .py files",
+    "text": "Option B: GUI-based; .py files\nGUI = graphical user interface\n\nwhy do we use a GUI? To get help!\n\nsyntax highlighting\nauto-complete\npotentially AI-support 1\n\nwe can use our local computer (, , ) or  x11/ rdp into a virtual machine\nthere is again quite a variety\nI pick Visusal Studio Code (VSC), others use Jetbrains PyCharm, etc.\n\nVSCodium: open-source adaption without telemetry; no MS VS Marketplace but its own; at times less smooth\n\n\nAI: even if you try your best to do all correct, treat sensitive data respectfully, for example, use the University-provided systems,… using tools like AI Coding Support (GitHub CoPilot) might make most of these efforts useless; sensitive data might (!) be fed back for training purposes, etc. If in doubt, take the pessimistic approach (expect that it calls home) and talk to relevant people (Ethics-advisors, eResearch support, supervisor,…)"
+  },
+  {
+    "objectID": "JoiningTheDots.html#live-demovideo",
+    "href": "JoiningTheDots.html#live-demovideo",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "LIVE DEMO/VIDEO",
+    "text": "LIVE DEMO/VIDEO\nLet’s try to write another hello-wordl, just like we did on the CLI. Cmd-N, save, file name, .py extension. Go to Terminal. Execute it python helloworld.py\n\n\npersonal experience: VSC is powerful, yet quite streamlined.\ndouble-edged-sword: simple vs. overwhelming\nprevent you from having this feeling, too.\neach project (connection to a VM): own window,\n\ncan run mulitple concurrently\n\nsidebar (most things can be customised, put into other places, etc.) here it shows a file explorer.\n\nmaybe not impressive\nremote VM, not the local machine\neven drag and drop things. Really neat.\n\nwe have a (or several) built-in command-line applications (BaSH, ZSH, …\n\nI can navigate to a sub-folder and click open terminal here)\n\ntop-right corner\n\nwhere the magic\nwe write our code\nseveral windows possible; we can have previews, …"
+  },
+  {
+    "objectID": "JoiningTheDots.html#option-b---jupyter-notebooks.ipynb-files",
+    "href": "JoiningTheDots.html#option-b---jupyter-notebooks.ipynb-files",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Option B - Jupyter Notebooks/.ipynb files:",
+    "text": "Option B - Jupyter Notebooks/.ipynb files:\n\nmaximise the GUI-use: Jupyter Notebooks1\nImagine a pharmacy-student’s lab notebook.\n\nThere are some hard-facts (graphs, print-outs,…) and explanations around it\n\nin Jupyter, we can have code blocks, text blocks, images, …\n\nto beautify we can use markdown syntax\n\na different take than MS-Word cusor-highlight-text-to-bold approach\n\n\nbut: Why add explanations/metadata in the first place? - collaboration/colleagues need to know rationale/units [\\(m\\) vs \\(mm\\)] - future-you:\n\nagain: FAIR and metadata, utlimately: get more research impact\n\n\nformerly IPythonNotebook, hence the file extension .ipynb"
+  },
+  {
+    "objectID": "JoiningTheDots.html#live-demo-lets-create-a-new-jupyter-notebook-write-a-hello-world-run-it-save-it-and-push-it-to-github",
+    "href": "JoiningTheDots.html#live-demo-lets-create-a-new-jupyter-notebook-write-a-hello-world-run-it-save-it-and-push-it-to-github",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Live Demo: Let’s create a new Jupyter Notebook, write a hello-world, run it, save it, and push it to GitHub",
+    "text": "Live Demo: Let’s create a new Jupyter Notebook, write a hello-world, run it, save it, and push it to GitHub\n\n\nNow, VSC has syntax highlighting.\n\nreserved keyword, such as if changes colour\nit indents my new line\n\nindentation is very important in Python\n\nwhile you can do all that it is harded in a simplistic text editor\n\nsame idea; but instead of calling our script (the .py file) via the command-line, we can press the little play button\nturns our coded md to visually pleasing\none. See how our heading levels\ngive us a little ToC on the bottom-left?\nAnd we get the output below each cell.\nBonus: Once we have several cells, we can intentionally press the play button here and there; observe how the numbers change"
+  },
+  {
+    "objectID": "JoiningTheDots.html#version-control-with-git-and-github",
+    "href": "JoiningTheDots.html#version-control-with-git-and-github",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Version Control with Git and GitHub",
+    "text": "Version Control with Git and GitHub\n\nlocal machine only(bus 🚌 risk) even VM (decommissoned?) isn’t enough\nif all stakeholders agree (Research Data Policy, Ethics Commission, IP Advisor, Funder,…)\n\nwe can host our code on version controlled repository\n\ntrack changes (what changed from previous to now, what from now to 23 days ago)\nwe don’t want file names such as Thesis final final really final 2 july.docx\ncode is mostly plain text (not .docx,…), we can use thigs like a diff\nwhile  1 is the underlying ‘technique’/foundation GitHub  is one(!) commercial (now owned by Microsoft) entity\n\nthere are alternatives, GitLab, BitBucket, …\nsome are open source, some run in the cloud, some run on your local machine\n\nwe don’t have the time for the details, but we have Introduction to version control with Git (Thu, 9am-12pm)\n\nɡɪt is a distributed version control system that tracks versions of files developed by Linus Torvalds"
+  },
+  {
+    "objectID": "JoiningTheDots.html#vsc-and-github",
+    "href": "JoiningTheDots.html#vsc-and-github",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "VSC and GitHub",
+    "text": "VSC and GitHub\n\n\n\nVSC we can either use the lefthand side-panel for git (once extension is installed), or we can use the CLI below to do\n\ngit status, git diff, git commit -am \"present-tense active what I did\"1, git push\n\nGitHub can also provide us with\n\nGitHub Actions (throw-away-VMs running on MSAzure)\nSome basic Project Management via Issues\nCollaboration (allow other to work on your code)\nprivate and public repos\nthere are academic discounts, …\n\n\n\n \n\nexample: ‘Fix typo in introduction to user guide’ how to write proper commit messages here"
+  },
+  {
+    "objectID": "JoiningTheDots.html#packages-a-gift-a-curse",
+    "href": "JoiningTheDots.html#packages-a-gift-a-curse",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Packages 🎁 : A gift 👑 & a curse 🤬",
+    "text": "Packages 🎁 : A gift 👑 & a curse 🤬\n\n\nA gift 👑 because:\n\nPython makes it easy to integrate\nincredible amount of packages exist\nso no reinventing the wheel (build on other peoples’ extended efforts)1\n\nA curse 🤬 because:\n\nthings tend to break\n\npeople discontinue packages\nbreaking changes require us to change our syntax\npackages depend on other packages (think of a big tree🌲)\n\n\n\nBut! We are not the first people to run into such challenges\n\npackage management: there are different ways of minimising that impact; let me show 3\n\nmanually creating a references.txt file (part of the following demo)\npip freeze &gt; references.txt (also part of the following demo)\npoetry\n\nthere are others, Anaconda, Hatch, just to name a few\n\n\nproper referencing is crucial, code is not different from other academic tasks in this respect"
+  },
+  {
+    "objectID": "JoiningTheDots.html#mapping-our-geospatial-example-to-the-pyramid",
+    "href": "JoiningTheDots.html#mapping-our-geospatial-example-to-the-pyramid",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Mapping our geospatial example to the Pyramid",
+    "text": "Mapping our geospatial example to the Pyramid\n\n\n\nCategory\nDetails\n\n\n\n\nData Input\nDownload dataset\n\n\nComputer\nWe use a VM (on Nectar)\n\n\nOS\nWe use Ubuntu 22.4\n\n\nLanguage\nPython\n\n\nLibraries\nGeopandas among others\n\n\nIDE\nVSC to run a Jupyter Notebook (ssh’d to VM)\n\n\nCode\nOn GitHub\n\n\nResearch Outputs\nMap published to website/GitHub Action (bit out of scope)"
+  },
+  {
+    "objectID": "JoiningTheDots.html#prepwork",
+    "href": "JoiningTheDots.html#prepwork",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Prepwork",
+    "text": "Prepwork\nVIDEO\n\n(VM is created, VSC is installed, plugins are installed, python-is-python3)\nOpen VSC\nssh\ncreate venv\ncreate ipynb (maybe touch via console or left panel)\n(copy-)paste in md headings/skeleton structure\npush run button\nselect kernel\n(not sure: create new gh repo, make private)\n(not sure where/how: magically we know all needed libs; pip freeze it)\nshow commit in VSC extension\nnavigate to website and see what we did"
+  },
+  {
+    "objectID": "JoiningTheDots.html#background-what-we-plot",
+    "href": "JoiningTheDots.html#background-what-we-plot",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Background: What we plot",
+    "text": "Background: What we plot\n\nStatsNZ decomposes New Zealand into Statistical Areas\n\neach SA should encapsule people of similar socio-economical background\nthere are 3 resolutions (SA1 = x people, SA2 = y people, SA3 = z people)\nwe pick SA2\n\nwe want to plot the\n\nboundaries (polygon on the map)\nname of each SA2\nnumber of people and show this on an interactive map in a browser"
+  },
+  {
+    "objectID": "Plots.html",
+    "href": "Plots.html",
+    "title": "Quarto Basics",
+    "section": "",
+    "text": "Code\nimport plotly.express as px\nimport pandas as pd\npd.options.plotting.backend = \"plotly\"\nimport plotly.io as pio\nimport numpy as np\nimport plotly.graph_objects as go\nfrom plotly.subplots import make_subplots\nimport matplotlib.cm as cm\nimport plotly.subplots as sp\n\n\n\n\nCode\n# Custom colors\ncustom_colors = ['#00467F', '#009AC7', '#8D9091', '#A71930', '#7D0063', '#D2492A', '#55A51C',\n                 '#4F2D7F', '#005B82', '#00877C', '#0039A6', '#BA4482', '#006990']\n\n\n\n\nCode\npio.renderers.default = \"notebook\"\n# Read data from the CSV file\ndf = pd.read_csv('./InputDataR1.csv')\ndf_raw = df\ndfR2 = pd.read_csv('./InputDataR2.csv')\ndf2_raw = dfR2\ndf2 = df.drop([0, 1])\ndfR22 = dfR2.drop([0, 1])\n\n\n\noption_counts = df2['Q1'].value_counts()\noption_countsR2 = dfR22['Q1'].value_counts()\n\n# Create a DataFrame from the value_counts() result\noption_counts_df = pd.DataFrame({'Option': option_counts.index, 'R1': option_counts.values})\noption_counts_dfR2 = pd.DataFrame({'Option': option_countsR2.index, 'R2': option_countsR2.values})\noption_counts_df = option_counts_df.merge(option_counts_dfR2, on=\"Option\", how=\"outer\")\n\n# print(option_counts_df)\ntotal_r1 = option_counts_df.R1.sum()\ntotal_r2 = option_counts_df.R2.sum()\nattendance_ratio = total_r1/total_r2\n\ntrace1 = go.Pie(\n     values=option_counts_df.R1, \n     labels=option_counts_df.Option,\n     domain=dict(x=[0, 0.5*attendance_ratio]),\n     name=\"Run #1\",\n     hole=0.4,\n     hoverinfo=\"label+percent+name\",\n     title=f\"Run#1 &lt;br&gt; [{int(total_r1)}]\",\n     marker_colors=custom_colors\n)\n\n\n\ntrace2 = go.Pie(\n     values=option_counts_df.R2, \n     labels=option_counts_df.Option,\n     domain=dict(x=[0.5, 1.0]),\n     name=\"Run #2\",\n     hole=0.4,\n     hoverinfo=\"label+percent+name\",\n     title=f\"Run#2 &lt;br&gt; [{int(total_r2)}]\",\n     marker_colors=custom_colors\n)\n\nlayout = go.Layout(\n        font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n#      legend=dict(\n#         x=0.5,  # Center the legend horizontally\n#         y=-0.1,  # Position the legend just below the plot\n#         xanchor='center',  # Set the x anchor to center\n#         yanchor='top',  # Set the y anchor to the top\n#     )\n)\n#     title=\"Participants' Background\")\n\ndata = [trace1, trace2]\nfig = go.Figure(data=data, layout=layout)\nfig.show()\n# Save the figure as an SVG file\npio.write_image(fig, './UpskillingResearchersInML_Assets/ParticipantsBackground.svg', width=1800, height=600, scale=1)  # Adjust the scale as needed)\n\n\n                                                \n\n\n\n\nCode\n# print(option_counts_df.R1/option_counts_df.R1.sum()*100)\n# assign this as a new column to the existing dataframe option_counts_df\noption_counts_df['percentR1'] = (option_counts_df['R1'] / option_counts_df['R1'].sum() * 100).fillna(0)\noption_counts_df['percentR2'] = (option_counts_df['R2'] / option_counts_df['R2'].sum() * 100).fillna(0)\n\nprint(option_counts_df)\n\n\n                               Option   R1   R2  percentR1  percentR2\n0    Biomedical and clinical sciences  6.0  3.0      37.50  16.666667\n1                         Engineering  4.0  8.0      25.00  44.444444\n2        Built environment and design  1.0  NaN       6.25   0.000000\n3                           Economics  1.0  NaN       6.25   0.000000\n4                   Chemical sciences  1.0  NaN       6.25   0.000000\n5               Mathematical sciences  1.0  1.0       6.25   5.555556\n6                 Biological sciences  1.0  1.0       6.25   5.555556\n7                           Education  1.0  NaN       6.25   0.000000\n8                     Health sciences  NaN  4.0       0.00  22.222222\n9  Information and computing sciences  NaN  1.0       0.00   5.555556\n\n\n\n\nCode\noption_countsOSR1 = df2['Q2'].value_counts()\noption_countsOSR2 = dfR22['Q2'].value_counts()\n# Create a DataFrame from the value_counts() result\n\noption_counts_df = pd.DataFrame({'Option': option_countsOSR1.index, 'R1': option_countsOSR1.values})\noption_counts_dfR2 = pd.DataFrame({'Option': option_countsOSR2.index, 'R2': option_countsOSR2.values})\noption_counts_df = option_counts_df.merge(option_counts_dfR2, on=\"Option\", how=\"outer\")\n\n\ntrace1 = go.Pie(\n     values=option_counts_df.R1, \n     labels=option_counts_df.Option,\n     domain=dict(x=[0.0, 0.45]),  # Adjust the x values\n     name=\"Run #1\",\n     hole=0.4,\n     hoverinfo=\"label+percent+name\",\n     title=f\"Run#1 &lt;br&gt; [{int(total_r1)}]\",\n     marker_colors=custom_colors\n)\n\n\n\ntrace2 = go.Pie(\n     values=option_counts_df.R2, \n     labels=option_counts_df.Option,\n     domain=dict(x=[0.55, 1.0]),  # Adjust the x values\n     name=\"Run #2\",\n     hole=0.4,\n     hoverinfo=\"label+percent+name\",\n     title=f\"Run#2 &lt;br&gt; [{int(total_r2)}]\",\n     marker_colors=custom_colors\n)\n\nlayout = go.Layout(\n#     boxgap=0.1,\n    font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n\n)\n#     title=\"Participants' Background\")\ndata = [trace1, trace2]\nfig = go.Figure(data=data, layout=layout)\nconfig = {'responsive': False}\nfig.show()\n\n# Save the figure as an SVG file\npio.write_image(fig, './UpskillingResearchersInML_Assets/ParticipantsOS.svg', width=1800, height=600, scale=1)  # Adjust the scale as needed)\n\n\n                                                \n\n\n\n\nCode\n# List of column names you want to plot\ncolumns_to_plot = ['Q3_1', 'Q3_2', 'Q3_3', 'Q3_4', 'Q3_5', 'Q3_6']\n\ndef plot_columns_from_dataframe(dataframe1, dataframe2, columns_to_plot):\n    # String to be stripped from each element\n    string_to_strip = \"Please rate your level of agreement with the following statements (0 = complete disagreement, 100 = complete agreement). - \"\n\n    for column in columns_to_plot:\n        # Check if the column contains string values before applying .str.replace()\n        if df_raw[column].dtype == 'object':\n            df_raw[column] = df_raw[column].str.replace(string_to_strip, '', case=False)\n\n    # Convert the columns to float, handling non-numeric values by replacing them with NaN\n    for column in columns_to_plot:\n        dataframe1[column] = pd.to_numeric(dataframe1[column], errors='coerce')\n\n    # Create subplots\n    fig = make_subplots(rows=1, cols=1, shared_yaxes=True)\n\n    # custom_colors = ['color1', 'color2', 'color3', 'color4', 'color5', 'color6']  # Define your custom colors\n\n    for it_number, column in enumerate(columns_to_plot):\n        median_value_df1 = dataframe1[column].median()\n        subplot_df1 = go.Box(\n            y=dataframe1[column],\n            boxpoints='all',\n            jitter=0.3,\n            pointpos=-1.8,\n            line=dict(color=custom_colors[it_number]),\n            marker=dict(color=custom_colors[it_number]),\n            name=df_raw.loc[0,column]\n        )\n\n        median_value_df2 = dataframe2[column].median()\n        subplot_df2 = go.Box(\n            y=dataframe2[column],\n            boxpoints='all',\n            jitter=0.3,\n            pointpos=-1.8,\n            line=dict(color=custom_colors[it_number]),\n            marker=dict(color=custom_colors[it_number]),\n            showlegend=False,\n            # in f notation prepend Run#2 to the name followed b the it_number variable\n            name=f\"Run#2 Q {it_number+1}\"\n        )\n\n        # Add subplots to the figure\n        fig.add_trace(subplot_df1, row=1, col=1)\n        fig.add_trace(subplot_df2, row=1, col=1)\n\n        # # Add median annotations\n        # fig.add_annotation(\n        #     x=it_number + 1,\n        #     y=median_value_df1,\n        #     text=f'Median: {median_value_df1:.2f}',\n        #     font=dict(size=14, color=\"black\"),\n        #     showarrow=True,\n        #     arrowhead=7,\n        #     ax=0,\n        #     ay=-20,\n        #     row=1,\n        #     col=1\n        # )\n\n        # fig.add_annotation(\n        #     x=it_number + 1,\n        #     y=median_value_df2,\n        #     text=f'Median: {median_value_df2:.2f}',\n        #     font=dict(size=14, color=\"black\"),\n        #     showarrow=True,\n        #     arrowhead=7,\n        #     ax=0,\n        #     ay=-20,\n        #     row=1,\n        #     col=2\n        # )\n\n    # Customize the layout\n    fig.update_layout(\n        title=\"Agreement with statements: 0 = complete disagreement, 100 = complete agreement, Run#1 left, Run#2 right\",\n        font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n        # xaxis=dict(title=\"Columns\"),\n        # yaxis=dict(title=\"Values\")\n    )\n\n    # do not show the x axis labels\n    fig.update_xaxes(showticklabels=False)\n\n    # Add a subtitle-like text as an annotation\n    fig.add_annotation(\n        text=\"median across all data for Run#1: 85.5, Run #2: 86.25\",\n        xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n        x=0.5, y=1.05,  # Adjust the position\n        showarrow=False,  # Hide arrow\n        font=dict(size=16)  # Customize font size\n    )\n\n    # # Add a horizontal line to the boxplots\n    # average_values_df1 = dataframe1[columns_to_plot].mean()\n    # overall_avg_df1 = average_values_df1.mean()\n\n    # average_values_df2 = dataframe2[columns_to_plot].mean()\n    # overall_avg_df2 = average_values_df2.mean()\n\n    # fig.add_shape(\n    #     go.layout.Shape(\n    #         type=\"line\",\n    #         x0=0,\n    #         x1=len(columns_to_plot) + 1,\n    #         y0=overall_avg_df1,\n    #         y1=overall_avg_df1,\n    #         line=dict(color=\"red\", width=2),\n    #     ),\n    #     row=1,\n    #     col=1\n    # )\n\n    # fig.add_shape(\n    #     go.layout.Shape(\n    #         type=\"line\",\n    #         x0=0,\n    #         x1=len(columns_to_plot) + 1,\n    #         y0=overall_avg_df2,\n    #         y1=overall_avg_df2,\n    #         line=dict(color=\"red\", width=2),\n    #     ),\n    #     row=1,\n    #     col=2\n    # )\n\n    # fig.add_annotation(\n    #     x=len(columns_to_plot) + 1,\n    #     y=overall_avg_df1,\n    #     text=f'Overall avg: {overall_avg_df1:.2f}',\n    #     font=dict(size=14, color=\"red\"),\n    #     ax=0,\n    #     ay=20,\n    #     row=1,\n    #     col=1\n    # )\n\n    # fig.add_annotation(\n    #     x=len(columns_to_plot) + 1,\n    #     y=overall_avg_df2,\n    #     text=f'Overall avg: {overall_avg_df2:.2f}',\n    #     font=dict(size=14, color=\"red\"),\n    #     ax=0,\n    #     ay=20,\n    #     row=1,\n    #     col=2\n    # )\n\n    # Show the figure\n    fig.show()\n    # Save the figure as an SVG file\n    pio.write_image(fig, './UpskillingResearchersInML_Assets/ParticipantsAgreement.svg', width=1800, height=600, scale=1)  # Adjust the scale as needed)\n\n# Example usage:\n# Create or load your DataFrames and specify the list of columns to plot\n# df1 = pd.read_csv('your_dataframe1.csv')  # Or create your DataFrame\n# dataframe2 = pd.read_csv('your_dataframe2.csv')  # Or create your DataFrame\n# columns_to_plot = ['Q3_1', 'Q3_2', 'Q3_3', 'Q3_4', 'Q3_5', 'Q3_6']\n# plot_columns_from_dataframe(df1, dataframe2, columns_to_plot)\ncolumns_to_plot = ['Q3_1', 'Q3_2', 'Q3_3', 'Q3_4', 'Q3_5', 'Q3_6']\nplot_columns_from_dataframe(df2, dfR22, columns_to_plot)\n\n\n\n                                                \n\n\n\n\nCode\n# Calculate the median for each column\nmedians = df2[columns_to_plot].median()\n\n# Calculate the metric as the median of medians\noverall_median = medians.median()\n\nprint(overall_median)\n\n# Calculate the median for each column\nmedians = dfR22[columns_to_plot].median()\n\n# Calculate the metric as the median of medians\noverall_median = medians.median()\n\nprint(overall_median)\n\n\n\n85.5\n86.25\n\n\n\n\nCode\n# Load data from CSV into the 'zoom' DataFrame\nzoom = pd.read_csv(\"ZoomStats.csv\")\n\n# Create a list of unique days\nunique_days = zoom['Day'].unique()\n\n\n\n# Create subplots for each day\nfig = go.Figure()\n# config = {'responsive': False}\n\n\n# Create a bar for Run1 and Run2 for each unique day\nx_labels = []\nfor day in unique_days:\n    day_data = zoom[zoom['Day'] == day]\n    \n    fig.add_trace(go.Bar(\n        x=[f'Day {day} - Run1', f'Day {day} - Run2'],\n        y=[day_data['Run1'].values[0], day_data['Run2'].values[0]],\n        name=f'Day {day}',\n        text=[day_data['Run1'].values[0], day_data['Run2'].values[0]],\n        textposition='outside',  # Place the value annotations outside the bars\n        showlegend=False,  # Hide the legend\n        marker_color=[custom_colors[0], custom_colors[1]]\n    ))\n    \n    x_labels.extend([f'Day {day} - Run1', f'Day {day} - Run2'])\n\n# Update layout for the overall figure\nfig.update_layout(\n    title='Number of participants in Zoom meetings per day',\n    xaxis=dict(\n        # title='Day and Run',\n        tickmode='array',\n        tickvals=list(range(len(x_labels))),\n        ticktext=x_labels\n    ),\n    # yaxis=dict(title='Value'),\n    barmode='group',\n    # bargap=0.1,  # Adjust the bargap to your preferred spacing\n    font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n)\n\n\n\nhighest_value = max(zoom[['Run1', 'Run2']].values.flatten())\n# print(highest_value)\n\n\nfig.update_yaxes(range=[0, highest_value+4])  # Set the initial y-axis range\n\n# Add a subtitle-like text as an annotation\nfig.add_annotation(\n    text=\"deduplicated, not including instructors or helpers\",\n    xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n    x=0.5, y=1.05,  # Adjust the position\n    showarrow=False,  # Hide arrow\n    font=dict(size=16)  # Customize font size\n)\n\n\n# Show the figure\nfig.show()\n\n# Save the figure as an SVG file\npio.write_image(fig, './UpskillingResearchersInML_Assets/ZoomParticipants.svg')\n\n\n                                                \n\n\n\n\nCode\ndf_promR1 = df2['Q4']\ndf_promR1\ndf_promR1.dropna(inplace=True)\ndf_promR1.astype(int)\ndf_promR2 = dfR22['Q4']\ndf_promR2\ndf_promR2.dropna(inplace=True)\ndf_promR2.astype(int)\n\npromote = pd.concat([df_promR1.astype(int), df_promR2.astype(int)], axis=1)\n\n# # Rename the columns if needed (optional)\npromote.columns = ['Q4_R1', 'Q4_R2']\npromote\n\n# flatten the dataframe 'promote' \n# promote = promote.stack().reset_index()\n\noption_counts_R1 = promote['Q4_R1'].value_counts()\noption_counts_R2 = promote['Q4_R2'].value_counts()\n\npromote2 = pd.concat([option_counts_R1.astype(int), option_counts_R2.astype(int)], axis=1)\npromote2.columns = ['Q4_R1', 'Q4_R2']\npromote2\n\n# data_type = type(promote2['Q4_R1'].iloc[0])\n# print(data_type)\n\n# promote2.plot(kind='bar')\n\n# Create subplots for each day\nfig = go.Figure()\n# config = {'responsive': False}\n\n\n# Create a bar for Run1 and Run2 for each unique day\n\nfig.add_trace(go.Bar(\n    x=promote2.index,\n    y=promote2['Q4_R1'],\n    name=\"Run #1\",\n    text=promote2['Q4_R1'].values,\n    textposition='outside',  # Place the value annotations outside the bars\n    # showlegend=False,  # Hide the legend\n    marker_color=custom_colors[0]\n)\n)\n\nfig.add_trace(go.Bar(\n    x=promote2.index,\n    y=promote2['Q4_R2'],\n    name=\"Run #2\",\n    text=promote2['Q4_R2'].values,\n    textposition='outside',  # Place the value annotations outside the bars\n    # showlegend=False,  # Hide the legend\n    marker_color=custom_colors[1]\n)\n)\n\n\n# Update layout for the overall figure\nfig.update_layout(\n    title='How likely would you be to recommend this workshop to a colleague?',\n\n    barmode='group',\n    bargap=0.1,  # Adjust the bargap to your preferred spacing\n    font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),\n)\n\n\n\n# Add a subtitle-like text as an annotation\nfig.add_annotation(\n    text=\"0 = not likely at all ... 10 = extremely likely\",\n    xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n    x=0.5, y=-0.15,  # Adjust the position\n    showarrow=False,  # Hide arrow\n    font=dict(size=16)  # Customize font size\n)\n\n# Add a subtitle-like text as an annotation\nfig.add_annotation(\n    text=\"deduplicated, not including instructors or helpers\",\n    xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n    x=0.5, y=1.05,  # Adjust the position\n    showarrow=False,  # Hide arrow\n    font=dict(size=16)  # Customize font size\n)\n\nfig.update_xaxes(range=[0, 11])  # Set the initial x-axis range\nfig.update_yaxes(range=[0, 10])  # Set the initial y-axis range\n\n# Update x-axis ticks to display integers from 0 to 10\nfig.update_xaxes(\n    tickmode='array',\n    tickvals=list(range(11)),  # Set tick values from 0 to 10\n    ticktext=list(map(str, range(11)))  # Set tick labels as strings of integers from 0 to 10\n)\n\n# # Show the figure\nfig.show()\npio.write_image(fig, './UpskillingResearchersInML_Assets/ParticipantsRecommend.svg', width=1800, height=600, scale=1)  # Adjust the scale as needed)\n\n\n\n\n\n                                                \n\n\n\n\nCode\n# Load data from CSV into the 'zoom' DataFrame\nzoom = pd.read_csv(\"ZoomStats.csv\")\nzoom\n\n\n# Assuming you have a DataFrame or data source named 'zoom'\nfig = go.Figure()\n\nfig.add_trace(go.Scatter(x=zoom['Day'], y=zoom['Run1'], mode='lines+markers', name='Run#1', line=dict(width=2, color=custom_colors[0]), marker=dict(size=8, color=custom_colors[0])))\nfig.add_trace(go.Scatter(x=zoom['Day'], y=zoom['Run2'], mode='lines+markers', name='Run#2', line=dict(width=2, color=custom_colors[1]), marker=dict(size=8, color=custom_colors[1])))\n\n\ndef format_data_label(value):\n    if np.isnan(value) or value == \"\":\n        return \"\"\n    else:\n        return f\"{value:.0f}\"\n\nfig.update_layout(title='Attendees per Zoom session',\n                  xaxis_title='Day',\n                #   yaxis_title='Value'\n                  )\n\n# Create a text column for data values with custom formatting\ntext_values_run1 = [format_data_label(val) for val in zoom['Run1']]\ntext_values_run2 = [format_data_label(val) for val in zoom['Run2']]\n\n# Add data labels to each trace using add_trace\nfig.add_trace(go.Scatter(x=zoom['Day'], y=zoom['Run1'], mode='text', text=text_values_run1, textposition='top center', showlegend=False))\nfig.add_trace(go.Scatter(x=zoom['Day'], y=zoom['Run2'], mode='text', text=text_values_run2, textposition='bottom center', showlegend=False))\n\n# Set the y-axis scale to [0, 37]\nfig.update_yaxes(range=[0.1, 5.1])\nfig.update_yaxes(range=[0, 37])\n\n# Set x-axis ticks to integers\nfig.update_xaxes(tickmode='linear', dtick=1)\n\n\n\n\nfig.update_layout(\n        font=dict(\n            family=\"Verdana\",\n            size=18,\n        ),)\n\n# Add a subtitle-like text as an annotation\nfig.add_annotation(\n    text=\"deduplicated, not including instructors or helpers\",\n    xref=\"paper\", yref=\"paper\",  # Position relative to the chart\n    x=0.5, y=1.05,  # Adjust the position\n    showarrow=False,  # Hide arrow\n    font=dict(size=16)  # Customize font size\n)\n\n# Set hoverformat to display data labels without decimal places\nfig.update_traces(hoverinfo=\"y+text\", hoverlabel=dict(namelength=0), hovertemplate=\"%{y:.0f}\")\n\n\nfig.show()\n\n# Save the figure as an SVG file\npio.write_image(fig, './UpskillingResearchersInML_Assets/ZoomParticipantsLine.svg')"
   }
 ]
