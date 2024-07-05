@@ -232,9 +232,53 @@ Photo courtesy of [Visual Studio Code](https://code.visualstudio.com/docs/getsta
 # How to connect to a remote resource using VSC (that can be your LabPC, ResVM, Nectar, AWS,...)
 (go to SESSION UoA compute)
 
+# Reproducibility
+
+- this is a big topic in academia
+- to superficially summarise: Instead of writing a publication and keeping your code and data to yourself, you want to enable others to reproduce your results
+- while this has various other implications (Ethics, Intellectual Property, ...), for now, we assume that this is all sorted
+- some journals, etc. require you to provide your code and data (data availability statement, etc.)
+
+Let's focus on the technical aspects with this example:
+
+- let's say you have input data that you store and properly enhance with metadata
+  - **Dataset**. 
+      - Where did you get it from? `Source URL?`
+      - What version/date did you download it? `Version 17.2.1, 2024-JUL-08`
+      - Is it acceptable that you copy and share it `CC-BY-SA` + Link
+  - **Code**
+    - you followed the Tidy Data principles: such as: 
+      - keep an untouched copy of your raw data
+      - keep a clear receipe of the steps you took (hard for spreadsheets, easy for code)
+      - you can use Git to version-control your code; it might be adequate for data, too; it might not
+  - **Infrastructure**
+    - you don't start from scratch every time
+    - you base your work on others'
+    - that is fine and encouraged; we don't want to code our *Microsoft Word*, in order to write a paper
+    - (among others/this is a non-exhausitve list), three aspects follow TODO: PUT A PYRAMID VISUALISATION HERE
+      - the machine the code runs on (that might have an influence on how random numbers are generated; how many bits a certain data type has, etc.). For some research that might not be relevant, for others it is crucial
+      - the Python version (for example, Python 2 vs Python 3 had breaking changes)
+      - the libraries you use (their syntax changes, they might not exist anymore)
+      - if you use indeterministic models (some ML approaches), the random seed might be important or it might not be 100% reproducitble; that's often fine if you minimise the potential
+    - While achieving **full reproducibility** is a challange (you'd have to keep/maintain/trouble-shoot a physical machine with the same CPU running everything; you wouldn't be able to patch its security vulnerabilities, etc.), there are certain steps you can take are *in the right direction*
+    - TODO PUT THE INVERSE PYRAMID HERE
+      - keep track of your libraries and their versions 
+        - you can use a `requirements.txt` file
+        - you can use [Poetry](https://python-poetry.org/)
+        - you can use [Conda](https://docs.conda.io/en/latest/)
+        - potential challenge: These libraries are taken offline; you just point to the relevant version; you don't keep/download/save/backup the relevant version
+      - you can Containerise your environment; or parts of it
+        - you can use [Docker](https://www.docker.com/) LINK TO OTHER SESSION
+          - in essence: You define the operating system (`Ubuntu version 22.04`)
+          - You define the exact Python version (`Python 3.10.2`)
+          - You use the above methods to extract libraries and their versions (`pip freeze > requirements.txt`)
+      - you run it on a certain cloud infrastructure; this might go away/change
+
+- RO Crate
+
 # How and why to use Git 
 
-![alt]("Data2024Assets/folium_logo.png")
+![alt](Data2024Assets/folium_logo.png)
 
 
 ::: {.callout-note icon=false}
