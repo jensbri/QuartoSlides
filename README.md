@@ -11,6 +11,7 @@ Repo to host several presentations (in anti-chronological order)
 | --- | --- |
 | [Introduction to the Python Programming Language](https://jensbri.github.io/QuartoSlides/Python4h#/title-slide) | 2024-07-10 |
 | [Joining the dots for modern data science workflows](https://jensbri.github.io/QuartoSlides/DataWorkflows2024#/title-slide) | 2024-07-08 |
+| [Joining the dots for modern data science workflows](https://jensbri.github.io/QuartoSlides/JoiningTheDots#/title-slide) | 2024-07-08 |
 | [Developing a Carpentries-style Machine Learning workshop](https://jensbri.github.io/QuartoSlides/LightningTalk#/title-slide) | 2023-10-17 |
 | [Upskilling Researchers in Machine Learning](https://jensbri.github.io/QuartoSlides/UpskillingResearchersInML#/title-slide) | 2023-10-17 |
 | [ML-Carp Recap and Outlook](https://jensbri.github.io/QuartoSlides/ML-Recap#/title-slide) | 2023-09-21 |
