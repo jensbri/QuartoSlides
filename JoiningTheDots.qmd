@@ -12,7 +12,8 @@ format:
   revealjs:
     # tbl-cap-location: bottom
     # number-sections: true
-    theme: UoAtemplate.scss
+    theme: ResBazTheme.scss
+    # theme: UoAtemplate.scss
     highlight-style: atom-one
     code-overflow: wrap
     # highlight-style: monokai
@@ -27,7 +28,8 @@ format:
     margin: 0.2
     # logo: "./UoALogoDarkBlueRGBLandscape.png"
     title-slide-attributes:
-        data-background-image: UoALogoDarkBlueRGBLandscape.png
+        # data-background-image: UoALogoDarkBlueRGBLandscape.png
+        data-background-image: ResBazSlideBackgroundJustLogo.svg
         data-background-size: 20%
         # data-background-postion: right
         data-background-position: 95% 76%
@@ -46,8 +48,9 @@ format:
     reveal_options:
       menu:
         numbers: true
-    header: State of the Art Workflows for working with data in 2024
-    header-logo: UoALogoDarkBlueRGBLandscape.png
+    header: Joining the dots for modern data science workflows
+    header-logo: ResBaz_transparent_cropped.svg
+    # header-logo: UoALogoDarkBlueRGBLandscape.png
     hide-from-titleSlide: all
     filters:
       - reveal-header
@@ -69,18 +72,21 @@ revealjs-plugins:
 
 --- 
 
-<!-- # Intro
 
-- Welcome
-- What this is about: a lot of reserach topics and perspectives
-- Nick Young and I condensed our takes into 1h
-  - When I say 'I', I often mean 'we'. -->
 
 # What this is
 
-- In a nutshell, we show how to efficiently create a chain of our preferred tools to tackle a map visualisation part of a ficticious PhD
-- We try to go 'end-to-end' and consider Research Reproducibility/we anticipate an expert questioning our results and wanting to reproduce our results a few years after publication
-- Be aware: We use a geospatial example, but the tools and workflows are applicable to many research disciplines
+- efficiently create a **chain of our preferred tools** to tackle a **map visualisation** part of a ficticious PhD
+- '*end-to-end*' with focus on **Research Reproducibility**
+- Though geospatial example, but the **tools and workflows** are applicable to **many research disciplines**
+
+::: {.notes}
+- Welcome
+- What this is about: a lot of reserach topics and perspectives
+- Nick Young and I condensed our takes into 1h
+  - When I say 'I', I often mean 'we'. 
+- we anticipate an expert questioning our results and wanting to reproduce our results a few years after publication
+:::
  
 # Housekeeping 🧹
 
@@ -93,9 +99,9 @@ revealjs-plugins:
   - This session **won't** be recorded 📹
 
 
-- Cameras on, please 📸
-- Please mute your microphone 🎤  
-- Questions later unless unavoidable now: Zoom chat 💬
+- **Cameras on**, please 📸
+- Please **mute** your microphone 🎤  
+- **Questions later** unless unavoidable now: Zoom chat 💬
 
 - Be kind 😊
   - all details of the Code of Conduct 🗞️  can be found [here](https://resbaz.auckland.ac.nz/about/) 
@@ -114,42 +120,41 @@ revealjs-plugins:
 - Probably very limited time for questions, but
   a) [Drop-in Clinic](https://resbaz.auckland.ac.nz/schedule/#session-090) (Tuesday/tomorrow, 3-4pm)
   b) [HackyHour](https://uoa-eresearch.github.io/HackyHour/) community and Slack channel (availble for all, not jut University of Auckland)
-- Slides, repo, links shared afterwards
-- pointers to relevant ResBaz sessions 
+- Slides, repo, links **shared afterwards**
+- **pointers** to relevant **ResBaz sessions **
   - some might be full
   - some might share slides on request, might(!)
 
 # Go, go, go! Wait, what?
 
-- Example = End-to-End workflow with data
-  - Depth of covered aspect varies; also depends on your research
-- I share opinions/experiences/preferences.
-    - try to listen firstly; try it out; find your own solutions; share your findings/preferences/outputs with me later
+- What of the covered parts matters most to you, depends on your research
+- I share *opinions/experiences/preferences*.
+    - try to **listen** firstly; **try** it out; **find** your **own** solutions; **share** your findings/preferences/outputs with me later
 - Focus is 
-  - recent (not dated)
-  - relevant (to many research disciplines, not just research involving geospatial) 
-  - chain of tools and adequate usage to
-  - facilitate your research 
+  - **recent** (not dated)
+  - **relevant** (to many research disciplines, not just research involving geospatial) 
+  - **chain** of tools and **adequate usage** to
+  - **facilitate your research**
 
 ::: {.callout-caution}
 ## Goal: make your (research) lives easier
 - Don't reinvent the wheel 🛞
 	- Use existing work IF ADEQUATE! (citing, data sensitivity, intellectual property, licenses, funding, ... the list goes on!) 
 - *Make it [FAIR](https://research-hub.auckland.ac.nz/guide-to-managing-research-data/ethics-integrity-and-compliance/fair-principles-for-research-data)* (Findable, Accessible, Interoperable, and Reusable) and benefit from that
-- Focus on your research, not on learning tools
-- keep Reproducibility in mind! Excellent [resource here](https://book.the-turing-way.org/reproducible-research/reproducible-research)
+- **Focus** on your **research**, **not on learning tools**
+- keep **Reproducibility** in mind! Excellent [resource here](https://book.the-turing-way.org/reproducible-research/reproducible-research)
 :::
 
 	
 # Overview of the ficiticous project
-- **our project** is part of a PhD project (usually 3-5 years runtime), how much of the shown workflows apply to your work differs
-- from this 1 hour up to 3 years (or more?) and you can mix-and-match components
+- **our project** is part of a **PhD** project (usually 3-5 years runtime)
+  - 1 hour up to 3 years (or more?) and **you can mix-and-match** components
 
 - We picked a **geospatial** example
 	- **Why?** Many can appreciate an enhanced map (other topics might require jargon, etc.)
-	- Even if your research does not invovle geospatial aspects: You are in the right session 😎 It is about **the process not so much the product**
+	- Even if your research does **not** invovle geospatial aspects: You are in the right session 😎 It is about **the process not so much the product**
 
-- For this project, we made sure that we are allowed to obtain/capture | posess and store | use | (work on with AI support) | publish as it is [not senstivite](https://research-hub.auckland.ac.nz/guide-to-managing-research-data/ethics-integrity-and-compliance/research-data-classification). 
+- For this project, we made sure that we are **allowed** to obtain/capture | posess and store | use | (work on with AI support) | publish as it is [not senstivite](https://research-hub.auckland.ac.nz/guide-to-managing-research-data/ethics-integrity-and-compliance/research-data-classification). 
 - Parties that might have an influence: Ethics Committee, IP, Commerical Interest, Countries, supervisor,...
 
 ## More details about data sensitivity, etc.
@@ -216,12 +221,12 @@ revealjs-plugins:
 ![](Data2024Assets/Pyramid02OS.svg){.absolute top=120 right=10 width="450" height="250"}
 
 - Selected tools are maximised for
-  - being Operating System (OS) agnostic
+  - being Operating System **(OS) agnostic**
   - they **should** work on many systems
   - some (!) trouble-shotting in aforementioned [Drop-in Clinic](https://resbaz.auckland.ac.nz/schedule/#session-090) or [over Slack](https://uoa-eresearch.github.io/HackyHour/) 
 
 ::: {.callout-note}
-because of the way we interact with the core-coding task, we don't see too much of the OS
+because of the way we interact with the core-coding task, **we won't see too much of the OS**
 :::
 
 
@@ -230,20 +235,23 @@ because of the way we interact with the core-coding task, we don't see too much 
 
 - we will use Python 🐍
 - Python vs. R vs. C vs. Rust vs. JS, ... is out of scope
-- if availabile try one of these sessions
-- My summary: If your goal is...
+- Try one of these sessions If your goal is...
   - ... efficient Machine Learning: [Julia](https://resbaz.auckland.ac.nz/schedule/#session-60)
   - ... statistics and refined plots (yes, I am looking at you, [ggplot2](https://ggplot2.tidyverse.org/)): [R](https://resbaz.auckland.ac.nz/schedule/#session-56)
   - ... the Swiss Army Knife®: [Python ](https://resbaz.auckland.ac.nz/schedule/#session-111)
 
-(all running Wed. 1-5pm)
+(all these ResBaz session are running concurrently on Wed. 1-5pm)
 
 ## Component 4: Libraries
 ![](Data2024Assets/Pyramid04Lib.svg){.absolute top=120 right=10 width="450" height="250"}
 
-- Python has a vast amount of libraries
+- We will talk more about packages/libraries in due course
+- For now: Python has a vast amount of libraries
 - we will use [GeoPandas](https://geopandas.org/) among others
-- more pro/con is about to follow in due course
+- efficiently handling these might appear daunting
+  - but we will show you some tricks
+  - many others have done this before!
+
 
 ## Component 5: the programming environment
 
@@ -254,7 +262,7 @@ We have two main appraoches
 ::: {.column width=50%}
 ![](Data2024Assets/HelloWorldPy.svg){width="450"}
 
-Use this to:
+command-line interface (aka **CLI**/terminal/console/shell/BaSH/ZSH/Fish/...):
 
 - automatically, for ex. every night at 11pm (cron-job)
 - chain one scripts output as an input to another script (build a pipeline)
@@ -263,7 +271,7 @@ Use this to:
 ::: {.column width=50%}
   ![](Data2024Assets/HelloWorldJupyter.svg){width="450"}
 
-Use this to:
+**Jupyter** Notbooks, etc.:
 
 - develop your code
 - explore your data
@@ -275,8 +283,8 @@ Use this to:
 
 ## Option A: Command-line-based
 
-- we can get a lot done by only using a command-line interface (aka CLI/terminal/console/shell/BaSH/ZSH/Fish/...)
-- open locally or log in to a VM (via [SSH](https://en.wikipedia.org/wiki/Secure_Shell), etc.)
+- we can get a lot done by only using a CLI
+- open a terminal locally or log in to a VM (via [SSH](https://en.wikipedia.org/wiki/Secure_Shell), etc.)
 - we can code in a text editor 
 	- that can be [VI](https://ex-vi.sourceforge.net/)/[VIM](https://www.vim.org/)/[nano](https://nano-editor.org/)/...
 
@@ -285,7 +293,9 @@ Use this to:
 [Introduction to the Command Line](https://resbaz.auckland.ac.nz/schedule/#session-57) (Wed. 10am-3pm)
 :::
 
-TODO #26 VIDEO HOW WE LOG IN VIA SSH. HOW WE CREATE A .PY FILE AND EXECUTE IT
+
+## Option A in action
+{{< video Data2024Assets/cliPY.mp4 aspect-ratio="1.5170731707x1" >}}
 
 ## Option B: GUI-based; `.py` files
 
@@ -301,8 +311,8 @@ TODO #26 VIDEO HOW WE LOG IN VIA SSH. HOW WE CREATE A .PY FILE AND EXECUTE IT
 - I pick [Visusal Studio Code (VSC)](https://code.visualstudio.com/), others use [Jetbrains PyCharm](https://www.jetbrains.com/pycharm/), etc.
 	- [VSCodium](https://vscodium.com/): open-source adaption without telemetry; no MS VS Marketplace but its own; at times less smooth
 
-## LIVE DEMO/VIDEO 
-Let's try to write another hello-wordl, just like we did on the CLI. Cmd-N, save, file name, .py extension. Go to Terminal. Execute it `python helloworld.py`
+
+
 
 ::: {.notes}
 - personal experience: VSC is powerful, yet quite streamlined. 
@@ -335,7 +345,9 @@ Let's try to write another hello-wordl, just like we did on the CLI. Cmd-N, save
 		- **future-you**: 
   - again: [FAIR](https://research-hub.auckland.ac.nz/guide-to-managing-research-data/ethics-integrity-and-compliance/fair-principles-for-research-data) and metadata, utlimately: get more research impact
 
-## Live Demo: Let's create a new Jupyter Notebook, write a hello-world, run it, save it, and push it to GitHub
+<!-- ## {background-video="Data2024Assets/VSCipy.mp4" aspect-ratio="1.5014662757x1"} -->
+## Option B in action
+{{< video Data2024Assets/VSCipy.mp4 aspect-ratio="1.5014662757x1" >}}
 
 ::: {.notes}
 - Now, VSC has syntax highlighting. 
@@ -377,7 +389,9 @@ Bottom-up:
 
 # Intermezzo: Let's see some of that in action
 
-LIVE DEMO: 5 lines of code 
+Just 5 lines of code
+
+We can do this in [Google Colab](https://colab.research.google.com/), example [here](https://colab.research.google.com/drive/13ODR80i0AVMymNYIcSZRS_tLYr8hyzLe?usp=sharing)
 
 ```python
 import pandas as pd
@@ -387,7 +401,11 @@ df = yfinance.Ticker("^NZ50").history(period="max")# Load data from Yahoo Financ
 df[["Open", "Close", "High", "Low"]].plot(labels={"value": "$ NZD"}, title="NZX 50 Index") # plot it
 ```
 
-## Version Control with Git and GitHub
+## Intermezzo: How does that look on Google Colab
+
+{{< video Data2024Assets/FiveLinesColab.mp4 aspect-ratio="1.5014662757x1" >}}
+
+# Version Control with Git and GitHub
 
 - local machine only(bus 🚌 risk) even VM (decommissoned?) *isn't enough*
 - `if` **all** stakeholders agree (Research Data Policy, Ethics Commission, IP Advisor, Funder,...) 
@@ -407,11 +425,11 @@ df[["Open", "Close", "High", "Low"]].plot(labels={"value": "$ NZD"}, title="NZX 
 - VSC we can either use the lefthand *side-panel* for git (once extension is installed), or we can use the *CLI* below to do
   - `git status`, `git diff`, `git commit -am "present-tense active what I did"`^[example: 'Fix typo in introduction to user guide' how to write proper commit messages [here](https://cbea.ms/git-commit/) ], `git push` 
 - GitHub can also provide us with 
-	- GitHub Actions (*throw-away*-VMs running on MSAzure)
+	- GitHub Actions (*throw-away*-VMs running on [MSAzure](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions))
 	- Some basic Project Management via [Issues](https://code.visualstudio.com/blogs/2020/05/06/github-issues-integration)
 	- Collaboration (allow other to work on your code)
-	- private and public repos
-	- there are academic discounts, ...
+	- *private* and *public* repos
+	- there are [academic discounts](https://github.com/education), ...
 :::
 
 ::: {.column width=30%}
@@ -425,22 +443,22 @@ df[["Open", "Close", "High", "Low"]].plot(labels={"value": "$ NZD"}, title="NZX 
 
 :::: {.columns}
 ::: {.column width=50%}
- A gift 👑 because:
+ A **gift** 👑 because:
 
-- Python makes it easy to integrate
-- incredible amount of packages exist
-- so no reinventing the wheel (build on other peoples' extended efforts)^[proper referencing is crucial, code is not different from other academic tasks in this respect]
+- Python makes it **easy to integrate**
+- incredible **amount** of packages exist
+- so **no reinventing the wheel** (build on other peoples' extended efforts)^[proper referencing is crucial, code is not different from other academic tasks in this respect]
 
-A curse 🤬 because:
+A **curse** 🤬 because:
 
-- things tend to break
-  - people discontinue packages
-  - breaking changes require us to change our syntax
-  - packages depend on other packages (think of a big tree🌲)
+- things tend to **break**
+  - people **discontinue** packages
+  - **"breaking changes"** require us to change our syntax
+  - packages depend on other packages (think of a **big tree**🌲)
 :::
 
 ::: {.column width=50%}
-But! We are not the first people to run into such challenges
+But! **We are not the first people to run into such challenges**
 
 - package management: there are different ways of minimising that impact; let me show 3
 
@@ -456,13 +474,14 @@ But! We are not the first people to run into such challenges
 
 # To `venv` or not to `venv`?
 
-- (This topic is not crucial, I know people who use it frequently and other that are successful and don't do it at all)
-- What is this `venv`? This is one way (there are others) of creating a virtual environment. 
-- Each `venv` can have its own packages and versions; as opposed to a global enviroment (so you can run the old and the new version in paralell and test, etc.)
-- Some consider it good practice to keep one `venv` per project. If you research and use of Python on one specific machine is just about one project, this might be ignorable; `poetry` spins up a virtual environment anyways for you
-- overall, this kind of encapsulation can support Reproducibility
+(Though not crucial, mentioned for the sake of completeness)
 
-VIDEO here I install everything with `pip install requirements.txt`
+- What is this `venv`? 
+  - This is [one way](https://docs.python.org/3/library/venv.html) (there are others) of creating a virtual environment. 
+- Each `venv` can have its **own packages** and versions; as opposed to a global enviroment (so you can run the old and the new version in paralell and test, etc.)
+- Some consider it *good practice* to keep one `venv` per project. If you research and use of Python on one specific machine is just about one project, this might be ignorable; [poetry](https://python-poetry.org/) (as mentioned on the previous slide) spins up a virtual environment anyways for you
+- overall, **this kind of encapsulation can support Reproducibility**
+
 
 # Revisit the Pyramid 
 (input data properly stored ✅  we use an IDE (VSC) ✅ use package management ✅)
@@ -473,11 +492,13 @@ VIDEO here I install everything with `pip install requirements.txt`
 :::: {.columns}
 ::: {.column width=70%}
 
-- Containers (Think of a mini-VM) [Docker](https://www.docker.com/), [Kubernetes](https://kubernetes.io/)
-    	- Pick/reference an OS (say Ubuntu 22.4) + a Python version (say 3.11.6), etc. your local/VM machine runs Kernel and VSC
-    	- put the result on [DockerHub](https://hub.docker.com/)
-- [BinderHub](https://research-hub.auckland.ac.nz/research-software-and-computing/advanced-compute/nectar-binderhub): package a remote Git repository into an interactive Jupyter notebook for displaying code and output
-- [Research Object](https://www.researchobject.org/ro-crate/) (RO) Crate: an approach to package research data and its metadata human and machine readable, [Workflow](https://about.workflowhub.eu/Workflow-RO-Crate/) hub can ingest or generate an RO-Crate that describes the complete processes, authorship, and requirements of a computational workflow
+- **Containers** (Think of a mini-VM) [Docker](https://www.docker.com/), [Kubernetes](https://kubernetes.io/)
+	- Pick/reference an OS (say Ubuntu 22.4) + a Python version (say 3.11.6), etc. 
+  	- your local/VM machine runs `Kernel` and `VSC` 
+	- put the result on [DockerHub](https://hub.docker.com/)
+- [BinderHub](https://research-hub.auckland.ac.nz/research-software-and-computing/advanced-compute/nectar-binderhub): you can **package** a remote **Git repo**sitory into an **interactive Jupyter** notebook for displaying **code** and **output**
+- [Research Object](https://www.researchobject.org/ro-crate/) **(RO) Crate**: an approach to package research data and its metadata human and machine readable
+  - the [Workflow](https://about.workflowhub.eu/Workflow-RO-Crate/) aspect can ingest or generate an RO-Crate that describes the complete processes, authorship, and requirements of a computational workflow
 
 :::
 
@@ -525,48 +546,91 @@ But: If the alternatives are that you keep all data, code, ... on your laptop wh
 
 | Category           | Details                                              |
 |--------------------|------------------------------------------------------|
-| Data Input         | Download dataset                                     |
+| Data Input         | Download dataset [1](https://github.com/UoA-eResearch/SA2_2022_population/raw/main/statistical-area-2-2023-generalised_simplified_22.3%25.zip) & [2](https://raw.githubusercontent.com/UoA-eResearch/SA2_2022_population/main/population_by_SA2.csv)                                     |
 | Computer           | We use a VM (on [Nectar](https://research-hub.auckland.ac.nz/research-software-and-computing/advanced-compute/nectar-research-cloud))                         |
 | OS                 | We use `Ubuntu 22.4`                                   |
 | Language           | `Python`                                               |
-| Libraries          | `Geopandas` among others                               |
-| IDE                | `VSC` to run a Jupyter Notebook (ssh'd to VM)          |
+| Libraries          | `geopandas` among others                               |
+| IDE                | `[VSC](https://code.visualstudio.com/)` to run a Jupyter Notebook (`ssh` to VM)          |
 | Code               | On `GitHub`                                            |
 | Research Outputs   | Map published to website/`GitHub Action` (bit out of scope) |
 
 
 
-## Prepwork
-VIDEO
+## Background
 
-- (VM is created, VSC is installed, plugins are installed, python-is-python3)
-- Open VSC
-- ssh
-- create venv
-- create ipynb (maybe touch via console or left panel)
-- (copy-)paste in md headings/skeleton structure
-- push run button
-- select kernel
-- (not sure: create new gh repo, make private)
-- (not sure where/how: magically we know all needed libs; pip freeze it)
-- show commit in VSC extension
-- navigate to website and see what we did
+Rough workflow:
 
-## Background: What we plot
-- StatsNZ decomposes New Zealand into Statistical Areas 
-	- each SA should encapsule people of similar socio-economical background
-	- there are 3 resolutions (SA1 = x people, SA2 = y people, SA3 = z people)
+- We **download** a dataset that contains the **boundaries** of New Zealand's Statistical Areas (**SA2**) - details follow
+- And **another** one that contains the **population** (i.e. the number of people) of each SA2
+- We want to **plot** the boundaries and the population data on an interactive **map in a browser**
+- We put that on **GitHub**/a **website**
+
+Details:
+
+- StatsNZ decomposes New Zealand into [Statistical Areas (SA)](https://www.stats.govt.nz/methods/statistical-standard-for-geographic-areas-2023/) 
+	- each SA should encapsule people of similar socio-economical status
+	- there are 3 resolutions (SA1 = up to 500 people, SA2 = 1k-4k people, SA3 = 5k-50k people)
 	- we pick SA2
 
-- we want to plot the 
-	- boundaries (polygon on the map)
-	- name of each SA2
-	- number of people 
-and show this on an interactive map in a browser
 
-# Skeleton headlines
-- import the data
-- work on it
-- plot it
 
-GHA TO SERVE?
+# Live demo
+
+What I did as a preparation (which exceeds the available time for this session):
+
+- create a Ubuntu VM on Nectar
+- start VSC on my local machine, connect to the VM via SSH
+- as Ubuntu comes with Python, I created a virtual environment (that I named `data`)
+    - `sudo apt install python3.12-venv`
+    - `python3 -m venv data` 
+    - `source data/bin/activate`
+    - start a new terminal, done (notice the first bit on the prompt)
+- I installed `Jupyter` and `GitHub Pull Requests` exentsions and signed in to GitHub
+
+<!-- ![](Data2024Assets/StatsNZPopDL.jpg)
+{.absolute top=10 right=10 width="200"} -->
+
+```python
+# We download the first dataset
+!wget "https://github.com/UoA-eResearch/SA2_2022_population/raw/main/statistical-area-2-2023-generalised_simplified_22.3%25.zip"
+
+# !pip install geopandas
+import geopandas as gpd
+import pandas as pd
+
+# Load dataset into geopandas df, have a look
+sa2 = gpd.read_file("statistical-area-2-2023-generalised_simplified_22.3%.zip").dropna(subset="geometry")
+sa2
+
+# we remove Chathan Islands and those with no land area
+sa2 = sa2[(sa2.SA22023__1 != "Chatham Islands") & (sa2.LAND_AREA_ > 0)].copy()
+sa2
+
+# We download the second dataset
+!wget "https://raw.githubusercontent.com/UoA-eResearch/SA2_2022_population/main/population_by_SA2.csv"
+
+# we import a population dataset
+population = pd.read_csv("Data2024Assets/population_by_SA2.csv")
+population
+
+# Extract ID from Area col by using RegEx
+population['SA2'] = population['Area'].str.extract(r'(\d+)')
+population
+
+# Add a prefix to the right dataframe's columns (excluding the merge key)
+prefix = 'population_in_year_'
+population= population.rename(columns={col: prefix + col for col in population.columns[1:10]})
+population
+
+# Merge these
+sa2 = sa2.merge(population, left_on='SA22023_V1', right_on='SA2')
+sa2
+```
+
+# Questions
+
+- please see the explanation above
+- the likelihood of me being able to answer your question now is quite slim
+  - a lot of content in 1h
+- Come to HackyHour or the Drop-in Clinic

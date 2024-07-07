@@ -12,7 +12,7 @@ format:
   revealjs:
     # tbl-cap-location: bottom
     # number-sections: true
-    theme: UoAtemplate.scss
+    theme: ResBazTheme.scss
     highlight-style: atom-one
     code-overflow: wrap
     # highlight-style: monokai
