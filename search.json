@@ -466,70 +466,70 @@
     "href": "JoiningTheDots.html#component-2-the-operating-system",
     "title": "Joining the dots for modern data science workflows",
     "section": "Component 2: the operating system",
-    "text": "Component 2: the operating system\n\n\nSelected tools are maximised for\n\nbeing Operating System (OS) agnostic\nthey should work on many systems\nsome (!) trouble-shotting in aforementioned Drop-in Clinic or over Slack\n\n\n\n\n\n\n\n\nNote\n\n\nbecause of the way we interact with the core-coding task, we don’t see too much of the OS"
+    "text": "Component 2: the operating system\n\n\nSelected tools are maximised for\n\nbeing Operating System (OS) agnostic\nthey should work on many systems\nsome (!) trouble-shotting in aforementioned Drop-in Clinic or over Slack\n\n\n\n\n\n\n\n\nNote\n\n\nbecause of the way we interact with the core-coding task, we won’t see too much of the OS"
   },
   {
     "objectID": "JoiningTheDots.html#component-3-the-programming-language",
     "href": "JoiningTheDots.html#component-3-the-programming-language",
     "title": "Joining the dots for modern data science workflows",
     "section": "Component 3: the programming language",
-    "text": "Component 3: the programming language\n\n\nwe will use Python 🐍\nPython vs. R vs. C vs. Rust vs. JS, … is out of scope\nif availabile try one of these sessions\nMy summary: If your goal is…\n\n… efficient Machine Learning: Julia\n… statistics and refined plots (yes, I am looking at you, ggplot2): R\n… the Swiss Army Knife®: Python\n\n\n(all running Wed. 1-5pm)"
+    "text": "Component 3: the programming language\n\n\nwe will use Python 🐍\nPython vs. R vs. C vs. Rust vs. JS, … is out of scope\nTry one of these sessions If your goal is…\n\n… efficient Machine Learning: Julia\n… statistics and refined plots (yes, I am looking at you, ggplot2): R\n… the Swiss Army Knife®: Python\n\n\n(all these ResBaz session are running concurrently on Wed. 1-5pm)"
   },
   {
     "objectID": "JoiningTheDots.html#component-4-libraries",
     "href": "JoiningTheDots.html#component-4-libraries",
     "title": "Joining the dots for modern data science workflows",
     "section": "Component 4: Libraries",
-    "text": "Component 4: Libraries\n\n\nPython has a vast amount of libraries\nwe will use GeoPandas among others\nmore pro/con is about to follow in due course"
+    "text": "Component 4: Libraries\n\n\nWe will talk more about packages/libraries in due course\nFor now: Python has a vast amount of libraries\nwe will use GeoPandas among others\nefficiently handling these might appear daunting\n\nbut we will show you some tricks\nmany others have done this before!"
   },
   {
     "objectID": "JoiningTheDots.html#component-5-the-programming-environment",
     "href": "JoiningTheDots.html#component-5-the-programming-environment",
     "title": "Joining the dots for modern data science workflows",
     "section": "Component 5: the programming environment",
-    "text": "Component 5: the programming environment\n We have two main appraoches\n\n\n\nUse this to:\n\nautomatically, for ex. every night at 11pm (cron-job)\nchain one scripts output as an input to another script (build a pipeline)\n\n\n\nUse this to:\n\ndevelop your code\nexplore your data\nget interactivity\nrun bits and pieces in Isolation"
+    "text": "Component 5: the programming environment\n We have two main appraoches\n\n\n\ncommand-line interface (aka CLI/terminal/console/shell/BaSH/ZSH/Fish/…):\n\nautomatically, for ex. every night at 11pm (cron-job)\nchain one scripts output as an input to another script (build a pipeline)\n\n\n\nJupyter Notbooks, etc.:\n\ndevelop your code\nexplore your data\nget interactivity\nrun bits and pieces in Isolation"
   },
   {
     "objectID": "JoiningTheDots.html#option-a-command-line-based",
     "href": "JoiningTheDots.html#option-a-command-line-based",
     "title": "Joining the dots for modern data science workflows",
     "section": "Option A: Command-line-based",
-    "text": "Option A: Command-line-based\n\nwe can get a lot done by only using a command-line interface (aka CLI/terminal/console/shell/BaSH/ZSH/Fish/…)\nopen locally or log in to a VM (via SSH, etc.)\nwe can code in a text editor\n\nthat can be VI/VIM/nano/…\n\n\n\n\n\n\n\n\nRecommended ResBaz session\n\n\nIntroduction to the Command Line (Wed. 10am-3pm)\n\n\n\nTODO #26 VIDEO HOW WE LOG IN VIA SSH. HOW WE CREATE A .PY FILE AND EXECUTE IT"
+    "text": "Option A: Command-line-based\n\nwe can get a lot done by only using a CLI\nopen a terminal locally or log in to a VM (via SSH, etc.)\nwe can code in a text editor\n\nthat can be VI/VIM/nano/…\n\n\n\n\n\n\n\n\nRecommended ResBaz session\n\n\nIntroduction to the Command Line (Wed. 10am-3pm)"
+  },
+  {
+    "objectID": "JoiningTheDots.html#option-a-in-action",
+    "href": "JoiningTheDots.html#option-a-in-action",
+    "title": "Joining the dots for modern data science workflows",
+    "section": "Option A in action",
+    "text": "Option A in action"
   },
   {
     "objectID": "JoiningTheDots.html#option-b-gui-based-.py-files",
     "href": "JoiningTheDots.html#option-b-gui-based-.py-files",
     "title": "Joining the dots for modern data science workflows",
     "section": "Option B: GUI-based; .py files",
-    "text": "Option B: GUI-based; .py files\nGUI = graphical user interface\n\nwhy do we use a GUI? To get help!\n\nsyntax highlighting\nauto-complete\npotentially AI-support 1\n\nwe can use our local computer (, , ) or  x11/ rdp into a virtual machine\nthere is again quite a variety\nI pick Visusal Studio Code (VSC), others use Jetbrains PyCharm, etc.\n\nVSCodium: open-source adaption without telemetry; no MS VS Marketplace but its own; at times less smooth\n\n\nAI: even if you try your best to do all correct, treat sensitive data respectfully, for example, use the University-provided systems,… using tools like AI Coding Support (GitHub CoPilot) might make most of these efforts useless; sensitive data might (!) be fed back for training purposes, etc. If in doubt, take the pessimistic approach (expect that it calls home) and talk to relevant people (Ethics-advisors, eResearch support, supervisor,…)"
-  },
-  {
-    "objectID": "JoiningTheDots.html#live-demovideo",
-    "href": "JoiningTheDots.html#live-demovideo",
-    "title": "Joining the dots for modern data science workflows",
-    "section": "LIVE DEMO/VIDEO",
-    "text": "LIVE DEMO/VIDEO\nLet’s try to write another hello-wordl, just like we did on the CLI. Cmd-N, save, file name, .py extension. Go to Terminal. Execute it python helloworld.py\n\n\npersonal experience: VSC is powerful, yet quite streamlined.\ndouble-edged-sword: simple vs. overwhelming\nprevent you from having this feeling, too.\neach project (connection to a VM): own window,\n\ncan run mulitple concurrently\n\nsidebar (most things can be customised, put into other places, etc.) here it shows a file explorer.\n\nmaybe not impressive\nremote VM, not the local machine\neven drag and drop things. Really neat.\n\nwe have a (or several) built-in command-line applications (BaSH, ZSH, …\n\nI can navigate to a sub-folder and click open terminal here)\n\ntop-right corner\n\nwhere the magic\nwe write our code\nseveral windows possible; we can have previews, …"
+    "text": "Option B: GUI-based; .py files\nGUI = graphical user interface\n\nwhy do we use a GUI? To get help!\n\nsyntax highlighting\nauto-complete\npotentially AI-support 1\n\nwe can use our local computer (, , ) or  x11/ rdp into a virtual machine\nthere is again quite a variety\nI pick Visusal Studio Code (VSC), others use Jetbrains PyCharm, etc.\n\nVSCodium: open-source adaption without telemetry; no MS VS Marketplace but its own; at times less smooth\n\n\n\n\npersonal experience: VSC is powerful, yet quite streamlined.\ndouble-edged-sword: simple vs. overwhelming\nprevent you from having this feeling, too.\neach project (connection to a VM): own window,\n\ncan run mulitple concurrently\n\nsidebar (most things can be customised, put into other places, etc.) here it shows a file explorer.\n\nmaybe not impressive\nremote VM, not the local machine\neven drag and drop things. Really neat.\n\nwe have a (or several) built-in command-line applications (BaSH, ZSH, …\n\nI can navigate to a sub-folder and click open terminal here)\n\ntop-right corner\n\nwhere the magic\nwe write our code\nseveral windows possible; we can have previews, …\n\n\n\nAI: even if you try your best to do all correct, treat sensitive data respectfully, for example, use the University-provided systems,… using tools like AI Coding Support (GitHub CoPilot) might make most of these efforts useless; sensitive data might (!) be fed back for training purposes, etc. If in doubt, take the pessimistic approach (expect that it calls home) and talk to relevant people (Ethics-advisors, eResearch support, supervisor,…)"
   },
   {
     "objectID": "JoiningTheDots.html#option-b---jupyter-notebooks.ipynb-files",
     "href": "JoiningTheDots.html#option-b---jupyter-notebooks.ipynb-files",
     "title": "Joining the dots for modern data science workflows",
     "section": "Option B - Jupyter Notebooks/.ipynb files:",
-    "text": "Option B - Jupyter Notebooks/.ipynb files:\n\nmaximise the GUI-use: Jupyter Notebooks1\nImagine a pharmacy-student’s lab notebook.\n\nThere are some hard-facts (graphs, print-outs,…) and explanations around it\n\nin Jupyter, we can have code blocks, text blocks, images, …\n\nto beautify we can use markdown syntax\n\na different take than MS-Word cusor-highlight-text-to-bold approach\n\n\nbut: Why add explanations/metadata in the first place? - collaboration/colleagues need to know rationale/units [\\(m\\) vs \\(mm\\)] - future-you:\n\nagain: FAIR and metadata, utlimately: get more research impact\n\n\nformerly IPythonNotebook, hence the file extension .ipynb"
+    "text": "Option B - Jupyter Notebooks/.ipynb files:\n\nmaximise the GUI-use: Jupyter Notebooks1\nImagine a pharmacy-student’s lab notebook.\n\nThere are some hard-facts (graphs, print-outs,…) and explanations around it\n\nin Jupyter, we can have code blocks, text blocks, images, …\n\nto beautify we can use markdown syntax\n\na different take than MS-Word cusor-highlight-text-to-bold approach\n\n\nbut: Why add explanations/metadata in the first place? - collaboration/colleagues need to know rationale/units [\\(m\\) vs \\(mm\\)] - future-you:\n\nagain: FAIR and metadata, utlimately: get more research impact\n\n\n\nformerly IPythonNotebook, hence the file extension .ipynb"
   },
   {
-    "objectID": "JoiningTheDots.html#live-demo-lets-create-a-new-jupyter-notebook-write-a-hello-world-run-it-save-it-and-push-it-to-github",
-    "href": "JoiningTheDots.html#live-demo-lets-create-a-new-jupyter-notebook-write-a-hello-world-run-it-save-it-and-push-it-to-github",
+    "objectID": "JoiningTheDots.html#option-b-in-action",
+    "href": "JoiningTheDots.html#option-b-in-action",
     "title": "Joining the dots for modern data science workflows",
-    "section": "Live Demo: Let’s create a new Jupyter Notebook, write a hello-world, run it, save it, and push it to GitHub",
-    "text": "Live Demo: Let’s create a new Jupyter Notebook, write a hello-world, run it, save it, and push it to GitHub\n\n\nNow, VSC has syntax highlighting.\n\nreserved keyword, such as if changes colour\nit indents my new line\n\nindentation is very important in Python\n\nwhile you can do all that it is harded in a simplistic text editor\n\nsame idea; but instead of calling our script (the .py file) via the command-line, we can press the little play button\nturns our coded md to visually pleasing\none. See how our heading levels\ngive us a little ToC on the bottom-left?\nAnd we get the output below each cell.\nBonus: Once we have several cells, we can intentionally press the play button here and there; observe how the numbers change"
+    "section": "Option B in action",
+    "text": "Option B in action\n\n\n\nNow, VSC has syntax highlighting.\n\nreserved keyword, such as if changes colour\nit indents my new line\n\nindentation is very important in Python\n\nwhile you can do all that it is harded in a simplistic text editor\n\nsame idea; but instead of calling our script (the .py file) via the command-line, we can press the little play button\nturns our coded md to visually pleasing\none. See how our heading levels\ngive us a little ToC on the bottom-left?\nAnd we get the output below each cell.\nBonus: Once we have several cells, we can intentionally press the play button here and there; observe how the numbers change"
   },
   {
-    "objectID": "JoiningTheDots.html#version-control-with-git-and-github",
-    "href": "JoiningTheDots.html#version-control-with-git-and-github",
+    "objectID": "JoiningTheDots.html#intermezzo-how-does-that-look-on-google-colab",
+    "href": "JoiningTheDots.html#intermezzo-how-does-that-look-on-google-colab",
     "title": "Joining the dots for modern data science workflows",
-    "section": "Version Control with Git and GitHub",
-    "text": "Version Control with Git and GitHub\n\nlocal machine only(bus 🚌 risk) even VM (decommissoned?) isn’t enough\nif all stakeholders agree (Research Data Policy, Ethics Commission, IP Advisor, Funder,…)\n\nwe can host our code on version controlled repository\n\ntrack changes (what changed from previous to now, what from now to 23 days ago)\nwe don’t want file names such as Thesis final final really final 2 july.docx\ncode is mostly plain text (not .docx,…), we can use thigs like a diff\nwhile  1 is the underlying ‘technique’/foundation GitHub  is one(!) commercial (now owned by Microsoft) entity\n\nthere are alternatives, GitLab, BitBucket, …\nsome are open source, some run in the cloud, some run on your local machine\n\nwe don’t have the time for the details, but we have Introduction to version control with Git (Thu, 9am-12pm)\n\nɡɪt is a distributed version control system that tracks versions of files developed by Linus Torvalds"
+    "section": "Intermezzo: How does that look on Google Colab",
+    "text": "Intermezzo: How does that look on Google Colab"
   },
   {
     "objectID": "JoiningTheDots.html#vsc-and-github",
@@ -543,28 +543,21 @@
     "href": "JoiningTheDots.html#packages-a-gift-a-curse",
     "title": "Joining the dots for modern data science workflows",
     "section": "Packages 🎁 : A gift 👑 & a curse 🤬",
-    "text": "Packages 🎁 : A gift 👑 & a curse 🤬\n\n\nA gift 👑 because:\n\nPython makes it easy to integrate\nincredible amount of packages exist\nso no reinventing the wheel (build on other peoples’ extended efforts)1\n\nA curse 🤬 because:\n\nthings tend to break\n\npeople discontinue packages\nbreaking changes require us to change our syntax\npackages depend on other packages (think of a big tree🌲)\n\n\n\nBut! We are not the first people to run into such challenges\n\npackage management: there are different ways of minimising that impact; let me show 3\n\nmanually creating a references.txt file (part of the following demo)\npip freeze &gt; references.txt (also part of the following demo)\npoetry\n\nthere are others, Anaconda, Hatch, just to name a few\n\n\nproper referencing is crucial, code is not different from other academic tasks in this respect"
+    "text": "Packages 🎁 : A gift 👑 & a curse 🤬\n\n\nA gift 👑 because:\n\nPython makes it easy to integrate\nincredible amount of packages exist\nso no reinventing the wheel (build on other peoples’ extended efforts)1\n\nA curse 🤬 because:\n\nthings tend to break\n\npeople discontinue packages\n“breaking changes” require us to change our syntax\npackages depend on other packages (think of a big tree🌲)\n\n\n\nBut! We are not the first people to run into such challenges\n\npackage management: there are different ways of minimising that impact; let me show 3\n\nmanually creating a references.txt file (part of the following demo)\npip freeze &gt; references.txt (also part of the following demo)\npoetry\n\nthere are others, Anaconda, Hatch, just to name a few\n\n\nproper referencing is crucial, code is not different from other academic tasks in this respect"
   },
   {
     "objectID": "JoiningTheDots.html#mapping-our-geospatial-example-to-the-pyramid",
     "href": "JoiningTheDots.html#mapping-our-geospatial-example-to-the-pyramid",
     "title": "Joining the dots for modern data science workflows",
     "section": "Mapping our geospatial example to the Pyramid",
-    "text": "Mapping our geospatial example to the Pyramid\n\n\n\nCategory\nDetails\n\n\n\n\nData Input\nDownload dataset\n\n\nComputer\nWe use a VM (on Nectar)\n\n\nOS\nWe use Ubuntu 22.4\n\n\nLanguage\nPython\n\n\nLibraries\nGeopandas among others\n\n\nIDE\nVSC to run a Jupyter Notebook (ssh’d to VM)\n\n\nCode\nOn GitHub\n\n\nResearch Outputs\nMap published to website/GitHub Action (bit out of scope)"
+    "text": "Mapping our geospatial example to the Pyramid\n\n\n\nCategory\nDetails\n\n\n\n\nData Input\nDownload dataset 1 & 2\n\n\nComputer\nWe use a VM (on Nectar)\n\n\nOS\nWe use Ubuntu 22.4\n\n\nLanguage\nPython\n\n\nLibraries\ngeopandas among others\n\n\nIDE\n[VSC](https://code.visualstudio.com/) to run a Jupyter Notebook (ssh to VM)\n\n\nCode\nOn GitHub\n\n\nResearch Outputs\nMap published to website/GitHub Action (bit out of scope)"
   },
   {
-    "objectID": "JoiningTheDots.html#prepwork",
-    "href": "JoiningTheDots.html#prepwork",
+    "objectID": "JoiningTheDots.html#background",
+    "href": "JoiningTheDots.html#background",
     "title": "Joining the dots for modern data science workflows",
-    "section": "Prepwork",
-    "text": "Prepwork\nVIDEO\n\n(VM is created, VSC is installed, plugins are installed, python-is-python3)\nOpen VSC\nssh\ncreate venv\ncreate ipynb (maybe touch via console or left panel)\n(copy-)paste in md headings/skeleton structure\npush run button\nselect kernel\n(not sure: create new gh repo, make private)\n(not sure where/how: magically we know all needed libs; pip freeze it)\nshow commit in VSC extension\nnavigate to website and see what we did"
-  },
-  {
-    "objectID": "JoiningTheDots.html#background-what-we-plot",
-    "href": "JoiningTheDots.html#background-what-we-plot",
-    "title": "Joining the dots for modern data science workflows",
-    "section": "Background: What we plot",
-    "text": "Background: What we plot\n\nStatsNZ decomposes New Zealand into Statistical Areas\n\neach SA should encapsule people of similar socio-economical background\nthere are 3 resolutions (SA1 = x people, SA2 = y people, SA3 = z people)\nwe pick SA2\n\nwe want to plot the\n\nboundaries (polygon on the map)\nname of each SA2\nnumber of people and show this on an interactive map in a browser"
+    "section": "Background",
+    "text": "Background\nRough workflow:\n\nWe download a dataset that contains the boundaries of New Zealand’s Statistical Areas (SA2) - details follow\nAnd another one that contains the population (i.e. the number of people) of each SA2\nWe want to plot the boundaries and the population data on an interactive map in a browser\nWe put that on GitHub/a website\n\nDetails:\n\nStatsNZ decomposes New Zealand into Statistical Areas (SA)\n\neach SA should encapsule people of similar socio-economical status\nthere are 3 resolutions (SA1 = up to 500 people, SA2 = 1k-4k people, SA3 = 5k-50k people)\nwe pick SA2"
   },
   {
     "objectID": "Plots.html",

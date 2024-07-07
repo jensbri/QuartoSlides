@@ -11,6 +11,8 @@
 <script src="site_libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
 <link href="site_libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/grid-htext-1.0.0/grid_htext.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.53">
@@ -396,7 +398,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="UoALogoDarkBlueRGBLandscape.png" data-background-position="95% 76%" data-background-size="20%" class="quarto-title-block center">
+<section id="title-slide" data-background-image="ResBazSlideBackgroundJustLogo.svg" data-background-position="95% 76%" data-background-size="20%" class="quarto-title-block center">
   <h1 class="title">Joining the dots for modern data science workflows</h1>
   <p class="subtitle">State of the art workflows not just for Computer Scientists</p>
 
@@ -413,22 +415,34 @@ Nick Young, Jens Brinkmann
 
   <p class="date">July, 2024</p>
 </section>
-<section class="slide level2">
-
-<!-- # Intro
-
-- Welcome
-- What this is about: a lot of reserach topics and perspectives
-- Nick Young and I condensed our takes into 1h
-  - When I say 'I', I often mean 'we'. -->
-</section>
 <section id="what-this-is" class="title-slide slide level1 center">
 <h1>What this is</h1>
 <ul>
-<li>In a nutshell, we show how to efficiently create a chain of our preferred tools to tackle a map visualisation part of a ficticious PhD</li>
-<li>We try to go ‘end-to-end’ and consider Research Reproducibility/we anticipate an expert questioning our results and wanting to reproduce our results a few years after publication</li>
-<li>Be aware: We use a geospatial example, but the tools and workflows are applicable to many research disciplines</li>
+<li>efficiently create a <strong>chain of our preferred tools</strong> to tackle a <strong>map visualisation</strong> part of a ficticious PhD</li>
+<li>‘<em>end-to-end</em>’ with focus on <strong>Research Reproducibility</strong></li>
+<li>Though geospatial example, but the <strong>tools and workflows</strong> are applicable to <strong>many research disciplines</strong></li>
 </ul>
+<aside class="notes">
+<ul>
+<li>Welcome</li>
+<li>What this is about: a lot of reserach topics and perspectives</li>
+<li>Nick Young and I condensed our takes into 1h
+<ul>
+<li>When I say ‘I’, I often mean ‘we’.</li>
+</ul></li>
+<li>we anticipate an expert questioning our results and wanting to reproduce our results a few years after publication</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 
 <section id="housekeeping" class="title-slide slide level1 center">
@@ -442,10 +456,10 @@ Nick Young, Jens Brinkmann
 <li>Resources shared later, always prioritise following-along over note-taking, etc. 📝</li>
 <li>This session <strong>won’t</strong> be recorded 📹</li>
 </ul></li>
-<li><p>Cameras on, please 📸</p></li>
-<li><p>Please mute your microphone 🎤<br>
+<li><p><strong>Cameras on</strong>, please 📸</p></li>
+<li><p>Please <strong>mute</strong> your microphone 🎤<br>
 </p></li>
-<li><p>Questions later unless unavoidable now: Zoom chat 💬</p></li>
+<li><p><strong>Questions later</strong> unless unavoidable now: Zoom chat 💬</p></li>
 <li><p>Be kind 😊</p>
 <ul>
 <li>all details of the Code of Conduct 🗞️ can be found <a href="https://resbaz.auckland.ac.nz/about/">here</a></li>
@@ -478,8 +492,8 @@ Nick Young, Jens Brinkmann
 <li><a href="https://resbaz.auckland.ac.nz/schedule/#session-090">Drop-in Clinic</a> (Tuesday/tomorrow, 3-4pm)</li>
 <li><a href="https://uoa-eresearch.github.io/HackyHour/">HackyHour</a> community and Slack channel (availble for all, not jut University of Auckland)</li>
 </ol></li>
-<li>Slides, repo, links shared afterwards</li>
-<li>pointers to relevant ResBaz sessions
+<li>Slides, repo, links <strong>shared afterwards</strong></li>
+<li><strong>pointers</strong> to relevant <strong>ResBaz sessions </strong>
 <ul>
 <li>some might be full</li>
 <li>some might share slides on request, might(!)</li>
@@ -490,20 +504,17 @@ Nick Young, Jens Brinkmann
 <section id="go-go-go-wait-what" class="title-slide slide level1 center">
 <h1>Go, go, go! Wait, what?</h1>
 <ul>
-<li>Example = End-to-End workflow with data
+<li>What of the covered parts matters most to you, depends on your research</li>
+<li>I share <em>opinions/experiences/preferences</em>.
 <ul>
-<li>Depth of covered aspect varies; also depends on your research</li>
-</ul></li>
-<li>I share opinions/experiences/preferences.
-<ul>
-<li>try to listen firstly; try it out; find your own solutions; share your findings/preferences/outputs with me later</li>
+<li>try to <strong>listen</strong> firstly; <strong>try</strong> it out; <strong>find</strong> your <strong>own</strong> solutions; <strong>share</strong> your findings/preferences/outputs with me later</li>
 </ul></li>
 <li>Focus is
 <ul>
-<li>recent (not dated)</li>
-<li>relevant (to many research disciplines, not just research involving geospatial)</li>
-<li>chain of tools and adequate usage to</li>
-<li>facilitate your research</li>
+<li><strong>recent</strong> (not dated)</li>
+<li><strong>relevant</strong> (to many research disciplines, not just research involving geospatial)</li>
+<li><strong>chain</strong> of tools and <strong>adequate usage</strong> to</li>
+<li><strong>facilitate your research</strong></li>
 </ul></li>
 </ul>
 <div class="callout callout-caution callout-titled callout-style-default">
@@ -521,8 +532,8 @@ Nick Young, Jens Brinkmann
 <li>Use existing work IF ADEQUATE! (citing, data sensitivity, intellectual property, licenses, funding, … the list goes on!)</li>
 </ul></li>
 <li><em>Make it <a href="https://research-hub.auckland.ac.nz/guide-to-managing-research-data/ethics-integrity-and-compliance/fair-principles-for-research-data">FAIR</a></em> (Findable, Accessible, Interoperable, and Reusable) and benefit from that</li>
-<li>Focus on your research, not on learning tools</li>
-<li>keep Reproducibility in mind! Excellent <a href="https://book.the-turing-way.org/reproducible-research/reproducible-research">resource here</a></li>
+<li><strong>Focus</strong> on your <strong>research</strong>, <strong>not on learning tools</strong></li>
+<li>keep <strong>Reproducibility</strong> in mind! Excellent <a href="https://book.the-turing-way.org/reproducible-research/reproducible-research">resource here</a></li>
 </ul>
 </div>
 </div>
@@ -533,15 +544,17 @@ Nick Young, Jens Brinkmann
 <section id="overview-of-the-ficiticous-project" class="title-slide slide level1 center">
 <h1>Overview of the ficiticous project</h1>
 <ul>
-<li><p><strong>our project</strong> is part of a PhD project (usually 3-5 years runtime), how much of the shown workflows apply to your work differs</p></li>
-<li><p>from this 1 hour up to 3 years (or more?) and you can mix-and-match components</p></li>
-<li><p>We picked a <strong>geospatial</strong> example</p>
+<li><strong>our project</strong> is part of a <strong>PhD</strong> project (usually 3-5 years runtime)
+<ul>
+<li>1 hour up to 3 years (or more?) and <strong>you can mix-and-match</strong> components</li>
+</ul></li>
+<li>We picked a <strong>geospatial</strong> example
 <ul>
 <li><strong>Why?</strong> Many can appreciate an enhanced map (other topics might require jargon, etc.)</li>
-<li>Even if your research does not invovle geospatial aspects: You are in the right session 😎 It is about <strong>the process not so much the product</strong></li>
+<li>Even if your research does <strong>not</strong> invovle geospatial aspects: You are in the right session 😎 It is about <strong>the process not so much the product</strong></li>
 </ul></li>
-<li><p>For this project, we made sure that we are allowed to obtain/capture | posess and store | use | (work on with AI support) | publish as it is <a href="https://research-hub.auckland.ac.nz/guide-to-managing-research-data/ethics-integrity-and-compliance/research-data-classification">not senstivite</a>.</p></li>
-<li><p>Parties that might have an influence: Ethics Committee, IP, Commerical Interest, Countries, supervisor,…</p></li>
+<li>For this project, we made sure that we are <strong>allowed</strong> to obtain/capture | posess and store | use | (work on with AI support) | publish as it is <a href="https://research-hub.auckland.ac.nz/guide-to-managing-research-data/ethics-integrity-and-compliance/research-data-classification">not senstivite</a>.</li>
+<li>Parties that might have an influence: Ethics Committee, IP, Commerical Interest, Countries, supervisor,…</li>
 </ul>
 </section>
 <section id="more-details-about-data-sensitivity-etc." class="slide level2">
@@ -642,7 +655,7 @@ Nick Young, Jens Brinkmann
 <ul>
 <li>Selected tools are maximised for
 <ul>
-<li>being Operating System (OS) agnostic</li>
+<li>being Operating System <strong>(OS) agnostic</strong></li>
 <li>they <strong>should</strong> work on many systems</li>
 <li>some (!) trouble-shotting in aforementioned <a href="https://resbaz.auckland.ac.nz/schedule/#session-090">Drop-in Clinic</a> or <a href="https://uoa-eresearch.github.io/HackyHour/">over Slack</a></li>
 </ul></li>
@@ -656,7 +669,7 @@ Nick Young, Jens Brinkmann
 <p><strong>Note</strong></p>
 </div>
 <div class="callout-content">
-<p>because of the way we interact with the core-coding task, we don’t see too much of the OS</p>
+<p>because of the way we interact with the core-coding task, <strong>we won’t see too much of the OS</strong></p>
 </div>
 </div>
 </div>
@@ -667,23 +680,27 @@ Nick Young, Jens Brinkmann
 <ul>
 <li>we will use Python 🐍</li>
 <li>Python vs.&nbsp;R vs.&nbsp;C vs.&nbsp;Rust vs.&nbsp;JS, … is out of scope</li>
-<li>if availabile try one of these sessions</li>
-<li>My summary: If your goal is…
+<li>Try one of these sessions If your goal is…
 <ul>
 <li>… efficient Machine Learning: <a href="https://resbaz.auckland.ac.nz/schedule/#session-60">Julia</a></li>
 <li>… statistics and refined plots (yes, I am looking at you, <a href="https://ggplot2.tidyverse.org/">ggplot2</a>): <a href="https://resbaz.auckland.ac.nz/schedule/#session-56">R</a></li>
 <li>… the Swiss Army Knife®: <a href="https://resbaz.auckland.ac.nz/schedule/#session-111">Python</a></li>
 </ul></li>
 </ul>
-<p>(all running Wed. 1-5pm)</p>
+<p>(all these ResBaz session are running concurrently on Wed. 1-5pm)</p>
 </section>
 <section id="component-4-libraries" class="slide level2">
 <h2>Component 4: Libraries</h2>
 <p><img data-src="Data2024Assets/Pyramid04Lib.svg" class="absolute" style="top: 120px; right: 10px; width: 450px; height: 250px; "></p>
 <ul>
-<li>Python has a vast amount of libraries</li>
+<li>We will talk more about packages/libraries in due course</li>
+<li>For now: Python has a vast amount of libraries</li>
 <li>we will use <a href="https://geopandas.org/">GeoPandas</a> among others</li>
-<li>more pro/con is about to follow in due course</li>
+<li>efficiently handling these might appear daunting
+<ul>
+<li>but we will show you some tricks</li>
+<li>many others have done this before!</li>
+</ul></li>
 </ul>
 </section>
 <section id="component-5-the-programming-environment" class="slide level2">
@@ -692,14 +709,14 @@ Nick Young, Jens Brinkmann
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><img data-src="Data2024Assets/HelloWorldPy.svg" width="450"></p>
-<p>Use this to:</p>
+<p>command-line interface (aka <strong>CLI</strong>/terminal/console/shell/BaSH/ZSH/Fish/…):</p>
 <ul>
 <li>automatically, for ex. every night at 11pm (cron-job)</li>
 <li>chain one scripts output as an input to another script (build a pipeline)</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img data-src="Data2024Assets/HelloWorldJupyter.svg" width="450"></p>
-<p>Use this to:</p>
+<p><strong>Jupyter</strong> Notbooks, etc.:</p>
 <ul>
 <li>develop your code</li>
 <li>explore your data</li>
@@ -711,8 +728,8 @@ Nick Young, Jens Brinkmann
 <section id="option-a-command-line-based" class="slide level2">
 <h2>Option A: Command-line-based</h2>
 <ul>
-<li>we can get a lot done by only using a command-line interface (aka CLI/terminal/console/shell/BaSH/ZSH/Fish/…)</li>
-<li>open locally or log in to a VM (via <a href="https://en.wikipedia.org/wiki/Secure_Shell">SSH</a>, etc.)</li>
+<li>we can get a lot done by only using a CLI</li>
+<li>open a terminal locally or log in to a VM (via <a href="https://en.wikipedia.org/wiki/Secure_Shell">SSH</a>, etc.)</li>
 <li>we can code in a text editor
 <ul>
 <li>that can be <a href="https://ex-vi.sourceforge.net/">VI</a>/<a href="https://www.vim.org/">VIM</a>/<a href="https://nano-editor.org/">nano</a>/…</li>
@@ -731,7 +748,10 @@ Nick Young, Jens Brinkmann
 </div>
 </div>
 </div>
-<p>TODO #26 VIDEO HOW WE LOG IN VIA SSH. HOW WE CREATE A .PY FILE AND EXECUTE IT</p>
+</section>
+<section id="option-a-in-action" class="slide level2">
+<h2>Option A in action</h2>
+<video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="Data2024Assets/cliPY.mp4"></video>
 </section>
 <section id="option-b-gui-based-.py-files" class="slide level2">
 <h2>Option B: GUI-based; <code>.py</code> files</h2>
@@ -750,10 +770,6 @@ Nick Young, Jens Brinkmann
 <li><a href="https://vscodium.com/">VSCodium</a>: open-source adaption without telemetry; no MS VS Marketplace but its own; at times less smooth</li>
 </ul></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>AI: even if you try your best to do all correct, treat sensitive data respectfully, for example, use the University-provided systems,… using tools like AI Coding Support (GitHub CoPilot) might make most of these efforts useless; sensitive data might (!) be fed back for training purposes, etc. If in doubt, take the pessimistic approach (expect that <strong>it calls home</strong>) and talk to relevant people (Ethics-advisors, eResearch support, supervisor,…)</p></li></ol></aside></section>
-<section id="live-demovideo" class="slide level2">
-<h2>LIVE DEMO/VIDEO</h2>
-<p>Let’s try to write another hello-wordl, just like we did on the CLI. Cmd-N, save, file name, .py extension. Go to Terminal. Execute it <code>python helloworld.py</code></p>
 <aside class="notes">
 <ul>
 <li>personal experience: VSC is powerful, yet quite streamlined.</li>
@@ -791,7 +807,7 @@ Nick Young, Jens Brinkmann
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-</section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>AI: even if you try your best to do all correct, treat sensitive data respectfully, for example, use the University-provided systems,… using tools like AI Coding Support (GitHub CoPilot) might make most of these efforts useless; sensitive data might (!) be fed back for training purposes, etc. If in doubt, take the pessimistic approach (expect that <strong>it calls home</strong>) and talk to relevant people (Ethics-advisors, eResearch support, supervisor,…)</p></li></ol></aside></section>
 <section id="option-b---jupyter-notebooks.ipynb-files" class="slide level2">
 <h2>Option B - Jupyter Notebooks/<code>.ipynb</code> files:</h2>
 <ul>
@@ -812,9 +828,11 @@ Nick Young, Jens Brinkmann
 <li>again: <a href="https://research-hub.auckland.ac.nz/guide-to-managing-research-data/ethics-integrity-and-compliance/fair-principles-for-research-data">FAIR</a> and metadata, utlimately: get more research impact</li>
 </ul></li>
 </ul>
+<!-- ## {background-video="Data2024Assets/VSCipy.mp4" aspect-ratio="1.5014662757x1"} -->
 <aside><ol class="aside-footnotes"><li id="fn2"><p>formerly IPythonNotebook, hence the file extension .ipynb</p></li></ol></aside></section>
-<section id="live-demo-lets-create-a-new-jupyter-notebook-write-a-hello-world-run-it-save-it-and-push-it-to-github" class="slide level2">
-<h2>Live Demo: Let’s create a new Jupyter Notebook, write a hello-world, run it, save it, and push it to GitHub</h2>
+<section id="option-b-in-action" class="slide level2">
+<h2>Option B in action</h2>
+<video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="Data2024Assets/VSCipy.mp4"></video>
 <aside class="notes">
 <ul>
 <li>Now, VSC has syntax highlighting.
@@ -886,15 +904,21 @@ Nick Young, Jens Brinkmann
 <section>
 <section id="intermezzo-lets-see-some-of-that-in-action" class="title-slide slide level1 center">
 <h1>Intermezzo: Let’s see some of that in action</h1>
-<p>LIVE DEMO: 5 lines of code</p>
+<p>Just 5 lines of code</p>
+<p>We can do this in <a href="https://colab.research.google.com/">Google Colab</a>, example <a href="https://colab.research.google.com/drive/13ODR80i0AVMymNYIcSZRS_tLYr8hyzLe?usp=sharing">here</a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a></a>pd.options.plotting.backend <span class="op">=</span> <span class="st">"plotly"</span></span>
 <span id="cb1-3"><a></a><span class="im">import</span> yfinance</span>
 <span id="cb1-4"><a></a>df <span class="op">=</span> yfinance.Ticker(<span class="st">"^NZ50"</span>).history(period<span class="op">=</span><span class="st">"max"</span>)<span class="co"># Load data from Yahoo Finance</span></span>
 <span id="cb1-5"><a></a>df[[<span class="st">"Open"</span>, <span class="st">"Close"</span>, <span class="st">"High"</span>, <span class="st">"Low"</span>]].plot(labels<span class="op">=</span>{<span class="st">"value"</span>: <span class="st">"$ NZD"</span>}, title<span class="op">=</span><span class="st">"NZX 50 Index"</span>) <span class="co"># plot it</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="version-control-with-git-and-github" class="slide level2">
-<h2>Version Control with Git and GitHub</h2>
+<section id="intermezzo-how-does-that-look-on-google-colab" class="slide level2">
+<h2>Intermezzo: How does that look on Google Colab</h2>
+<video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="Data2024Assets/FiveLinesColab.mp4"></video>
+</section></section>
+<section>
+<section id="version-control-with-git-and-github" class="title-slide slide level1 center">
+<h1>Version Control with Git and GitHub</h1>
 <ul>
 <li>local machine only(bus 🚌 risk) even VM (decommissoned?) <em>isn’t enough</em></li>
 <li><code>if</code> <strong>all</strong> stakeholders agree (Research Data Policy, Ethics Commission, IP Advisor, Funder,…)
@@ -923,11 +947,11 @@ Nick Young, Jens Brinkmann
 </ul></li>
 <li>GitHub can also provide us with
 <ul>
-<li>GitHub Actions (<em>throw-away</em>-VMs running on MSAzure)</li>
+<li>GitHub Actions (<em>throw-away</em>-VMs running on <a href="https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions">MSAzure</a>)</li>
 <li>Some basic Project Management via <a href="https://code.visualstudio.com/blogs/2020/05/06/github-issues-integration">Issues</a></li>
 <li>Collaboration (allow other to work on your code)</li>
-<li>private and public repos</li>
-<li>there are academic discounts, …</li>
+<li><em>private</em> and <em>public</em> repos</li>
+<li>there are <a href="https://github.com/education">academic discounts</a>, …</li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:30%;">
@@ -938,23 +962,23 @@ Nick Young, Jens Brinkmann
 <h2>Packages 🎁 : A gift 👑 &amp; a curse 🤬</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>A gift 👑 because:</p>
+<p>A <strong>gift</strong> 👑 because:</p>
 <ul>
-<li>Python makes it easy to integrate</li>
-<li>incredible amount of packages exist</li>
-<li>so no reinventing the wheel (build on other peoples’ extended efforts)<sup>1</sup></li>
+<li>Python makes it <strong>easy to integrate</strong></li>
+<li>incredible <strong>amount</strong> of packages exist</li>
+<li>so <strong>no reinventing the wheel</strong> (build on other peoples’ extended efforts)<sup>1</sup></li>
 </ul>
-<p>A curse 🤬 because:</p>
+<p>A <strong>curse</strong> 🤬 because:</p>
 <ul>
-<li>things tend to break
+<li>things tend to <strong>break</strong>
 <ul>
-<li>people discontinue packages</li>
-<li>breaking changes require us to change our syntax</li>
-<li>packages depend on other packages (think of a big tree🌲)</li>
+<li>people <strong>discontinue</strong> packages</li>
+<li><strong>“breaking changes”</strong> require us to change our syntax</li>
+<li>packages depend on other packages (think of a <strong>big tree</strong>🌲)</li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p>But! We are not the first people to run into such challenges</p>
+<p>But! <strong>We are not the first people to run into such challenges</strong></p>
 <ul>
 <li><p>package management: there are different ways of minimising that impact; let me show 3</p>
 <ul>
@@ -968,14 +992,16 @@ Nick Young, Jens Brinkmann
 <aside><ol class="aside-footnotes"><li id="fn6"><p>proper referencing is crucial, code is not different from other academic tasks in this respect</p></li></ol></aside></section></section>
 <section id="to-venv-or-not-to-venv" class="title-slide slide level1 center">
 <h1>To <code>venv</code> or not to <code>venv</code>?</h1>
+<p>(Though not crucial, mentioned for the sake of completeness)</p>
 <ul>
-<li>(This topic is not crucial, I know people who use it frequently and other that are successful and don’t do it at all)</li>
-<li>What is this <code>venv</code>? This is one way (there are others) of creating a virtual environment.</li>
-<li>Each <code>venv</code> can have its own packages and versions; as opposed to a global enviroment (so you can run the old and the new version in paralell and test, etc.)</li>
-<li>Some consider it good practice to keep one <code>venv</code> per project. If you research and use of Python on one specific machine is just about one project, this might be ignorable; <code>poetry</code> spins up a virtual environment anyways for you</li>
-<li>overall, this kind of encapsulation can support Reproducibility</li>
+<li>What is this <code>venv</code>?
+<ul>
+<li>This is <a href="https://docs.python.org/3/library/venv.html">one way</a> (there are others) of creating a virtual environment.</li>
+</ul></li>
+<li>Each <code>venv</code> can have its <strong>own packages</strong> and versions; as opposed to a global enviroment (so you can run the old and the new version in paralell and test, etc.)</li>
+<li>Some consider it <em>good practice</em> to keep one <code>venv</code> per project. If you research and use of Python on one specific machine is just about one project, this might be ignorable; <a href="https://python-poetry.org/">poetry</a> (as mentioned on the previous slide) spins up a virtual environment anyways for you</li>
+<li>overall, <strong>this kind of encapsulation can support Reproducibility</strong></li>
 </ul>
-<p>VIDEO here I install everything with <code>pip install requirements.txt</code></p>
 </section>
 
 <section id="revisit-the-pyramid" class="title-slide slide level1 center">
@@ -985,9 +1011,17 @@ Nick Young, Jens Brinkmann
 <div class="columns">
 <div class="column" style="width:70%;">
 <ul>
-<li>Containers (Think of a mini-VM) <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a> - Pick/reference an OS (say Ubuntu 22.4) + a Python version (say 3.11.6), etc. your local/VM machine runs Kernel and VSC - put the result on <a href="https://hub.docker.com/">DockerHub</a></li>
-<li><a href="https://research-hub.auckland.ac.nz/research-software-and-computing/advanced-compute/nectar-binderhub">BinderHub</a>: package a remote Git repository into an interactive Jupyter notebook for displaying code and output</li>
-<li><a href="https://www.researchobject.org/ro-crate/">Research Object</a> (RO) Crate: an approach to package research data and its metadata human and machine readable, <a href="https://about.workflowhub.eu/Workflow-RO-Crate/">Workflow</a> hub can ingest or generate an RO-Crate that describes the complete processes, authorship, and requirements of a computational workflow</li>
+<li><strong>Containers</strong> (Think of a mini-VM) <a href="https://www.docker.com/">Docker</a>, <a href="https://kubernetes.io/">Kubernetes</a>
+<ul>
+<li>Pick/reference an OS (say Ubuntu 22.4) + a Python version (say 3.11.6), etc.</li>
+<li>your local/VM machine runs <code>Kernel</code> and <code>VSC</code></li>
+<li>put the result on <a href="https://hub.docker.com/">DockerHub</a></li>
+</ul></li>
+<li><a href="https://research-hub.auckland.ac.nz/research-software-and-computing/advanced-compute/nectar-binderhub">BinderHub</a>: you can <strong>package</strong> a remote <strong>Git repo</strong>sitory into an <strong>interactive Jupyter</strong> notebook for displaying <strong>code</strong> and <strong>output</strong></li>
+<li><a href="https://www.researchobject.org/ro-crate/">Research Object</a> <strong>(RO) Crate</strong>: an approach to package research data and its metadata human and machine readable
+<ul>
+<li>the <a href="https://about.workflowhub.eu/Workflow-RO-Crate/">Workflow</a> aspect can ingest or generate an RO-Crate that describes the complete processes, authorship, and requirements of a computational workflow</li>
+</ul></li>
 </ul>
 </div><div class="column" style="width:30%;">
 <p><img data-src="Data2024Assets/ContainerBreadChef.jpg" width="450"></p>
@@ -1039,7 +1073,7 @@ Nick Young, Jens Brinkmann
 <tbody>
 <tr class="odd">
 <td>Data Input</td>
-<td>Download dataset</td>
+<td>Download dataset <a href="https://github.com/UoA-eResearch/SA2_2022_population/raw/main/statistical-area-2-2023-generalised_simplified_22.3%25.zip">1</a> &amp; <a href="https://raw.githubusercontent.com/UoA-eResearch/SA2_2022_population/main/population_by_SA2.csv">2</a></td>
 </tr>
 <tr class="even">
 <td>Computer</td>
@@ -1055,11 +1089,11 @@ Nick Young, Jens Brinkmann
 </tr>
 <tr class="odd">
 <td>Libraries</td>
-<td><code>Geopandas</code> among others</td>
+<td><code>geopandas</code> among others</td>
 </tr>
 <tr class="even">
 <td>IDE</td>
-<td><code>VSC</code> to run a Jupyter Notebook (ssh’d to VM)</td>
+<td><code>[VSC](https://code.visualstudio.com/)</code> to run a Jupyter Notebook (<code>ssh</code> to VM)</td>
 </tr>
 <tr class="odd">
 <td>Code</td>
@@ -1072,49 +1106,88 @@ Nick Young, Jens Brinkmann
 </tbody>
 </table>
 </section>
-<section id="prepwork" class="slide level2">
-<h2>Prepwork</h2>
-<p>VIDEO</p>
+<section id="background" class="slide level2">
+<h2>Background</h2>
+<p>Rough workflow:</p>
 <ul>
-<li>(VM is created, VSC is installed, plugins are installed, python-is-python3)</li>
-<li>Open VSC</li>
-<li>ssh</li>
-<li>create venv</li>
-<li>create ipynb (maybe touch via console or left panel)</li>
-<li>(copy-)paste in md headings/skeleton structure</li>
-<li>push run button</li>
-<li>select kernel</li>
-<li>(not sure: create new gh repo, make private)</li>
-<li>(not sure where/how: magically we know all needed libs; pip freeze it)</li>
-<li>show commit in VSC extension</li>
-<li>navigate to website and see what we did</li>
+<li>We <strong>download</strong> a dataset that contains the <strong>boundaries</strong> of New Zealand’s Statistical Areas (<strong>SA2</strong>) - details follow</li>
+<li>And <strong>another</strong> one that contains the <strong>population</strong> (i.e.&nbsp;the number of people) of each SA2</li>
+<li>We want to <strong>plot</strong> the boundaries and the population data on an interactive <strong>map in a browser</strong></li>
+<li>We put that on <strong>GitHub</strong>/a <strong>website</strong></li>
 </ul>
-</section>
-<section id="background-what-we-plot" class="slide level2">
-<h2>Background: What we plot</h2>
+<p>Details:</p>
 <ul>
-<li>StatsNZ decomposes New Zealand into Statistical Areas
+<li>StatsNZ decomposes New Zealand into <a href="https://www.stats.govt.nz/methods/statistical-standard-for-geographic-areas-2023/">Statistical Areas (SA)</a>
 <ul>
-<li>each SA should encapsule people of similar socio-economical background</li>
-<li>there are 3 resolutions (SA1 = x people, SA2 = y people, SA3 = z people)</li>
+<li>each SA should encapsule people of similar socio-economical status</li>
+<li>there are 3 resolutions (SA1 = up to 500 people, SA2 = 1k-4k people, SA3 = 5k-50k people)</li>
 <li>we pick SA2</li>
-</ul></li>
-<li>we want to plot the
-<ul>
-<li>boundaries (polygon on the map)</li>
-<li>name of each SA2</li>
-<li>number of people and show this on an interactive map in a browser</li>
 </ul></li>
 </ul>
 </section></section>
-<section id="skeleton-headlines" class="title-slide slide level1 center">
-<h1>Skeleton headlines</h1>
+<section id="live-demo" class="title-slide slide level1 center">
+<h1>Live demo</h1>
+<p>What I did as a preparation (which exceeds the available time for this session):</p>
 <ul>
-<li>import the data</li>
-<li>work on it</li>
-<li>plot it</li>
+<li>create a Ubuntu VM on Nectar</li>
+<li>start VSC on my local machine, connect to the VM via SSH</li>
+<li>as Ubuntu comes with Python, I created a virtual environment (that I named <code>data</code>)
+<ul>
+<li><code>sudo apt install python3.12-venv</code></li>
+<li><code>python3 -m venv data</code></li>
+<li><code>source data/bin/activate</code></li>
+<li>start a new terminal, done (notice the first bit on the prompt)</li>
+</ul></li>
+<li>I installed <code>Jupyter</code> and <code>GitHub Pull Requests</code> exentsions and signed in to GitHub</li>
 </ul>
-<p>GHA TO SERVE?</p>
+<!-- ![](Data2024Assets/StatsNZPopDL.jpg)
+{.absolute top=10 right=10 width="200"} -->
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="co"># We download the first dataset</span></span>
+<span id="cb2-2"><a></a><span class="op">!</span>wget <span class="st">"https://github.com/UoA-eResearch/SA2_2022_population/raw/main/statistical-area-2-2023-generalised_simplified_22.3%25.zip"</span></span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a><span class="co"># !pip install geopandas</span></span>
+<span id="cb2-5"><a></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb2-6"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-7"><a></a></span>
+<span id="cb2-8"><a></a><span class="co"># Load dataset into geopandas df, have a look</span></span>
+<span id="cb2-9"><a></a>sa2 <span class="op">=</span> gpd.read_file(<span class="st">"statistical-area-2-2023-generalised_simplified_22.3%.zip"</span>).dropna(subset<span class="op">=</span><span class="st">"geometry"</span>)</span>
+<span id="cb2-10"><a></a>sa2</span>
+<span id="cb2-11"><a></a></span>
+<span id="cb2-12"><a></a><span class="co"># we remove Chathan Islands and those with no land area</span></span>
+<span id="cb2-13"><a></a>sa2 <span class="op">=</span> sa2[(sa2.SA22023__1 <span class="op">!=</span> <span class="st">"Chatham Islands"</span>) <span class="op">&amp;</span> (sa2.LAND_AREA_ <span class="op">&gt;</span> <span class="dv">0</span>)].copy()</span>
+<span id="cb2-14"><a></a>sa2</span>
+<span id="cb2-15"><a></a></span>
+<span id="cb2-16"><a></a><span class="co"># We download the second dataset</span></span>
+<span id="cb2-17"><a></a><span class="op">!</span>wget <span class="st">"https://raw.githubusercontent.com/UoA-eResearch/SA2_2022_population/main/population_by_SA2.csv"</span></span>
+<span id="cb2-18"><a></a></span>
+<span id="cb2-19"><a></a><span class="co"># we import a population dataset</span></span>
+<span id="cb2-20"><a></a>population <span class="op">=</span> pd.read_csv(<span class="st">"Data2024Assets/population_by_SA2.csv"</span>)</span>
+<span id="cb2-21"><a></a>population</span>
+<span id="cb2-22"><a></a></span>
+<span id="cb2-23"><a></a><span class="co"># Extract ID from Area col by using RegEx</span></span>
+<span id="cb2-24"><a></a>population[<span class="st">'SA2'</span>] <span class="op">=</span> population[<span class="st">'Area'</span>].<span class="bu">str</span>.extract(<span class="vs">r'(\d+)'</span>)</span>
+<span id="cb2-25"><a></a>population</span>
+<span id="cb2-26"><a></a></span>
+<span id="cb2-27"><a></a><span class="co"># Add a prefix to the right dataframe's columns (excluding the merge key)</span></span>
+<span id="cb2-28"><a></a>prefix <span class="op">=</span> <span class="st">'population_in_year_'</span></span>
+<span id="cb2-29"><a></a>population<span class="op">=</span> population.rename(columns<span class="op">=</span>{col: prefix <span class="op">+</span> col <span class="cf">for</span> col <span class="kw">in</span> population.columns[<span class="dv">1</span>:<span class="dv">10</span>]})</span>
+<span id="cb2-30"><a></a>population</span>
+<span id="cb2-31"><a></a></span>
+<span id="cb2-32"><a></a><span class="co"># Merge these</span></span>
+<span id="cb2-33"><a></a>sa2 <span class="op">=</span> sa2.merge(population, left_on<span class="op">=</span><span class="st">'SA22023_V1'</span>, right_on<span class="op">=</span><span class="st">'SA2'</span>)</span>
+<span id="cb2-34"><a></a>sa2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+
+<section id="questions" class="title-slide slide level1 center">
+<h1>Questions</h1>
+<ul>
+<li>please see the explanation above</li>
+<li>the likelihood of me being able to answer your question now is quite slim
+<ul>
+<li>a lot of content in 1h</li>
+</ul></li>
+<li>Come to HackyHour or the Drop-in Clinic</li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -1123,13 +1196,13 @@ Nick Young, Jens Brinkmann
 </div>
 <div class="reveal-header">
 <div class="header-logo" data-hide-from-titleslide="true">
-<img data-src="UoALogoDarkBlueRGBLandscape.png">
+<img data-src="ResBaz_transparent_cropped.svg">
 </div>
 <div class="sc-title">
 <p> </p>
 </div>
 <div class="header-text" data-hide-from-titleslide="true">
-<p>State of the Art Workflows for working with data in 2024</p>
+<p>Joining the dots for modern data science workflows</p>
 </div>
 <div class="sb-title">
 <p> </p>
@@ -1536,6 +1609,9 @@ Nick Young, Jens Brinkmann
       }
     });
     </script>
+    <script>videojs(video_shortcode_videojs_video1);</script>
+    <script>videojs(video_shortcode_videojs_video2);</script>
+    <script>videojs(video_shortcode_videojs_video3);</script>
     
 
 </body></html>
