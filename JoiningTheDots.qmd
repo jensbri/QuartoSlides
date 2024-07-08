@@ -409,10 +409,8 @@ df[["Open", "Close", "High", "Low"]].plot(labels={"value": "$ NZD"}, title="NZX 
 
 - local machine only(bus 🚌 risk) even VM (decommissoned?) *isn't enough*
 - `if` **all** stakeholders agree (Research Data Policy, Ethics Commission, IP Advisor, Funder,...) 
-  - we can host our code on **version controlled repository**
-- track changes (what changed from previous to now, what from now to 23 days ago)
-- we don't want file names such as `Thesis final final really final 2 july.docx` 
-- code is mostly plain text (not `.docx`,...), we can use thigs like a `diff`
+  - we can host our code on a specific **version controlled repository**
+- track changes/ we don't want file names such as `Thesis final final really final 2 july.docx`, great for code
 - while {{< fa brands git >}} ^[ɡɪt is a distributed version control system that tracks versions of files developed by Linus Torvalds] is the underlying 'technique'/foundation  [GitHub](https://github.com/) {{< fa brands github >}}  is one(!) commercial (now owned by Microsoft) entity 
 	- there are alternatives, [GitLab](https://www.gitlab.com/), [BitBucket](https://bitbucket.org), ... 
   	- some are open source, some run in the cloud, some run on your local machine
