@@ -1,0 +1,515 @@
+---
+title: "LaTeX 101"
+subtitle: "An Introduction to Formatting Documents With Code"
+author: "Jens Brinkmann, Nelis Drost"
+institute: "The University of Auckland"
+# logo-container: "ResBaz_transparent_Logo_cropped.svg"
+date: 2024-07-09
+date-format: full
+# bibliography: refs.bib
+from: markdown+emoji
+# embed-resources: false
+format:
+  revealjs:
+    # number-sections: true
+    theme: UoAtemplate.scss
+    # css: ./logo.css
+    # disableLayout: true
+    navigation-mode: vertical
+    controls-layout: bottom-right
+    controls-tutorial: true
+    transition: convex
+    width: 1600
+    height: 900
+    margin: 0.2
+    # background-image: ./ResBaz_transparent_Logo_cropped.svg
+    # background-opacity: 0.5
+    # background-position: bottom 10px right 20px
+    # background-size: contain
+    # data-background-repeat: no-repeat
+    # background-size: 80px
+    # background-repeat: no-repeat
+    # background-position: 0% 100%
+    # logo: ResBaz_transparent_cropped.svg
+    # self_contained: false
+    reveal_plugins: ["menu"]
+    reveal_options:
+      menu:
+        numbers: true
+    header: ResBaz 2024 |  LaTeX 101
+    header-logo: ResBaz_transparent_cropped.svg
+    hide-from-titleSlide: all
+    filters:
+      - reveal-header
+      - line-highlight
+--- 
+
+# What is this session about
+- This is a ResBaz *taster* session
+- We only have one hour 🕐 
+- There is an advanced session:  [How to Create a LaTeX Report Without Losing Hair](https://resbaz.auckland.ac.nz/schedule/#session-50) - Thu 1-3pm
+
+![](LaTeX%20Assets/VSCandCode.gif){width="650"}
+
+
+# Housekeeping 🧹
+
+- **Cameras on**, please 📸
+- Please **mute** your microphone 🎤  
+- **Questions:** Zoom chat 💬
+- This session **won't** be recorded 📹
+
+- Be kind 😊
+  - all details of the Code of Conduct 🗞️  can be found [here](https://resbaz.auckland.ac.nz/about/) 
+
+
+
+# What is $\LaTeX$ 
+
+- Pronounciation: /ˈlɑːtɛk/ or /ˈleɪtɛk/ 
+- $\LaTeX$: a typesetting system; since 1984
+- Recent advances make it **more user-friendly** and approchable
+- Writing **context** and **formatting** are **separated**
+- To see an output (or download a PDF) you often need to **compile** the code
+
+<!-- ::: aside
+The name TeX is intended by its developer to be $\tau \epsilon \chi$, TeX is an abbreviation of τέχνη (ΤΕΧΝΗ technē), Greek for both "art" and "craft", which is also the root word of technical.
+::: -->
+
+
+# Why $\LaTeX$?
+
+::: {.callout-tip}
+## First an foremost (my opnion):
+
+- because the output **looks very professional** (often you can tell at a glance that it is a $\LaTeX$ document) 
+- there is **less risk** of breaking the whole document (as it is plain text)
+
+:::
+
+... also good because:
+
+- **free** and **open-source**
+- is **cross-platform**
+- standard for many **scientific** publications (for some journals mandatory)
+- great for writing **mathematical equations**
+- great for writing **code**
+- (parts) can be **automated**
+- ***it* decides** where to place images, tables, etc. (you can also specify this), especially good if you decide to add more and don't want them to be placed in awkward places
+- you can have **in-line-comments** (for future you, for your supervisor, to toggle things on/off)
+- add **references while you write** (`\cite{}` and done)
+  - (see [Managing References With Zotero](https://resbaz.auckland.ac.nz/schedule/#session-54) session, Friday, 10-12)
+
+# Is $\LaTeX$ scary?
+
+
+- Initially, **it might be**, because it is **not** *wysiwyg*
+- But it has come a long way, you can use it in your browser: [Overleaf](https://www.overleaf.com/)
+- There are...
+  - shortcuts
+  - workarounds
+  - a cheat sheet 
+  - we will provide you with PhD thesis template 
+
+::: {.callout-note}
+You can keep all this offline/local/no-cloud, which is good for Ethics Approvals and [sensitive](https://research-hub.auckland.ac.nz/guide-to-managing-research-data/ethics-integrity-and-compliance/research-data-classification) data
+
+even if you don’t have the software to compile a document, you can still extract the content (because you can read/extract the meaning from the plain text files)
+:::
+
+
+::: {.callout-warning}
+You can waste an almost infinite amount of time on fiddling with layout details
+:::
+
+# Cost-benefit Tradeoff
+
+:::{.callout-warning}
+
+- trade-off: time invested upfront learning $\LaTeX$ vs. 
+- time saved in the long-run
+- But then also last-minute PhD-thesis or other submission deadlines: Do you have the time by then?
+{{< fa file-word >}} horror stories
+:::
+
+
+  
+- Many collaborators/supervisors are familiar with Word {{< fa file-word >}} and don't want to deviate from it
+- While GitHub {{< fa brands github >}} is great; {{< fa file-word >}} [Track Changes](https://support.microsoft.com/en-us/office/track-changes-in-word-197ba630-0f5f-4a8e-9a77-3712475e806a) has one advantage (in my opinion)
+  - it knows where cut-pasted things went!
+- plugins such as [Grammarly](https://app.grammarly.com/) can be finicky 
+
+
+# Alternatives
+
+- the ususal suspects: [Microsoft Word](https://www.microsoft.com/en-nz/microsoft-365/p/word/cfq7ttc0hlkm), [Google Doc](https://docs.google.com/), [DropBox Paper](https://www.dropbox.com/paper/start), [Libre Office ](https://www.libreoffice.org/), [Open Office](https://www.openoffice.org/)
+  - these are *wysiwyg*/gui-based: point $\rightarrow$ click $\rightarrow$ change,...
+  - easier for others to learn/colleaborate
+- [Quarto](https://quarto.org/) and other ways of interacting with Markdown
+  - these encapsulate $\LaTeX$
+  - [pandoc](https://pandoc.org/) can work its magic
+
+
+
+# To recap:
+
+- $\LaTeX$ separates **content** from **formatting**, letting you focus on writing ~~and fiddling~~ 🥸 
+- **Cross-platform** compatibility ({{< fa brands apple >}}, {{< fa brands windows >}}, {{< fa brands linux >}}, ...)
+- There is a wide **community** and often several ways to get things done. 
+  - It is rare that you are the first to ask a question. 
+- Most of the **(good) books**, journal articles, etc. are created using $\LaTeX$ for a reason!
+- it is **open source** and uses **plain text** files
+- *...just to name a few*
+
+
+::: {.callout-note}
+You specify structure by inserting e.g.: `\section`, `\begin{figure}`, `\begin{tabular},` etc.
+
+You don’t need to worry about **how those will look** until **later**. (e.g.: $1a, 1b \rightarrow 1.1, 1.2$)
+:::
+
+# What is it for
+
+::::{.columns}
+:::{.column width="33%"} 
+[Articles]{.fragment fragment-index=1}
+![](LaTeX Assets/article.png){.fragment fragment-index=1}
+:::
+:::{.column width="33%"}
+[Theses]{.fragment fragment-index=2}
+![](LaTeX Assets/thesis.jpg){.fragment fragment-index=2}
+<!-- https://benjaminhopfer.com/non-programming/2014/04/10/typesetting-my-masters-thesis-latex.html -->
+:::
+:::{.column width="33%"}
+[Books]{.fragment fragment-index=3}
+![](LaTeX Assets/book.jpg){.fragment fragment-index=3}
+<!-- https://www.researchgate.net/publication/271428616_LaTeX_for_Agricultural_Extension_Professionals/figures?lo=1 -->
+:::
+::::
+
+## What is it for?
+:::::{.columns}
+::::{.column width="40%"}
+Reports
+
+[Forms]{.fragment fragment-index=2}
+
+[Repeatable layouts & auto-generated content]{.fragment fragment-index=3}
+
+![](LaTeX Assets/ticket.jpg){.fragment fragment-index=3}
+::::
+::::{.column width="30%"}
+![](LaTeX Assets/factsheet.jpg)
+::::
+::::{.column width="30%"}
+![](LaTeX Assets/invoice.jpg){.fragment fragment-index=2}
+::::
+:::::
+
+## What is it for?
+::::{.columns}
+:::{.column width="70%"}
+[Beamer](https://ctan.org/pkg/beamer?lang=en) template for presentations
+
+::: {.callout-note}
+this website/presentation was built using [Quarto](https://quarto.org/) and its [RevealJS](https://quarto.org/docs/presentations/revealjs/) integration
+:::
+
+:::
+
+:::{.column width="30%"}
+![](LaTeX Assets/beamer.jpg)
+:::
+::::
+
+
+## Visualisations in TikZ  
+Example showing the power of the [TikZ package](https://tikz.net/)
+
+## Visualisations in TikZ -1
+![Focused ion beam system, Author: Clemens Helfmeier](LaTeX Assets/Visualisation in tikz.jpg)
+[Source](https://texample.net/tikz/examples/author/clemens-helfmeier/)
+
+## Visualisations in TikZ -2
+![2D Visualisation in TikZ](LaTeX Assets/Simple Visualisation in tikz.jpg)
+[Source](https://tikz.net/perigals-dissection/)
+
+## Visualisations in TikZ -3
+![3D Visualisation in TikZ](LaTeX Assets/3DVisInTikZ.jpg)
+[Source](https://tikz.net/differential-of-volume-cylindrical-coordinates/)
+
+## Visualisations in TikZ -4
+![(Neuronal) Network Visualisation in TikZ](LaTeX Assets/NeuronalNetworksInTikZ.png)
+[Source](https://tikz.net/wp-content/uploads/2021/12/neural_networks-001.png)
+
+
+## Easily go from one to two column layouts
+
+::::{.columns}
+
+:::{.column width="50%"}
+```latex
+\documentclass[10pt,a4paper,onesided]{article} 
+\usepackage{lipsum}
+\begin{document}
+  \section{My Title}
+  \subsection{Sub-Section}
+  \textbf{Printing 1 to 3 paragraphs}\\
+  \lipsum[1-3]
+  \subsection{Sub-Section}
+  \lipsum[1]
+\end{document}
+```
+Note that: ...[onesided]{.fragment .fade-in}...
+![One Column](LaTeX Assets/OneCol.jpg)
+
+
+:::
+
+:::{.column width="50%"}
+```latex
+#| \documentclass[10pt,a4paper,twocolumn]{article} 
+\usepackage{lipsum}
+\begin{document}
+  \section{My Title}
+  \subsection{Sub-Section}
+  \textbf{Printing 1 to 3 paragraphs}\\
+  \lipsum[1-3]
+  \subsection{Sub-Section}
+  \lipsum[1]
+\end{document}
+```
+Note that: ...[twocolumn]{.fragment .fade-in}...
+![Two Column](LaTeX Assets/TwoCol.jpg)
+:::
+
+::::
+
+
+## Maths/Formulae
+
+::: {.r-stack}
+![](LaTeX Assets/MSWordFormula.jpg){.fragment width="1200"}
+
+![](LaTeX Assets/LaTeXIT.jpg){.fragment height="700"}
+
+![](LaTeX Assets/MathPix.jpg){.fragment height="700"}
+:::
+
+
+
+## External Files
+
+- External files are **referenced**
+  - e.g. an `Images` folder.
+  - **updating files** (same file name) come into effect **automatically**/quickly (after recompiling)
+  - While doint that, consider a version control mechanism such as [GitHub](https://github.com/) {{< fa brands github >}}  to avoid data loss
+- Similarly: **imported data** (often in the `csv file` format) which you can get to [automatically update tables](https://tex.stackexchange.com/questions/146716/importing-csv-file-into-latex-as-a-table)
+- Even **layouts** can be changed ***plug and play***
+
+
+::: {.callout-warning}
+How would you do this is a MS Word document? How can you make sure that you updated all and didn't miss one? There are workardounds, but they are not as elegant as in $\LaTeX$
+:::
+
+
+
+
+# How does creating a document in $\LaTeX$ work?
+While our current session is just a *taster Session*, some pointers at important elements follow below. 
+
+To get hands-on experience, I recommend (again) the advanced session:  [How to Create a LaTeX Report Without Losing Hair](https://resbaz.auckland.ac.nz/schedule/#session-50) - Thu 1-3pm
+
+
+## Preamble
+
+- similar to coding: 
+  - you start with importing relevant libraries (things others did to make your life easier) 
+  - and definitions (for example, colours)
+
+```latex{code-line-numbers="false"}
+\documentclass[twoside,openright,a4paper]
+
+\usepackage[usenames, dvipsnames, table]{xcolor}
+
+\addbibresource{references.bib}
+
+\definecolor{uoadarkblue}{RGB}{0, 70, 127}
+```
+
+
+## Main body
+
+You can either
+
+- write all your document in **one text file** (with the file extension `*.tex`)
+  - often better practice: `\include` command to include chapters
+- $\LaTeX$ commands usually start with the **backslash** character `\...`
+- as in all coding: **Details matter**: close brackets you opened, etc.
+- $\LaTeX$ is **mostely whitespace-insensitive**, this means you can write your `.tex` document without having to worry about empty lines, etc. This also means, if you want to include empty lines, you have to enforce them 
+  - `\\` (two backslashes)
+  - `\newline`
+  - `\hfill \break`
+  - [see also](https://www.overleaf.com/learn/latex/Line_breaks_and_blank_spaces)
+
+```latex {code-line-numbers="false"}
+\include{Titlepage}
+\part{Background}
+\include{Chapters/Intro}
+```
+
+## References, Appendices, etc.
+- all of these can be ingested (reference to external files) in the preamble
+- It's fair to consider this a strong-suit of $\LaTeX$
+
+
+```latex {code-line-numbers="false"}
+\section{Test}\label{sec:test}
+Some text
+\begin{equation}
+  e = m c^2
+  \label{eqn:emc}
+\end{equation}
+
+\subsection{Discussion}
+As we can see in Equation \ref{eqn:emc} in Section \ref{sec:test}...
+
+```
+
+# How to get $\LaTeX$
+
+If you are eager to get started, you might wonder how to get $\LaTeX$ on your machine:
+
+- Perspectives:
+  - from *local* machine to *cloud-based*
+  - *open-source* to *paid subscription*
+  
+
+We will look at
+
+- ... the *core*
+- ... *special* editors
+- ... in the *browser*
+- ... the *meta* version
+
+## How to get $\LaTeX$ - the core
+
+::: callout-tip
+Idea: As software-agnostic as possible
+:::
+
+- Download a $\LaTeX$ distribution, for example [MiKTeX](https://miktex.org/download)
+- install [pandoc](https://pandoc.org/installing.html)
+- use any texteditor {{< fa brands apple >}} TextEdit, {{< fa brands windows >}} Notepad,, {{< fa brands linux >}} various
+- a generic IDE, such as [VSCode](https://code.visualstudio.com/)
+- on the commandline: type `pandoc -i ~/Desktop/myWritings.tex -o ~/Desktop/MyRenderedLaTeX.pdf`
+- inspect your neatly renedered document
+
+## How to get $\LaTeX$ - special editors
+
+::: callout-tip
+Idea: local installation and a specialised editor
+:::
+
+
+- [Texifier](https://www.texifier.com/)
+- [TeXLive](https://www.tug.org/texlive/)
+- [TeXStudio](https://www.texstudio.org/)
+- [TeXMaker](https://www.xm1math.net/texmaker/)
+
+## How to get $\LaTeX$ - In the browser
+
+- [Overleaf](https://www.overleaf.com/) is quote famous for "bringing $\LaTeX$ to the masses"
+- A pro and con at the same time: It runs in the cloud, you don't need to install a $\LaTeX$ distribution, special editor, etc.
+- Recently, they added "Overleaf On-Premises" to circumvent privacy challenges
+- there is a **free plan** which might be a good fit for beginners or if it is just you wokring on a dcument
+- there are **paid plans**, including **student** plans which are currently NZD109/year
+  - The main advantages: 
+    - Invite **collaborators**, so work on the same document at the same time
+    - Have a similar **tracking** mechanism as MS Word's *Track Changes*
+    - Sync to **Dropbox**, **GitHub**, etc.
+- University of Auckland ABI staff/students get Overleaf premium free
+
+
+## How to get $\LaTeX$ - The *meta* version
+
+[Quarto](https://quarto.org/) can be considered *one level above* in terms of abstraction ![text](rstudio-qmd-how-it-works.png)
+
+- $\LaTeX$ is just one of its output, the other benefit is a direct integration with **Python, R, Julia, Observable**
+- you can write in  [markdown syntax](https://quarto.org/docs/authoring/markdown-basics.html)  (`.md`) so for example `**my text**` (md notation) as oppsed to `\textbf{my text}`
+- the integration with code means you won't have to copy-paste results back and forth
+  - this point can't be stressed enough! You are so likely to forget updating a plot 
+  - you also get reproducability, because it isn't just a screen shot that is integrated into your document
+  <!-- (There are approaches where you can get some (rudimentary) Python code into LaTeX, even into Overleaf, but these are mainly for handling several files (batch processing) keeping track of Python version- Coding colaborators can contribute via a Git workflow
+- Communicate results to non-coding collaborators using git (e.g., [GitHub](https://github.com/))
+
+
+
+# Trying to make your $\LaTeX$ journey easier
+- Template 
+  - Resulting in a neat design (including page numbers in roman, arabic or intentionally omitted)
+  - Shows how to get certain things done (Part, Section, Sub-Section, labels,...)
+  - There are other templates of [Overleaf by the UoA](https://www.overleaf.com/edu/aucklanduni#templates)
+- [TablesGenerator](https://www.tablesgenerator.com/) and or [LaTeXTables](https://www.latex-tables.com/)
+- [Mathpix Snip](https://mathpix.com/)
+- [LaTeXIt](https://www.chachatelier.fr/latexit/latexit-downloads.php?lang=en) (to quickly create equations, {{< fa brands apple >}} only)
+- You can write in Markdown notation and use [Pandoc](https://pandoc.org/) to convert to $\LaTeX$ or MSWord *.docx (which you can easily pass to strict Word users)
+- As $\LaTeX$ is based on plain text files, you can use `diff` commands (see Git) or alternatively use [latexdiff](https://ctan.org/pkg/latexdiff?lang=en) which is better with interpreting the syntax and can highlight changes which are then output to a PDF
+
+## Tables
+
+:::{.columns}
+
+:::{.column width="50%"}
+- A simple table in $\LaTeX$ syntax:
+```latex
+\begin{table}[]
+\caption{My Example Table}
+\label{tab:my-table}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+country     & 1999   & 2000   &  &  \\ \hline
+Afghanistan & 745    & 2666   &  &  \\ \hline
+Brazil      & 37737  & 80488  &  &  \\ \hline
+China       & 212258 & 213766 &  &  \\ \hline
+\end{tabular}
+\end{table}
+```
+:::
+
+:::{.column width="50%"}
+- Alternatively using **markdown** syntax:
+
+```markdown
+| country     | 1999   | 2000   |   |   |
+|-------------|--------|--------|---|---|
+| Afghanistan | 745    | 2666   |   |   |
+| Brazil      | 37737  | 80488  |   |   |
+| China       | 212258 | 213766 |   |   |
+```
+:::
+::::
+
+- To be honest: 
+  - Both are a pain to format by hand
+  - You shouldn't work with your data in these. These are for publishing only
+- [TablesGenerator](https://www.tablesgenerator.com/) and or [LaTeXTables](https://www.latex-tables.com/) can help you with that
+- If applicable(!!!): ChatGPT etc. do a pretty decent job; make sure you are *allowed* (multi-stakeholder) to use them
+  
+
+
+
+
+## $\LaTeX$ guides and references
+[The Not So Short Introduction To Latex](https://tobi.oetiker.ch/lshort/lshort.pdf)
+
+[Overleaf tutorials](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
+
+[Latex Reference](https://texdoc.org/serve/latex2e.pdf/0) [(also as a website)](https://latexref.xyz/dev/latex2e.html)
+
+[Wiki-book](https://en.wikibooks.org/wiki/LaTeX)
+
+
+# Time for questions
+
+?
