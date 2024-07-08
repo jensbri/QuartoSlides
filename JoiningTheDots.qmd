@@ -549,7 +549,7 @@ But: If the alternatives are that you keep all data, code, ... on your laptop wh
 | OS                 | We use `Ubuntu 22.4`                                   |
 | Language           | `Python`                                               |
 | Libraries          | `geopandas` among others                               |
-| IDE                | `[VSC](https://code.visualstudio.com/)` to run a Jupyter Notebook (`ssh` to VM)          |
+| IDE                | [VSC](https://code.visualstudio.com/) to run a Jupyter Notebook (`ssh` to VM)          |
 | Code               | On `GitHub`                                            |
 | Research Outputs   | Map published to website/`GitHub Action` (bit out of scope) |
 
