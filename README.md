@@ -9,6 +9,7 @@ Repo to host several presentations (in anti-chronological order)
 
 | Title | Date |
 | --- | --- |
+| [LaTeX 101](https://jensbri.github.io/QuartoSlides/LaTeX101-24#/title-slide) | 2024-07-09 |
 | [Joining the dots for modern data science workflows](https://jensbri.github.io/QuartoSlides/JoiningTheDots#/title-slide) | 2024-07-08 |
 | [Developing a Carpentries-style Machine Learning workshop](https://jensbri.github.io/QuartoSlides/LightningTalk#/title-slide) | 2023-10-17 |
 | [Upskilling Researchers in Machine Learning](https://jensbri.github.io/QuartoSlides/UpskillingResearchersInML#/title-slide) | 2023-10-17 |
